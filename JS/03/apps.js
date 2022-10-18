@@ -61,5 +61,5 @@ function calRealDate (allDate, absentDate) {
     var secondAttendDate = parseInt(firstAttendDate / allDate * 100);
     return secondAttendDate;
 }
-var anRealDate = calRealDate (allDate, absentDate);
-alert (anRealDate + '% 출석하셨습니다. 80%를 넘겨야 지원금을 받으실수 있습니다.')
+var realAttendDate = calRealDate (allDate, absentDate);
+alert (realAttendDate + '% 출석하셨습니다. 80%를 넘겨야 지원금을 받으실수 있습니다. 화이팅!')
