@@ -58,7 +58,7 @@ var absentDate = parseInt(prompt('write your absent days'));
 
 function calRealDate (allDate, absentDate) {
     var firstAttendDate = allDate - absentDate;
-    var secondAttendDate = firstAttendDate / allDate * 100;
+    var secondAttendDate = parseInt(firstAttendDate / allDate * 100);
     return secondAttendDate;
 }
 var anRealDate = calRealDate (allDate, absentDate);
