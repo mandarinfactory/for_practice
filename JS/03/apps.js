@@ -62,4 +62,5 @@ function calRealDate (allDate, absentDate) {
     return secondAttendDate;
 }
 var realAttendDate = calRealDate (allDate, absentDate);
-alert (realAttendDate + '% 출석하셨습니다. 80%를 넘겨야 지원금을 받으실수 있습니다. 화이팅!')
+if (realAttendDate >= allDate ) { alert (realAttendDate + '% 출석하셨습니다. 80%를 넘겨야 지원금을 받으실수 있습니다. 화이팅!')}
+else { alert (realAttendDate + '% 출석하셨습니다. 80%를 넘기셨습니다! 축하드려요!')}
