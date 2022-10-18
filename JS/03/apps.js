@@ -51,7 +51,16 @@ var add = addNumbers (promptOne, promptTwo);
 var minus = minusNumbers (promptOne, promptTwo);
 var divide = divideNumbers (promptOne, promptTwo);
 var multi = multiNumbers (promptOne, promptTwo);
+console.log(add, minus, divide, multi); 
 
-console.log(add, minus, divide, multi);
+var allDate = parseInt(prompt('write your all attend days'));
+var absentDate = parseInt(prompt('write your absent days'));
+var attendDate = parseInt(prompt('write your attend days'));
 
-
+function calGetDate (allDate, absentDate) {
+ if (parseInt(allDate - absentDate) > parseInt(allDate * 0.8)) {
+    alert('congratulation')
+ }
+ else { alert('you need to study hard! or need to attend more!')}    
+}
+var toFindDate = calGetDate(allDate, absentDate); 
