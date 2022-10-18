@@ -55,12 +55,11 @@ console.log(add, minus, divide, multi);
 
 var allDate = parseInt(prompt('write your all attend days'));
 var absentDate = parseInt(prompt('write your absent days'));
-var attendDate = parseInt(prompt('write your attend days'));
 
-function calGetDate (allDate, absentDate) {
- if (parseInt(allDate - absentDate) > parseInt(allDate * 0.8)) {
-    alert('congratulation')
- }
- else { alert('you need to study hard! or need to attend more!')}    
+function calRealDate (allDate, absentDate) {
+    var firstAttendDate = allDate - absentDate;
+    var secondAttendDate = firstAttendDate / allDate * 100;
+    return secondAttendDate;
 }
-var toFindDate = calGetDate(allDate, absentDate); 
+var anRealDate = calRealDate (allDate, absentDate);
+alert (anRealDate + '% 출석하셨습니다. 80%를 넘겨야 지원금을 받으실수 있습니다.')
