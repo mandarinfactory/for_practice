@@ -1,4 +1,4 @@
-/* function anything(x,y) {
+function anything(x,y) {
     return x + y;
 }
 let number = anything(5,90);
@@ -28,7 +28,7 @@ var ONE = prompt('one');
 var TWO = prompt('two');
 var THREE = prompt('three');
 var scoreThree = averageSumThree (ONE, TWO, THREE)
-console.log(parseFloat(scoreThree)); */
+console.log(parseFloat(scoreThree));
 // scope(변수의 범위를 지정해줌) : 지역변수(함수안에서 선언된 변수), 전역변수(함수밖에서 선언된 변수) //
 
 var promptOne = parseInt(prompt('number_one'));
