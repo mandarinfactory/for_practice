@@ -1,15 +1,81 @@
 <!DOCTYPE html>
+<!-- = document type definition(DTD) = HTML5(자동, semantics), web-document의 version을 알려줌 -->
 <html lang="en">
+<!-- HTML > head(여러기능부분) & body(전체적인 browser의 본문) -->
+<!--  HyperText Markup Language로써 DOM(Document Object Model)구조를 설계하는 언어이다.(programming language는 아니다!) -->
+<!-- DOM => Document(문서)의 Object(객체)들이 어떤 트리로 이루어져있나/구조로 이루어져있나(Model)를 말하는것. = web문서의 구조를 말한다. -->
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- meta는 여러 기능을 부가적으로 추가해준다. 첫번째는 유니코드(세계언어통합코드)인코딩이다.(UTF-8) 
+        두번째는 IE를 호환하게 해주는것, 세번째는 반응형(viewport) browser로 인식한다. -->
+    <link rel="stylesheet" href="style.css">
+    <title>mandarin</title>
 </head>
 
 <body>
-
+    <main>
+        <h1>HALLO! HTML_BASIC</h1>
+        <hr>
+        <section>
+            <h2>01. HTML특징과 주의사항</h2>
+            <ul>
+                <li>HTML은 semantic language이다.</li>
+                <li>element는 tag(link)와 attribute(속성, rel="", href=""등, tag 바로옆에 나온다.)로 이루어진다.</li>
+                <li>element간에는 node가 있다. <br>
+                    부모(parent), 자식(child), 자손(decendent), 형제(siblings)로 나누어져있다.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>02. 중요 semantic elements</h2>
+            <ul>
+                <li>
+                    heading element(h1-h6) : h1은 문서안에 한개 이상 포함해야하는 element이다. <br>
+                    main, section element안에는 heading element 하나를 포함해야한다. <br>
+                    heading element안에는 반드시 text가 포함되어야한다.
+                </li>
+                <li>
+                    p : paragraph, 문단의 범위
+                </li>
+                <li>
+                    main : web-document의 중요 내용의 범위, 한개 이상 포함해야한다.
+                </li>
+                <li>
+                    ul(unordered-list <=> ol),li(list)는 목록을 구성한다.
+                </li>
+                <li>
+                    em, b, strong : 강조 element
+                </li>
+                <li>
+                    a : page의 link를 만드는 element
+                </li>
+                <li>
+                    input : web에서 user의 data를 받을수 있는 대화형 control을 생성한다.(bar형 icon을 생성한다.) => button과 같이 많이 사용함
+                </li>
+                <li>
+                    div,span : 자유자제로 쓰일수 있는 쉽게 말해 box같은 존재이다. (의미가 없어서 아무렇게나 쓰일수 있다. 레이아웃 같은경우 많이 쓰임.)
+                    <!-- 굳이 필요한거 아니면 div,span보다는 semantic word(header, footer)같은걸 최대한 이용할것 => 시인성을 위해서! -->
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>03. escape</h2>
+            <ul>
+                <li>예시로 arrow brackit을 사용하면 자동으로 element로 인식하는걸 방지하려는 문법이다.</li>
+                <li>&lt; = '<' </li>
+                        <!-- & = &amp; -->
+                <li>&gt; = '>' </li>
+                <li>a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b</li>
+                <!-- nbsp = 여백처리 -->
+            </ul>
+        </section>
+    </main>
+    <!-- hX(1-6)와 main은 필수요소로 body에 들어가야 한다. -->
+    <!-- <section>은 여러가지 목차, 차례가 있을경우 많이 쓰는 element이다. -->
+    <!-- element는 각각 markup(<>)에 들어가는것을 뜻한다.(<input>, <main>등) -->
+    <!-- <br>은 줄바꿈, <hr>은 선을 그어준다. -->
 </body>
 
 </html>
