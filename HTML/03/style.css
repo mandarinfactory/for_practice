@@ -1,0 +1,24 @@
+.style_one {
+    color: black;
+}
+#style_two {
+    color: firebrick;
+}
+.box_one, .box_two {
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
+}
+.box_one > div, 
+.box_two > div {
+    width: 150px;
+    height: 150px;
+    background-color: brown;
+}
+.box_one > div > div, 
+.box_two > div > div {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+/* &gt;는 바로 내려오는 parent-child에만 CSS를 적용하도록 한다. */
