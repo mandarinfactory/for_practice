@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            function addNumber(n) {
+                var firstNumber = ($('.section_' + n + ' .input_one').val())
+                var secondNumber = parseInt($('.section_' + n + ' .input_two').val())
+                var resultNumber = firstNumber + secondNumber
+                $('.section_' + n + 'p').html(resultNumber)
+            }
+            $('.section_one button').click(function () {
+                addNumber('one');
+            })
+            $('.section_two button').click(function () {
+                addNumber('two');
+            })
+            function anAddNumber(a, b, c) {
+                var firstNum = $('section_' + a + ' .num' + b + ' - ' + b).val()
+                var secondNum = $('section_' + a + ' .num' + b + ' - ' + c).val()
+                var thirdNum = $('section_' + a + ' .num' + c + ' - ' + b).val()
+                var fourthNum = $('section_' + a + ' .num' + c + ' - ' + c).val()
+                var firstResultNum = parseInt(firstNum + secondNum)
+                var secondResultNum = parseInt(thirdNum + fourthNum)
+                var realNum = firstResultNum + secondResultNum
+                $('section_' + a + 'p').html(realNum)
+            }
+
+            $('section_three button').click(function () {
+                anAddNumber('third', '1', '2')
+            })
+            $('section_four button').click(function () {
+                anAddNumber('fourth', '1', '2')
+            })
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <section class="section_one">
+        <input class="input_one" type="text">
+        +
+        <input class="input_one" type="text">
+        =
+        <button>result</button>
+        <p>result</p>
+    </section>
+    <section class="section_two">
+        <input class="input_one" type="text">
+        +
+        <input class="input_one" type="text">
+        =
+        <button>result</button>
+        <p>result</p>
+    </section>
+    <section class="section_three">
+        <input class="num1-1" type="text">
+        <input class="num1-2" type="text">
+        +
+        <input class="num2-1" type="text">
+        <input class="num2-2" type="text">
+        =
+        <button>input</button>
+        <p>result</p>
+    </section>
+    <section class="section_four">
+        <input class="num1-1" type="text">
+        <input class="num1-2" type="text">
+        +
+        <input class="num2-1" type="text">
+        <input class="num2-2" type="text">
+        =
+        <button>input</button>
+        <p>result</p>
+    </section>
+</body>
+
+</html>
