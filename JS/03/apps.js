@@ -63,4 +63,5 @@ function calRealDate (allDate, absentDate) {
 }
 var realAttendDate = calRealDate (allDate, absentDate);
 if (realAttendDate < 80 ) { alert (realAttendDate + '% 출석하셨습니다. 80%를 넘겨야 지원금을 받으실수 있습니다. 화이팅!')}
+else if (realAttendDate = 80) { alert (realAttendDate + '% 출석하셨습니다. 딱 80%니까 더 출석해서 안정적으로 만들어봐요!')}
 else { alert (realAttendDate + '% 출석하셨습니다. 80%를 넘기셨습니다! 축하드려요!')}
