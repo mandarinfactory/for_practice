@@ -12,7 +12,7 @@ h2 {
 .color_firebrick {
     color: firebrick;
 }
-#color_orange {
+#color_orangered {
     color: orangered;
 }
 /* decendant가 parent 순위보다 높아서 h1이 darkblue로 색이 변경된것이다. */
