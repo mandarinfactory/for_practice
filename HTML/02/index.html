@@ -15,27 +15,48 @@
         <p>Cascading(순차적으로 내려오는, 폭포수의) Style-Sheet(CSS) => 우선순위가 적용되는 디자인 양식</p>
         <hr>
         <section>
-            <h2>우선순위</h2>
+            <h2 class="color_firebrick">CSS특징</h2>
             <ul>
-                <p>CSS특징</p>
                 <li>CSS 문법 작성법 : head element내에서 style 요소를 declare후 선택자(속성, 값)형태로 작성</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>inherit가 되는 attribute와 안되는 attribute가 있다.</li>
             </ul>
         </section>
         <section>
-            <h2>선택자</h2>
+            <h2>type선택자</h2>
+            <ul>
+                <li>tagname : {attribute:value;}</li>
+                <li>decendant 선택자가 우선순위가 높다.</li>
+                <li>class/id는 어떤 element보다 가장 우선순위가 높다.</li>
+                <li>동일한 element에 동일한 style만 가능하다.</li>
+            </ul>
         </section>
         <section>
-            <h2>class선택자</h2>
+            <h2 class="color_firebrick">class선택자</h2>
+            <ul>
+                <li>style element내에서 .classname{attribute:value} declare후, <br>
+                    html element내에서 class attribute를 호출
+                </li>
+                <li>class는 중복호출, 명명은 가능하지만, id는 한곳만 가능하다.(수정관리가 용이)</li>
+            </ul>
         </section>
         <section>
-            <h2>id선택자</h2>
+            <h2 id="color_orange">id선택자</h2>
+            <ul>
+                <li>style element내에서 #id{attribute:value} declare후, <br>
+                    html element내에서 id attribute를 호출
+                </li>
+                <li>id가 class보다 순위가 높다.</li>
+                <li>class와 달리 id는 중복호출, 명명이 불가하다.</li>
+            </ul>
         </section>
         <section>
             <h2>inline-style</h2>
+            <ul>
+                <li>html element의 style 속성을 추가하고 CSS양식으로 작성</li>
+                <li>webpage에 inline-style을 사용하지 않는것이 좋은편, 유지관리가 어렵다.</li>
+                <li>주로 JS ==> CSS로 이용할때 주로 쓰는편이다.</li>
+                <li>id, class보다 가장 상위의 우선순위를 가진다.</li>
+            </ul>
         </section>
     </main>
 </body>

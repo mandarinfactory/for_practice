@@ -1,7 +1,18 @@
 body {
     word-spacing: 3px;
     line-height: 23px;
+    color: dimgray;
 }
 h1 {
     color: darkblue;
 }
+h2 {
+    color: black;
+}
+.color_firebrick {
+    color: firebrick;
+}
+#color_orange {
+    color: orangered;
+}
+/* decendant가 parent 순위보다 높아서 h1이 darkblue로 색이 변경된것이다. */
