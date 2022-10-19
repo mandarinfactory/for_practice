@@ -57,9 +57,9 @@ var allDate = parseInt(prompt('write your all attend days'));
 var absentDate = parseInt(prompt('write your absent days'));
 
 function calRealDate (allDate, absentDate) {
-    var firstAttendDate = allDate - absentDate;
-    var secondAttendDate = parseInt(firstAttendDate / allDate * 100);
-    return secondAttendDate;
+    var attendDateFirst = allDate - absentDate;
+    var attendDateSecond = parseInt(attendDateFirst / allDate * 100);
+    return attendDateSecond;
 }
 var realAttendDate = calRealDate (allDate, absentDate);
 if (realAttendDate < 80 ) { alert (realAttendDate + '% 출석하셨습니다. 80%를 넘겨야 지원금을 받으실수 있습니다. 화이팅!')}
