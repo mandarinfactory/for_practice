@@ -1,0 +1,9 @@
+a {
+    text-decoration: none;
+    color: black;
+    transition: background-color 1s ease-in-out;
+}
+.chapters li a:hover{
+    color: white;
+    background-color: firebrick;
+}

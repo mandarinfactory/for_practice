@@ -19,3 +19,14 @@ var d = b - (c * d);
 console.log(d);
 
 console.log(b % c);
+
+function sum(a, b){
+    return a + b; // a와 b가 number인지, string인지 확인해야한다.
+}
+function getType(target) {
+    return Object.prototype.toString.call(target).slice(8, -1)
+}
+var obj = new Object();
+obj.toString(); // toString은 string을 반환하는 object의 대표적인 방법이다.
+// Object.prototype.toString method는 object를 나타내는 string을 반환한다. //
+Object.prototype.toString.call('');

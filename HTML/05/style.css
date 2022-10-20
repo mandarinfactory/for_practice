@@ -1,0 +1,26 @@
+.ex_two i + *{
+    color: aquamarine;
+}
+/* +는 바로 옆에 있는 sibiling element만 해당된다. *를 쓰더라도! */
+.ex_two b ~ *{
+    font-weight: bolder;
+} 
+/* ~ sibling element전부를 말한다. */
+.ex_two b ~ small {
+    font-style: italic;
+}
+.ex_three :first-child {
+    font-style: italic;
+    color: yellow;
+}
+.ex_four b:first-of-type {
+    color: darkblue;
+}
+/* first-child는 문자그대로 첫번째 child element(<i>)를 말하는거고 of-type은 해당 tag중(<b>)에 first를 말한다. */
+
+.ex_five :last-child {
+    color: firebrick;
+}
+.ex_six :last-of-type{
+    color: chocolate;
+}
