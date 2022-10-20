@@ -7,15 +7,15 @@ a {
     transition: background-color 1s;
 }
 .list_anchor :nth-child(4) a:hover{
-    background-color: rgb(5, 44, 5);
+    background-color: yellowgreen;
     color: white;
 }
 .list_anchor :nth-child(5) a:hover{
-    background-color: rgb(7, 12, 77);
+    background-color: darkblue;
     color: white;
 }
 .list_anchor :last-child a:hover{
-    background-color: rgb(64, 65, 4);
+    background-color: olive;
     color: white;
 }
 /* (:)pseudo-class(가상class) --> (hover: mouse로 해당value를 만질때 이루어진다.) --> 우선순위가 높다. */
