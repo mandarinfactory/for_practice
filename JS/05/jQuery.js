@@ -32,8 +32,8 @@ $(document).ready(function () { // call-back function! => 이 내부에서만 �
         var selectPrice = parseInt($('.ex_five select').val())
         var selectColor = parseInt($('.ex_five input:checked').val())
         var submitQuan = $('.ex_five .input_quan').val()
-        var resultPrice = (selectPrice + selectColor) * submitQuan;
-        $('.ex_five p').text(resultPrice + '원 입니다. 빠른 구매 부탁드립니다.')
+        var totalPrice = (selectPrice + selectColor) * submitQuan;
+        $('.ex_five p').text(totalPrice + '원 입니다. 빠른 구매 부탁드립니다.')
     })
     // 항상 function등을 적을때 사전에 주석으로 정리를 해놓고 만들자! //
 })
