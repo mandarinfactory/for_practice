@@ -22,6 +22,8 @@ $(document).ready(function () { // call-back function! => 이 내부에서만 �
         var secondOne = parseInt($(`.ex_seven .para_${numX} .number_two`).val())
         var totalOne = firstOne + secondOne
         $(`.ex_seven .para_${numX} b`).text(totalOne)
+        return totalOne
+        // function을 종료하고 다시 호출지점으로 반환시키는게 return이다. //
     }
 
     $('.ex_one button').click(function () {
@@ -47,11 +49,29 @@ $(document).ready(function () { // call-back function! => 이 내부에서만 �
       checkTotalPrice('six')
     })
     $('.ex_seven button').click(function () {
-        easyAddOne('one')
-        easyAddOne('two')
-        easyAddOne('three')
-        easyAddOne('four')
-        easyAddOne('five')
+        var sumOne = easyAddOne('one')
+        var sumTwo = easyAddOne('two')
+        var sumThree = easyAddOne('three')
+        var sumFour = easyAddOne('four')
+        var sumFive = easyAddOne('five')
+        var sumResult = sumOne + sumTwo + sumThree + sumFour + sumFive
+        $('.ex_seven .output').text(sumResult)
     })
-    // 항상 function등을 적을때 사전에 주석으로 정리를 해놓고 만들자! //
+    function anCheckTotalPrice (numX) {
+        var selectPrice = parseInt($(`.ex_eight .div_${numX} select`).val())
+        var selectColor = parseInt($(`.ex_eight .div_${numX} input:checked`).val())
+        var submitQuan = $(`.ex_eight .div_${numX} .input_quan`).val()
+        var totalPrice = (selectPrice + selectColor) * submitQuan;
+        $(`.ex_eight .div_${numX} p`).text(totalPrice + '원 입니다. 빠른 구매 부탁드립니다.')
+        return totalPrice
+    }
+    $('.ex_eight button').click(function () {
+        var totalPriceOne = anCheckTotalPrice('one')
+        var totalPriceTwo = anCheckTotalPrice('two')
+        var totalPriceThree = anCheckTotalPrice('three')
+        var totalPrice = totalPriceOne + totalPriceTwo + totalPriceThree
+        $('.ex_eight .output_para').text('총' + totalPrice + '원 입니다. 확인 후 구매 부탁드립니다.')
+    })
 })
+// 항상 function등을 적을때 사전에 주석으로 정리를 해놓고 만들자! //
+//jQuery는 항상 $(document).ready내에서 function을 생성해야한다!(call-back function) //
