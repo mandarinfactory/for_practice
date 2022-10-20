@@ -17,6 +17,12 @@ $(document).ready(function () { // call-back function! => 이 내부에서만 �
         var totalPrice = (selectPrice + selectColor) * submitQuan;
         $(`.ex_${numX} p`).text(totalPrice + '원 입니다. 빠른 구매 부탁드립니다.')
     }
+    function easyAddOne (numX) {
+        var firstOne = parseInt($(`.ex_seven .para_${numX} .number_one`).val())
+        var secondOne = parseInt($(`.ex_seven .para_${numX} .number_two`).val())
+        var totalOne = firstOne + secondOne
+        $(`.ex_seven .para_${numX} b`).text(totalOne)
+    }
 
     $('.ex_one button').click(function () {
         clickAddNum('one');
@@ -33,13 +39,19 @@ $(document).ready(function () { // call-back function! => 이 내부에서만 �
         var selectVal = $('.ex_four select').val()
         // select의 value값이 있어야 가능하다.
         console.log(selectVal);
-
     })
     $('.ex_five button').click(function () {
       checkTotalPrice('five')
     })
     $('.ex_six button').click(function () {
       checkTotalPrice('six')
+    })
+    $('.ex_seven button').click(function () {
+        easyAddOne('one')
+        easyAddOne('two')
+        easyAddOne('three')
+        easyAddOne('four')
+        easyAddOne('five')
     })
     // 항상 function등을 적을때 사전에 주석으로 정리를 해놓고 만들자! //
 })
