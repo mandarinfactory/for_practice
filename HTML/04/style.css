@@ -1,0 +1,23 @@
+body {
+    line-height: 25px;
+}
+a {
+    color: black;
+    text-decoration: none;
+    transition: background-color 1s;
+}
+.list_anchor :nth-child(4) a:hover{
+    background-color: rgb(5, 44, 5);
+    color: white;
+}
+.list_anchor :nth-child(5) a:hover{
+    background-color: rgb(7, 12, 77);
+    color: white;
+}
+.list_anchor :last-child a:hover{
+    background-color: rgb(64, 65, 4);
+    color: white;
+}
+/* (:)pseudo-class(가상class) --> (hover: mouse로 해당value를 만질때 이루어진다.) --> 우선순위가 높다. */
+/* UI(User Interface) : 화면구성을 이용해서 user가 webbrowser를 이용하게 해주는것 */
+/* UX(User Experience) : user의 경험을 바탕으로 UI를 만들게 해준다. --> 직접적으로 user들의 선호도나 취향을 보다 많이 알 수 있다. */
