@@ -10,6 +10,13 @@ $(document).ready(function () { // call-back function! => 이 내부에서만 �
         $(`.ex_${numX} p`).text(resultNum);
         // .text&html로 p element의 값을 변경(result => resultNum)한다.//
     }
+    function checkTotalPrice (numX) {
+        var selectPrice = parseInt($(`.ex_${numX} select`).val())
+        var selectColor = parseInt($(`.ex_${numX} input:checked`).val())
+        var submitQuan = $(`.ex_${numX} .input_quan`).val()
+        var totalPrice = (selectPrice + selectColor) * submitQuan;
+        $(`.ex_${numX} p`).text(totalPrice + '원 입니다. 빠른 구매 부탁드립니다.')
+    }
 
     $('.ex_one button').click(function () {
         clickAddNum('one');
@@ -29,11 +36,10 @@ $(document).ready(function () { // call-back function! => 이 내부에서만 �
 
     })
     $('.ex_five button').click(function () {
-        var selectPrice = parseInt($('.ex_five select').val())
-        var selectColor = parseInt($('.ex_five input:checked').val())
-        var submitQuan = $('.ex_five .input_quan').val()
-        var totalPrice = (selectPrice + selectColor) * submitQuan;
-        $('.ex_five p').text(totalPrice + '원 입니다. 빠른 구매 부탁드립니다.')
+      checkTotalPrice('five')
+    })
+    $('.ex_six button').click(function () {
+      checkTotalPrice('six')
     })
     // 항상 function등을 적을때 사전에 주석으로 정리를 해놓고 만들자! //
 })
