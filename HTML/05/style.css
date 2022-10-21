@@ -36,3 +36,34 @@
     color: blueviolet;
     font-weight: 600;
 }
+.ex_ten :not(.span_one) {
+    color: indianred;
+    font-weight: 600;
+}
+.ex_eleven a[href]{
+    background-color: grey;
+    text-decoration: none;
+    color: deepskyblue;
+    font-weight: 600;
+}
+.ex_eleven a[href='#']{
+    text-decoration: none;
+    color:rgb(22, 54, 22);
+    font-style: italic;
+}
+.ex_eleven a[href^='http']{
+    text-decoration: none;
+    color:darkmagenta;
+}
+.ex_eleven a[href$='ml']{
+    text-decoration: none;
+    color:goldenrod;
+}
+.ex_eleven a[href*='ave']{
+    text-decoration: none;
+    color:greenyellow;
+}
+
+/* ^는 해당값으로 시작되는 element를 말한다. $는 해당값으로 끝나는 element를 말한다. *는 해당값이 element에 있는걸 말한다. */
+/* [] => attribute를 이용하는것 */
+/* pseudo-class는 중복으로 들어가면 안된다. span:first-child(.a:nth-child)이런식으로는 적용이 안됨. */
