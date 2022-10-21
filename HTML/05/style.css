@@ -21,6 +21,18 @@
 .ex_five :last-child {
     color: firebrick;
 }
-.ex_six :last-of-type{
+.ex_six :last-of-type {
     color: chocolate;
+}
+.ex_seven span:nth-child(2) {
+    color: darkcyan;
+    font-weight: 600;
+}
+.ex_eight :nth-of-type(3) {
+    color: lightpink;
+    font-weight: 600;
+}
+.ex_nine :nth-last-child(2) {
+    color: blueviolet;
+    font-weight: 600;
 }

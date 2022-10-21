@@ -19,7 +19,8 @@
             <small>small</small>
         </div>
 
-        <h2>첫번째요소선택자</h2>
+        <h2>첫번째요소선택자 : first-child</h2>
+        <!-- 무조건 child의 첫번째 child를 찾는다. -->
         <div class="ex_three">
             <i>italic</i>
             <b>bold</b>
@@ -28,7 +29,8 @@
             <b>bold</b>
         </div>
 
-        <h2>첫번째타입선택자</h2>
+        <h2>첫번째타입선택자 : first-of-type</h2>
+        <!-- 첫번째 type을 찾는다(div, a등) -->
         <div class="ex_four">
             <i>italic</i>
             <b>bold</b>
@@ -38,6 +40,7 @@
         </div>
 
         <h2>마지막요소선택자 : last-child</h2>
+        <!-- 무조건 child의 마지막 child를 찾는다. -->
         <div class="ex_five">
             <i>italic</i>
             <b>bold</b>
@@ -47,6 +50,7 @@
         </div>
 
         <h2>마지막타입선택자 : last-of-type</h2>
+        <!-- 마지막 type을 찾는다(div, a등) -->
         <div class="ex_six">
             <i>italic</i>
             <b>bold</b>
@@ -54,6 +58,52 @@
             <b>bold</b>
             <b>bold</b>
         </div>
+
+        <h2>n번째요소선택자 : nth-child(n)</h2>
+        <!-- n번째 child element를 찾는다. -->
+        <div class="ex_seven">
+            <span>nothing</span>
+            <span>nothing</span>
+            <span>nothing</span>
+            <span>nothing</span>
+        </div>
+
+        <h2>n번째타입선택자 : nth-of-type(n)</h2>
+        <div class="ex_eight">
+            <span>lalalalala</span>
+            <span>lalalalala</span>
+            <span>lalalalala</span>
+            <div>lalalalala</div>
+            <div>lalalalala</div>
+            <div>lalalalala</div>
+            <div>lalalalala</div>
+            <span>lalalalala</span>
+        </div>
+
+        <h2>n번째후위선택자 : nth-last-child(n)</h2>
+        <div class="ex_nine">
+            <span>lalalalala</span>
+            <span>lalalalala</span>
+            <span>lalalalala</span>
+            <div>lalalalala</div>
+            <div>lalalalala</div>
+            <div>lalalalala</div>
+            <div>lalalalala</div>
+            <span>lalalalala</span>
+        </div>
+
+        <ul>
+            <h1>선택자용어정리</h1>
+            <li>decendant, child element(parent>child)</li>
+            <li>전체 = *</li>
+            <li>전체형제 = ~, 인접형제 = +</li>
+            <li>first-child/-of-type</li>
+            <li>last-child/-of-type</li>
+            <li>nth-child(n)/of-type(n)</li>
+            <li>nth-last-child(n)/-of-type(n)</li>
+            <li>even(짝수), odd(홀수)</li>
+            <li>Xn + Y = (간격n+시작번호)</li>
+        </ul>
     </main>
 </body>
 
