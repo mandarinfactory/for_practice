@@ -30,3 +30,66 @@ body {
 .section_two .section_two_one a:hover {
     background-image: url(../06/IMG/facebook_over.png);
 }
+section div {
+    width: 200px;
+    height: 200px;
+    border: 7px solid black;
+}
+.section_two .section_two_two div {
+    background-image: url(../06/IMG/bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* -position은 항상 X축, Y축순으로 순서대로 적어야한다. */
+}
+.section_two .section_two_three div {
+    background-color: yellow;
+    background-image: url(../06/IMG/bg2.jpg);
+    background-repeat: repeat-y;
+    background-position: right;
+}
+.section_two .section_two_four div {
+    background-image: url(../06/IMG/wallpapersden.com_artistic-building-pixel-art_2245x1225.jpg);
+    background-color: darkgray;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section_two .section_two_five a {
+    display: inline-block;
+    background-image: url(../06/IMG/spriteimg.jpg);
+    width: 50px;
+    height: 50px;
+}
+.a_one:hover {
+    background-position: -50px 0;
+}
+.a_two {
+    background-position: -100px 0;
+}
+.a_two:hover {
+    background-position: -150px 0;
+}
+.a_three {
+    background-position: 0 -50px;
+}
+.a_three:hover {
+    background-position: -50px -50px;
+}
+.a_four {
+    background-position: -100px -50px;
+}
+.a_four:hover {
+    background-position: -150px -50px;
+}
+.a_five {
+    background-position: 0 -100px;
+}
+.a_five:hover {
+    background-position: -50px -100px;
+}
+.a_six {
+    background-position: -100px -100px;
+}
+.a_six:hover {
+    background-position: -150px -100px;
+}
