@@ -1,6 +1,32 @@
 body {
     background-color: cornflowerblue;
+    line-height: 30px;
 }
-.section_one img {
-        
+.section_one > img {
+    width: 200px;
+    height: 200px;
+    /* img의 ratio를 맞춰야한다. => 일단 width/height를 맞춰놓으면 browser에서 자동적으로 맞춰준다.(안되는file도 있음. 그런건 따로 비레식으로 게산할것.) */
+}
+.section_one .pixel_art {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    /* cover는 해당 크기에 딱 맞춰서 img를 확대하고, contain은 해당크기에 img의 크기를 맞춘다. */
+    /* object-fit : img, video 같은 element의 크기를 어떤 방식으로 조절해 element에 맞출 것인지 지정해준다. */
+    /* object-position : x축, y축순으로 기재한다.(right/center/left top/center/bottom 또는 pixel이나 %로도 지정할수 있다. */
+}
+.section_one .google_img {
+    width: 100px;
+    height: 100px;
+}
+.section_two .section_two_one a{
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-image: url(../06/IMG/facebook.jpg);
+    transition: background-image 1s;
+}
+.section_two .section_two_one a:hover {
+    background-image: url(../06/IMG/facebook_over.png);
 }

@@ -17,15 +17,33 @@
             <h2>img-element</h2>
             <ul>
                 <li>img element는 alt attribute를 이용해 접근성과 표준성을 준수해야 한다.</li>
-                <li></li>
-                <li></li>
+                <li>img element의 크기는 width, height중 하나만 지정하면 비율(ratio)을 유지할 수 있다. 다만, 아닌 file도 있으므로 해당 file은 비례식으로 구하면
+                    된다.(원본 width, height보다 더 크게 하면 img pixel이 깨져버린다.)</li>
+                <li>img element의 width와 height를 지정해야할 경우 반드시 object-fit을 지정해야함.</li>
+                <li>object-fit : img, video 같은 element의 크기를 어떤 방식으로 조절해 element에 맞출 것인지 지정해준다.</li>
+                <li>object-position : x축, y축순으로 기재한다.(right/center/left top/center/bottom 또는 pixel이나 %로도 지정할수 있다.</li>
+                <li>cover는 여백없이 크기에 맞춰 채워주는것, contain은 크기에 맞춰 img를 줄여서 넣는다.(위아래 letterbox가 생긴다.)</li>
             </ul>
-            <img src="IMG/a8b432195a0f6f207b4e561a1fa199657154249a3890514a43687a85e6b6cc82.png" alt="오둥이커엽" />
+            <img class="cutty_duck" src="IMG/a8b432195a0f6f207b4e561a1fa199657154249a3890514a43687a85e6b6cc82.png"
+                alt="오둥이커엽" />
+            <img class="pixel_art" src="IMG/wallpapersden.com_artistic-building-pixel-art_2245x1225.jpg"
+                alt="pixel_art" />
             <!-- alternate(alt,대체문자) : 보조적인, 대체할수 있는 attribute(web-accessiblilty를 위해서 만들어둔 장치이다.) -->
+            <a href="http://www.google.com"><img class="google_img"
+                    src="IMG/png-transparent-google-logo-computer-icons-google-text-logo-google-logo-thumbnail.png"
+                    alt="google" /></a>
         </section>
         <hr>
         <section class="section_two">
             <h2>background</h2>
+            <section class="section_two_one">
+                <h3>background를 이용한 roll-over effect 구현</h3>
+                <ul>
+                    <li>backgound:url(경로);</li>
+                    <li>background-image:url(old-fashioned => color, image둘다를 못넣는다.);</li>
+                </ul>
+                <a href="http://www.facebook.com"></a>
+            </section>
         </section>
         <hr>
     </main>
