@@ -44,13 +44,25 @@
             <ul>
                 <li>text의 수평, 수직정렬은 parent가 정한다.</li>
                 <li>CSS2에서 text의 수직정렬은 어려웠다. (변칙적으로 한줄일 경우에만 line-height를 이용한다.)</li>
-                <li></li>
+                <li>inline element간의 수직정렬은 vertical-align(top, middle, bottom)을 사용한다.</li>
+                <li>block-level element는 margin을 이용해서 자체적으로 움직인다.</li>
+                <li>auto는 수평값(block-level / position, float가 적용되지 않았을때)에만 쓰인다. y축에는 auto가 사용되지 않는다.</li>
             </ul>
             <hr>
             <div class="ex_one">
                 <span>ONE</span>
                 <span>TWO</span>
                 <span>THREE</span>
+            </div>
+            <hr>
+            <div class="ex_two">
+                FOUR
+            </div>
+            <hr>
+            <div class="ex_three">
+                <span>01</span>
+                <span>02</span>
+                <span>03</span>
             </div>
         </section>
     </main>

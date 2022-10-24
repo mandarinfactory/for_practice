@@ -26,7 +26,7 @@ h2 {
 /* display : block을 사용해서 임의로 inline element가 크기를 가지게 변환할 수 있다. */
 /* inline-block은 inline와 block둘 다 가능하게 해준다. 크기를 가지지만, inline 속성도 있다.(요즘에는 주로 쓰지 않음.) */
 .section_two .ex_one {
-    width: 400px;
+    width: 310px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -39,7 +39,7 @@ h2 {
     font-weight: 700;
     background-color: midnightblue;
     color: white;
-    border: 5px solid black;
+    border-radius: 10%;
 }
 .section_two .ex_one span:nth-child(1) {
     height: 150px;
@@ -49,4 +49,44 @@ h2 {
 }
 .section_two .ex_one span:nth-child(3) {
     height: 50px;
+}
+.ex_two {
+    width: 300px;
+    height: 30px;
+    margin: 0 auto; 
+    /* margin : 4개 각각적으면 시계방향, 2개를 적으면 상하 좌우, 1개만 적으면 모든곳을 뜻한다. */
+    /* margin-top, bottom, right, left로도 쓸 수 있다. */
+    text-align: center;
+    background-color:bisque;
+    font-weight: 800;
+    border-radius: 10px;
+}
+.ex_three {
+    width: 500px;
+    height: 120px;
+    margin: 0 auto;
+    text-align: end;
+    background-color:aliceblue;
+    line-height: 50px;
+}
+.ex_three span {
+    width: 50px;
+    height: 50px;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+.ex_three span:first-child {
+    display: block;
+    margin-left: auto;
+    background-color: orange;
+}
+.ex_three span:nth-child(2) {
+    display: inline-block;
+    background-color: orangered;
+}
+.ex_three span:last-child {
+    display: inline-block;
+    background-color: yellow;
 }
