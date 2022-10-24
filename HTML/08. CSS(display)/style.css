@@ -1,0 +1,52 @@
+body {
+    line-height: 30px;
+}
+h1 {
+    background-color: steelblue;
+    color: white;
+    width: 400px;
+    height: 35px;
+    text-align: center;
+}
+h2 {
+    background-color: cadetblue;
+    color: white;
+    width: 160px;
+    height: 30px;
+    text-align: center;
+}
+.section_one .ex_one a {
+    display: inline-block;
+    width: 400px;
+    height: 30px;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+}
+/* display : block을 사용해서 임의로 inline element가 크기를 가지게 변환할 수 있다. */
+/* inline-block은 inline와 block둘 다 가능하게 해준다. 크기를 가지지만, inline 속성도 있다.(요즘에는 주로 쓰지 않음.) */
+.section_two .ex_one {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.section_two .ex_one span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    text-align: center;
+    font-weight: 700;
+    background-color: midnightblue;
+    color: white;
+    border: 5px solid black;
+}
+.section_two .ex_one span:nth-child(1) {
+    height: 150px;
+}
+.section_two .ex_one span:nth-child(2) {
+    height: 100px;
+}
+.section_two .ex_one span:nth-child(3) {
+    height: 50px;
+}
