@@ -10,7 +10,41 @@
 </head>
 
 <body>
-
+    <main>
+        <h1>table을 이용한 자료식 표현</h1>
+        <section>
+            <h2>table element의 특징과 주의사항</h2>
+            <ul>
+                <li>줄(tr)의 td(칸,=cell)의 갯수는 동일해야한다.</li>
+                <li>cell의 병합(colspan, rowspan)</li>
+            </ul>
+        </section>
+        <hr>
+        <table>
+            <tr>
+                <td colspan="2">1</td>
+                <!--<td>2</td> -->
+                <td rowspan="2">3</td>
+            </tr>
+            <tr>
+                <td rowspan="2">4</td>
+                <td>5</td>
+                <!-- <td>6</td> -->
+            </tr>
+            <tr>
+                <!--<td>7</td> -->
+                <!-- <td>8</td> -->
+                <td colspan="2">9</td>
+            </tr>
+        </table>
+    </main>
+    <!-- table(자료식),td, tr, colspan, rowspan -->
+    <!-- table내 tr, tr안에 td가 들어간다. -->
+    <!-- column은 세로이므로, colspan은 정보를 세로로 읽고 싶을때 사용한다. -->
+    <!-- 따라서 그 결과 가로방향(=>)으로 cell이 합쳐지게 된다. -->
+    <!-- row는 가로이므로, rowspan은 정보를 가로로 읽고 싶을때 사용한다. -->
+    <!-- 따라서 colspan이랑 다르게 세로 방향으로 cell이 합치게 된다. -->
+    <!-- 둘다 기준을 합치려고 하는 cell기준으로 attribute로 쓰면 된다. -->
 </body>
 
 </html>
