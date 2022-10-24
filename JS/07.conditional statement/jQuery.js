@@ -57,8 +57,3 @@ $('.ex_five button').click(function () {
     // comparsion operator
     - >, <, >=, <= , ===, !==, &&, !(=false) 
     */
-
-   /* assignment
-   // 입력한 숫자를 1로 나눈 나머지가 소수점만 남는다는것 = 1보다 작다.
-   // 숫자는 1로 나눈 나머지가 0이여야 한다.
-    */
