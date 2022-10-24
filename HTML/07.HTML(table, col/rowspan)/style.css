@@ -3,7 +3,7 @@ body {
 }
 table {
     border-collapse: collapse;
-    /* table에만 쓰는 전용attribute이다.(나눠진 td를 합쳐줌) */
+    /* table에만 쓰는 전용attribute(border-collapse)이다.(나눠진 td를 합쳐줌) */
     width: 200px;
     height: 200px;
     text-align: center;
