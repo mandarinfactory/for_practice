@@ -44,7 +44,26 @@ $(function(){
     $('.ex_three button').click(function () {
         var firstNumber = parseFloat($('.ex_three input').val())
         $('.ex_three .para_result').html(oneFiveEightNumber(firstNumber))
-    })//click    
+    })//click
+
+    $('.ex_four button').click(function () {
+        var score = parseFloat($('.ex_four .input_score').val())
+        var age = parseInt($('.ex_four .input_age').val())
+        var scoreResult
+        console.log(age);
+        if ((age >= 20 && score >= 90) || (age < 20 && score >= 80)) {
+            scoreResult = 'A'
+        } else if ((age >= 20 && (score >= 80 && score < 70)) || (age < 20 && (score >= 70 && score < 60))) { 
+            scoreResult = 'B'
+        } else if ((age >= 20 && (score >= 70 && score < 80)) || (age < 20 &&(score >= 60 && score < 70))) { 
+            scoreResult = 'C'
+        } else if ((age >= 20 && (score >= 60 && score < 70)) || (age < 20 && (score >= 50 && score < 60))) {
+            scoreResult = 'D'
+        } else {
+            scoreResult = 'E'
+        }
+        $('.ex_four .para_result').html(scoreResult)
+    })//click
 })//document.ready call-back function
 
 /*  boolean : true, false 딱 두개만 있다.(string이 아님!)
