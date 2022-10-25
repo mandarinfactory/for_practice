@@ -33,20 +33,18 @@ $(function(){
     })//click
 
     function oneFiveEightNumber (firstNumber) {
-        var theresultNumber
+        var theResultNumber
         if(firstNumber === 1 || firstNumber === 5 || firstNumber === 8) {
-            theresultNumber = '감사합니다!'
+            theResultNumber = `${firstNumber} 맞음!`
         } else {
-            theresultNumber = '틀렸습니다!'
+            theResultNumber = `${firstNumber} 틀림!`
         }
-        return theresultNumber
+        return theResultNumber
     }
     $('.ex_three button').click(function () {
         var firstNumber = parseFloat($('.ex_three input').val())
-        $('.ex_three .para_result').text(oneFiveEightNumber(firstNumber))
-    })//click
-
-    
+        $('.ex_three .para_result').html(oneFiveEightNumber(firstNumber))
+    })//click    
 })//document.ready call-back function
 
 /*  boolean : true, false 딱 두개만 있다.(string이 아님!)
