@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>semantic table</h1>
+        <hr>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <hr>
+        <table class="table_one">
+            <caption>국가이름</caption>
+            <!-- table내에서 h1기능을 한다.(caption) -->
+            <thead>
+                <tr>
+                    <th scope="col">번호</th> <!-- field name(th) -->
+                    <th scope="col">국가명</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td> <!-- field value -->
+                    <td>영국</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>프랑스</td>
+                </tr>
+            </tbody> <!-- tbody는 필수로 묶어줘야하고 thead는 필수사항은 아니나 권장사항이다. -->
+            <tfoot>
+                <tr>
+                    <td colspan="2">2022-10-25</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+</body>
+
+</html>

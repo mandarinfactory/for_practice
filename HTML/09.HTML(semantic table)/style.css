@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+}
+td,th {
+    border: 5px solid midnightblue;
+}
+.table_one {
+    width: 300px;
+    margin: 0 auto;
+}
+.table_one td:first-child{
+    width: 50px; /* inline, block도 아닌 table-cell이라서 width, height를 가진다. */
+    height: 40px;
+    text-align: center;
+}
+.table_one tfoot td:first-child{
+    text-align: right;
+} /* parent 선택자를 붙인 attribute가 우선적으로 표현된다. */
+/* 후순위에 적은 attribute가 최종적으로 표현된다. */
