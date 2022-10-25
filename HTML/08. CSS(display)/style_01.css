@@ -1,0 +1,73 @@
+.ex_one {
+    text-align: right;
+}
+.ex_one span {
+    display: inline-block;
+    width: 100px;
+    background-color: tomato;
+    text-align: center;
+    vertical-align: bottom; /* 각각의 element내에서 세로축을 기준으로 정렬하는것 */
+    font-size: 20px;
+    font-weight: 600;
+    border: 3px solid black;
+}
+.ex_one span:first-child {
+    height: 150px;
+    line-height: 150px;
+}
+.ex_one span:nth-child(2) {
+    height: 100px;
+    line-height: 100px;
+}
+.ex_one span:last-child {
+    height: 50px;
+    line-height: 50px;
+}
+
+.ex_two {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 200px;
+}
+.ex_two span{
+    display: inline-block; 
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border: 3px solid black;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 700;
+    font-size: 20px;
+    /* line-height는 안에 있는 'FOUR'에 inherit되므로 따로 span에서 직접적으로 line-height를 해야 200px은 span이 100px은 text가 받도록 해야한다. */
+}
+.ex_three {
+    width: 300px;
+    height: 200px;
+    background-color: yellow;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 200px;
+}
+.ex_three span {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    vertical-align: center;
+    background-color: red;
+    border: 3px solid black;
+    font-size: 20px;
+    font-weight: 600;
+}
+.ex_three span:first-child {
+    height: 100px;
+    line-height: 100px;
+}
+.ex_three span:last-child {
+    height: 50px;
+    line-height: 50px;
+}
