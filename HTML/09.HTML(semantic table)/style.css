@@ -2,7 +2,11 @@ table {
     border-collapse: collapse;
 }
 td,th {
-    border: 5px solid midnightblue;
+    border: 1px solid black;
+}
+caption {
+    font-size: 18px;
+    font-weight: 700;
 }
 .table_one {
     width: 300px;
@@ -17,3 +21,17 @@ td,th {
     text-align: right;
 } /* parent 선택자를 붙인 attribute가 우선적으로 표현된다. */
 /* 후순위에 적은 attribute가 최종적으로 표현된다. */
+.table_two {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+}
+.table_two thead {
+    background-color: #999;
+}
+.table_two tbody th {
+    background-color: #EEE;
+}
+.table_two tbody td {
+    text-align: center;
+}

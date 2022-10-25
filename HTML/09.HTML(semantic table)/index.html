@@ -14,9 +14,13 @@
         <h1>semantic table</h1>
         <hr>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>caption : table element의 제목</li>
+            <li>th : field name을 정의</li>
+            <li>td : data value</li>
+            <li>scope : th, td의 읽는 방향을 정의(column, row)</li>
+            <li>thead : th의 범위(권고요소)</li>
+            <li>tbody : td의 범위(필수요소)</li>
+            <li>tfoot : table의 보조요소</li>
         </ul>
         <hr>
         <table class="table_one">
@@ -44,6 +48,38 @@
                     <td colspan="2">2022-10-25</td>
                 </tr>
             </tfoot>
+        </table>
+        <hr>
+        <table class="table_two">
+            <caption>device별 월간판매량</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2" scope="colgroup">구분</th>
+                    <th colspan="3" scope="colgroup">상품종류</th>
+                    <!--     <td>3</td>
+                    <td>4</td> -->
+                </tr>
+                <tr>
+                    <!--           <td>1</td> -->
+                    <th scope="col">스마트폰</th>
+                    <th scope="col">타블렛</th>
+                    <th scope="col">랩탑</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1월</th>
+                    <td>50대</td>
+                    <td>90대</td>
+                    <td>105대</td>
+                </tr>
+                <tr>
+                    <th scope="row">2월</th>
+                    <td>20대</td>
+                    <td>300대</td>
+                    <td>45대</td>
+                </tr>
+            </tbody>
         </table>
     </main>
 </body>
