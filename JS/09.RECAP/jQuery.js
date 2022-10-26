@@ -16,7 +16,7 @@ $(function () {
      if (randomNum === 1) randomNum = '가위' 
      else if (randomNum === 2) randomNum = '바위'
      else randomNum = '보'
-    
+
     var resultGame 
     if ((theResult === '가위' && randomNum === '보') || (theResult === '바위' && randomNum === '가위') || (theResult === '보' && randomNum === '바위')) 
     resultGame = '유저 승'
@@ -39,30 +39,43 @@ $('.ex_one button').click(function () {
     $('.ex_one .para_result').text(`사용자 : ${resultGame.objUser}, 컴퓨터 : ${resultGame.objComputer}, 결과 : ${resultGame.objResult}`)
     })//click
 
-
+function searchGrade (korScore, engScore, mathScore) {
+    var korScore = parseFloat(korScore);
+    var engScore = parseFloat(engScore);
+    var mathScore = parseFloat(mathScore);
+    var totalScore = korScore + engScore + mathScore;
+    var averageScore = (totalScore / 3).toFixed(2); // 소수점 2자리까지 끊어서 return해주는 function
+    var scoreToGrade
+    if(isNaN(averageScore)){
+        alert('숫자로 적어주시기 바랍니다!')
+        return false
+    }
+    if (averageScore > 100 || averageScore < 0) {
+        alert('0-100점 사이만 입력해주시기 바랍니다!')
+        return false
+    } // 유효성검사(validation)는 else if로 묶기보단 따로 if로 적어준다.
+    /* 등급구하기 */
+    if(averageScore >= 90){
+        scoreToGrade = 'A'
+    } else if (averageScore < 90 && averageScore >= 80) {
+        scoreToGrade = 'B'
+    } else {
+        scoreToGrade = 'C'
+    }
+    var anotherObj = {
+        total : totalScore,
+        average : averageScore,
+        grade : scoreToGrade,
+    }
+    return anotherObj;
+}
 
     $('.ex_two button').click(function () {
-        var korScore = parseFloat($('.ex_two .korean').val())  
-        var engScore = parseFloat($('.ex_two .english').val())  
-        var mathScore = parseFloat($('.ex_two .math').val())  
-        var totalScore = korScore + engScore + mathScore;
-        var averageScore = (totalScore / 3).toFixed(2); // 소수점 2자리까지 끊어서 return해주는 function
-        var scoreToGrade
-        if(isNaN(averageScore)){
-            alert('숫자로 적어주시기 바랍니다!')
-            return false}
-        if (averageScore > 100 || averageScore < 0) {
-            alert('0-100점 사이만 입력해주시기 바랍니다!')
-            return false
-        } // 유효성검사(validation)는 else if로 묶기보단 따로 if로 적어준다.
-        /* 등급구하기 */
-        if(averageScore >= 90){
-            scoreToGrade = 'A'
-        } else if (averageScore < 90 && averageScore >= 80) {
-            scoreToGrade = 'B'
-        } else {
-            scoreToGrade = 'C'
-        }
-        console.log(scoreToGrade)
-    })
+        var korScore = $('.ex_two .korean').val()
+        var engScore = $('.ex_two .english').val()
+        var mathScore = $('.ex_two .math').val()
+        var resultScore = searchGrade(korScore, engScore, mathScore);
+        if(!resultScore) return false
+        $('.ex_two .para_result').text(`총점:${resultScore.total}점 평균:${resultScore.average}점 ${resultScore.grade}학점입니다! 축하드립니다!`)
+    })//click
 })//call-back function!!
