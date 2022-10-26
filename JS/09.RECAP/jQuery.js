@@ -102,6 +102,6 @@ function searchGrade (korScore, engScore, mathScore) {
         } else {
             alertBMI = '귀하는 비만인 체중입니다.'
         }
-    $('.ex_three .para_result').text(alertBMI)
+    $('.ex_three .para_result').text(`${alertBMI} 확인 후 자세한 상담은 전화로 부탁드립니다.`)
     })//click
 })//call-back function!!
