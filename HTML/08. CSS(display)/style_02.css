@@ -1,0 +1,51 @@
+span {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: orange;
+    font-weight: 600;
+    border: 3px solid black;
+}
+div {
+    background-color:orangered;
+}
+.ex_one {
+    width: 500px;
+    margin: 0 auto;
+}
+.ex_one span {
+    display: block;
+    margin-left: auto;
+
+}
+.ex_two {
+    text-align: end;
+}
+.ex_two span {
+    display: inline-block;
+}
+.ex_three {
+    text-align: center;
+}
+.ex_three span{
+    display: inline-block;
+}
+.ex_four span{
+    display: block;
+}
+.ex_four span:first-child {
+    margin: 0 auto;
+}
+.ex_four span:last-child {
+    margin-left: auto;
+}
+.ex_five span {
+    display: block;
+}
+.ex_five span:nth-child(odd) {
+    margin-right: auto;
+}
+.ex_five span:nth-child(even) {
+    margin-left: auto;
+}
