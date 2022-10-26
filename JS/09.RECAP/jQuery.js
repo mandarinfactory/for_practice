@@ -78,4 +78,30 @@ function searchGrade (korScore, engScore, mathScore) {
         if(!resultScore) return false
         $('.ex_two .para_result').text(`총점:${resultScore.total}점 평균:${resultScore.average}점 ${resultScore.grade}학점입니다! 축하드립니다!`)
     })//click
+
+
+    $('.ex_three button').click(function () {
+        var selGender = $('.ex_three .gender:checked').val()
+        var selHeight = parseFloat($('.ex_three .height').val())
+        var selWeight = parseFloat($('.ex_three .weight').val())
+        var bmiNum = parseFloat((selWeight /  ((selHeight / 100) * (selHeight / 100))).toFixed(2))
+        var alertBMI
+        // 1. 키를 100 - 200 내로 안적음
+        // 2. 체중은 200내로
+        if (!selGender || isNaN(bmiNum) || bmiNum < 0 || bmiNum > 50){
+            alert('성별, 체중 그리고 신장을 확인 후 다시 적어주시기 바랍니다.')
+            return false
+        }
+        // 마름 적정 과체중 비만
+        if ((selGender = 'male' && bmiNum < 15) || (selGender = 'female' && bmiNum < 20)) {
+            alertBMI = '귀하는 마른 체중입니다.'
+        } else if ((selGender = 'male' && (bmiNum >= 15 && bmiNum < 20)) || (selGender = 'female' && (bmiNum >= 20 && bmiNum < 25))) {
+            alertBMI = '귀하는 적정한 체중입니다.'
+        } else if ((selGender = 'male' && (bmiNum >= 20 && bmiNum < 25)) || (selGender = 'female' && (bmiNum >= 25 && bmiNum < 30))) {
+            alertBMI = '귀하는 과체중인 체중입니다.'   
+        } else {
+            alertBMI = '귀하는 비만인 체중입니다.'
+        }
+    $('.ex_three .para_result').text(alertBMI)
+    })//click
 })//call-back function!!
