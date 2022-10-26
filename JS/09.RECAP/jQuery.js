@@ -91,17 +91,21 @@ $(function () {
     );
   }); //click
 
-  $(".ex_three button").click(function () {
-    var selGender = $(".ex_three .gender:checked").val();
-    var selHeight = parseFloat($(".ex_three .height").val());
-    var selWeight = parseFloat($(".ex_three .weight").val());
+  function calculatorBMI(selGender, selHeight, selWeight) {
+    var selHeight = parseFloat(selHeight);
+    var selWeight = parseFloat(selWeight);
     var bmiNum = parseFloat(
       (selWeight / ((selHeight / 100) * (selHeight / 100))).toFixed(2)
     );
-    var alertBMI;
     // 1. 키를 100 - 200 내로 안적음
     // 2. 체중은 200내로
-    if (!selGender || isNaN(bmiNum) || bmiNum < 10 || bmiNum > 50) {
+    if (
+      !selGender ||
+      isNaN(bmiNum) ||
+      isNaN(bmiNum) ||
+      bmiNum < 10 ||
+      bmiNum > 50
+    ) {
       alert("성별, 체중 그리고 신장을 확인 후 다시 적어주시기 바랍니다.");
       return false;
     }
@@ -110,22 +114,33 @@ $(function () {
       (selGender = "male" && bmiNum < 15) ||
       (selGender = "female" && bmiNum < 20)
     ) {
-      alertBMI = "귀하는 마른 체중입니다.";
+      return "귀하는 마른 체중입니다."; // 여기로 undefined로 선언되었던 변수를 가져와서 Eventlistener랑 연결시킨다.
     } else if (
       (selGender = "male" && bmiNum >= 15 && bmiNum < 20) ||
       (selGender = "female" && bmiNum >= 20 && bmiNum < 25)
     ) {
-      alertBMI = "귀하는 적정한 체중입니다.";
+      return "귀하는 적정한 체중입니다.";
     } else if (
       (selGender = "male" && bmiNum >= 20 && bmiNum < 25) ||
       (selGender = "female" && bmiNum >= 25 && bmiNum < 30)
     ) {
-      alertBMI = "귀하는 과체중인 체중입니다.";
+      return "귀하는 과체중인 체중입니다.";
     } else {
-      alertBMI = "귀하는 비만인 체중입니다.";
+      return "귀하는 비만인 체중입니다.";
     }
+  }
+  $(".ex_three button").click(function () {
+    var selGender = $(".ex_three .gender:checked").val();
+    var selHeight = $(".ex_three .height").val();
+    var selWeight = $(".ex_three .weight").val();
+    var resultCal = calculatorBMI(selGender, selHeight, selWeight);
+    if (!resultCal) return false;
     $(".ex_three .para_result").text(
-      `${alertBMI} 확인 후 자세한 상담은 전화로 부탁드립니다.`
+      `${calculatorBMI(
+        selGender,
+        selHeight,
+        selWeight
+      )} 확인 후 자세한 상담은 전화로 부탁드립니다.`
     );
   }); //click
 }); //call-back function!!
