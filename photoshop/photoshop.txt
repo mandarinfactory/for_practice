@@ -48,4 +48,19 @@
                · brightness(상하), saturation(좌우), hue(깊이)
           - 투명도 : transparent, opacity(불투명도), alpha(∂)
 
-     6. bitmap / vector 
+- 이미지출력방식
+     1. bitmap방식(photoshop)
+          - pixel의 색정보를 출력하는 방식
+          - memory(RAM)에 영향을 많이 받는다. => 고해상도의 작업이 어려움
+          - alising(계단현상)이 일어난다. <=> anti-alising(계단현상을 최소화하는 기술)
+          - 세밀한 표현이 가능하다.
+          - 사진작업
+          - jpeg(손실, 압축포맷), png(비손실/압축, 투명도까지 저장가능하다.), gif, wep, ico
+
+     2. vector방식(illustrator)
+          - 수학적계산을 이용해서 형태를 출력하는 방식
+          - alising현상이 존재하지 않는다.
+          - CPU의 의존도가 높다.
+          - 다양한 애니메이션이 가능하지만 세밀한 표현은 어려움
+          - 고해상도출력물, 폰트, 로고, 명함, 단순한 캐릭터
+          - svg(계산식, 코드)
