@@ -45,7 +45,7 @@ function searchGrade (korScore, engScore, mathScore) {
     var mathScore = parseFloat(mathScore);
     var totalScore = korScore + engScore + mathScore;
     var averageScore = (totalScore / 3).toFixed(2); // 소수점 2자리까지 끊어서 return해주는 function
-    var scoreToGrade
+    var scoreToGrade // for return 
     if(isNaN(averageScore)){
         alert('숫자로 적어주시기 바랍니다!')
         return false
