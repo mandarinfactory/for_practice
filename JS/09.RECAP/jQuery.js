@@ -35,6 +35,7 @@ $(function () {
 $('.ex_one button').click(function () {
     var theResult = parseInt($('.ex_one input').val()) // 1 2 3
     var resultGame = paperGame(theResult) // objUser, objComputer, objResult
+    if(!resultGame) return false // click시 잘못된 값을 넣었을때 Eventlistener도 false로 반환시키게 해준다.
     $('.ex_one .para_result').text(`사용자 : ${resultGame.objUser}, 컴퓨터 : ${resultGame.objComputer}, 결과 : ${resultGame.objResult}`)
     })//click
 })//call-back function!!
