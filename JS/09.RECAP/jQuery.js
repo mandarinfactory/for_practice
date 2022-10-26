@@ -1,6 +1,6 @@
 $(function () {
-    $('.ex_one button').click(function () {
-        var theResult = parseInt($('.ex_one input').val()) // 1 2 3
+    function paperGame (theResult) {
+        var theResult = theResult // parameter에 있는 theResult가 아니다! 새로운 변수로 선언한거임.
         if (theResult !==1 && theResult !==2 && theResult !==3) {
             alert('입력이 잘못되었습니다.')
             return false // 종료시에 관행적으로 사용하는 return값이다.
@@ -18,11 +18,23 @@ $(function () {
      else randomNum = '보'
     
     var resultGame 
-    if ((theResult === '가위' && randomNum === '보') || (theResult === '바위' && randomNum === '가위') || (theResult === '보' && randomNum === '바위')) resultGame = '유저 승'
-    else if ((theResult === '가위' && randomNum === '바위') || (theResult === '바위' && randomNum === '보') || (theResult === '보' && randomNum === '가위')) resultGame = '컴퓨터 승'
+    if ((theResult === '가위' && randomNum === '보') || (theResult === '바위' && randomNum === '가위') || (theResult === '보' && randomNum === '바위')) 
+    resultGame = '유저 승'
+    else if ((theResult === '가위' && randomNum === '바위') || (theResult === '바위' && randomNum === '보') || (theResult === '보' && randomNum === '가위')) 
+    resultGame = '컴퓨터 승'
     else resultGame = '비김'
-    $('.ex_one .para_result').text(`사용자 : ${theResult}, 컴퓨터 : ${randomNum}, 결과 : ${resultGame}`)
+    var obj = {
+        objUser : theResult,
+        objComputer : randomNum,
+        objResult : resultGame,
+    } // = 객체, 여러가지 값을 넣을수 있다.
+    return obj
     // 0 ~ 2 (내림) : Math.floor()
     // 1 ~ 3 (올림) : Math.ceil() + 반올림은 Math.round()
+}
+$('.ex_one button').click(function () {
+    var theResult = parseInt($('.ex_one input').val()) // 1 2 3
+    var resultGame = paperGame(theResult) // objUser, objComputer, objResult
+    $('.ex_one .para_result').text(`사용자 : ${resultGame.objUser}, 컴퓨터 : ${resultGame.objComputer}, 결과 : ${resultGame.objResult}`)
     })//click
 })//call-back function!!
