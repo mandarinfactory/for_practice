@@ -23,12 +23,12 @@ $(function () {
     else if ((theResult === '가위' && randomNum === '바위') || (theResult === '바위' && randomNum === '보') || (theResult === '보' && randomNum === '가위')) 
     resultGame = '컴퓨터 승'
     else resultGame = '비김'
-    var obj = {
+    var theObj = {
         objUser : theResult,
         objComputer : randomNum,
         objResult : resultGame,
     } // = 객체, 여러가지 값을 넣을수 있다.
-    return obj
+    return theObj
     // 0 ~ 2 (내림) : Math.floor()
     // 1 ~ 3 (올림) : Math.ceil() + 반올림은 Math.round()
 }
