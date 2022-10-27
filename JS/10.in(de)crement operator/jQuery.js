@@ -108,4 +108,18 @@ $(function () {
     point += checkAddQuestion("three");
     $(".ex_seven .result").text(point);
   }); // click
+
+
+ function getPrice (price) {
+   var priceOne = parseInt($(`.pro_${price} input`).val());
+   var priceTwo = parseInt($(`.pro_${price} select`).val());
+   var totalPrice = priceOne * priceTwo
+   $(".pro_${price} .result").text(priceGoods);
+  return getPrice
+ }
+
+  
+  $(".ex_eight button").click(function () {
+    $('.ex_eight .result').text(getPrice)
+  });
 }); // call-back function
