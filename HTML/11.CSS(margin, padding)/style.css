@@ -46,3 +46,36 @@
     margin-left: 200px;
     background-color: green;
 }
+.ex_three{
+    border: 1px solid black;
+    background-color: black;
+    /* 특이하게도 margin-collapse는 border로 되어있거나 padding이 적용되어있으면 collapse가 되지않고 top/bottom이 적용된다. */
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.ex_three div {
+    margin: 100px 0;
+    background-color: yellow;
+}
+.ex_three span {
+    margin: 20px;
+    background-color: yellowgreen;
+}
+.ex_four {
+    border: 1px solid black;
+    background-color: black;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.ex_four div {
+    margin: 50px 0;
+    /* block level 간의 상하margin은 collapse가 되서 FOUR, FIVE간의 차이가 100px이 아닌 50px이 된다. */
+    background-color: green;
+}
+.ex_four span {
+    display: inline-block;
+    margin: 50px 50px;
+    background-color: yellow;
+}

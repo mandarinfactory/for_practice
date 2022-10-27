@@ -16,8 +16,12 @@
         <ul>
             <li>margin은 element의 바깥쪽 간격, padding은 element의 안쪽여백</li>
             <li>margin은 element 주위의 빈 공간을 추가하고, padding은 element 내부의 빈 공간을 만든다.</li>
-            <li>첫번째 block-level element는 margin-top이 적용되지 않는다. 마찬가지로 마지막 element는 margin-bottom이 적용되지 않는다.</li>
+            <li>첫번째 block-level element는 margin-top이 적용되지 않는다. 마찬가지로 마지막 element는 margin-bottom이 적용되지 않는다.
+                (parent-element가 border나 padding이 적용되어있는경우에는 잘 적용된다.)
+            </li>
             <li>box-sizing속성을 이용해서 padding, border값을 크기 안쪽으로 적용할 수 있다.</li>
+            <li>inilne element는 margin-top/bottom이 적용되지 않는다.</li>
+            <li>block level element간에는 상하margin은 겹친다.(inline계열은 절대 해당되지 않는다! 단, block으로 지정시키면 된다.)</li>
         </ul>
         <hr>
         <div class="ex_one">
@@ -31,6 +35,19 @@
                 <div></div>
                 <div></div>
             </div>
+        </div>
+        <hr>
+        <div class="ex_three">
+            <div>ONE</div>
+            <span>TWO</span>
+            <span>THREE</span>
+        </div>
+        <hr>
+        <div class="ex_four">
+            <div>FOUR</div>
+            <div>FIVE</div>
+            <span>SIX</span>
+            <span>SEVEN</span>
         </div>
         <hr>
     </main>
