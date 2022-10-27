@@ -64,3 +64,33 @@
           - 다양한 애니메이션이 가능하지만 세밀한 표현은 어려움
           - 고해상도출력물, 폰트, 로고, 명함, 단순한 캐릭터
           - svg(계산식, 코드)
+
+- 주의사항
+     1. capslock은 꼭 비활성화 할것.
+     2. 한글키 상태에서는 단축키가 비활성화 된다.
+
+- interface
+     1. 초기화 : launching + ctrl + shift + alt
+     2. zoom-in/out 
+          - alt + 마우스휠
+          - ctrl + (+ / -)
+          - 화면 왼쪽 하단에 화면비율로도 조절할 수 있다.(numeric percentage)
+          - space 누른상태에서 마우스 우클릭하면 바로 100% 사이즈로 변경 할 수 있다.(100,200,화면에 맞추기)
+     3. pan : space를 누른상태에서 마우스로 이동한다.
+     4. 스크린모드 : F (작업표시줄과 상단의 메뉴가 사라질 수 있음.)
+     5. UI구조
+          - 메뉴(상단 / file, edit등)
+          - 팔레트(오른쪽 / 색상, 레이어등)
+          - 툴바(왼쪽 / 브러쉬, 지우개등)
+          - 툴옵션바(메뉴바 아래있는 바,상단 / 툴의 세부설정)
+
+- 환경설정(preference)
+     1. ctrl + K(단축키)
+     2. unit & ruler => ruler, type을 pixel로 설정한다.(때에 따라 point로 해야할 수도 있다.)
+     3. guide, grid, slice : grid용 unit을 pixel로 변경 (100pixel 4subdivision = 25pixel로 보여준다.)
+
+- 디자인 보조 기능
+     1. ruler : ctrl + R, ruler에서 우클릭을 이용해 unit를 변경할 수 있음
+     2. guide : ruler와 함께 쓰이고 안내선 역할을 한다.
+          - 지우는 방법 : view > guides > clear guides로 지우면 된다. / ctrl + ;
+     3. grid : ctrl + ", snap기능과 같이 사용한다.
