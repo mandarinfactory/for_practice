@@ -79,3 +79,28 @@
     margin: 50px 50px;
     background-color: yellow;
 }
+.ex_five {
+    width: 500px;
+    margin: 0 auto;
+    background-color: black;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.ex_five>div {
+    width: 200px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: red;
+}
+.ex_five .div_two{
+    margin-top: 30px;
+    margin-left: auto;
+}
+.ex_five div div{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+.ex_five div div:last-child{
+    margin-left: auto;
+}
