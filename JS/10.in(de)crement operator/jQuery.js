@@ -55,4 +55,20 @@ $(function () {
     c = plusMinusCal(c, -1);
     $(".ex_four .para_result").text(c);
   });
+
+  function circulation(x, y) {
+    x += y;
+    if (x > 3) x = 0;
+    if (x < 0) x = 3;
+    return x;
+  }
+  var d = 0;
+  $(".ex_five .plus").click(function () {
+    d = circulation(d, 1);
+    $(".ex_five .para_result").text(d);
+  });
+  $(".ex_five .minus").click(function () {
+    d = circulation(d, -1);
+    $(".ex_five .para_result").text(d);
+  });
 }); // call-back function
