@@ -56,19 +56,56 @@ $(function () {
     $(".ex_four .para_result").text(c);
   });
 
-  function circulation(x, y) {
+  function circulCal(x, y, min, max) {
+    // function내에서 변수는 매개변수(parameter)로 쓴다!
     x += y;
-    if (x > 3) x = 0;
-    if (x < 0) x = 3;
+    if (x > max) x = min;
+    if (x < min) x = max;
     return x;
   }
   var d = 0;
   $(".ex_five .plus").click(function () {
-    d = circulation(d, 1);
+    d = circulCal(d, 1, 0, 3); // 증감결과 = 증감함수(증감결과, 증감할 양, 시작, 끝)
     $(".ex_five .para_result").text(d);
   });
   $(".ex_five .minus").click(function () {
-    d = circulation(d, -1);
+    d = circulCal(d, -1, 0, 3);
     $(".ex_five .para_result").text(d);
   });
+  var e = 2;
+  $(".ex_six .plus").click(function () {
+    e = circulCal(e, 1, 2, 8); // 증감결과 = 증감함수(증감결과, 증감할 양, 시작, 끝)
+    $(".ex_six .para_result").text(e);
+  });
+  $(".ex_six .minus").click(function () {
+    e = circulCal(e, -1, 2, 8);
+    $(".ex_six .para_result").text(e);
+  });
+
+  function addQuestion(numX) {
+    $(`.qu_${numX} .num_one`).text(Math.floor(Math.random() * 10));
+    $(`.qu_${numX} .num_two`).text(Math.floor(Math.random() * 10));
+  }
+
+  addQuestion("one");
+  addQuestion("two");
+  addQuestion("three");
+
+  function checkAddQuestion(spanOne) {
+    var numOne = parseInt($(`.qu_${spanOne} .num_one`).text()); // val()은 input에서만 쓴다!
+    var numTwo = parseInt($(`.qu_${spanOne} .num_two`).text()); // val()은 input에서만 쓴다!
+    var sumNum = parseInt($(`.qu_${spanOne} .input_sum`).val());
+    if (numOne + numTwo === sumNum) {
+      return 1; // 1점을 주는것! => 점수확인으로 줄 점수!
+    } else {
+      return 0;
+    }
+  }
+  $(".ex_seven button").click(function () {
+    var point = 0; // click할때마다 초기화시키기 위해서!
+    point += checkAddQuestion("one"); // point 증가 결과점수
+    point += checkAddQuestion("two");
+    point += checkAddQuestion("three");
+    $(".ex_seven .result").text(point);
+  }); // click
 }); // call-back function
