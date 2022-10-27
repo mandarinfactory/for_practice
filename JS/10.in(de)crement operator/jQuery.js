@@ -12,6 +12,7 @@ $(function () {
     if (n > 5) n = 5; // 검사를 한다!
     $(".ex_one .para_result").text(n);
   }); // click
+
   $(".ex_one .minus").click(function () {
     n--;
     if (n < 1) n = 1;
@@ -24,9 +25,34 @@ $(function () {
     if (m > 3) m = 0;
     $(".ex_two .para_result").text(m);
   }); // click
+
   $(".ex_two .minus").click(function () {
     m--;
     if (m < 0) m = 3;
     $(".ex_two .para_result").text(m);
   }); // click
+
+  var a = 0;
+  var b = 1;
+  $(".ex_three button").click(function () {
+    a += b;
+    $(".ex_three .para_result").append(`, ${a}`); // append = 옆으로 이어서 붙이기로 출력해준다.
+    b++;
+  }); //click
+
+  function plusMinusCal(numA, numB) {
+    numA += numB;
+    if (numA > 5) numA = 5;
+    if (numA < 1) numA = 1;
+    return numA;
+  } // function
+  var c = 1;
+  $(".ex_four .plus").click(function () {
+    c = plusMinusCal(c, 1);
+    $(".ex_four .para_result").text(c); // = c
+  });
+  $(".ex_four .minus").click(function () {
+    c = plusMinusCal(c, -1);
+    $(".ex_four .para_result").text(c);
+  });
 }); // call-back function
