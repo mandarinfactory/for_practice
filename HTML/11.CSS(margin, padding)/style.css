@@ -1,0 +1,48 @@
+.ex_one {
+    width: 500px;
+    background-color: black;
+    margin: 0 auto;
+    padding: 100px;
+    box-sizing: border-box;
+}
+.ex_one div{
+    width: 100px;
+    height: 100px;
+    /* margin-top: 100px;
+    margin-collapse : top이나 bottom margin이 같은 위치에 위치해 있다면 병합되어서 
+    같은 block(내/외부 element가 아닌 같은 element로 인식한다.)으로 browser는 인식한다. 
+    따라서 반대로 외부인 .ex_one에서 padding을 이용한다. */
+    background-color: yellow;
+}
+.ex_one div:nth-child(2) {
+    margin-left: 100px;
+    background-color: yellowgreen;
+}
+.ex_one div:last-child {
+    margin-left: 200px;
+    background-color: green;
+}
+.ex_two {
+    width: 500px;
+    background-color: black;
+    margin: 0 auto;
+    padding: 100px;
+    box-sizing: border-box;
+}
+/* box-sizing 잊지말자! */
+.ex_two div div{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+.ex_two > div {
+    background-color: yellowgreen;
+}
+/* div 안에 또 div 있으니까(nested structure) > 사용해서 헷갈리게 하지 말자! */
+.ex_two div div:last-child{
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+    margin-left: 200px;
+    background-color: green;
+}

@@ -1,6 +1,50 @@
 body {
     line-height: 30px;
 }
+h1{
+    background-color: firebrick;
+    color: white;
+}
+form > legend {
+    width: 200px;
+    height: 40px;
+    background-color: skyblue;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 800;
+}
 label:first-child {
+    background-color: skyblue;
+}
+#input_nine {
+    vertical-align: top;
+}
+.fieldset_one{
+    margin-top: 10px;
+    background-color: aliceblue;
+    animation-duration: 2s;
+    animation-name: slideInOne;
+}
+@keyframes slideInOne {
+    from {
+        margin-left: 100%;
+    } to {
+        margin-left: 0%;
+    }
+}
+
+.fieldset_two{
+    margin-top: 10px;
     background-color: azure;
+    animation-duration: 2.3s;
+    animation-name: slideInOne;
+}
+.fieldset_three{
+    margin-top: 10px;
+    background-color:beige;
+    animation-duration: 2.6s;
+    animation-name: slideInOne;
 }
