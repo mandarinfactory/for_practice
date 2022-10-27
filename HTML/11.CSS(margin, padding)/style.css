@@ -80,27 +80,29 @@
     background-color: yellow;
 }
 .ex_five {
-    width: 500px;
+    width: 700px;
     margin: 0 auto;
     background-color: black;
     padding: 30px;
     box-sizing: border-box;
 }
 .ex_five>div {
-    width: 200px;
+    width: 300px;
     padding: 30px;
     box-sizing: border-box;
-    background-color: red;
+    background-color: yellow;
 }
-.ex_five .div_two{
+.ex_five div:last-child{
     margin-top: 30px;
     margin-left: auto;
 }
-.ex_five div div{
+.ex_five div span{
+    display: block;
     width: 100px;
     height: 100px;
     background-color: green;
 }
-.ex_five div div:last-child{
-    margin-left: auto;
+.ex_five div span:last-child{
+    margin-left: 125px;
+    margin-top: 30px;
 }
