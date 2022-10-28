@@ -25,7 +25,7 @@ $(function () {
         var resultOne = getScoreCal('one');
         if(!resultOne) return false
         var resultTwo = getScoreCal('two');
-        if(!resultTwo) return false
+        if(!resultTwo) return false // 같이 validation하면 하나가 값이 출력될수도 있다.
         $('.ex_one>.result').text(`총점평균 : ${((resultOne.totalScore)+(resultTwo.totalScore))/2} 
         총평균: ${((resultOne.averageScore)+(resultTwo.averageScore))/2}`)
         /* 
