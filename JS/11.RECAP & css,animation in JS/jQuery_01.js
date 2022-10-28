@@ -40,14 +40,16 @@ $(function () {
 
     /* ex4 -------------------------------------------------------- */
     $('.ex4 .slide_up').click(function () {
-        $('.ex4 .box').stop().slideUp('slide_up')
+        $('.ex4 .box').stop().slideUp(2000, function () {
+            alert('hallo!')
+        })// animation(slide, fade)내 call-back function은 animation이 끝나면 실행하게 된다.
     })
     $('.ex4 .slide_down').click(function () {
-        $('.ex4 .box').stop().slideDown('slide_down')
+        $('.ex4 .box').stop().slideDown(2000)
     })
     $('.ex4 .slide_toggle').click(function () {
-        $('.ex4 .box').stop().slideToggle('slide_toggle')
-    })
+        $('.ex4 .box').stop().slideToggle(2000)
+    }) // 2000 = 2s, 이렇게 따로 시간을 지정할 수 있다.
 
     /* ex5 --------------------------------------------------- */
     $('.ex5 .fade_in').click(function () {
