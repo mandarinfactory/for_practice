@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style_02.css">
     <title>Document</title>
 </head>
 
@@ -12,18 +13,28 @@
     <main>
         <h1>markup validation</h1>
         <ul>
-            <li>inline계열(span, li, input, button등)element의 child로는 block level은 허락되지 않는다.</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+                inline계열(span, li, input, button등)element의 child로는 block level은 허락되지 않는다.
+                예외 : anchor는 block-level의 parent로써 허락됨.
+            </li>
+            <li>
+                interaction element간의 parent-child관계가 허락되지 않는다.
+            </li>
+            <li>
+                ul.ol의 child는 li만 가능하다. <br>
+                dl의 child는 dt, dd만 가능하다. <br>
+                legend의 parent로는 fieldset만 가능하다. <br>
+                figcaption의 child로는 anchor는 허락되지 않는다.
+            </li>
+            <li>
+                img는 alt속성을 반드시 포함해야 한다.
+            </li>
+            <li>
+                h1 ~ h6는 반드시 text를 포함해야 한다.
+            </li>
+            <li>
+                main, section, article element는 h1~h6중 하나를 포함해야 한다.
+            </li>
         </ul>
     </main>
 </body>
