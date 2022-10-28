@@ -94,3 +94,36 @@
      2. guide : ruler와 함께 쓰이고 안내선 역할을 한다.
           - 지우는 방법 : view > guides > clear guides로 지우면 된다. / ctrl + ;
      3. grid : ctrl + ", snap기능과 같이 사용한다.
+
+- file 열기
+     1. file / open (ctrl + O)
+     2. 닫기는 ctrl + W
+     3. 복사 후 새file을 열면 clipboard resolution으로 생성됨
+     4. drag and drop을 사용해서 file을 open할경우 duckInBar(메뉴 제일 아래 있는 바)에 drop을 해야한다.
+     5. file > 우클릭 > 연결프로그램 > 포토샵
+
+- img size 변경
+     1. img > image size (ctrl + alt + I)
+          - ratio를 유지한채 image resolution을 변경한다.
+          - 단위설정을 할것!
+          - 원본resolution보다 이상으로 변경하지 말것
+     2. img > canvas size (ctrl + alt + C)
+          - ratio를 변경할 경우
+          - image가 잘린다 => relative option을 해제 후 사용한다.
+     3. crop tool
+          - drag를 이용해서 size를 변경할 수 있다.
+          - 잘라내기와 늘리기 둘다 사용할 수 있다.
+     4. 특정 해상도로 이미지를 변경하고 싶을 경우
+          - 원하는 해상도의 새파일을 만든 후,
+          - 원본파일 ctrl + A(전체선택), ctrl + C(복사)
+          - 새파일에 ctrl + V(붙여넣기)후 ctrl + T(변형)로 이미지 조절을 한다.
+
+- save, format
+     1. 그냥 ctrl + S 하면 확장자가 많이 나오지 않는다.(psd일경우에 많이 쓴다.)
+     2. ctrl + alt + S로 하면 많은 확장자가 나와서 편하게 저장할 수 있다.(모든 포맷)
+     3. ctrl + shift + alt + S = save for web (훨씬 더 디테일한 옵션을 제공한다.)
+
+- 변형tool
+
+
+- history

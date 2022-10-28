@@ -15,7 +15,7 @@
         <hr>
         <ul>
             <li>form : data의 전송 범위</li>
-            <li>legend : form element의 제목(table은 caption)</li>
+            <li>legend : form element의 제목(table은 caption) => legend는 항상!! fieldset의 직계child element여야한다!</li>
             <li>fieldset : form element 안의 내용이나 기능의 범위</li>
             <li>label : 입력양식에 대한 참조 문구</li>
             <li>title속성 : 접근성(accessibility)차원에서 사용하는 속성</li>
@@ -46,92 +46,94 @@
         </ul>
         <hr>
         <form>
-            <legend>회원가입</legend>
-            <div class="fieldset_one">
-                <fieldset>
-                    <legend>필수정보</legend>
-                    <!-- form에서 heading element이다.(legend) -->
-                    <p>
-                        <label for="input_one">아이디</label> : <input id="input_one" type="text"
-                            placeholder="아이디를 입력해주십시오.">
-                    </p>
-                    <p>
-                        <label for="input_two">비밀번호</label> : <input id="input_two" type="password"
-                            placeholder="비밀번호를 입력해주십시오.">
-                    </p>
-                    <p>
-                        <label>성별</label>
-                        <label for="input_three" title="남성인 경우 선택하세요.">
-                            <input type="radio" name="gender" value="male" id="input_three">남
-                        </label>
-                        <label for="input_four" title="여성인 경우 선택하세요.">
-                            <input type="radio" name="gender" value="female" id="input_four">여
-                        </label>
-                    </p>
-                </fieldset>
-            </div>
-            <div class="fieldset_two">
-                <fieldset>
-                    <legend>추가정보</legend>
-                    <p>
-                        <label>취미</label> :
-                        <!-- label은 내부element를 설명해주는 element이다. => 요즘에는 title로 설명하는경우도 많다. -->
-                        <input type="checkbox" id="" title="영화">영화
-                        <input type="checkbox" id="" title="독서">독서
-                        <input type="checkbox" id="" title="음악">음악
-                        <input type="checkbox" id="" title="미술">미술
-                        <input type="checkbox" id="" title="스포츠">스포츠
-                    </p>
-                    <p>
-                        <label for="input_four" title="이메일을 입력하는 칸입니다.">이메일</label>
-                        <input type="email" id="input_four" placeholder="이메일을 입력해주십시오.">
-                    </p>
-                    <p>
-                        <label for="input_five">연락처</label>
-                        <select name="" id="">
-                            <option value="" label="통신사"></option>
-                            <option value="" label="SKT"></option>
-                            <option value="" label="KT"></option>
-                            <option value="" label="LGU+"></option>
-                            <!-- option만 select안에 label을 쓰기 어려워서 option attribute내에서 label을 쓸 수 있다. -->
-                        </select>
-                        <input type="tel" name="" id="input_five" placeholder="번호만 적어주십시오." />
-                    </p>
-                    <p>
-                        <label for="" id="input_six">연령</label>
-                        <input type="number" min="1" max="60" id="input_six" />
-                    </p>
-                    <p>
-                        <label for="" id="input_seven">오늘날짜</label>
-                        <input type="date" id="input_seven">
-                    </p>
-                    <p>
-                        <label for="" id="input_eight">예약시간</label>
-                        <input type="time" id="input_eight">
-                    </p>
-                    <p>
-                        <label for="" id="input_nine">예약특이사항</label>
-                        <textarea name="" id="input_nine" cols="30" rows="10"
-                            placeholder="특이사항이 있다면 적어주십시오."></textarea>
-                        <!-- mulit-line 입력양식 -->
-                    </p>
-                </fieldset>
-            </div>
-            <div class="fieldset_three">
-                <fieldset>
-                    <legend>버튼들!</legend>
-                    <input type="button" value="누르세요!">
-                    <input type="reset" value="RESET">
-                    <input type="submit" value="SUBMIT">
-                    <!-- input button은 이미지를 넣기가 안됐다. -->
-                    <!-- input submit은 자동으로 새로고침을 해준다 -->
-                    <button type="button">몰?루</button>
-                    <!-- button을 form내에 만들면 자동적으로 input submit 역할을 한다. (type으로 정해주지 않는다면)-->
-                    <button type="reset">버튼으로 초기화!</button>
-                    <button>HALLO!</button>
-                    <button>GOODBYE!</button>
-                </fieldset>
-            </div>
+            <fieldset>
+                <legend>회원가입</legend>
+                <div class="fieldset_one">
+                    <fieldset>
+                        <legend>필수정보</legend>
+                        <!-- form에서 heading element이다.(legend) -->
+                        <p>
+                            <label for="input_one">아이디</label> : <input id="input_one" type="text"
+                                placeholder="아이디를 입력해주십시오.">
+                        </p>
+                        <p>
+                            <label for="input_two">비밀번호</label> : <input id="input_two" type="password"
+                                placeholder="비밀번호를 입력해주십시오.">
+                        </p>
+                        <p>
+                            <label>성별</label>
+                            <label for="input_three" title="남성인 경우 선택하세요.">
+                                <input type="radio" name="gender" value="male" id="input_three">남
+                            </label>
+                            <label for="input_four" title="여성인 경우 선택하세요.">
+                                <input type="radio" name="gender" value="female" id="input_four">여
+                            </label>
+                        </p>
+                    </fieldset>
+                </div>
+                <div class="fieldset_two">
+                    <fieldset>
+                        <legend>추가정보</legend>
+                        <p>
+                            <label>취미</label> :
+                            <!-- label은 내부element를 설명해주는 element이다. => 요즘에는 title로 설명하는경우도 많다. -->
+                            <input type="checkbox" id="" title="영화">영화
+                            <input type="checkbox" id="" title="독서">독서
+                            <input type="checkbox" id="" title="음악">음악
+                            <input type="checkbox" id="" title="미술">미술
+                            <input type="checkbox" id="" title="스포츠">스포츠
+                        </p>
+                        <p>
+                            <label for="input_four" title="이메일을 입력하는 칸입니다.">이메일</label>
+                            <input type="email" id="input_four" placeholder="이메일을 입력해주십시오.">
+                        </p>
+                        <p>
+                            <label for="input_five">연락처</label>
+                            <select name="" id="">
+                                <option value="" label="통신사"></option>
+                                <option value="" label="SKT"></option>
+                                <option value="" label="KT"></option>
+                                <option value="" label="LGU+"></option>
+                                <!-- option만 select안에 label을 쓰기 어려워서 option attribute내에서 label을 쓸 수 있다. -->
+                            </select>
+                            <input type="tel" name="" id="input_five" placeholder="번호만 적어주십시오." />
+                        </p>
+                        <p>
+                            <label for="" id="input_six">연령</label>
+                            <input type="number" min="1" max="60" id="input_six" />
+                        </p>
+                        <p>
+                            <label for="" id="input_seven">오늘날짜</label>
+                            <input type="date" id="input_seven">
+                        </p>
+                        <p>
+                            <label for="" id="input_eight">예약시간</label>
+                            <input type="time" id="input_eight">
+                        </p>
+                        <p>
+                            <label for="" id="input_nine">예약특이사항</label>
+                            <textarea name="" id="input_nine" cols="30" rows="10"
+                                placeholder="특이사항이 있다면 적어주십시오."></textarea>
+                            <!-- mulit-line 입력양식 -->
+                        </p>
+                    </fieldset>
+                </div>
+                <div class="fieldset_three">
+                    <fieldset>
+                        <legend>버튼들!</legend>
+                        <input type="button" value="누르세요!">
+                        <input type="reset" value="RESET">
+                        <input type="submit" value="SUBMIT">
+                        <!-- input button은 이미지를 넣기가 안됐다. -->
+                        <!-- input submit은 자동으로 새로고침을 해준다 -->
+                        <button type="button">몰?루</button>
+                        <!-- button을 form내에 만들면 자동적으로 input submit 역할을 한다. (type으로 정해주지 않는다면)-->
+                        <button type="reset">버튼으로 초기화!</button>
+                        <button>HALLO!</button>
+                        <button>GOODBYE!</button>
+                    </fieldset>
+                </div>
+            </fieldset>
         </form>
     </main>
 </body>

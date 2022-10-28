@@ -1,0 +1,18 @@
+body {
+    line-height: 28px;
+}
+li {
+    list-style: none;
+}
+li::before {
+    /* before은 맨 앞에 after는 맨 뒤에 가상element가 오게 한다. */
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 8px;
+    background-color: crimson;
+    border-radius: 2.5px;
+    vertical-align: middle;
+}
+/* ::는 pseudo-element이다. => 접근성을 중시하면서 디자인을 할 수 있는 장점이 있고, 수정관리가 용이하게 해준다. :는 pseudo-class */
