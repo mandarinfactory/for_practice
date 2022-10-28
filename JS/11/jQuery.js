@@ -34,4 +34,11 @@ $(function () {
         $('.ex_one>.result').text(`총점평균 : ${totalResultAverage} 총평균 : ${averResultAverage}`)로 바꿔쓸수도 있다.(따로 변수 선언)
         */
     })//click
+    var a = 1;
+    var b = 1;
+    $('ex_two button').click(function () {
+        a += b;
+        if (a > 5) b = -1;
+        if (a < 0) b = 1;
+    })
 })//call-back
