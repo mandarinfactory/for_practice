@@ -19,7 +19,12 @@ $(function () {
     $('.ex2 .bg-none').click(function () {
       $('.ex2 .box').css({'background': 'none'})
     })//click
-   // 추가적으로 내가 넣어야함!
+    $('.ex2 .color-red').click(function () {
+      $('.ex2 .box').css({'color' : 'red'})
+    })
+    $('.ex2 .color-yellow').click(function () {
+      $('.ex2 .box').css({'color' : 'yellow'})
+    })
     $('.ex2 .bg-color').click(function () {
       $('.ex2 .box').css({
         'background': 'yellow',
