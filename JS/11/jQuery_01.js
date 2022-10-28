@@ -48,5 +48,16 @@ $(function () {
     $('.ex4 .slide_toggle').click(function () {
         $('.ex4 .box').stop().slideToggle('slide_toggle')
     })
+
+    /* ex5 --------------------------------------------------- */
+    $('.ex5 .fade_in').click(function () {
+        $('.ex5 .box').stop().fadeIn('fade_in')
+    })
+    $('.ex5 .fade_out').click(function () {
+        $('.ex5 .box').stop().fadeOut('fade_out')
+    })
+    $('.ex5 .fade_toggle').click(function () {
+        $('.ex5 .box').stop().fadeToggle('fade_toggle')
+    })
   })//document.ready
   /* animnation이 중첩될경우 .stop()을 사용해 animation이 누적되는걸 방지한다. */
