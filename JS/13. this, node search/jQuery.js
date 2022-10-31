@@ -25,17 +25,31 @@ $(function (){
     $('.ex_five button').click(function () {
         $('.ex_five button').css({'color':'inherit'})
         $(this).siblings('button').css({'color':'crimson'}) // siblings = 형제element들
-    })
+    })//click
     $('.ex_six button').click(function () {
         $('.ex_six .btn_box').css({'background-color':'inherit'})
         $(this).parent().css({'background-color':'darkgrey'})
-    })
+    })//click
     /* ex_seven ---------------------------------------------------------- */
     $('.ex_seven .btn_box').click(function () {
         $('.ex_seven .btn_box button').css({'background-color':'inherit'})
         $(this).children('button').css({'background-color':'red'})
-    })
+    })//click
     $('.ex_seven .btn_box button').click(function () {
         return false; // 중지!!!!!!!!!! btn누르면 동작안하게끔 만들어줌!!!!!!
-    })
+    })//click
+    /* ex_eight ---------------------------------------------------------- */
+    $('.ex_eight button').click(function () {
+        $(this).siblings('button').removeClass('active'); // this의 나머지 = this의 siblings!
+        $(this).toggleClass('active')
+        // toggle, toggleClass는 this제외하고 다 removeClass + this는 꼭 남아야한다!
+    })//click
+    /* 
+        // 숨기거나 보여주는 method    
+        show, hide, toggle
+        fadeIn, fadeOut, fadeToogle (+stop!) 
+        slideDown, slideUp, slideToggle (+stop!)
+        // 모양바꾸는 method
+        css, addClass, removeClass, toggleClass
+    */
 })//call-back(document.ready)

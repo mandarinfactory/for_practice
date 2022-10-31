@@ -18,3 +18,6 @@ button {
     border-color: rgb(51, 58, 36);
     box-shadow: 3px 9px 0px rgb(51, 58, 36);;
 } /* 항상 JS보다 CSS부터 우선적으로 정리해놔야한다! */
+.ex_eight button.active{
+    background-color: firebrick;
+}
