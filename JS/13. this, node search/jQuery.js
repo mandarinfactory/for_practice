@@ -30,4 +30,12 @@ $(function (){
         $('.ex_six .btn_box').css({'background-color':'inherit'})
         $(this).parent().css({'background-color':'darkgrey'})
     })
+    /* ex_seven ---------------------------------------------------------- */
+    $('.ex_seven .btn_box').click(function () {
+        $('.ex_seven .btn_box button').css({'background-color':'inherit'})
+        $(this).children('button').css({'background-color':'red'})
+    })
+    $('.ex_seven .btn_box button').click(function () {
+        return false; // 중지!!!!!!!!!! btn누르면 동작안하게끔 만들어줌!!!!!!
+    })
 })//call-back(document.ready)
