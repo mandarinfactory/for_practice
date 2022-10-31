@@ -95,6 +95,27 @@
           - 지우는 방법 : view > guides > clear guides로 지우면 된다. / ctrl + ;
      3. grid : ctrl + ", snap기능과 같이 사용한다.
 
+- brush 기능
+     1. ctrl + b
+     2. canvas위에서 우클릭 / general brush
+          - soft, hard
+          - hardness option
+               - brush의 진하거나 뿌옇게 하는 정도를 조절할 수 있다.
+               - brush 경계의 퍼지는 정도의 값
+          - [, ]를 이용해서 brush 크기를 제어할수 있다.
+- history기능
+     1. undo기능 
+          - ctrl + Z
+     2. redo
+          - ctrl + shift + Z
+     3. 주의사항
+          - history를 수정할 경우 수정 후 작업과정은 모두 사라진다.(이전에 했던 기록은 사라짐.)
+     4. 색 채우기
+          - fill foreground color
+               alt + delete
+          - fill background color
+               ctrl + delete
+
 - file 열기
      1. file / open (ctrl + O)
      2. 닫기는 ctrl + W
@@ -123,7 +144,14 @@
      2. ctrl + alt + S로 하면 많은 확장자가 나와서 편하게 저장할 수 있다.(모든 포맷)
      3. ctrl + shift + alt + S = save for web (훨씬 더 디테일한 옵션을 제공한다.)
 
-- 변형tool
-
-
-- history
+- 선택영역-기초
+     1. marquee
+          - M, shift + M
+          - 원(elliptical), 사각형(retangular) 선택영역
+          - feather option : 선택영역의 blur(퍼지는효과)값을 설정
+     2. lasso
+          - L, shift + L
+          - lasso(drag를 이용해 선택설정), polygon(click을 이용해서 설정), magnetic(색상을 자동으로 감지해 자동으로 설정)
+     3. magic wand
+          - W, shift + W
+          - click한 색상과 유사색상 범위를 자동으로 선택한다.

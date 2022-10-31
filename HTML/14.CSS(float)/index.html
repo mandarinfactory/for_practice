@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>float를 이용한 grid layout</h1>
+        <hr>
+        <ul>
+            <li>float는 정확하고 다양한 layout 구현이 가능하다. (block, inline등이랑은 아예 계열이 다르다.)</li>
+            <li>float속성이 적용되면 기존의 display level에 적용되는 특징이 사라진다.
+                <ul>
+                    <li>block level의 전체 넓이가 없어지고 한줄로 배치됨.</li>
+                    <li>auto값이 적용되지 않음.</li>
+                    <li>inline level도 크기를 가질 수 있음.</li>
+                    <li>float이 적용된 child element의 높이를 parent element가 인식할수 없음.
+                        => CSS에서 pseudo element(::)강제로 만들어준다. + display : block;까지! (= clearfix를 만들어줌.)
+                    </li>
+                    <li>다시말해, clearfix를 이용해 높이를 인식시킬수 있게 해준다.</li>
+                    <li>clear : both; (left, right둘다의 float값을 취소한다는 뜻이다.)
+                        다시말해, element가 float가 적용된 element 다음일 수 있는지 또는
+                        그 아래로 내려가야하는지(cleared)를 지정한다. => 관련 float element의 margin경계 아래로
+                        clear를 적용할 element를 옯긴다. => 이는 later float element의 위치에 영향을 준다. earlier보다 높게 위치할수 없으므로!
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </li>
+        </ul>
+        </li>
+        <li></li>
+        </ul>
+        <hr>
+        <div class="ex_one">
+            <div class="small grid_one">ONE</div>
+            <div class="small grid_two">TWO</div>
+        </div> <!-- ex_one -->
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+body {
+    line-height: 28px;
+}
+.ex_one {
+    width: 980px;
+    border: 1px solid black; /* border의 사이즈 또한 들어간다! */
+    text-align: center;
+}
+.ex_one::after {
+    content: '';
+    display: block;
+    clear: left; /* clearfix */
+    /* clear : both => both(left, right둘다의 float값을 취소한다는 뜻이다.) 
+    다시말해, element가 float가 적용된 element 다음일 수 있는지 또는 
+    그 아래로 내려가야하는지(cleared)를 지정한다. => 관련 float element의 margin경계 아래로
+    clear를 적용할 element를 옯긴다. => 이는 later float element의 위치에 영향을 준다. earlier보다 높게 위치할수 없으므로! */
+}
+.ex_one div {
+    height: 300px;
+    background-color:rgb(3, 3, 54);
+    line-height: 300px;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+.ex_one .small {
+    width: 300px;
+}
+.ex_one .wide {
+    width: 460px;
+}
+.ex_one .grid_one,
+.ex_one .grid_two{
+    float: left;
+}
