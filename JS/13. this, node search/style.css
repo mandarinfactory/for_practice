@@ -6,10 +6,11 @@ button {
     font-weight: 700;
     font-size: 30px;
 }
-.ex_three button.active{
+.ex_three button.active,
+.ex_four button.active{
     background-color: black;
     color: white;
     border-radius: 50%;
     border-color: rgb(51, 58, 36);
     box-shadow: 3px 9px 0px rgb(51, 58, 36);;
-}
+} /* 항상 JS보다 CSS부터 우선적으로 정리해놔야한다! */

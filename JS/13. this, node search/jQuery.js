@@ -1,4 +1,5 @@
 $(function (){
+    /* ex-one, two ---------------------------------------------------- */
     function btnColor (numX){
         var numY = numX.val() // 선택한 btn의 value값 =.attr('value')
         var color = numX.attr('data-color') // 선택한 btn의 임의의 attribute('data-color')
@@ -8,8 +9,18 @@ $(function (){
     $('.ex_one button, .ex_two button').click(function () {
         btnColor($(this)) // = click한btn => 최대한 간소화 시켜야한다!, 상품은 최대한 간단하게!
     }) //click
-    $('.ex_three button').click(function () {
-        $('.ex_three button').removeClass('active') // 먼저 removeClass로 끄고
-        $(this).addClass('active') // 그다음 addClass로 따로 class를 추가해준다.
+
+    /* ex-three, four ---------------------------------------------------- */
+    function btnStyle (numX){
+        var numY = numX.val() // click한 btn($this = numX)의 value = numY
+        var numZ = numX.attr('data-theColor')
+        console.log(numZ)
+        $(`.ex_${numY} button`).removeClass('active') // 먼저 removeClass로 끄고
+        numX.addClass('active') // 그다음 addClass로 따로 class를 추가해준다.
+        $(`.ex_${numY} button`).css({'color':'inherit'})
+        numX.css({'color':numZ})
+    }
+    $('.ex_three button, .ex_four button').click(function () {
+        btnStyle($(this))
     })//click
 })//call-back(document.ready)
