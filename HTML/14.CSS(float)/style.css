@@ -19,9 +19,9 @@ body {
 }
 .ex_one div {
     height: 300px;
-    background-color:rgb(17, 27, 18);
+    background-color:darkgreen;
     line-height: 300px;
-    font-size: 50px;
+    font-size: 80px;
     font-weight: 700;
     color: white;
 }
@@ -58,4 +58,161 @@ body {
     float: right;
     margin-right: 20px;
 }
-
+/* ex_two ------------------------------------------ */
+.ex_two {
+    width: 980px;
+    padding-top: 20px;
+    border: 15px solid black;
+    margin: 0 auto;
+}
+.ex_two div {
+    width: 300px;
+    margin-bottom: 20px;
+    background-color: firebrick;
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+}
+.ex_two::after {
+    content: '';
+    display: block;
+    clear: both; /* clearfix */
+}
+.ex_two .short{
+    height: 300px;
+    line-height: 300px;
+}
+.ex_two .long {
+    height: 620px;
+    line-height: 620px;
+}
+.ex_two>.div_one,
+.ex_two>.div_two,
+.ex_two>.div_three,
+.ex_two>.div_four{
+    float: left;
+    margin-left: 20px;
+}
+.ex_two .div_five,
+.ex_two .div_six,
+.ex_two .div_seven,
+.ex_two .div_eight{
+    clear: left;
+    float: right;
+    margin-right: 20px;
+}
+/* ex_three --------------------------------------- */
+.ex_three {
+    width: 980px;
+    margin: 0 auto;
+    border: 15px solid black;
+    padding-top: 20px;
+}
+.ex_three::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.ex_three div{
+    width: 300px;
+    background-color: dodgerblue;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    float: left;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 700;
+}
+.ex_three div:nth-child(odd) {
+    height: 150px;
+    line-height: 150px;
+}
+.ex_three div:nth-child(even) {
+    height: 300px;
+    line-height: 300px;
+}
+.ex_three div:nth-child(3n+4) {
+    clear:both;
+}
+/* ex_four --------------------------------- */
+.ex_four{
+    width: 730px;
+    margin: 0 auto;
+    border: 15px solid black;
+    padding-top: 30px;
+}
+.ex_four::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.ex_four div{
+    margin-bottom: 30px;
+    background-color: darkorange;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 700;
+}
+.ex_four .div_one,
+.div_two,
+.div_ten,
+.div_eleven{
+    margin-left: 30px;
+    width: 200px;
+    height: 200px;
+    float: left;
+    line-height: 200px;
+}
+.div_four,
+.div_five,
+.div_six,
+.div_seven{
+    width: 200px;
+    height: 200px;
+    clear: left;
+    float: right;
+    margin-right: 30px;
+    line-height: 200px;
+}
+.div_three {
+    width: 340px;
+    height: 200px;
+    clear: left;
+    line-height: 200px;
+}
+.div_four{
+    height: 420px;
+    line-height: 420px;
+}
+.div_eight{
+    width: 420px;
+    height: 420px;
+    clear: right;
+    float: left;
+    line-height: 420px;
+    margin-left: 30px;
+}
+.div_nine{
+    width: 420px;
+    height: 420px;
+    clear: left;
+    float: right;
+    margin-right: 30px;
+    line-height: 420px;
+}
+.div_ten{
+    clear: right;
+    float: left;
+}
+.div_eleven{
+    float: right;
+    margin-right: 30px;
+}
+.div_twelve{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    clear: both;
+    margin: 0 auto;
+}
