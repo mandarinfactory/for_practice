@@ -20,6 +20,7 @@
                     <li>block level의 전체 넓이가 없어지고 한줄로 배치됨.</li>
                     <li>auto값이 적용되지 않음.</li>
                     <li>inline level도 크기를 가질 수 있음.</li>
+                    <li>모든 element에 margin-collapse가 일어나지않고 다 적용이 된다.(div간의 병합도 사라짐.)</li>
                     <li>float이 적용된 child element의 높이를 parent element가 인식할수 없음.
                         => CSS에서 pseudo element(::)강제로 만들어준다. + display : block;까지! (= clearfix를 만들어줌.)
                     </li>
@@ -28,8 +29,8 @@
                         다시말해, element가 float가 적용된 element 다음일 수 있는지 또는
                         그 아래로 내려가야하는지(cleared)를 지정한다. => 관련 float element의 margin경계 아래로
                         clear를 적용할 element를 옯긴다. => 이는 later float element의 위치에 영향을 준다. earlier보다 높게 위치할수 없으므로!
-                    <li></li>
-                    <li></li>
+                    <li>float이 적용된 element의 인접 sibling element는(grid_three)는 clear와 float중 택1 해야함.</li>
+                    <li>float layout에서는 margin-bottom을 사용하는것을 권장 => later block level은 float element를 인식하지 못함.</li>
                     <li></li>
             </li>
         </ul>
@@ -40,6 +41,13 @@
         <div class="ex_one">
             <div class="small grid_one">ONE</div>
             <div class="small grid_two">TWO</div>
+            <div class="small grid_three">THREE</div>
+            <div class="small grid_four">FOUR</div>
+            <div class="small grid_five">FIVE</div>
+            <div class="small grid_six">SIX</div>
+            <div class="small grid_seven">SEVEN</div>
+            <div class="wide grid_eight">EIGHT</div>
+            <div class="wide grid_nine">NINE</div>
         </div> <!-- ex_one -->
     </main>
 </body>
