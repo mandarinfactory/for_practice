@@ -10,6 +10,8 @@ button {
     display: inline-block;
     padding: 30px;
     border: 5px solid black;
+    font-weight: 700;
+    font-size: 40px;
 }
 .ex_three button.active,
 .ex_four button.active{
@@ -17,7 +19,20 @@ button {
     border-radius: 50%;
     border-color: rgb(51, 58, 36);
     box-shadow: 3px 9px 0px rgb(51, 58, 36);;
-} /* 항상 JS보다 CSS부터 우선적으로 정리해놔야한다! */
+} 
 .ex_eight button.active{
     background-color: firebrick;
 }
+.ex_ten div.active1{
+    background-color: crimson;
+}
+.ex_ten div.active2{
+    background-color: darkgreen;
+}
+.ex_ten div.active3{
+    background-color: darkblue;
+}
+.ex_ten div.active4{
+    background-color: yellow;
+}
+/* 항상 JS보다 CSS부터 우선적으로 정리해놔야한다! */

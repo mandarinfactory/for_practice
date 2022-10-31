@@ -52,4 +52,15 @@ $(function (){
         // 모양바꾸는 method
         css, addClass, removeClass, toggleClass
     */
+   /* assignment ----------------------------------------------------- */
+   $('.ex_nine button').click(function () {
+        var boxNumber = $(`.ex_nine .box${$(this).text()}`).attr('data-bg')
+        $(`.ex_nine div`).css({'background-color':'inherit'})
+        $(`.ex_nine .box${$(this).text()}`).css({'background-color':boxNumber})
+   })
+   $('.ex_ten button').click(function () {
+    $(`.ex_ten .box${$(this).text()}`).attr('data-bg')
+    $(`.ex_ten .box${$(this).text()}`).siblings('div').removeClass(`active${$(this).text()}`)
+    $(`.ex_ten .box${$(this).text()}`).toggleClass(`active${$(this).text()}`)
+   })
 })//call-back(document.ready)
