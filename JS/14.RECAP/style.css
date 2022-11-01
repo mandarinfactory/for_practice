@@ -3,6 +3,7 @@
     padding: 30px;
     border: 3px solid black;
 }
+/* ex_three, four ------------------------------- */
 .ex_three div.active1{
     background-color: red;
 }
@@ -20,4 +21,27 @@
 }
 .ex_four div.active3{
     background-color: blue;
+}
+/* accordian -------------------------------------- */
+.accordian {
+    width: 600px;
+    margin: 0 auto;
+    border: 3px solid black;
+}
+.accordian div p {
+    margin: 0;
+    padding: 10px;
+}
+.accordian div .question {
+    border: 1px solid black;
+    cursor: pointer;
+}
+.accordian div .question:hover,
+.accordian div .question.active{
+    background-color: black;
+    color: white;
+}
+.accordian div .answer {
+    display: none;
+    background-color:rgb(167, 216, 248);
 }

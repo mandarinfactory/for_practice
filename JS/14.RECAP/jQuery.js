@@ -43,13 +43,20 @@ $(function () {
         calculator($(this))
         $(this).siblings('.result').text(result) // node를 사용하면 따로 value값을 줄 필요가 없다!
     })//click
-    /* assignment! --------------------------------------------------------- */
+    /* assignment!(ex_seven, eight) ---------------------------------------- */
     var a = 0;
-    function anCalculator(numY) {
+    function easyCalculator(numY) {
         a += parseInt(numY.val())
         $(`.ex_${numY.siblings('span').attr('data-name')} span`).text(a);
     }//function
     $('.ex_seven button, .ex_eight button').click(function () {
-        anCalculator($(this))
+        easyCalculator($(this))
+    })//click
+    /* accordian --------------------------------------------------------- */
+    $('.question').click(function () {
+        $('.answer').stop().slideUp()
+        $(this).siblings('.answer').stop().slideToggle()
+        $(this).parent().siblings().children('.question').removeClass('active')
+        $(this).toggleClass('active')
     })//click
 })//.document.ready
