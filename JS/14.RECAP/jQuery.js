@@ -57,6 +57,6 @@ $(function () {
         $('.answer').stop().slideUp()
         $(this).siblings('.answer').stop().slideToggle()
         $(this).parent().siblings().children('.question').removeClass('active')
-        $(this).toggleClass('active')
+        $(this).toggleClass('active') // toggleClass - removeClass 다시 확인하기!
     })//click
 })//.document.ready
