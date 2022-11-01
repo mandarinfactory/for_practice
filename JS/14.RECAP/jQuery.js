@@ -45,16 +45,11 @@ $(function () {
     })//click
     /* assignment! --------------------------------------------------------- */
     var a = 0;
-    function anCalculator() {
-        var exNum = $(this).siblings('span').attr('data-name')
-        console.log(exNum)
-        a += parseInt($(this).val())
-        $(`.ex_${exNum} span`).text(a);
-    }
+    function anCalculator(numY) {
+        a += parseInt(numY.val())
+        $(`.ex_${numY.siblings('span').attr('data-name')} span`).text(a);
+    }//function
     $('.ex_seven button, .ex_eight button').click(function () {
-        var exNum = $(this).siblings('span').attr('data-name')
-        console.log(exNum)
-        a += parseInt($(this).val())
-        $(`.ex_${exNum} span`).text(a);
+        anCalculator($(this))
     })//click
 })//.document.ready
