@@ -1,5 +1,19 @@
 /* block을 움직이는 방법들!
-    - float
-    - grid
-    - flex
+    - float + masonry(plugin)
+    - grid : 벽돌처럼 쌓을때 많이 쓰인다.
+    - flex : 90%사용
 */
+body {
+    line-height: 28px;
+}
+.ex_one {
+    display: grid; /* children element들의 속성이 변한다! => parent에서 지시 */
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,200px);
+    width: 600px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.ex_one div {
+    border: 3px solid black;
+}
