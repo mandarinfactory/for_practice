@@ -1,0 +1,23 @@
+.box{
+    display: inline-block;
+    padding: 30px;
+    border: 3px solid black;
+}
+.ex_three div.active1{
+    background-color: red;
+}
+.ex_three div.active2{
+    background-color: green;
+}
+.ex_three div.active3{
+    background-color: blue;
+}
+.ex_four div.active1{
+    background-color: red;
+}
+.ex_four div.active2{
+    background-color: green;
+}
+.ex_four div.active3{
+    background-color: blue;
+}

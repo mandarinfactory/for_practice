@@ -60,7 +60,7 @@ $(function (){
    })
    $('.ex_ten button').click(function () {
     $(`.ex_ten .box${$(this).text()}`).attr('data-bg')
-    $(`.ex_ten .box${$(this).text()}`).siblings(`active${$(this).text()}`).removeClass(`active${$(this).text()}`)
+    $(`.ex_ten .box${$(this).text()}`).siblings('div').removeClass('active1 active2 active3 active4')
     $(`.ex_ten .box${$(this).text()}`).toggleClass(`active${$(this).text()}`)
    })
 })//call-back(document.ready)
