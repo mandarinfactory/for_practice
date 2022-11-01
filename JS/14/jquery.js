@@ -43,4 +43,18 @@ $(function () {
         calculator($(this))
         $(this).siblings('.result').text(result) // node를 사용하면 따로 value값을 줄 필요가 없다!
     })//click
+    /* assignment! --------------------------------------------------------- */
+    var a = 0;
+    function anCalculator() {
+        var exNum = $(this).siblings('span').attr('data-name')
+        console.log(exNum)
+        a += parseInt($(this).val())
+        $(`.ex_${exNum} span`).text(a);
+    }
+    $('.ex_seven button, .ex_eight button').click(function () {
+        var exNum = $(this).siblings('span').attr('data-name')
+        console.log(exNum)
+        a += parseInt($(this).val())
+        $(`.ex_${exNum} span`).text(a);
+    })//click
 })//.document.ready
