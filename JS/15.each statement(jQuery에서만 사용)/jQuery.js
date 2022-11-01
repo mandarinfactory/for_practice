@@ -38,6 +38,6 @@ $(function () {
                 a ++
             } else {''}
         })//each
-        $('.ex_four .result').text(a);
+        $('.ex_four .result').text(`${a}점입니다. 축하합니다.`);
     })//click
 })//call-back
