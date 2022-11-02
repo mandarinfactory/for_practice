@@ -1,0 +1,16 @@
+body {
+    line-height: 28px;
+}
+div {
+    padding: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.ex_one {
+    display: flex;
+    flex-direction: row;
+}
+.ex_two {
+    display: flex;
+    justify-content: center;
+}
