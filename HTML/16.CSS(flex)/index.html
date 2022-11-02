@@ -29,21 +29,46 @@
                 <div>2</div>
                 <div>3</div>
             </div>
-        </section>
+        </section><!-- section_one -->
         <hr>
         <section class="section_two">
             <h2>justify-content</h2>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>justify-content는 default로 flex-start가 되어있다.
+                    <ul>
+                        <li>flex-start : 기본값(왼쪽, 윗쪽)</li>
+                        <li>flex-end : 기본위치의 반대위치로 보낸다.(axis가 row면 오른쪽으로, column이면 아래쪽으로 옮겨진다.)</li>
+                        <li>space-between : children element들의 간격을 자동 분할</li>
+                        <li>center : 수평중앙으로 정렬시킨다.</li>
+                    </ul>
+                </li>
             </ul>
             <div class="ex_two">
                 <div>1</div>
                 <div>2</div>
                 <div>3</div>
             </div>
-        </section>
+        </section><!-- section_two -->
+        <hr>
+        <section class="section_three">
+            <h2>align-items</h2>
+            <ul>
+                <li>align-items는 stretch가 기본값이다. <br>
+                    row일경우 grid의 height를 parent의 height와 동일하게 설정하고, <br>
+                    column일경우에는 grid의 width를 parent의 width와 동일하게 설정한다.</li>
+                <li>center : 수직중앙으로 정렬시킨다.(row일경우 수직중앙, column일경우 수평중앙)</li>
+                <li>flex-start/end : row일경우 위/아래, column일경우 오른쪽/왼쪽으로 정렬시킨다.</li>
+            </ul>
+            <div class="ex_three">
+                <div>1 <br>
+                    1 <br>
+                    1
+                </div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </section><!-- section_three -->
+        <hr>
     </main>
 </body>
 

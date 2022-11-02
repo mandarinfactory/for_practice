@@ -10,7 +10,33 @@ div {
     display: flex;
     flex-direction: row;
 }
+.ex_one div {
+    background-color: red;
+    color: white;
+}
 .ex_two {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 200px;
+}
+.ex_two div {
+    background-color: blue;
+    color: white;
+}
+.ex_three {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+.ex_three div {
+    background-color: green;
+}
+.ex_three div:first-child{
+    display: flex;
+    height: 200px;
+    align-items: center;
 }
