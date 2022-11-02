@@ -23,6 +23,7 @@ $(function () {
         numX.parent().siblings('.result').text(a); //한번만 나오면 되니까! each-event밖에서!
     }//searchNumber
     function eraseNumber (numY) {
+        /* $('.ex_one input').attr('checked', false) => 이것도 되지만, 현재는 prop을 권장! */
         numY.parent().siblings('div').children('input').prop('checked', false)
         numY.parent().siblings('.result').text('그 결과는..?')
     }//earseNumber
@@ -30,7 +31,6 @@ $(function () {
         searchNumber($(this))
     })//click(.button_result)
     $('.ex_one .button_reset, .ex_two .button_reset').click(function () {
-        /* $('.ex_one input').attr('checked', false) => 이것도 되지만, 현재는 prop을 권장! */
         eraseNumber($(this))
     })//click(.button_reset)
 })//call-back function
