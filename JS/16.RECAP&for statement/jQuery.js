@@ -29,8 +29,11 @@ $(function () {
     }//earseNumber
     $('.ex_one .button_result, .ex_two .button_result').click(function () {
         searchNumber($(this))
-    })//click(.button_result)
+    })//click(.button_result / ex_one)
     $('.ex_one .button_reset, .ex_two .button_reset').click(function () {
         eraseNumber($(this))
-    })//click(.button_reset)
+    })//click(.button_reset / ex_two)
+    $('.ex_three button').click(function () {
+
+    })//click(.ex_three)
 })//call-back function
