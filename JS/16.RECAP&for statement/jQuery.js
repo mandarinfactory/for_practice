@@ -1,6 +1,6 @@
 $(function () {
     /* ex_one, two --------------------------------------------------------------------------- */
-    // ${}가 아닌 parent, siblings, children인 node를 이용해서 function을 만들어본다!
+    // ${}가 아닌 parent, siblings, children인 node를 이용해서 function을 만들어본다! ${}로 많이쓰긴한다.
     function searchNumber (numX) {
         var a = 0; /*  클릭할때마다 점수가 변하면 안되니까 click-event 안에서 변수선언! 
         each-event안에서 하면 점수가 늘지를 않는다! 0 <=> 1 왔다갔다함. */
