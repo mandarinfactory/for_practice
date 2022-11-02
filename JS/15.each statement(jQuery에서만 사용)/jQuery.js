@@ -32,8 +32,8 @@ $(function () {
     $('.ex_four button').click(function () {
         var a = 0;
         $('.ex_four p').each(function () {
-            var paraNum = parseInt($(this).attr('data-answer'))
-            var dataNum = parseInt(($(this).children('input:checked')).attr('data-n'))
+            var paraNum = $(this).attr('data-answer')
+            var dataNum = ($(this).children('input:checked')).attr('data-n')
             if (paraNum === dataNum) {
                 a ++
             } else {''}
