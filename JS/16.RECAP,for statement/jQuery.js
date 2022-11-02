@@ -10,7 +10,7 @@ $(function () {
             var inputNum = $(this).children('input:checked').val()
             if(inputNum === undefined){ // validation if statement => 아래 if(error){}로 연결된다.
                 error = true;
-               /*  return false; */ // 여기서 false를 return하면 false한 시점에서 function은 멈춘다.
+                /*  return false; */ // 여기서 false를 return하면 false한 시점에서 function은 멈춘다.
             }
             if(divNum === inputNum) {
                 a++;
@@ -33,6 +33,7 @@ $(function () {
     $('.ex_one .button_reset, .ex_two .button_reset').click(function () {
         eraseNumber($(this))
     })//click(.button_reset / ex_two)
+    /* ex_three --------------------------------------------------------------------------- */
     $('.ex_three button').click(function () {
         var clickCnt = parseInt($(this).val()) //정답갯수(string => number화하고! 비교해야하니까!)
         var checkCnt = 0; // check한 갯수를 증감연산한 변수, each에서 선언하면 숫자가 계속 변하니까 click-event에서!
@@ -51,6 +52,7 @@ $(function () {
             $('.ex_three .result').text('오답ㅠㅠㅠㅠㅠ')
         }
     })//click(.ex_three)
+    /* ex_four --------------------------------------------------------------------------- */
     $('.ex_four button').click(function () {
         var resultNumber = 0; // 점수 증가할 변수
         $('.ex_four div').each(function () {
@@ -59,11 +61,11 @@ $(function () {
             $(this).children('input').each(function () {
                 if($(this).prop('checked') && $(this).val() === 'yes'){
                     inputNumber ++;
-                } // coreect 
+                } // correct(if)
                 if($(this).prop('checked') && $(this).val() === 'no'){
                     inputNumber --;
                     return false
-                }// incorrect
+                }// incorrect(if)
             })//each_input(4번씩 * div의 갯수 = 12번)
             if (number === inputNumber){
                 resultNumber ++ // 찍어야할 갯수와 찍은 갯수가 동일하다.
