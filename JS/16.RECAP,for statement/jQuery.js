@@ -34,6 +34,41 @@ $(function () {
         eraseNumber($(this))
     })//click(.button_reset / ex_two)
     $('.ex_three button').click(function () {
-
+        var clickCnt = parseInt($(this).val()) //정답갯수(string => number화하고! 비교해야하니까!)
+        var checkCnt = 0; // check한 갯수를 증감연산한 변수, each에서 선언하면 숫자가 계속 변하니까 click-event에서!
+        $('.ex_three input').each(function () {
+            if($(this).prop('checked') && $(this).val() === 'ok'){ // 'ok'이면서 checked가 되어있다면
+                checkCnt ++; // checkCnt + 1
+            }
+            if($(this).prop('checked') && $(this).val() === 'no'){
+                checkCnt --;
+                return false;
+            }
+        })//each
+        if(clickCnt === checkCnt ){
+            $('.ex_three .result').text('정답!!!!!!!!')
+        } else {
+            $('.ex_three .result').text('오답ㅠㅠㅠㅠㅠ')
+        }
     })//click(.ex_three)
+    $('.ex_four button').click(function () {
+        var resultNumber = 0; // 점수 증가할 변수
+        $('.ex_four div').each(function () {
+            var number = parseInt($(this).attr('data-cnt'))
+            var inputNumber = 0; // 정답체크 갯수 확인에 사용할 변수
+            $(this).children('input').each(function () {
+                if($(this).prop('checked') && $(this).val() === 'yes'){
+                    inputNumber ++;
+                } // coreect 
+                if($(this).prop('checked') && $(this).val() === 'no'){
+                    inputNumber --;
+                    return false
+                }// incorrect
+            })//each_input(4번씩 * div의 갯수 = 12번)
+            if (number === inputNumber){
+                resultNumber ++ // 찍어야할 갯수와 찍은 갯수가 동일하다.
+            }// if statement
+        })//each_div(3번씩)
+        $('.ex_four .result').text(resultNumber)
+    })//click(.ex_four/assignment)
 })//call-back function
