@@ -85,4 +85,37 @@ $(function () {
         }
     })//click
     /* ex_eight ------------------------------------------------ */
+    for (var i = 1 ; i <= 10; i++) {
+        var numOne = Math.floor(Math.random() * 10)
+        var numTwo = Math.floor(Math.random() * 10)
+        $('.ex_nine .question').append(`
+        <p class='q${i}'>
+        <input class='n1' type='text' size='1' readonly value='${numOne}'>
+        +
+        <input class='n2' type='text' size='1' readonly value='${numTwo}'>
+        =
+        <input class='n3' type='text' size='1'>
+        </p>
+        `)
+    $('.ex_nine button').click(function () {
+        var a = 0 // 맞힌 갯수에 +1씩 추가될 점수
+        var b = parseInt($(`.q${i} .n1`).val())
+        var c = parseInt($(`.q${i} .n2`).val())
+        var d = parseInt($(`.q${i} .n3`).val()) //user가 input에 넣은 값
+        if (d === (b + c)) {
+            for (var i = a; i <= 10; i++) {
+                a ++;
+            }//for
+        }//if-else
+        $('.ex_nine .result').text(a)//result
+        $(('.ex_nine div').val()).each(function () {
+            if($(this).children('n3') === ($('.n2').val() + $('.n3').val())) {
+                $(this).parent().css({'background-color':'green'})
+            } else {
+                $(this).parent().css({'background-color':'red'})
+            }//if
+        })//each 
+    })//click
+    }//for_question
+    /* ex_nine ------------------------------------------------ */
 })//call-back function
