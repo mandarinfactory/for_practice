@@ -96,26 +96,21 @@ $(function () {
         =
         <input class='n3' type='text' size='1'>
         </p>
-        `)
+        `)}
     $('.ex_nine button').click(function () {
         var a = 0 // 맞힌 갯수에 +1씩 추가될 점수
-        var b = parseInt($(`.q${i} .n1`).val())
-        var c = parseInt($(`.q${i} .n2`).val())
-        var d = parseInt($(`.q${i} .n3`).val()) //user가 input에 넣은 값
-        if (d === (b + c)) {
-            for (var i = a; i <= 10; i++) {
+        for (var i = 1; i <= 10; i++) {
+                var b = parseInt($(`.q${i} .n1`).val())
+                var c = parseInt($(`.q${i} .n2`).val())
+                var d = parseInt($(`.q${i} .n3`).val()) //user가 input에 넣은 값
+                if (d === (b + c)) {
                 a ++;
-            }//for
-        }//if-else
-        $('.ex_nine .result').text(a)//result
-        $(('.ex_nine div').val()).each(function () {
-            if($(this).children('n3') === ($('.n2').val() + $('.n3').val())) {
-                $(this).parent().css({'background-color':'green'})
+                $(`.ex_nine q${i}`).css({'background-color':'green'})
             } else {
-                $(this).parent().css({'background-color':'red'})
-            }//if
-        })//each 
+                $(`.ex_nine q${i}`).css({'background-color':'green'})
+                }//if-else
+            }//for
+        $('.ex_nine .result').text(a)//result
     })//click
-    }//for_question
     /* ex_nine ------------------------------------------------ */
 })//call-back function
