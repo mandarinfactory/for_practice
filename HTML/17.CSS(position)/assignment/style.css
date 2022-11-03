@@ -1,8 +1,10 @@
+body {
+    background-color: black;
+}
 .div {
     width: 300px;
     height: 300px;
     position: absolute;
-    border: 1px solid black;
 }
 .one {
     top: calc(50% - 300px);
