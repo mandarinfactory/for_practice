@@ -177,3 +177,34 @@
                3. 사용법
                     - 브러쉬 기능으로 선택영역을 임의로 대충 설정(hardness옵션을 설정)
                     - refine hair 버튼을 이용하여 영역 재설정 => ok를 누르면 된다.
+
+- layer 개념
+     1. 투명영역(alpha채널)을 가진 종이개념
+     2. background-layer(jpg)
+          - 투명영역이 없다.
+          - 일반레이어로 변경 => 더블클릭
+
+- layer 복제
+     1. move-tool 사용(V)
+     2. V + alt => 선택영역이 존재할경우 따로 layer가 생성되지 않고 복제된다.
+     3. ctrl + J
+          - 선택영역이 없을경우 : layer 전체 복제(duplicate)
+          - 선택영역이 존재할경우 : 선택영역만 복제(layer via copy)
+     4. ctrl + shift + J
+          - 선택영역을 잘라내서 복제
+
+- layer 변형(transform, ctrl + T)
+     1. option-bar
+          - 축을 설정한다.
+          - aspect ratio(비율유지)
+     2. shift키
+          - 비례를 유지하지 않는다.
+     3. ctrl키
+          - 꼭지점 : 왜곡시킨다.(distort)
+          - 변 : 기울기가 바뀐다.
+          - 이등변삼각형 : ctrl + shift + alt
+
+-layer 반복복제
+     1. ctrl + J
+     2. ctrl + T
+     3. ctrl + shift + alt + T
