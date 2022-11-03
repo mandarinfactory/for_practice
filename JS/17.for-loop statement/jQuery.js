@@ -105,9 +105,9 @@ $(function () {
                 var d = parseInt($(`.q${i} .n3`).val()) //user가 input에 넣은 값
                 if (d === (b + c)) {
                 a ++;
-                $(`.ex_nine q${i}`).css({'background-color':'green'})
+                $(`.ex_nine .q${i}`).css({'background-color':'green'})
             } else {
-                $(`.ex_nine q${i}`).css({'background-color':'green'})
+                $(`.ex_nine .q${i}`).css({'background-color':'red'})
                 }//if-else
             }//for
         $('.ex_nine .result').text(a)//result
