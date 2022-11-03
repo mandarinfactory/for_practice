@@ -70,6 +70,11 @@ $(function () {
             if (number === inputNumber){
                 resultNumber ++ // 찍어야할 갯수와 찍은 갯수가 동일하다.
             }// if statement
+            if($(this).children('input:checked').val() === 'yes'){
+                $('.ex_four div').css({'background-color':'green'})
+            } else if ($(this).children('input:checked').val() === 'no'){
+                $('.ex_four div').css({'background-color':'firebrick'})
+            } else return false
         })//each_div(3번씩)
         $('.ex_four .result').text(resultNumber)
     })//click(.ex_four/assignment)
