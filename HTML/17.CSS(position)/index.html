@@ -25,12 +25,19 @@
                 fixed : web-browser 기준!!(scroll을 해도 같이 움직여서 고정된것으로 보인다.)
             </li>
             <li>
-                relative :
+                relative : 원래의 display 속성을 유지한채, position 속성을 추가할수 있다. <br>
+                (absolute의 기준 부모가 되기 위해서 많이 쓴다.) <br>
+                relative는 자기element의 좌표를 지정하기 전 위치를 기준으로 좌표값이 적용됨 <br>
+                (inborn으로 되어있는 기준축으로!)
             </li>
             <li>
-                static :
+                absolute, fixed가 적용된 요소는 display속성을 잃게 된다. <br>
+                block-level의 넓이가 사라짐, margin의 auto값 적용안됨, <br>
+                inline-level도 크기를 가질수 있음, float/flex/grid layout의 영향을 받지 않는다.
             </li>
-            <hr>
+            <li>
+                position 속성을 가진 요소는 z축(z-index)을 설정할 수 있다<div class=""></div>
+            </li>
             <div class="box abs_one">
                 GHOST!
             </div><!-- abs_one -->
@@ -63,6 +70,18 @@
                     Perspiciatis deserunt eligendi obcaecati
                     nihil velit.</div>
             </div><!-- container -->
+            <hr>
+            <div class="ex ex_one">
+                <div></div>
+            </div>
+            <hr>
+            <div class="ex ex_two">
+                <div></div>
+            </div>
+            <hr>
+            <div class="ex ex_three">
+                <div></div>
+            </div><!-- ex -->
     </main>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
