@@ -193,6 +193,12 @@
      4. ctrl + shift + J
           - 선택영역을 잘라내서 복제
 
+- layer 정렬
+     1. move-tool의 option바에 정렬 옵션
+     2. align(줄)
+     3. distribute (간격)
+          - 기준점 (상하, 좌우 layer 기준!)
+
 - layer 변형(transform, ctrl + T)
      1. option-bar
           - 축을 설정한다.
@@ -204,7 +210,35 @@
           - 변 : 기울기가 바뀐다.
           - 이등변삼각형 : ctrl + shift + alt
 
--layer 반복복제
+- layer 반복복제
      1. ctrl + J
      2. ctrl + T
      3. ctrl + shift + alt + T
+
+- layer 선택 
+     1. movetool옵션바에서 auto select 활성화, layer선택
+     2. 다중레이어 선택 
+          - movetool선택 드래그
+          - shift + 클릭
+     3. 선택된 레이어 선택 해제 
+          - ctrl + shift + alt + 오른족클릭
+          - shift + 클릭
+
+- layer 그룹관리 
+     1. 그룹만들기 
+          - 레이어 선택후 ctrl + G
+          - 레이어 팔레트 폴더 아이콘을 이용해서 글룹 생성후 레이어를 안쪽으로 이동
+     2. 그룹해제 : 그룹선택후 ctrl + shift + g
+     3. 그룹이동 : movetool선택, ctrl + 이동 / 복사는 ctrl + alt + 이동
+
+- layer 상하이동
+     1. ctrl + J(한단계 위로)
+     2. ctrl + [(한단계 아래로)
+     3. ctrl + shift + J(최상위)
+     4. ctrl + shift + [(최하위)
+
+- layer 잠금기능
+     1. lock transparent
+          - 투명영역의 작업을 잠금
+     2. lock all
+          - 모든 작업으로부터 잠금

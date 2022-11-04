@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="jQuery.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>ANIMATION</h1>
+        <hr>
+        <section>
+            <h2>transition</h2>
+            <ul>
+                <li>CSS의 속성값이 변하는 시간을 지정한다.</li>
+                <li>속성값이 숫자일 경우만 가능하다.</li>
+                <li>
+                    transition : 속성1 n초(s), 속성2 n초(s) <br>
+                    속성별로 시간을 다르게 설정할 경우 쓰는 방법이다.
+                </li>
+                <li>transition : all n초(s)</li>
+                <li>
+                    transition-delay : 1s,2s,3s... <br>
+                    활성화-비활성화 순서를 역순으로 정해야한다! => 그래야 자연스럽게 나온다.
+                </li>
+                <li>
+                    HTML 요소에 직접적용된 CSS속성값은 화면출력시에 transition이 적용되지 않는다. <br>
+                    단, JS로 적용시킨다면 새로고침 되더라도 자동적용된다.
+                </li>
+                <li>display : none인 요소는 transition이 적용되지 않는다.(.ex_five)</li>
+            </ul>
+            <div class="ex ex_one">
+                <button>버튼!</button>
+                <button>튼버!</button>
+            </div><!-- ex_one -->
+
+            <div class="ex ex_two">
+                <button>버튼!</button>
+                <button>튼버!</button>
+                <button>버튼!</button>
+                <button>튼버!</button>
+            </div><!-- ex_two -->
+
+            <div class="ex ex_three">
+                <button>온리원!</button>
+            </div><!-- ex_three -->
+
+            <div class="ex ex_four">
+                <button>방굽!</button>
+            </div><!-- ex_four -->
+
+            <div class="ex ex_five">
+                <button>변하기!</button>
+                <div class="box"></div>
+            </div><!-- ex_five -->
+        </section>
+        <hr>
+        <section>
+            <h2>keyframes, animation</h2>
+            <ul>
+                <li>다양한 모션의 구현이 가능하다.</li>
+                <li>
+                    que(시작과 끝)간이 자연스럽게 연결되지 않는다. 끝나면 바로 시작지점으로 이동함. <br>
+                    play상태와 중지상태가 자연스럽게 연결되지 않는다.
+                </li>
+            </ul>
+            <div class="container container1">
+                <button>버튼! transition</button>
+                <div class="box"></div>
+            </div>
+            <div class="container container2">
+                <button>버튼! animation</button>
+                <div class="box"></div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
