@@ -7,4 +7,9 @@ $(function () {
         var Y = $(this).attr('data-y')
         $('.cube').css({'transform':`rotateX(${X}deg) rotateY(${Y}deg)`})
     })//click
+    $('.btn_three button').click(function () {
+        var X = $(this).attr('data-x')
+        var Y = $(this).attr('data-y')
+        $('.theCube').css({'transform':`rotateX(${X}deg) rotateY(${Y}deg)`})
+    })//click
 })//call-back function
