@@ -1,3 +1,6 @@
+body {
+    line-height: 28px;
+}
 button {
     background-color: azure;
     border: 3px solid black;
@@ -14,9 +17,13 @@ button {
     background-color: black;
     color: white;
     font-size: 20px;
-    transform: scale(1.5) rotate(90deg); /* scale(크기비율), rotate(위치회전), translate =>
-    rotate에서 +는 시계방향, -는 반시계방향이다. */
+    transform: scale(1.5) rotate(90deg); 
 }
+/* scale(크기비율), rotate(위치회전), 
+translate(해당 element기준으로 위치옮김) =>
+transform만 %는 객체가 기준이고 그외에는 parent기준으로 잡는다.
+rotate에서 +는 시계방향, -는 반시계방향이다. 
+translate에서 -는 왼쪽, +는 오른쪽방향이다.*/
 .ex_two {
     width: 500px;
     height: 300px;
@@ -27,5 +34,6 @@ button {
 .ex_two div {
     position: absolute;
     background-color: cadetblue;
-    left: 100px;
+    left: 50%;
+    transform: scale(-1) translate(50%);
 }
