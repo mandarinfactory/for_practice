@@ -223,6 +223,11 @@
      3. 선택된 레이어 선택 해제 
           - ctrl + shift + alt + 오른족클릭
           - shift + 클릭
+     4. layer 선택영역
+          - ctrl + thumnail 클릭
+          - ctrl + shift + thumnail 레이어영역 추가
+          - ctrl + alt + thumnail 레이어영억 제거
+          - ctrl + shift + alt + thumnail 레이어영역의 공통되는 선택영역
 
 - layer 그룹관리 
      1. 그룹만들기 
@@ -242,3 +247,9 @@
           - 투명영역의 작업을 잠금
      2. lock all
           - 모든 작업으로부터 잠금
+
+- layer blending 모드
+     1. multiply : 겹칠수록 진해짐
+     2. overray : 상단의 레이어의 명도를 이용해 하단레이어의 명채도가 증감
+     3. screen : 상단레이어의 어두운 색을 출력하지 않는다.(합성에서 자주 사용)
+     4. difference : 상단의 레이어의 색이 반전됨
