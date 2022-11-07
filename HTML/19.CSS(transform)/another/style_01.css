@@ -1,0 +1,134 @@
+.envelop {
+    perspective: 500px;
+    /* 값이 커질수록 원근감은 작아진다.(반비례) */
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+}
+.envelop .card {
+    transition: all 2s;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 300px;
+    border: 3px solid black;
+    position: relative;
+    /* 3D효과를 위해서는 parent로 따로 싸야한다.(원근감용) */
+}
+.card:hover {
+    transform: rotateY(-180deg);
+}
+.card div {
+    backface-visibility: hidden;
+    /* 90도 이상 회전되면 화면에서 숨기는 method */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 300px;
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+}/* front & back 둘다! */
+.card .front {
+    background-color:dodgerblue;
+}
+.card .back {
+    background-color: green;
+    transform: rotateY(180deg);
+}
+/* ------------------------------------------------------------------------ */
+.door_container {
+    display: flex;
+    perspective: 500px;
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: dimgray;
+}
+.door_container.active .door_left {
+    transform: rotateY(-180deg);
+}
+.door_container.active .door_right {
+    transform: rotateY(180deg);
+}
+.door_container > div {
+    transition: all 2s;/* 열닫 둘다 animation줘야하니까! */
+    transform-style: preserve-3d;
+    position: relative;
+    width: 200px;
+    height: 300px;
+}/* left, right door! */
+.door_container .door_left {
+    transform-origin: left center;
+}
+.door_container .door_right {
+    transform-origin: right center;
+}
+.door_container > div > div {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+.door_container .front {
+    background-color: crimson;
+}
+.door_container .back {
+    transform: rotateY(180deg);
+    background-color: blue;
+}
+/* -------------------------------------------------------------------- */
+.container_two {
+    perspective: 700px;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+.cube {
+    transform-style: preserve-3d;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
+.cube div {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    opacity: 0.4;
+    text-align: center;
+    line-height: 300px;
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+}
+.cube .front {
+    transform: translateZ(150px);
+    background-color: red;
+}
+.cube .back {
+    transform: rotateY(180deg) translateZ(150px);
+    background-color: darkblue;
+}
+.cube .right {
+    background-color: aqua;
+    transform: rotateY(90deg) translateZ(150px);
+}
+.cube .left {
+    background-color: gold;
+    transform: rotateY(-90deg) translateZ(150px);
+}
+.cube .top {
+    background-color: darkgreen;
+    transform: rotateX(90deg) translateZ(150px);
+}
+.cube .bottom {
+    background-color:mediumslateblue;
+    transform: rotateX(-90deg) translateZ(150px);
+
+}

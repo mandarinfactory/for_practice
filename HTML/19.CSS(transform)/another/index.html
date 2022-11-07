@@ -6,11 +6,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_01.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="jQuery.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-
+    <main>
+        <h1>TRANSFORM_EXAMPLES</h1>
+        <ul>
+            <li>rotateX는 오른쪽에서 보는 기준으로 한다.(오른쪽이 +, 왼쪽이 -)</li>
+            <li>rotateY는 아래쪽에서 바라보는 기준으로 한다.(오른쪽이 +, 왼쪽이 -)</li>
+            <li>rotateZ는 정면에서 바라보는 기준으로 한다.</li>
+            <li>
+                원근감 설정을 위한 parent박스(.envelop) : perspective(값이 작을수록 원근감은 커진다.), <br>
+                각면을 감싸는 element(.card) => transform-style : preserve-3d <br>
+                parent의 회전각도를 child의 회전각에 반영하여 앞뒷면을 설정한다. <br>
+                이 설정을 안하면 계속 앞뒷면이 고정되어서 나온다.(backface-visibility로 인해)
+            </li>
+            <li>
+                면element <br>
+                - backface-visibility <br>
+                - 90도 이상 뒤집힌 면은 숨겨지게 된다.
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+        <hr>
+        <section>
+            <h2>flip효과</h2>
+            <div class="envelop">
+                <div class="card">
+                    <div class="front">
+                        FRONT
+                    </div><!-- front -->
+                    <div class="back">
+                        BACK
+                    </div><!-- back -->
+                </div><!-- card -->
+            </div><!-- envelop -->
+        </section>
+        <hr>
+        <!-- section-01 ------------------------------------------- -->
+        <section>
+            <h2>문열기</h2>
+            <button class="door_btn">열닫</button>
+            <div class="door_container">
+                <div class="door_left">
+                    <div class="front">앞</div>
+                    <div class="back">뒤</div>
+                </div><!-- door_left -->
+                <div class="door_right">
+                    <div class="front">앞</div>
+                    <div class="back">뒤</div>
+                </div><!-- door_right -->
+            </div><!-- door_container -->
+        </section>
+        <hr>
+        <!-- section-02 ------------------------------------------ -->
+        <section>
+            <h2>CUBE</h2>
+            <div class="cube_btns">
+                <button data-x="0" data-y="0">앞</button>
+                <button data-x="0" data-y="-180">뒤</button>
+                <button data-x="0" data-y="-90">우</button>
+                <button data-x="0" data-y="90">좌</button>
+                <button data-x="-90" data-y="0">위</button>
+                <button data-x="90" data-y="0">아래</button>
+            </div>
+            <div class="container_two">
+                <div class="cube">
+                    <div class="front">
+                        앞
+                    </div><!-- front -->
+                    <div class="back">
+                        뒤
+                    </div><!-- back -->
+                    <div class="right">
+                        우
+                    </div><!-- right -->
+                    <div class="left">
+                        좌
+                    </div><!-- left -->
+                    <div class="top">
+                        위
+                    </div><!-- top -->
+                    <div class="bottom">
+                        아래
+                    </div><!-- bottom -->
+                </div><!-- cube -->
+            </div><!-- container_two -->
+        </section>
+    </main>
 </body>
 
 </html>
