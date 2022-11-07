@@ -96,20 +96,25 @@ var checkAnNum = [
     [2, 3], //chk2, chk3 < q1
     [1] //chk1 < q2
 ]// checkAnNum (for - i) => 정답의 갯수는 j.length
-    $('.ex_five button').click(function () {
+$('.ex_five button').click(function () {
         var point = 0;
         var checkCnt = 0;
-        if ($(`.ex_five .q1 .chk${checkAnNum[1][0]}`).prop('checked')) {
+        if ($(`.ex_five .q1 .chk${checkAnNum[0][0]}`).prop('checked')) {
             checkCnt++
         }
-        if ($(`.ex_five .q1 .chk${checkAnNum[1][1]}`).prop('checked')) {
+        console.log(checkAnNum[0][0])
+        if ($(`.ex_five .q1 .chk${checkAnNum[0][1]}`).prop('checked')) {
             checkCnt++
         }
-        console.log(checkCnt)
+        console.log(checkAnNum[0][1])
         if ($(`.ex_five .q2 .chk${checkAnNum[1][0]}`).prop('checked')) {
             checkCnt++
         }
+        console.log(checkAnNum[1][0])
         console.log(checkCnt)
+    if(checkCnt === checkAnNum[0].length){
+        point++
+    }    
     if(checkCnt === checkAnNum[1].length){
         point++
     }    
