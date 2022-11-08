@@ -17,3 +17,71 @@
     }
 } */
 /* 화면넓이가 500px 이하일경우, */
+.a {
+    width: 95%;
+    max-width: 800px; /* 800px이하까지가 최대! */
+    margin: 10px auto;
+    height: 100px;
+    background-color: gainsboro;
+    text-align: center;
+    line-height: 100px;
+}
+.container {
+    width: 95%;
+    max-width: 800px;
+    margin: 10px auto;
+    text-align: center;
+}
+/* sidebar(b, c) -------------------------------------------------------- */
+.b, 
+.c {
+    height: 200px;
+    line-height: 200px;
+    background-color: gainsboro;
+}
+/* d -------------------------------------------------------- */
+.d {
+    height: 410px;
+    line-height: 410px;
+    background-color: gainsboro;
+}
+.e {
+    width: 95%;
+    max-width: 800px;
+    height: 100px;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 100px;
+    background-color: gainsboro;
+}
+@media screen and (min-width:1000px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .sidebar{
+        width: calc(25% - 10px);
+    }
+    .b {
+        margin-bottom: 10px;
+    }
+    .d {
+        width: 75%;
+    }
+}
+@media screen and (max-width:1000px) and (min-width:500px) {
+    .sidebar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .b, 
+    .c {
+        width: calc(50% - 5px);
+    }
+}
+@media screen and (max-width:500px) {
+    .sidebar{
+        display: none;
+    }
+}
