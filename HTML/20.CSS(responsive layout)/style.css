@@ -1,0 +1,19 @@
+/* @media screen and (min-width:1000px){
+    body{
+        background-color: forestgreen;
+    }
+}
+/* 화면넓이가 1000px 이상일경우, */
+/* @media screen and (min-width:500px) and (max-width:1000px){
+    body{
+        background-color: crimson;
+    }
+} */
+/* 화면넓이가 1000px 이하일경우, 500px이상일경우 =>
+1000px일때는 crimson이 적용된다.(우선순위) */
+/* @media screen and (max-width:500px){
+    body{
+        background-color: yellowgreen;
+    }
+} */
+/* 화면넓이가 500px 이하일경우, */
