@@ -37,4 +37,24 @@ $(function () {
             if(i !== 9){$('.ex_two table tr:last-child').append(`<td colspan=${9 - i}></td>`)}
         }//for-i
     /* ex_two -------------------------------------------------------- */
+    var totalUserArr = [
+        
+    ]//totalUserArr // .add할때마다 큰배열을 밖에 만들면 계속 초기화된다!
+    $('.ex_three .add').click(function () {
+        var userArr = [] // 소괄호는 계속 추가되어야하므로 안에다 만든다!
+        userArr.push($('.ex_three .name').val());
+        userArr.push($('.ex_three .gender:checked').val());
+        userArr.push($('.ex_three .age').val());
+        totalUserArr.push(userArr);
+    })//click(.add)
+    $('.ex_three .print').click(function () {
+        $('.ex_three .result').empty()
+        for(var i = 0; i < totalUserArr.length; i++) { //0,1번째씩이니까 ,i < totalUserArr.length
+            for(var j = 0; j < 3; j++){
+                $('.ex_three .result').append(`${totalUserArr[i][j]},`)
+            }//for-j
+            $('.ex_three .result').append(`<br>`)
+        }//for-i
+    })//click(.print)
+    /* ex_three -------------------------------------------------------- */
 })//call-back

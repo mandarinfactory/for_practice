@@ -60,7 +60,7 @@ $(function () {
 /* ex_three --------------------------------------------------- */
 var totalUserArr = [
     []
-]//arrTwo
+]//totalUserArr
 $('.ex_four .add').click(function () {
     var userArr = [] // ['','','']
     userArr.push($('.ex_four .name').val()) // ['']
