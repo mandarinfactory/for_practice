@@ -84,7 +84,7 @@ $(function () {
     $('.ex_six button').click(function () {
         $('.ex_six .result').empty();
         for(var i = 1; i <= 5; i++){
-            for(var j = 1; j <= i; j++ ){
+            for(var j = 1; j <= i; j++){
                 $('.ex_six .result').append('★')
             }// for -j_one
             for(j =1; j <= 5 - i; j++){

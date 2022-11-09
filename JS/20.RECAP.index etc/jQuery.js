@@ -37,7 +37,7 @@ $(function () {
                         checkCnt++;
                         i++ //i의값을 계속 변화해줘야하므로!
                     }//if
-             })//each
+                })//each
         if(checkCnt === c.length){
             $('.ex_three .result').text('정답!')
         } else {
@@ -96,4 +96,20 @@ $(function () {
     }//if-else
     })//click
     /* ex_five ----------------------------------------------------- */
+    $('.ex_six button').click(function () {
+        
+    })//click
+    /* ex_six ------------------------------------------------------- */
+    $('.ex_seven button').click(function () {
+        $('.ex_seven .result').empty(); // .result를 지운다!
+        $('.ex_seven .result').append(`<table>`)
+        for(var i = 1; i <= 10; i++){
+            $('.ex_seven .result table').append(`<tr>`)
+            for(var j = 1; j <= 2; j++){
+                $('.ex_seven .result table tr:last-child').append(`<td colspan=${1+j}>`)
+            } //for - j
+        } //for - i
+        
+    }) //click
+    /* ex_seven ------------------------------------------------------- */
 })//call-back function
