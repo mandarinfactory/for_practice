@@ -58,4 +58,133 @@ $(function () {
         }//for-i
     })//click(.print)
     /* ex_three -------------------------------------------------------- */
+    /* 
+    array[]는 반복, 순서 그리고 for에서 쓰기 편하고,
+    object{}는 data추출할때 매우 편하다. => for문으로 돌릴수 없다! (순서X)
+     */
+    var allArr = []; // 큰array
+    $('.ex_four .add').click(function () {
+        var userObj = {};
+        userObj.name = ($('.ex_four .name').val());
+        userObj.gender = ($('.ex_four .gender:checked').val());
+        userObj.age = ($('.ex_four .age').val());
+        allArr.push(userObj);
+        console.log(allArr)
+    })//click(.add)
+    $('.ex_four .print').click(function () {
+        $('.ex_four .result').empty()
+        for(var i = 0; i < allArr.length; i++){
+            $('.ex_four .result').append(`${allArr[i].name},`)
+            $('.ex_four .result').append(`${allArr[i].gender},`)
+            $('.ex_four .result').append(`${allArr[i].age}`)
+            $('.ex_four .result').append(`<br>`) //i번씩 띄어쓰기 해줘야하니까!
+        }//for-i
+    })//click(.print)
+    /* ex_four -------------------------------------------------------- */
+    var theArr = [];
+    $('.ex_five .add').click(function () {
+        var theObj = {};
+        theObj.name = ($('.ex_five .name').val());
+        theObj.gender = ($('.ex_five .gender:checked').val());
+        theObj.age = ($('.ex_five .age').val());
+        theArr.push(theObj);
+    })//click(.add)
+    $('.ex_five .print').click(function () {
+        $('.ex_five .result').empty()
+        theArr.forEach(function (obj) { //obj라는 parameter! => .append(`${obj.name},`)
+            $('.ex_five .result').append(`${obj.name},`)
+            $('.ex_five .result').append(`${obj.gender},`)
+            $('.ex_five .result').append(`${obj.age},`)
+            $('.ex_five .result').append(`<br>`)
+        }) //forEach function(event는 아니고 array-method이다! each랑은 비슷함.)
+      /*   for(var i = 0; i < allArr.length; i++){
+            $('.ex_five .result').append(`${theArr[i].name},`)
+            $('.ex_five .result').append(`${theArr[i].gender},`)
+            $('.ex_five .result').append(`${theArr[i].age}`)
+            $('.ex_five .result').append(`<br>`) //i번씩 띄어쓰기 해줘야하니까!
+        }//for-i  => 요즘에는 이렇게 안쓴다! function화 한다. */
+    })//click(.print)
+    /* ex_five -------------------------------------------------------- */
+    var everyArr = []
+    for (var i = 1; i <= 20; i++){
+        everyArr.push(Math.floor(Math.random()*10)) // 0 ~ 9, ㅡㅁ소.ceil이면 1 ~ 10
+    }//for-i
+    everyArr.forEach(function (num) {
+        $('.ex_six .result').append(num)
+         
+        $('.ex_six .result').append(`<br>`)
+    })//forEach
+    /* ex_six -------------------------------------------------------- */
+    var oneArr = [
+        {
+            name : "가상",
+            gender : '남',
+            age : '23'
+        },
+        {
+            name : '나상',
+            gender : '여',
+            age : '31'
+        },
+        {
+            name : '다상',
+            gender : '남', 
+            age : '48'
+        },
+        {
+            name : '라상',
+            gender : '여', 
+            age : '19'
+        }
+    ]
+    $('.ex_seven button').click(function () {
+        $('.ex_seven .result').empty()//click할때 한번만 비우면 된다!
+        var femaleArr = oneArr.filter(function (v) {
+            return v.gender === '여'
+        })//filter-function(해당 조건에 맞는 array들을 가져와서 새로운 array로 묶는다. => 조건만 볼때 주로 쓴다!(~조건이면 return한다.))
+        var maleArr = oneArr.filter(function (v) {
+            return v.gender === '남'
+        })//filter-function(해당 조건에 맞는 array들을 가져와서 새로운 array로 묶는다.)
+        femaleArr.forEach(function (v) {
+            $('.ex_seven .result').append(`여성 : ${v.name}`)
+            $('.ex_seven .result').append(`<br>`)
+        })//forEach(femaleArr)
+        $('.ex_seven .result').append(`<br>`)
+        maleArr.forEach(function (v) {
+            $('.ex_seven .result').append(`남성 : ${v.name}`)
+            $('.ex_seven .result').append(`<br>`)
+        })//forEach(maleArr)
+    })//click(.ex_seven)
+    /* ex_seven -------------------------------------------------------- */
+    var oneArr = [
+        {
+            name : "마상",
+            gender : '남',
+            age : '23'
+        },
+        {
+            name : '바상',
+            gender : '여',
+            age : '31'
+        },
+        {
+            name : '사상',
+            gender : '남', 
+            age : '48'
+        },
+        {
+            name : '아상',
+            gender : '여', 
+            age : '19'
+        }
+    ]
+    $('.ex_eight button').click(function () {
+        var twoArr =oneArr.map(function (v) {
+            return v.name
+        })//map.oneArr
+        twoArr.forEach(function () {
+            $('.ex_eight .result').append(v + ',');
+        })//forEach => map을 써도 되지만 주로 forEach를 출력시에는 쓴다.(새로운 array를 사용할때 주로 map사용!)
+    })//click(.ex_eight)
+    /* ex_eight -------------------------------------------------------- */
 })//call-back
