@@ -111,7 +111,6 @@ $(function () {
     }//for-i
     everyArr.forEach(function (num) {
         $('.ex_six .result').append(num)
-         
         $('.ex_six .result').append(`<br>`)
     })//forEach
     /* ex_six -------------------------------------------------------- */
@@ -187,4 +186,18 @@ $(function () {
         })//forEach => map을 써도 되지만 주로 forEach를 출력시에는 쓴다.(새로운 array를 사용할때 주로 map사용!)
     })//click(.ex_eight)
     /* ex_eight -------------------------------------------------------- */
+        for(var i = 1; i <= 5; i++){
+            var randomNum = Math.ceil(Math.random() * 100);
+            $('.ex_nine .q').append(`${randomNum},`);
+        }//for-i
+        $('.ex_nine .btn_odd').click(function j() {
+            /* 
+                글자 전체를 가져온다. '3','2','5' // split
+                그리고 글자를 , 기준으로 쪼개고 배열로 만든다. ['3','2','5']
+                배열을 반복해서 홀수,짝수검사를 통해(parseInt) 해당하는 배열을 새로 만들어야한다. ['3', '5'] // map
+                생성된 배열의 갯수는 .length로!
+                생성된 배열로 반복해서 숫자를 출력한다.(여러개니까!)  
+            */
+        })//click(.btn_odd)
+    /* ex_nine -------------------------------------------------------- */
 })//call-back
