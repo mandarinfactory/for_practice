@@ -46,6 +46,7 @@ $(function () {
         userArr.push($('.ex_three .gender:checked').val());
         userArr.push($('.ex_three .age').val());
         totalUserArr.push(userArr);
+        $('.ex_three').val('').prop('checked'.false) // click-event 후 input 초기화!
     })//click(.add)
     $('.ex_three .print').click(function () {
         $('.ex_three .result').empty()
