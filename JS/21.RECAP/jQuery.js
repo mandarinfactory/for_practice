@@ -107,7 +107,7 @@ $(function () {
     /* ex_five -------------------------------------------------------- */
     var everyArr = []
     for (var i = 1; i <= 20; i++){
-        everyArr.push(Math.floor(Math.random()*10)) // 0 ~ 9, ㅡㅁ소.ceil이면 1 ~ 10
+        everyArr.push(Math.floor(Math.random()*10)) // 0 ~ 9, Math.ceil이면 1 ~ 10
     }//for-i
     everyArr.forEach(function (num) {
         $('.ex_six .result').append(num)
@@ -186,18 +186,31 @@ $(function () {
         })//forEach => map을 써도 되지만 주로 forEach를 출력시에는 쓴다.(새로운 array를 사용할때 주로 map사용!)
     })//click(.ex_eight)
     /* ex_eight -------------------------------------------------------- */
-        for(var i = 1; i <= 5; i++){
-            var randomNum = Math.ceil(Math.random() * 100);
-            $('.ex_nine .q').append(`${randomNum},`);
-        }//for-i
-        $('.ex_nine .btn_odd').click(function j() {
+    for(var i = 1; i <= 5; i++){
+        var randomNum = Math.ceil(Math.random() * 100);
+        $('.ex_nine .q').append(`${randomNum},`);
+    }//for-i
+    var oddArr = []
+    var evenArr = []
+    $('.ex_nine .btn_odd').click(function j() {
+        $('.ex_nine .result').empty();
+        var rawNumber = $('.ex_nine .q').text() // 1. 글자전체 가져옴
+        var numberArr = rawNumber.split(',') // 2. ['','','']꼴로 만들어준다.
+        console.log(rawNumber)   
+        console.log(numberArr)   
+        numberArr.forEach(function (v){
+            if(parseInt(v) % 2 !== 0){
+            oddArr = numberArr.push(v)//map-oddArr //3. 홀수, 짝수검사를 통해 해당하는 배열을 새로 만든다!
+            }//if-else
+            })//forEach-numberArr
             /* 
-                글자 전체를 가져온다. '3','2','5' // split
-                그리고 글자를 , 기준으로 쪼개고 배열로 만든다. ['3','2','5']
-                배열을 반복해서 홀수,짝수검사를 통해(parseInt) 해당하는 배열을 새로 만들어야한다. ['3', '5'] // map
-                생성된 배열의 갯수는 .length로!
-                생성된 배열로 반복해서 숫자를 출력한다.(여러개니까!)  
+            1. 글자 전체를 가져온다. '3','2','5' // split
+            2. 그리고 글자를 , 기준으로 쪼개고 배열로 만든다. ['3','2','5']
+            3. 배열을 반복해서 홀수,짝수검사를 통해(parseInt) 해당하는 배열을 새로 만들어야한다. ['3', '5'] // map
+            4. 생성된 배열의 갯수는 .length로!
+            5. 생성된 배열로 반복해서 숫자를 출력한다.(여러개니까!)  
             */
         })//click(.btn_odd)
+        console.log(oddArr)
     /* ex_nine -------------------------------------------------------- */
 })//call-back
