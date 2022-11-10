@@ -66,15 +66,30 @@ $(function () {
     })//click(ex_two button => filter사용!)
     /* ex_two -------------------------------------------------------------- */
     var totalArr = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-        $('.ex_three .q').append( totalArr[Math.floor(Math.random() * 10)])//append는 변수선언하면 안된다!
+        $('.ex_three .q').append(totalArr[Math.floor(Math.random() * 10)])//append는 변수선언하면 안된다!
         var qNum = $('.ex_three .q').text()
         $('.ex_three button').click(function () {        
             var userNum = parseInt($('.ex_three input').val())//input은 value로 가져오는것! text가 아니고!
             if(totalArr[userNum] === qNum){
-                console.log('yes')
+                $('.ex_three .result').text('yyyyyes')
             } else {
-                console.log('no')
+                $('.ex_three .result').text('nnnnno')
             }//if-else
         })//click(ex_three)
     /* ex_three -------------------------------------------------------------- */
+    var weekEnArr = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+    var weekKrArr = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일']
+    $('.ex_four .q').append(weekEnArr[Math.floor(Math.random() * 7)])
+    $('.ex_four button').click(function () {
+        if(
+        weekEnArr.indexOf($('.ex_four .q').text())
+        ===
+        weekKrArr.indexOf($('.ex_four input').val())
+        ){
+            $('.ex_four .result').text('yyyyyes')
+        } else {
+            $('.ex_four .result').text('nnnnno')
+        }//if-else
+    })//click
+    /* ex_four -------------------------------------------------------------- */
 })//call-back
