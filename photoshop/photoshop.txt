@@ -168,43 +168,62 @@
                2. 선택영역을 제거 / 선택영역이 있을경우
           - shift + alt
                1. 정비례 + 방사형선택 / 선택영역이 없을경우
+
                2. 교집합, 선택된 부분과 겹치는 영역이 남게된다. / 선택영역이 있을경우
+
           - inverse
+             
                1. ctrl + shift + I : 선택영역 반전
+
           - select and mask
+              
                1. 모든 선택tool을 클릭하면 option bar에 위치함
+              
                2. brush형태로 선택영역을 설정(머리카락, 털 등)
+              
                3. 사용법
                     - 브러쉬 기능으로 선택영역을 임의로 대충 설정(hardness옵션을 설정)
                     - refine hair 버튼을 이용하여 영역 재설정 => ok를 누르면 된다.
 
 - layer 개념
+    
      1. 투명영역(alpha채널)을 가진 종이개념
+   
      2. background-layer(jpg)
           - 투명영역이 없다.
           - 일반레이어로 변경 => 더블클릭
 
 - layer 복제
+    
      1. move-tool 사용(V)
+    
      2. V + alt => 선택영역이 존재할경우 따로 layer가 생성되지 않고 복제된다.
+    
      3. ctrl + J
           - 선택영역이 없을경우 : layer 전체 복제(duplicate)
           - 선택영역이 존재할경우 : 선택영역만 복제(layer via copy)
+   
      4. ctrl + shift + J
           - 선택영역을 잘라내서 복제
 
 - layer 정렬
+    
      1. move-tool의 option바에 정렬 옵션
+   
      2. align(줄)
+  
      3. distribute (간격)
           - 기준점 (상하, 좌우 layer 기준!)
 
 - layer 변형(transform, ctrl + T)
      1. option-bar
+
           - 축을 설정한다.
           - aspect ratio(비율유지)
+    
      2. shift키
           - 비례를 유지하지 않는다.
+   
      3. ctrl키
           - 꼭지점 : 왜곡시킨다.(distort)
           - 변 : 기울기가 바뀐다.
@@ -212,18 +231,25 @@
 
 - layer 반복복제
      1. ctrl + J
+
      2. ctrl + T
+
      3. ctrl + shift + alt + T
+
 
 - layer 선택 
      1. movetool옵션바에서 auto select 활성화, layer선택
+
      2. 다중레이어 선택 
+
           - movetool선택 드래그
           - shift + 클릭
-     3. 선택된 레이어 선택 해제 
+     3. 선택된 레이어 선택 해제
+
           - ctrl + shift + alt + 오른족클릭
           - shift + 클릭
      4. layer 선택영역
+
           - ctrl + thumnail 클릭
           - ctrl + shift + thumnail 레이어영역 추가
           - ctrl + alt + thumnail 레이어영억 제거
@@ -233,35 +259,73 @@
      1. 그룹만들기 
           - 레이어 선택후 ctrl + G
           - 레이어 팔레트 폴더 아이콘을 이용해서 글룹 생성후 레이어를 안쪽으로 이동
+
      2. 그룹해제 : 그룹선택후 ctrl + shift + g
+
      3. 그룹이동 : movetool선택, ctrl + 이동 / 복사는 ctrl + alt + 이동
 
 - layer 상하이동
      1. ctrl + J(한단계 위로)
+
      2. ctrl + [(한단계 아래로)
+
      3. ctrl + shift + J(최상위)
+
      4. ctrl + shift + [(최하위)
 
 - layer 잠금기능
      1. lock transparent
           - 투명영역의 작업을 잠금
+
      2. lock all
           - 모든 작업으로부터 잠금
 
 - layer blending 모드
      1. multiply : 겹칠수록 진해짐
+
      2. overray : 상단의 레이어의 명도를 이용해 하단레이어의 명채도가 증감
+
      3. screen : 상단레이어의 어두운 색을 출력하지 않는다.(합성에서 자주 사용)
+
      4. difference : 상단의 레이어의 색이 반전됨
 
 - type tool
      1. 글자크기 단위설정 : ctrl + K, unit/ruler
+
      2. 폰트명 한글 표기 : ctrl + K, type, show Font Name in English 해제
+
      3. 글자 입력 방법
           - drag : 글자의 입력 범위를 설정, 시안, 출판
           - click : typo-graphy 
+
      4. 캐릭터 팔레트 : 타입툴 옵션바 : line-height, letter-spacing 
+
      5. rasterize type : 글자(vector)를 그림(bitmap)으로 변경
+
      6. tip
           - 웹문서에는 sans-sherif체를 사용하기를 권장함(나눔고딕, 노토산스, 맑은 고딕)
           - 글자색은 option-bar에서 바꿀수 있다.
+
+- gradient 
+     1. 적용순서
+          - 색상선택
+          - style(gradient모양)선택
+          - type(gradient방향)선택
+          - vector 레이어는 rasterize 후 적용해야함
+     
+     2. style
+          - gradient선택 후 마우스 우클릭
+          - basics / 전경색 => 후경색
+          - basics / 전경색 => 투명색
+
+     3. type
+          - gradient option-bar에 
+          - linear : 드래그(시작점) 방향과 거리를 이용해 gradient적용된다.
+          - radial : 드래그(시작점)을 기준으로 원형으로 퍼지는 gradient
+          - reflect : 드래그(시작점) 기준으로 반대칭 gradient
+
+     4. option-bar
+          - reverse : 뒤집어서 반대로 색이 출력된다.
+     
+     5. 편집 
+          - gradient tool option-bar edit(gradient모양) 버튼 사용
