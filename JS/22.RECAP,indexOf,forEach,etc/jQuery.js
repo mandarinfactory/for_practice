@@ -65,4 +65,16 @@ $(function () {
         })//forEach(oddEvenArr)
     })//click(ex_two button => filter사용!)
     /* ex_two -------------------------------------------------------------- */
+    var totalArr = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+        $('.ex_three .q').append( totalArr[Math.floor(Math.random() * 10)])//append는 변수선언하면 안된다!
+        var qNum = $('.ex_three .q').text()
+        $('.ex_three button').click(function () {        
+            var userNum = parseInt($('.ex_three input').val())//input은 value로 가져오는것! text가 아니고!
+            if(totalArr[userNum] === qNum){
+                console.log('yes')
+            } else {
+                console.log('no')
+            }//if-else
+        })//click(ex_three)
+    /* ex_three -------------------------------------------------------------- */
 })//call-back
