@@ -90,6 +90,29 @@ $(function () {
         } else {
             $('.ex_four .result').text('nnnnno')
         }//if-else
-    })//click
+    })//click(ex_four)
     /* ex_four -------------------------------------------------------------- */
+    var numEnArr = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+    for(var i = 1; i <= 5; i++){
+    $('.ex_five .q').append(numEnArr[Math.floor(Math.random() * 10)]+',')
+    }//for-i
+    $('.ex_five button').click(function () {
+        var checkCnt = 0;
+        var quesArr = $('.ex_five .q').text().split(',')
+        quesArr.pop()
+        var userArr = ($('.ex_five input').val()).split(',')
+        for(i = 0; i < quesArr.length; i++){
+            if(numEnArr[userArr[i]] === quesArr[i]){
+                checkCnt++
+            } else {
+                checkCnt--
+            }//if
+        }//for
+        if(checkCnt === quesArr.length){
+            $('.ex_five .result').text('다맞았습니다!')
+        } else {
+            $('.ex_five .result').text('다시 한번 확인해보세요!')
+        }//if
+    })//click
+    /* ex_five -------------------------------------------------------------- */
 })//call-back
