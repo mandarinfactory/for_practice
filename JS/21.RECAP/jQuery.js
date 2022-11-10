@@ -190,9 +190,9 @@ $(function () {
         var randomNum = Math.ceil(Math.random() * 100);
         $('.ex_nine .q').append(`${randomNum},`);
     }//for-i
-    var oddArr = []
     var evenArr = []
     $('.ex_nine .btn_odd').click(function j() {
+        var oddArr = []
         $('.ex_nine .result').empty();
         var rawNumber = $('.ex_nine .q').text() // 1. 글자전체 가져옴
         var numberArr = rawNumber.split(',') // 2. ['','','']꼴로 만들어준다.
@@ -210,7 +210,7 @@ $(function () {
             4. 생성된 배열의 갯수는 .length로!
             5. 생성된 배열로 반복해서 숫자를 출력한다.(여러개니까!)  
             */
+           console.log(oddArr)
         })//click(.btn_odd)
-        console.log(oddArr)
     /* ex_nine -------------------------------------------------------- */
 })//call-back
