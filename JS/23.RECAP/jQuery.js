@@ -117,7 +117,7 @@ $(function () {
  var a = [1,2,3]
  var aCopy = [...a] //전개연산자 => var a의 array 값을 복사한다.
  var obj3 = {name : 'a'}
- var obj3Copy = {...obj3} //전개연산자 => var obj3의 object 값을 복사한다.
+ var obj3Copy = {...obj3} //전개연산자 => var obj3의 object 값을 복사한다!!!!!!
 
  6.얕은복사(shallow copy)
   - 배열내 객체, 배열들이 있을때 내부값은 참조를 하는거고 내부값까지 복사하지 않는다.
@@ -126,11 +126,36 @@ $(function () {
     {name : 'a'},
     {name : 'b'},
  ]
- var arrCopy = [...arr] //copy
+ var arrCopy = [...arr] //copy!!!!
  arr.pop()
  console.log(arr, arrCopy) // [ {name : 'a'}, {name : 'a'},{name : 'b'}, ]
 
 
  arr[0].name = 'c';
  console.log(arrCopy) // [ {name : 'c'},{name : 'b'}, ]
+
+ 7.깊은복사(deep copy)
+  var arr = [
+    {name : 'a'},
+    {name : 'b'},
+ ]
+ var arrCopy = []
+    // []
+arrCopy.push({...arr[0]})
+    // [
+        {name : 'a'},
+    ]
+arrCopy.push({...arr[1]})
+    // [
+        {name : 'a'},
+        {name : 'b'},
+    ] => 이때의 ({name : 'a'},{name : 'b'},)는 arr의 값과 다른 값들이다. (복사를 한거지 참조한게 아니다!)
+또는,
+arr.forEach(function(v){
+    arrCopy.push({...v})
+})로 쓸수 있다.
+또는,
+var arrAnCopy = arr.map(function (v){
+    return {...v}
+})로도 쓸수 있다.
 */
