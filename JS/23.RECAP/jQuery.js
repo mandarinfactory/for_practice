@@ -43,4 +43,21 @@ $(function () {
         }
     })//click
     /* ex_two ------------------------------------------------------------------------------- */
+    var personnelArr = [
+        { name : '가상', gender : '남', age : 32, id : 1},//object
+        { name : '나상', gender : '여', age : 19, id : 2},//object
+        { name : '다상', gender : '남', age : 26, id : 3},//object
+        { name : '라상', gender : '여', age : 43, id : 4},//object
+    ]//personnelArr => id로 구분시키는것! 따라서 서로 다른 값으로 해야한다!
+    $('body').on('click','.ex_three .result button',function () {
+        
+    })//on을 사용하면 button(삭제button)이 후에 만들어지더라도 function이 적용이 된다.
+    personnelArr.forEach(function (v) {
+        $('.ex_three .result').append(`
+        <p>
+        이름 : ${v.name}, 성별 : ${v.gender}, 나이 : ${v.age} <button>삭제</button>
+        </p> 
+        `) /* JS에서 동적으로 button을 생성함. (dynamic programming) */
+    })//forEach
+    /* ex_three ------------------------------------------------------------------------------- */
 })//call-back
