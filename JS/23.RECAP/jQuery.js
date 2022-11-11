@@ -118,4 +118,19 @@ $(function () {
  var aCopy = [...a] //전개연산자 => var a의 array 값을 복사한다.
  var obj3 = {name : 'a'}
  var obj3Copy = {...obj3} //전개연산자 => var obj3의 object 값을 복사한다.
+
+ 6.얕은복사(shallow copy)
+  - 배열내 객체, 배열들이 있을때 내부값은 참조를 하는거고 내부값까지 복사하지 않는다.
+  - 객체나 배열 안에 객체나 배열이 들어있는 값을 복사한 경우
+ var arr = [
+    {name : 'a'},
+    {name : 'b'},
+ ]
+ var arrCopy = [...arr] //copy
+ arr.pop()
+ console.log(arr, arrCopy) // [ {name : 'a'}, {name : 'a'},{name : 'b'}, ]
+
+
+ arr[0].name = 'c';
+ console.log(arrCopy) // [ {name : 'c'},{name : 'b'}, ]
 */
