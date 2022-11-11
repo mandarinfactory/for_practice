@@ -83,12 +83,18 @@ $(function () {
         printPersonnelArr();
     })//click(sort-age)
     /* ex_three ------------------------------------------------------------------------------- */
+    var fourEnArr = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',]
+    var fourKrArr = ['영', '하나', '둘', '셋', '넷', '다섯', '여섯', '일곱', '여덟', '아홉',]
+    for(var i = 1; i <= 3; i++){
+        $('.ex_four .q').append(fourEnArr[Math.floor(Math.random() * 10)] + ',')
+    }//for
+    /* ex_four ------------------------------------------------------------------------------- */
 })//call-back
 
 
 
 /* 
-<< reference && copy >>
+<< reference && shallow / deep copy >>
  1.
  var a = 1
  var b = a
