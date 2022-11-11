@@ -49,15 +49,73 @@ $(function () {
         { name : '다상', gender : '남', age : 26, id : 3},//object
         { name : '라상', gender : '여', age : 43, id : 4},//object
     ]//personnelArr => id로 구분시키는것! 따라서 서로 다른 값으로 해야한다!
-    $('body').on('click','.ex_three .result button',function () {
-        
+    function printPersonnelArr () {
+        $('.ex_three .result').empty();
+        personnelArr.forEach(function (v) {
+            $('.ex_three .result').append(`
+            <p>
+            이름 : ${v.name}, 성별 : ${v.gender}, 나이 : ${v.age} <button class='delete' value = '${v.id}'>삭제</button>
+            </p> 
+            `) /* JS에서 동적으로 button을 생성함. (dynamic programming) */
+        })//forEach
+    }//printPersonnelArr
+    printPersonnelArr();
+    $('body').on('click','.ex_three .result .delete',function () {
+        var id = parseInt($(this).val())
+        personnelArr = personnelArr.filter(function(v) {
+            return v.id != id;
+        })//filter
+        printPersonnelArr();
     })//on을 사용하면 button(삭제button)이 후에 만들어지더라도 function이 적용이 된다.
-    personnelArr.forEach(function (v) {
-        $('.ex_three .result').append(`
-        <p>
-        이름 : ${v.name}, 성별 : ${v.gender}, 나이 : ${v.age} <button>삭제</button>
-        </p> 
-        `) /* JS에서 동적으로 button을 생성함. (dynamic programming) */
-    })//forEach
+
+    $('.ex_three .sort-age').click(function () {
+        personnelArr.sort(function (x,y) {
+            return x.age - y.age
+        })//sort
+        printPersonnelArr();
+    })//click(sort-age)
+    $('.ex_three .sort-name').click(function () {
+        personnelArr.sort(function (x,y) {
+            if(x.name > y.name) return 1
+            if(x.name < y.name) return -1
+            if(x.name === y.name) return 0
+        })//sort => 순서를 바꾸면 내림차순으로 바뀐다! -1 / 1 / 0
+        printPersonnelArr();
+    })//click(sort-age)
     /* ex_three ------------------------------------------------------------------------------- */
 })//call-back
+
+
+
+/* 
+<< reference && copy >>
+ 1.
+ var a = 1
+ var b = a
+ console.log(a === b) // true
+
+ 2.
+ console.log([1,2] == [1,2]) // false
+  => array는 보기에는 같아도 하나하나가 개별적으로 다른 array이므로 false로 출력된다.
+
+ 3. 
+ var arr1 = [1,2]
+ var arr2 = arr1 // arr2는 arr1을 참조한다고 말한다. (여기서 arr1 = [1,2]와 arr2 = arr1에서의 arr1은 다른값이다.)
+ arr2.push(3)
+ console.log(arr2, arr1)
+ // [1,2,3], [1,2,3]
+ console.log(arr2 === arr1)
+ // true
+
+ 4.
+ var obj1 = {name : 'a'}
+ var obj2 = obj1 // 마찬가지로, obj2는 obj1을 참조한다고 말한다.
+ obj2.name = b
+ console.log(obj1.name) // b   
+
+ 5. 복사
+ var a = [1,2,3]
+ var aCopy = [...a] //전개연산자 => var a의 array 값을 복사한다.
+ var obj3 = {name : 'a'}
+ var obj3Copy = {...obj3} //전개연산자 => var obj3의 object 값을 복사한다.
+*/
