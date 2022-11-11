@@ -79,6 +79,7 @@ $(function () {
     $('.ex_five button').click(function () {
         var inputVal = $('.ex_five input').val()
         var userArr = inputVal.split(',') // ['사과','오렌지','바나나']
+        
         var checkCnt = 0;
         var length = mainArr.length // 3
     for(var i = 0; i < userArr.length; i++){ 

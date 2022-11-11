@@ -88,6 +88,13 @@ $(function () {
     for(var i = 1; i <= 3; i++){
         $('.ex_four .q').append(fourEnArr[Math.floor(Math.random() * 10)] + ',')
     }//for
+    $('.ex_four button').click(function () {
+        var qVal = $('.ex_four .q').text()
+        var inputVal = $('.ex_four input').val()
+        var qValArr = qVal.split(',')
+        qValArr.pop()//질문의 영단어들의 array
+        var inputValArr= inputVal.split(',')//user가 쓴 한국단어들의 array 
+    })//click
     /* ex_four ------------------------------------------------------------------------------- */
 })//call-back
 
