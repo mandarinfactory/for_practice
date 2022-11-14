@@ -102,6 +102,7 @@ $(function () {
             timeNum -= 0.01;
             } else {
             timeNum = 0;
+            return false;
             }
             if(((timeNum).toFixed(2)) > 0){
             $('.ex_five .result').text(`${(timeNum).toFixed(2)}초`)
