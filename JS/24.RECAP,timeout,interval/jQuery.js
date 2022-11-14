@@ -100,12 +100,15 @@ $(function () {
         setInterval(function () {
             if(timeNum > 0){
             timeNum -= 0.01;
-            } else if (timeNum === 0) {
-                timeNum += 0
             } else {
-             return false
+            timeNum = 0;
             }
+            if(((timeNum).toFixed(2)) > 0){
             $('.ex_five .result').text(`${(timeNum).toFixed(2)}초`)
+            }
+            else {
+            $('.ex_five .result').text(`${((timeNum).toFixed(2)) * -1}초`)
+            }
         },10)
     })//click
 })//call-back
