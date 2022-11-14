@@ -1,0 +1,41 @@
+* {
+    font-family: inherit; /* body에서 inherit을 강제로 받게끔 한다. */
+    text-decoration: none;
+    color: black;
+    font-weight: inherit;
+}
+body {
+    font-family: 'Ubuntu Mono', monospace, 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+}
+main {
+    height: 800px;
+    line-height: 800px;
+    text-align: center;
+}
+.menu_up {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.serif {
+    font-family: 'Nanum Myeongjo', serif;
+}
+.footer {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer h1 {
+    margin-bottom: 10px;
+}
+:root{
+    --main_color : firebrick;
+    --sub_color : orange;
+    --dark_color : rgb(13, 14, 13);
+}/* HTML tag라고 생각하면 쉽다! */

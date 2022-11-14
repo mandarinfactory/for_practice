@@ -329,3 +329,13 @@
      
      5. 편집 
           - gradient tool option-bar edit(gradient모양) 버튼 사용
+
+- hue / saturation => image / Adjustments / hue,saturation (= ctrl + U)
+     1. image / Adjustments / brightness,contrast랑 같이 쓰인다.
+     2. image / Adjustments / replace color
+          - 스포이드 툴을 이용해 보정할 색상 영역을 선택한다.
+          - 변경할 색상을 설정한다.
+          - 영역을 추가하면서 색상 설정
+          - 지우개툴로 색상영역을 지운다.
+
+- 기타 
