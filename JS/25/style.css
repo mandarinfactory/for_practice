@@ -63,3 +63,15 @@
 .indicator button.active {
     opacity: 1.0;
 }
+.prev, .next {
+    position: absolute;
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+}
+.next {
+    right:20px
+}
+.prev {
+    left: 20px;
+}

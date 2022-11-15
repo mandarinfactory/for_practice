@@ -22,7 +22,8 @@ $(function () {
     {
         let tvNum = 1;
         let imgNum = 1;
-        let timeoutId 
+        let timeoutId;
+        let isClick = true;
 
         setInterval(function () {
             tvNum ++;
@@ -32,15 +33,16 @@ $(function () {
         },100)//setInterval
 
         function imageChange () {
+            if(imgNum > 5) imgNum = 1;
+            if(imgNum < 1) imgNum = 5;
             $('.carousel .inner img').stop().fadeOut(1000).removeClass('active')
             $('.carousel .inner .img'+imgNum).stop().fadeIn(1000).addClass('active')
             $('.indicator button').removeClass('active')
             $('.btn'+imgNum).addClass('active')
         }//imageChange
 
-        var colorTvId = setInterval(function () {
+       var colorTvId = setInterval(function () {
             imgNum  ++;
-            if(imgNum > 5) imgNum = 1;
             imageChange();
         },2000)//setIntverval
 
@@ -53,9 +55,31 @@ $(function () {
                 colorTvId = setInterval(function () {
                     imgNum  ++;
                     if(imgNum > 5) imgNum = 1;
-                    imageChange();
                 },2000)
             },5000)//setTimeout
+            imageChange();
+            autoplay()
+        })//click
+        
+        $('.next').click(function () {
+            if(!isClick)return false
+            isClick = false
+            setTimeout(function () {
+                isClick = true;
+            },1000)
+            imgNum ++;
+            imageChange();
+            autoplay()
+        })//click
+        $('.prev').click(function () {
+            if(!isClick)return false
+            isClick = false
+            setTimeout(function () {
+                isClick = true;
+            },1000)
+            imgNum --;
+            imageChange();
+            autoplay()
         })//click
     }/* ex_two end */
     /* ex_two ------------------------------------------------------------------------------------ */
