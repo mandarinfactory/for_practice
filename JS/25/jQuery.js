@@ -100,24 +100,24 @@ $(function () {
             },1000)
         } else if (j === 2) {
             setInterval(function () {
-                $(`.ex_three .${imgN}`).stop().fadeOut(1000)
-                $(`.ex_three .${imgN}`).stop().fadeIn(1000)
-            },1000)
+                $(`.ex_three .${imgN}`).stop().fadeOut(2000)
+                $(`.ex_three .${imgN}`).stop().fadeIn(2000)
+            },2000)
         } else if (j === 3) {
                 setInterval(function () {
-                    $(`.ex_three .${imgN}`).stop().fadeOut(1000)
-                    $(`.ex_three .${imgN}`).stop().fadeIn(1000)
-                },1000)
+                    $(`.ex_three .${imgN}`).stop().fadeOut(3000)
+                    $(`.ex_three .${imgN}`).stop().fadeIn(3000)
+                },3000)
         } else if (j === 4) {
                 setInterval(function () {
-                    $(`.ex_three .${imgN}`).stop().fadeOut(1000)
-                    $(`.ex_three .${imgN}`).stop().fadeIn(1000)
-                },1000)
+                    $(`.ex_three .${imgN}`).stop().fadeOut(4000)
+                    $(`.ex_three .${imgN}`).stop().fadeIn(4000)
+                },4000)
             } else {
                 setInterval(function () {
-                    $(`.ex_three .${imgN}`).stop().fadeOut(1000)
-                    $(`.ex_three .${imgN}`).stop().fadeIn(1000)
-                },1000)
+                    $(`.ex_three .${imgN}`).stop().fadeOut(5000)
+                    $(`.ex_three .${imgN}`).stop().fadeIn(5000)
+                },5000)
             }
     }//for - j
     /* ex_three ---------------------------------------------------------------------------------- */
