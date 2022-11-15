@@ -75,3 +75,23 @@
 .prev {
     left: 20px;
 }
+.ex_three {
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    border: 10px solid black;
+}
+.ex_three img:not(.img_dummy){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.ex_three .img_dummy {
+    display: block;
+    opacity: 0;
+}
+.ex_three .q {
+    display: none;
+}
