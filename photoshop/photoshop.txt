@@ -339,3 +339,17 @@
           - 지우개툴로 색상영역을 지운다.
 
 - 기타 
+     1. clone stamp tool : 이미지의 특정영역을 다른위치에 복사한다.
+          - 우클릭 브러쉬 선택(hardness가 적은값)
+          - alt + 복사될 위치 선택
+          - 브러쉬로 조정
+
+     2. healing brush
+          - J, 이미지의 특정질감을 다른위치 복사
+          - 우클릭 브러쉬 설정(hardness : 0)
+     3. blur tool
+          - pixel을 섞어서 이미지를 부드럽게 만들어준다.
+     4. dodge tool
+          - 이미지의 명, 채도를 올려준다.
+          - tool option bar에 exposure값을 조정하면서 쓴다.
+     5. burn tool
