@@ -14,8 +14,17 @@ $(function () {
             setTimeout(function () {
                 disableClick = false;
             },2000)//setTimeout(2초후에!) => 2초후에 다시 true => false값으로 바꿔서 a++을 실행시켜준다. => 1초에 1씩 증가하는 함수가 된다.
-            a++;
+            a ++;
             $('.ex_one .result').text(a)
         })//click
     }///* ex_one end */
+    {
+        let tvNum = 1;
+        setInterval(function () {
+            tvNum ++;
+            if(tvNum > 3) tvNum = 1
+            $('.tv').hide()
+            $('.tv'+tvNum).show()
+        },300)//setInterval
+    }
 })//call-back
