@@ -9,6 +9,8 @@
     display: block;
     width: 100%;
     display: none;
+    top:0;
+    pointer-events: none;
 }
 .carousel .tv_one {
     display: block;
@@ -33,7 +35,31 @@
     object-fit: cover;/* 비율에 맞게 이미지를 맞춰준다! */
     object-position: center;
     display: none;
+    filter: blur(3px);
+    transition: blur 1s;
+}
+.carousel .inner img.active {
+    filter: blur(0px);
 }
 .carousel .inner .img1 {
     display: block;
-} 
+}
+.indicator {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+}
+.indicator button {
+    border: none;
+    background-color:white;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+.indicator button.active {
+    opacity: 1.0;
+}

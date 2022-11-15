@@ -17,14 +17,46 @@ $(function () {
             a ++;
             $('.ex_one .result').text(a)
         })//click
-    }///* ex_one end */
+    }/* ex_one end */
+    /* ex_one ------------------------------------------------------------------------------------ */
     {
         let tvNum = 1;
+        let imgNum = 1;
+        let timeoutId 
+
         setInterval(function () {
             tvNum ++;
-            if(tvNum > 3) tvNum = 1
+            if(tvNum > 3) tvNum = 1;
             $('.tv').hide()
             $('.tv'+tvNum).show()
-        },300)//setInterval
-    }
+        },100)//setInterval
+
+        function imageChange () {
+            $('.carousel .inner img').stop().fadeOut(1000).removeClass('active')
+            $('.carousel .inner .img'+imgNum).stop().fadeIn(1000).addClass('active')
+            $('.indicator button').removeClass('active')
+            $('.btn'+imgNum).addClass('active')
+        }//imageChange
+
+        var colorTvId = setInterval(function () {
+            imgNum  ++;
+            if(imgNum > 5) imgNum = 1;
+            imageChange();
+        },2000)//setIntverval
+
+        $('.indicator button').click(function () {
+            imgNum = parseInt($(this).val());
+            imageChange();
+            clearInterval(colorTvId);
+            clearTimeout(timeoutId)
+            timeoutId = setTimeout(function () {
+                colorTvId = setInterval(function () {
+                    imgNum  ++;
+                    if(imgNum > 5) imgNum = 1;
+                    imageChange();
+                },2000)
+            },5000)//setTimeout
+        })//click
+    }/* ex_two end */
+    /* ex_two ------------------------------------------------------------------------------------ */
 })//call-back
