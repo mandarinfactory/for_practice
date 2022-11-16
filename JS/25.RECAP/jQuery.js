@@ -83,42 +83,24 @@ $(function () {
         })//click
     }/* ex_two end */
     /* ex_two ------------------------------------------------------------------------------------ */
-    var imageNumArr = ['1', '2', '3', '4', '5']
-    for (var i = 0; i < 5; i++){
-        var randomNum = Math.floor(Math.random() * imageNumArr.length)
-        $('.ex_three .q').append(imageNumArr[randomNum]+',')
-        imageNumArr.splice(randomNum,1)
-    }//for - i 
-    var differentNum = $('.ex_three .q').text().slice(0, -1)
-    var theNum = differentNum.split(',')
-    for(var j = 0; j < theNum.length; j++){
-        let imgN = (`img${+theNum[j]}`)
-        if(j === 1){
-            setInterval(function () {
-                $(`.ex_three .${imgN}`).stop().fadeOut(1000)
-                $(`.ex_three .${imgN}`).stop().fadeIn(1000)
-            },1000)
-        } else if (j === 2) {
-            setInterval(function () {
-                $(`.ex_three .${imgN}`).stop().fadeOut(2000)
-                $(`.ex_three .${imgN}`).stop().fadeIn(2000)
-            },2000)
-        } else if (j === 3) {
-                setInterval(function () {
-                    $(`.ex_three .${imgN}`).stop().fadeOut(3000)
-                    $(`.ex_three .${imgN}`).stop().fadeIn(3000)
-                },3000)
-        } else if (j === 4) {
-                setInterval(function () {
-                    $(`.ex_three .${imgN}`).stop().fadeOut(4000)
-                    $(`.ex_three .${imgN}`).stop().fadeIn(4000)
-                },4000)
-            } else {
-                setInterval(function () {
-                    $(`.ex_three .${imgN}`).stop().fadeOut(5000)
-                    $(`.ex_three .${imgN}`).stop().fadeIn(5000)
-                },5000)
-            }
-    }//for - j
+    var imageNumArr = [1,2,3,4,5]
+    setInterval (function () {
+        let number = Math.floor(Math.random() * imageNumArr.length)
+        $('.ex_three img:not(.img_dummy)').hide()
+        $(`.ex_three .img${imageNumArr[number]}`).show()
+        imageNumArr.splice(number,1)
+        if(imageNumArr.length === 0) imageNumArr = [1,2,3,4,5]
+    },100)//setInterval
     /* ex_three ---------------------------------------------------------------------------------- */
+    setInterval(function () {
+        let n
+
+    },100)//setInterval
+
+
+
+
+
+
+    /* ex_four ---------------------------------------------------------------------------------- */
 })//call-back
