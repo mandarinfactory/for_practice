@@ -95,3 +95,22 @@
 .ex_three .q {
     display: none;
 }
+ul.ex_four {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 5px solid red;
+}
+ul,li {
+    margin: 0;
+    padding: 0;
+}
+ul.ex_four li {
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 5px solid black;
+}
