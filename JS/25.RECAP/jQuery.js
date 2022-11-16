@@ -92,12 +92,6 @@ $(function () {
         if(imageNumArr.length === 0) imageNumArr = [1,2,3,4,5]
     },100)//setInterval
     /* ex_three ---------------------------------------------------------------------------------- */
-    for (var j = 1; j <= 9; j++){
-        $('.ex_four').append(`<li></li>`)
-        for (var i = 1; i <= 5; i++){
-            $('.ex_four li:last-child').append(`<img src="../img/"/>`)
-        }
-    }//for-j
     setInterval(function () {
         let arr = [1,2,3,4,5]
         for (var i = 0; i < (arr.length - 1); i++){
