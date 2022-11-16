@@ -92,9 +92,28 @@ $(function () {
         if(imageNumArr.length === 0) imageNumArr = [1,2,3,4,5]
     },100)//setInterval
     /* ex_three ---------------------------------------------------------------------------------- */
+    for (var j = 1; j <= 9; j++){
+        $('.ex_four').append(`<li></li>`)
+        for (var i = 1; i <= 5; i++){
+            $('.ex_four li:last-child').append(`<img src="../img/"/>`)
+        }
+    }//for-j
     setInterval(function () {
-        let n
-
+        let arr = [1,2,3,4,5]
+        for (var i = 0; i < (arr.length - 1); i++){
+            let num = Math.floor(Math.random() * (arr.length - 1))
+            $('.ex_four li img').hide()
+            $(`.ex_four li .img${arr[num]}`).show()
+            arr.splice(0, 1)
+            arr.push(arr[num])
+        }//for-i
+        /* 
+        for
+        n = Math.floor(Math.random() * ?)
+        $('.ex_four .li1 img').hide()
+        $(`.ex_four .li1 .img${arr[0]}`).show()
+        arr[0].splice(0,1)
+        */
     },100)//setInterval
 
 
