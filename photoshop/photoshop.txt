@@ -216,6 +216,7 @@
           - 기준점 (상하, 좌우 layer 기준!)
 
 - layer 변형(transform, ctrl + T)
+
      1. option-bar
 
           - 축을 설정한다.
@@ -230,6 +231,7 @@
           - 이등변삼각형 : ctrl + shift + alt
 
 - layer 반복복제
+
      1. ctrl + J
 
      2. ctrl + T
@@ -238,6 +240,7 @@
 
 
 - layer 선택 
+
      1. movetool옵션바에서 auto select 활성화, layer선택
 
      2. 다중레이어 선택 
@@ -256,6 +259,7 @@
           - ctrl + shift + alt + thumnail 레이어영역의 공통되는 선택영역
 
 - layer 그룹관리 
+
      1. 그룹만들기 
           - 레이어 선택후 ctrl + G
           - 레이어 팔레트 폴더 아이콘을 이용해서 글룹 생성후 레이어를 안쪽으로 이동
@@ -265,6 +269,7 @@
      3. 그룹이동 : movetool선택, ctrl + 이동 / 복사는 ctrl + alt + 이동
 
 - layer 상하이동
+
      1. ctrl + J(한단계 위로)
 
      2. ctrl + [(한단계 아래로)
@@ -274,6 +279,7 @@
      4. ctrl + shift + [(최하위)
 
 - layer 잠금기능
+
      1. lock transparent
           - 투명영역의 작업을 잠금
 
@@ -281,6 +287,7 @@
           - 모든 작업으로부터 잠금
 
 - layer blending 모드
+
      1. multiply : 겹칠수록 진해짐
 
      2. overray : 상단의 레이어의 명도를 이용해 하단레이어의 명채도가 증감
@@ -289,7 +296,20 @@
 
      4. difference : 상단의 레이어의 색이 반전됨
 
+- layer-style
+
+     1. layer에 특수한 효과를 적용
+          - effect를 편집하기 위해서는 rasterize를 먼저 적용해야함
+               - layer 우클릭 => rasterize layer style
+               - 다른 layer와 merge
+          
+          - fill옵션 => effect에는 적용되지 않는 투명도(opacity옆에 있다.)
+
+     2. stroke
+          - 색이 적용된 영역에 선을 생성
+
 - type tool
+
      1. 글자크기 단위설정 : ctrl + K, unit/ruler
 
      2. 폰트명 한글 표기 : ctrl + K, type, show Font Name in English 해제
@@ -307,6 +327,7 @@
           - 글자색은 option-bar에서 바꿀수 있다.
 
 - gradient 
+
      1. 적용순서
           - 색상선택
           - style(gradient모양)선택
@@ -331,7 +352,9 @@
           - gradient tool option-bar edit(gradient모양) 버튼 사용
 
 - hue / saturation => image / Adjustments / hue,saturation (= ctrl + U)
+
      1. image / Adjustments / brightness,contrast랑 같이 쓰인다.
+
      2. image / Adjustments / replace color
           - 스포이드 툴을 이용해 보정할 색상 영역을 선택한다.
           - 변경할 색상을 설정한다.
@@ -339,6 +362,7 @@
           - 지우개툴로 색상영역을 지운다.
 
 - 기타 
+
      1. clone stamp tool : 이미지의 특정영역을 다른위치에 복사한다.
           - 우클릭 브러쉬 선택(hardness가 적은값)
           - alt + 복사될 위치 선택
