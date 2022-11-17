@@ -96,10 +96,10 @@ $(function () {
         let arr = [1,2,3,4,5]
         for (var i = 0; i < (arr.length - 1); i++){
             let num = Math.floor(Math.random() * (arr.length - 1))
-            $('.ex_four li img').hide()
-            $(`.ex_four li .img${arr[num]}`).show()
-            arr.splice(0, 1)
-            arr.push(arr[num])
+            $('.ex_four .li1 img').hide()
+            $(`.ex_four .li1 .img${arr[num]}`).show()
+            arr.splice(0, arr[num])
+            arr.push(arr[num])  
         }//for-i
         /* 
         for
@@ -109,11 +109,5 @@ $(function () {
         arr[0].splice(0,1)
         */
     },100)//setInterval
-
-
-
-
-
-
     /* ex_four ---------------------------------------------------------------------------------- */
 })//call-back
