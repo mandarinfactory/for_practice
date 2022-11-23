@@ -5,6 +5,9 @@
 li {
     list-style: none;
 }
+img {
+    display: block;
+}
 section {
     padding: 2000px 0;
 }
@@ -22,12 +25,14 @@ section {
 }
 .section1 li {
     width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    background-color: purple;
-    opacity: 0.1;
-    transition: all 1s;
+    margin: 30px auto;
+    border: 5px solid black;
 }
-.section1 li.active {
-    opacity: 1;
+.section1 li img {
+    width: 100%;
+    transform: scale(0.1);
+    transition: all 1.5s;
+}
+.section1 li.active img{
+    transform: scale(1);
 }

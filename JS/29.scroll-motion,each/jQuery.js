@@ -1,14 +1,17 @@
 $(function () {
+    var offT
     function motionBox () {
-        var offT
         var scrY = $(window).scrollTop()
         var winH = $(window).innerHeight();
-        offT = $('.section1 li').offset().top
-        if(scrY >= offT - winH && scrY <= offT + 300){
-            $('.section1 li').addClass('active')
-        } else {
-            $('.section1 li').removeClass('active')
-        }
+
+        $('.section1 li').each(function () {
+            offT = $(this).offset().top // this = '.section1 li:nth-child(n)'
+            if(scrY >= offT - winH * 0.9 && scrY <= offT - winH * 0.1){
+                $(this).addClass('active')
+            } else {
+                $(this).removeClass('active')
+            }
+        })
     }//function
     $(window).resize(function () {
         motionBox();
