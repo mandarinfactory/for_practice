@@ -24,14 +24,38 @@ section {
     background-color: goldenrod;
 }
 .section1 li {
+    position: relative;
     width: 300px;
     margin: 30px auto;
-    border: 5px solid black;
 }
 .section1 li img {
     width: 100%;
     transform: scale(0.1);
     transition: all 1.5s;
+}
+.section1 li div {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.section1 li div em {
+    display: block;
+    margin-bottom: 10px;
+    background-color: white;
+    transition: all 3s;
+}
+.section1 li div em.active {
+    display: none;
+    background-color: none;
+    transform: translate(-160%, 0);
+}
+.section1 li div p {
+    display: block;
+    margin-bottom: 10px;
+    background-color: white;
 }
 .section1 li.active img{
     transform: scale(1);
