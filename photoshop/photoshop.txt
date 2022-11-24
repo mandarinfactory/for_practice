@@ -395,4 +395,8 @@
 
 - glow
 
+     1. outer glow(외부광선)
+          - 배경색이 어두워야 광원효과를 연출 할수 있음
+     2. inner glow(내부광선)
+          - 배경색이 어두워야 광원효과를 연출 할수 있음
 - pattern overray

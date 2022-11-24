@@ -1,0 +1,24 @@
+body {
+    padding: 1000px;
+    height: 1000vh;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 5000px;
+    margin: 0 auto;
+}
+div.card {
+    transition: all 0.5s;
+    position: relative;
+    transform-style: preserve-3d;
+    width: 600px;
+    height: 400px;
+    margin-bottom: 300px;
+    transform: rotateY(90deg);
+}
+.card.active {
+    transform: rotateY(0deg);
+}
