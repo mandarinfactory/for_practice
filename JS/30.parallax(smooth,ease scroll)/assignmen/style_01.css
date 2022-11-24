@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body,html {
+    height: 100%;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+section div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section div div {
+    width: 200px;
+    height: 300px;
+}
+.one {
+    background-color: darkblue;
+}
+.two {
+    background-color: darkred;
+}
+.three {
+    background-color: darkgreen;
+}
+.four {
+    background-color: darkorange;
+}
+.five {
+    background-color: darkslateblue;
+}
+.six {
+    background-color: darkslategrey;
+}
+@media screen and (min-width:700px) {
+
+}
+@media screen and (max-width:700px) {
+    section {
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}
