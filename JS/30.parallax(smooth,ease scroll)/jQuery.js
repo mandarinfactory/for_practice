@@ -1,10 +1,11 @@
-$(function () {
     var scrollSpeed = 0
 
     window.addEventListener('mousewheel',function (e) {
-        delta = e.wheelDeltaY / -120
-        console.log(delta)
-    })
+        e.preventDefault();/* browser에서 자동적으로 되는것들을 방지한다.(새로고침등) */
+        delta = e.wheelDeltaY / -120;
+        scrollSpeed += 5 * delta;
+        console.log(delta);
+    },{passive:false})/* jQuery에서는 안되서 무조건 vanila에서만! */
     /* 
     <<vanila JS>>
     addEventListener => event(click, mouseenter...)를 추가!
@@ -12,7 +13,7 @@ $(function () {
     */
     setInterval (function () {
         window.scrollTo({
-            top :  scrY + scrollSpeed
+            top :  scrY + scrollSpeed/* scrollSpeed 속도만큼 굴러간다! */
         })//setInterval
         scrollSpeed *= 0.975
         /* 
@@ -20,4 +21,3 @@ $(function () {
         0 ~ 1까지가 감속하는 숫자고 1과 가까워질수록 천천히 한다. (0.8 ~ 1이 제일 보기 좋다.)
         */
     },30)
-})//document.ready
