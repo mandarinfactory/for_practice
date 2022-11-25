@@ -29,6 +29,7 @@ li {
 }
 figure {
     border: 3px solid darkgreen;
+    overflow: hidden;
 }
 .text {
     padding: 10px;
