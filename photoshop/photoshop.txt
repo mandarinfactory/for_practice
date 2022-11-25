@@ -402,4 +402,22 @@
      2. inner glow(내부광선)
           - 배경색이 어두워야 광원효과를 연출할 수 있음
           - layer 색상과 동일한 색상을 사용할 경우 효과가 적용되지 않는다.
+
 - pattern overray
+     
+     1. 패턴제작
+          - 모양제작
+          - 반드시 사각선택툴로 패턴의 범위 선택!
+          - edit => define pattern 메뉴로 등록
+     
+     2. fill을 이용한 패턴적용
+          - edit / fill (shift + F5)
+          - contents 옵션 pattern 적용
+          - pattern 선택 후 OK
+          - 단점 : pattern의 사이즈 설정이 매우매우 어려움 => pattern overray 사용!
+          - fx => pattern overray
+               1. scale을 이용해 패턴의 크기를 제어할 수 있음
+               2. vector 레이어에 패턴을 적용할 수 있음
+          - pat파일 => 이미 만들어진 패턴을 사용하는게 더 빠르고 좋고 편하다!
+          - 포토샵 설치 경로 찾기 : 포토샵 단축 아이콘 => 우클릭 => 속성 
+          - 바로가기 => 파일 위치 열기 => presets => patterns에 복붙하고 포토샵 재부팅
