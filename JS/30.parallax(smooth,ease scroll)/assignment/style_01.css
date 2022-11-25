@@ -2,56 +2,41 @@
     margin: 0;
     padding: 0;
 }
-body,html {
-    height: 100%;
+li {
+    list-style: none;
 }
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+img {
+    display: block;
 }
-section div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* -------------------------------------------------------------- */
+ul {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-section div div {
-    width: 200px;
-    height: 300px;
+li::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
 }
-.one {
-    background-color: darkblue;
-}
-.two {
-    background-color: darkred;
-}
-.three {
-    background-color: darkgreen;
-}
-.four {
-    background-color: darkorange;
-}
-.five {
-    background-color: darkslateblue;
-}
-.six {
-    background-color: darkslategrey;
-}
-@media screen and (min-width:700px) {
-
-}
-@media screen and (max-width:700px) {
-    section {
-        width: 100%;
-        max-width: 700px;
+@media screen and (min-width:700px){
+    ul {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+        justify-content: space-between;
     }
-}
+    li {
+        position: relative;
+        width: 40%;
+        box-sizing: border-box;
+        margin-left: 50px;
+    }
+    img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    };
+}/* lg */
+/* ex_one --------------------------------------------------------------------------------------- */
