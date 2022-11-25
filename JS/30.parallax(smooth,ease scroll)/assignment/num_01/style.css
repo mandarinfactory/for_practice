@@ -38,6 +38,21 @@ figure {
 img {
     width: 100%;
 }
+h3, p {
+    opacity: 0;
+    transition: all 3s;
+}
+h3 {
+    transform: translateX(-100px);
+}
+p {
+    transform: translateX(500px);
+}
+li.active h3,
+li.active p {
+    opacity: 1;
+    transform: translateX(0);
+}
 @media screen and (min-width:1000px) {
     li {
         width: 30%;
