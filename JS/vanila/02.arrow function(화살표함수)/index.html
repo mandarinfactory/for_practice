@@ -18,7 +18,21 @@
             function () {} => ()=>(arrow function){}로 많이 쓰인다!
              */
         </pre>
-        <li></li>
+        <li>함수선언방식-3가지</li>
+        <pre>
+            function foo () {
+
+            }//1번째 방법 => hoisting이 발생한다.
+
+            foo = function () {
+    
+            }//2번쩨 방법 => 1번째 방법과 다를게 없다.(전역변수인 window.가 생략된거와 같다.)
+            
+            const foo = () => {
+    
+            }//3번째 방법 
+            foo(); // 항상 선언 후 호출임을 명시하자!
+        </pre>
     </ul>
     <hr>
     <div class="ex_one">
