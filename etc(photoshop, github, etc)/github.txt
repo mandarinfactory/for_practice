@@ -1,0 +1,15 @@
+<< GITHUB >>
+
+- version control system (버전관리시스템)
+
+    - 원래는 버전관리 목적으로 나왔다. (그 이후 연동작업, 협업관련으로도 현재는 많이 쓰이고 있다.)
+
+    - 버전관리(version control)
+        - 
+    
+    - git
+
+
+- clouding data
+
+- co-working
