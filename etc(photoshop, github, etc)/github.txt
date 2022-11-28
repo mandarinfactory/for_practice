@@ -23,7 +23,6 @@
                 - git-bucket 옵션은 건너뛰기함
                 - 설치중 mercurial 경고 뜨면 무시해도 됨
                 - 
-
 2. clouding data
 
 3. co-working
