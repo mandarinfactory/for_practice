@@ -20,8 +20,9 @@
                 대표적인것은 source tree
             - source tree
                 - source tree download (그전에 아틀라시안 로그인!)
-                - git-bucket 옵션은 건너뛰기함
+                - git-bucket 옵션은 건너뛰기함  
                 - 설치중 mercurial 경고 뜨면 무시해도 됨
+                - ssh키가 없다면 아니오 선택
                 - 
 2. clouding data
 
