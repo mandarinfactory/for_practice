@@ -33,6 +33,24 @@
             }//3번째 방법 
             foo(); // 항상 선언 후 호출임을 명시하자!
         </pre>
+        <li>
+            화살표함수는 인자가 한개일경우, 소괄호(),
+            또 실행할 code가 return문만 있을 경우
+            중괄호{}, return을 생략가능하다.
+        </li>
+        <pre>
+            let fn = parameter => parameter;
+            let result = fn(1);
+            console.log(result);
+            /* 
+            arrow일때는 매개변수가 하나면 (), return, {} 생략가능
+            원래는 
+            let fn = (parameter) => {
+                return parameter;
+            }
+            따라서, => 가 있다면 생략된 함수라고 바로 생각해야한다!
+            */
+        </pre>
     </ul>
     <hr>
     <div class="ex_one">
