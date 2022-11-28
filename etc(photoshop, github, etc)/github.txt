@@ -1,15 +1,29 @@
 << GITHUB >>
 
-- version control system (버전관리시스템)
+1. version control system (버전관리시스템)
 
     - 원래는 버전관리 목적으로 나왔다. (그 이후 연동작업, 협업관련으로도 현재는 많이 쓰이고 있다.)
 
     - 버전관리(version control)
-        - 
+
+        - 작업의 history를 저장하는 기능 (저장하는 방법 => commit)
     
     - git
 
+        - 버전관리시스템 중 가장 대중화 된 framework
+        - github => git을 온라인과 연동하는 서비스
+        - git interface
+            - CLI-interface
+                직접 terminal에 git 명령어를 입력하는 방법
+            - GUI-interface
+                그래픽 사용자 환경(GUI)을 제공 => icon, mouse로 컨트롤 할 수 있는 interface
+                대표적인것은 source tree
+            - source tree
+                - source tree download (그전에 아틀라시안 로그인!)
+                - git-bucket 옵션은 건너뛰기함
+                - 설치중 mercurial 경고 뜨면 무시해도 됨
+                - 
 
-- clouding data
+2. clouding data
 
-- co-working
+3. co-working

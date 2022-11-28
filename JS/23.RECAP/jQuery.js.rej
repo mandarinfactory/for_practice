@@ -1,0 +1,8 @@
+diff a/JS/23.RECAP/jQuery.js b/JS/23.RECAP/jQuery.js	(rejected hunks)
+@@ -42,4 +42,5 @@
+             $('.ex_two .result').text('nnnnno')
+         }
+     })//click
++    /* ex_two ------------------------------------------------------------------------------- */
+ })//call-back
+\ No newline at end of file

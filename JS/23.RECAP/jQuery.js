@@ -33,7 +33,7 @@ $(function () {
             var aKrNum = anKrArr.indexOf(userKrWord) // userKrWord가 anKrArr에서 몇번째에 있는지를 확인!
             // 그래서 qEnNum과 aKrNum이 같은지를 확인하면 된다!
             if(qEnNum === aKrNum){
-                count++
+               count++
             }
         })//enArr.forEach / 여기서 v는 영어단어!
         if(count === 3){
