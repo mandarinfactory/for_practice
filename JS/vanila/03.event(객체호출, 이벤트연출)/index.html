@@ -12,15 +12,19 @@
 <body>
     <ul>
         <li>
-            getElementBy <br>
+            getElementBy- (CSS선택자를 사용하지 않고 선택) <br>
             getElementByID : 객체를 return해준다. <br>
             getElementByTagName, getElementByClassName : 배열(유사배열)을 return해준다. <br>
-            Array.from()을 이용해 배열로 변환 후
+            Array.from()을 이용해 배열로 변환 후 반복문(forEach)을 이용해서 event-binding
         </li>
         <li>
-            querySelector
+            query- (CSS선택자를 이용해서 요소를 선택) <br>
+            querySelector : 객체 1개만 return<br>
+            querySelectorAll : 배열로 변환 후 return<br>
         </li>
-        <li></li>
+        <li>
+            onClick속성을 이용
+        </li>
     </ul>
     <hr>
     <div class="ex_one">
@@ -28,6 +32,18 @@
         <button class="btn">버튼</button>
         <button class="btn">버튼</button>
         <button class="btn">버튼</button>
+    </div>
+    <hr>
+    <div class="ex_two">
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+    </div>
+    <hr>
+    <div class="ex_three">
+        <button onClick="forThree(5)">버튼</button>
+        <button>버튼</button>
     </div>
 </body>
 

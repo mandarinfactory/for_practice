@@ -15,5 +15,15 @@ document.addEventListener('DOMContentLoaded',() => {
     내에서 event가 실행시킬수 있다.
     forEach를 사용해서 각각의 .btn에 event가 일어나게 해준다.
     */
-
+/* ex_one -------------------------------------------------------------------------- */
+    document.querySelectorAll('.ex_two button').forEach((v) => {
+        v.addEventListener('click', () => {
+            alert();
+        })
+    })//forEach
+/* ex_two -------------------------------------------------------------------------- */
+    window.forThree = (e) => {
+        e.preventDefault();
+    }
+/* ex_three ------------------------------------------------------------------------ */
 })//DOM
