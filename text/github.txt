@@ -6,24 +6,44 @@
 
     - 버전관리(version control)
 
-        - 작업의 history를 저장하는 기능 (저장하는 방법 => commit)
+        1. 작업의 history를 저장하는 기능 (저장하는 방법 => commit)
     
     - git
 
-        - 버전관리시스템 중 가장 대중화 된 framework
-        - github => git을 온라인과 연동하는 서비스
-        - git interface
+        1. 버전관리시스템 중 가장 대중화 된 framework
+
+        2. github => git을 온라인과 연동하는 서비스
+
+        3. git interface
+
             - CLI-interface
                 직접 terminal에 git 명령어를 입력하는 방법
+
             - GUI-interface
                 그래픽 사용자 환경(GUI)을 제공 => icon, mouse로 컨트롤 할 수 있는 interface
                 대표적인것은 source tree
+
             - source tree
-                - source tree download (그전에 아틀라시안 로그인!)
-                - git-bucket 옵션은 건너뛰기함  
-                - 설치중 mercurial 경고 뜨면 무시해도 됨
-                - ssh키가 없다면 아니오 선택
-                - 
+                1. source tree download (그전에 아틀라시안 로그인!)
+                2. git-bucket 옵션은 건너뛰기함  
+                3. 설치중 mercurial 경고 뜨면 무시해도 됨
+                4. ssh키가 없다면 아니오 선택
+
+        4. git 폴더
+            - source tree 초기화면
+                1. clone : github과 연동시
+                2. add : 이미 git으로 관리되어 있는 폴더를 추가
+                3. create : git을 시작할 폴더를 추가
+
+        5. 프로젝트 폴더 버전 관리 시작
+            - create : 폴더경로 설정 (계정에 저장소 생성하기 체크 하지 말 것)
+            - .git 폴더 생성 확인
+
+    - git 사용법
+
+        1. commit
+            -version을 생성
+
 2. clouding data
 
 3. co-working
