@@ -56,6 +56,10 @@
 {
     document.querySelectorAll('.ex_seven input:not(.result)').forEach((v) => {
         v.addEventListener('input', () => {
+            let num1 = parseInt(document.querySelector('.ex_seven .num1').value);
+            let num2 = parseInt(document.querySelector('.ex_seven .num2').value);
+            let sum = num1 + num2;
+            document.querySelector('.ex_seven .result').value = sum;
         })//input-event
     })//querySelectorAll
 }
