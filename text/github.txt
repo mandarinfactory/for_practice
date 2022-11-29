@@ -44,5 +44,13 @@
         1. commit
             - version을 생성
             - commit
+
+        2. reset
+            - 선택한 commit 이후의 history를 제거
+            - hard옵션
+            - github와 연동시 force push를 사용해야만 함
+        3. reverse (revert)
+            - branch를 생성하지 않고 과거 commit을 최상위 commit으로 등록
+            - confilct를 해결 후 stage 등록 후 커밋
 2. clouding data
 3. co-working
