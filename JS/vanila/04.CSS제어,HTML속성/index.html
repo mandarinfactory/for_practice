@@ -19,12 +19,65 @@
             css속성 중 '-'을 사용하면 다음단어를 대문자로 변경해준다. <br>
             border-radius => borderRadius
         </li>
-        <li></li>
+        <li>
+            classList.add('클래스명')
+            classList.remove('클래스명')
+            classList.toggle('클래스명')
+        </li>
+        <li>
+            innerHTML : element 안의 tag와 text를 가져온다. <br>
+            '내용' : element안의 tag와 text를 변경한다.
+        </li>
+        <li>
+            getAttribute('속성') : 속성값을 가져온다. <br>
+            setAttribute('속성',값) : 속성을 값으로 변경한다.
+        </li>
     </ul>
     <div class="ex_one">
         <button>1</button>
         <button>2</button>
         <button>3</button>
+    </div>
+    <hr>
+    <div class="ex_two">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+    </div>
+    <hr>
+    <div class="ex_three">
+        <button value="one">1</button>
+        <button value="two">2</button>
+        <button value="three">3</button>
+    </div>
+    <hr>
+    <div class="ex_four">
+        <button value="one">1</button>
+        <!-- 
+            one을 가지고 온다. (value)
+            1도 가지고 온다. 
+            value를 1로 변경
+            내용은 one으로 변경
+            toggle로 반복
+         -->
+        <button value="two">2</button>
+        <button value="three">3</button>
+    </div>
+    <hr>
+    <div class="ex_five">
+        <button value="one">
+            <span>1</span>
+            <span>one</span>
+        </button>
+
+        <button value="two">
+            <span>2</span>
+            <span>two</span>
+        </button>
+        <button value="three">
+            <span>3</span>
+            <span>three</span>
+        </button>
     </div>
 </body>
 

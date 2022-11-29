@@ -1,0 +1,12 @@
+.ex_two button.active {
+    color: firebrick;
+}
+.ex_five button span:last-child{
+    display: none;
+} 
+.ex_five button.active span:first-child {
+    display: none;
+}
+.ex_five button.active span:last-child {
+    display: block;
+}
