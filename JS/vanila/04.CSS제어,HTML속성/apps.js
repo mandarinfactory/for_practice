@@ -43,3 +43,13 @@
     })//querySelectorAll
 }
 /* ex_five --------------------------------------------------------------------- */
+{
+    document.querySelector('.ex_six button').addEventListener('click', e => {
+        alert('clicked!');
+    })//click-event
+    document.querySelector('.ex_six button span').addEventListener('click', e => {
+        alert('clicked-span!');
+        return false;
+    })//click-event
+}
+/* ex_six --------------------------------------------------------------------- */

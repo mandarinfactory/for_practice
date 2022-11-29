@@ -10,3 +10,9 @@
 .ex_five button.active span:last-child {
     display: block;
 }
+
+
+.ex_six button span {
+    background-color: darkslategray;
+    color: white;
+}
