@@ -48,8 +48,15 @@
         alert('clicked!');
     })//click-event
     document.querySelector('.ex_six button span').addEventListener('click', e => {
+        e.stopPropagation(); // event-bubbling을 막아준다.
         alert('clicked-span!');
-        return false;
     })//click-event
 }
 /* ex_six --------------------------------------------------------------------- */
+{
+    document.querySelectorAll('.ex_seven input:not(.result)').forEach((v) => {
+        v.addEventListener('input', () => {
+        })//input-event
+    })//querySelectorAll
+}
+/* ex_seven --------------------------------------------------------------------- */

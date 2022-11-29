@@ -17,6 +17,9 @@
             e.currentTarget : 정확히 해당 event 대상 element만 찾는다.
         </li>
         <li>
+            e.stopPropagation() : 상위요소의 event-bubbling을 중단시켜준다.
+        </li>
+        <li>
             인라인스타일 변경 <br>
             style.css속성 = '값' <br>
             css속성 중 '-'을 사용하면 다음단어를 대문자로 변경해준다. <br>
@@ -34,6 +37,10 @@
         <li>
             getAttribute('속성') : 속성값을 가져온다. <br>
             setAttribute('속성',값) : 속성을 값으로 변경한다.
+        </li>
+        <li>
+            폼요소.value = form element의 value속성값을 가져온다. <br>
+            폼요소.value = 값 : 폼요소의 value속성값을 변경한다.
         </li>
     </ul>
     <div class="ex_one">
@@ -87,6 +94,13 @@
         <button>
             <span>SPAN</span>
         </button>
+    </div>
+    <div class="ex_seven">
+        <input class="num1" type="number" value="0">
+        +
+        <input class="num2" type="number" value="0">
+        =
+        <input class="result" type="number" value="0" readonly>
     </div>
 </body>
 
