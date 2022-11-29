@@ -37,7 +37,8 @@
 {
     document.querySelectorAll('.ex_five button').forEach ( v => {
         v.addEventListener('click', e => {
-            e.target.classList.toggle('active')
+            e.currentTarget.classList.toggle('active')
+            //target은 eventListener는 가장 안쪽에 있는 event를 말하고, currentTarget은 해당 element만 말한다.
         })//click-event 
     })//querySelectorAll
 }

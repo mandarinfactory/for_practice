@@ -12,7 +12,10 @@
 
 <body>
     <ul>
-        <li>e.target : event 대상 요소</li>
+        <li>
+            e.target : event 대상 element (안쪽에 있는 element를 우선적으로 찾는다.)
+            e.currentTarget : 정확히 해당 event 대상 element만 찾는다.
+        </li>
         <li>
             인라인스타일 변경 <br>
             style.css속성 = '값' <br>
