@@ -42,8 +42,7 @@
     - git 사용법
 
         1. commit
-            -version을 생성
-
+            - version을 생성
+            - commit
 2. clouding data
-d
 3. co-working
