@@ -22,8 +22,9 @@ document.addEventListener('DOMContentLoaded',() => {
         })
     })//forEach
 /* ex_two -------------------------------------------------------------------------- */
-    window.forThree = (e) => {
+    document.querySelector('.ex_three a').addEventListener('click', (e) => {
         e.preventDefault();
-    }
+        alert();
+    })
 /* ex_three ------------------------------------------------------------------------ */
 })//DOM
