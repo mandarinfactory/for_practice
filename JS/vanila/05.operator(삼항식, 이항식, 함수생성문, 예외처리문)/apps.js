@@ -15,3 +15,10 @@
     })//click-event
     /* 2항연산자 ---------------------------------------------------------------- */
 }
+{
+    let a = 1;
+    const foo = new Function(`console.log('tt')`)
+    document.querySelector('.ex_three button').addEventListener('click', e => {
+       foo();
+    })//click-event
+}
