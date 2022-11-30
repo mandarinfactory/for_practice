@@ -47,5 +47,17 @@
     let strMinus = str += '-'
     let strMuliple = str += '*'
     let strDivide = str += '/'
-    document.querySelector('.ex_five p').innerHTML = str;
+    document.querySelectorAll('.ex_five button:not(.result)').forEach( e => {
+        e.addEventListener('click', e => {
+            e.currentTarget.innerHTML = str;
+        })//addEventListener
+    })//forEach
 }
+/* 
+ex_five button에서 not result button
+querySelectorAll => forEach.addEventListener
+click한 애한테서 값을 가져와야함 = innerHTML
+document.querySelectorAll('.ex_five button(not:'result')).addEventListener.forEach(function e => {
+    e.currentTarget.addEventListener.innerHTML
+})
+*/
