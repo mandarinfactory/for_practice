@@ -28,9 +28,14 @@
 }
 {   
     document.querySelector('.ex_four button').addEventListener('click', e => {
-        window.str = document.querySelector('.ex_four input').value /* input안에 있는 value! */
-        let calculator = new Function (`return ${str}`)
-        console.log(calculator())
+        let str = document.querySelector('.ex_four input').value /* input안에 있는 value! */
+        try {
+            let calculator = new Function (`return ${str}`)
+            let result = calculator(str);
+            alert(result);
+        } catch {
+            alert('계산식 오류!')
+        }
     })//click-event
     /* 함수생성문_assignment ----------------------------------------------------- */
 }
