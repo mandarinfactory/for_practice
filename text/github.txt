@@ -44,8 +44,9 @@
         1. commit
             - version을 생성
             - commit
-            - 파란색 줄기 = main줄기, master
-            - 맨위 user가 있는 곳 (속이 빈 원)이 head
+            - 파란색 줄기 = main줄기, master/origin
+            - 맨위 user가 있는 곳 (속이 빈 원)이 head => 현재 작업중인 commit을 말한다.
+            - checkout은 해당 commit 시점으로 옮겨 가는걸 말한다.
 
         2. reset
             - 선택한 commit 이후의 history를 제거
