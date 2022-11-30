@@ -44,7 +44,7 @@
         1. commit
             - version을 생성
             - commit
-            - 파란색 줄기 = main줄기, master/origin
+            - 파란색 줄기 = main줄기, master
             - 맨위 user가 있는 곳 (속이 빈 원)이 head => 현재 작업중인 commit을 말한다.
             - checkout은 해당 commit 시점으로 옮겨 가는걸 말한다.
 
@@ -55,6 +55,8 @@
         3. reverse (revert)
             - branch를 생성하지 않고 과거 commit을 최상위 commit으로 등록
             - confilct를 해결 후 stage 등록 후 커밋
+            - 최상위 commit시점으로 checkout 하는것
+            - 한단계 아래의 commit을 차례대로 reverse
 
         
 2. clouding data
