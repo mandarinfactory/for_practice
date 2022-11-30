@@ -39,3 +39,13 @@
     })//click-event
     /* 함수생성문_assignment ----------------------------------------------------- */
 }
+{
+    let str = '1'
+    let strDouble = str += '2'
+    let strTriple = str += '3'
+    let strPlus = str += '+'
+    let strMinus = str += '-'
+    let strMuliple = str += '*'
+    let strDivide = str += '/'
+    document.querySelector('.ex_five p').innerHTML = str;
+}
