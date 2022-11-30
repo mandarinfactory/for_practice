@@ -52,12 +52,23 @@
             - 선택한 commit 이후의 history를 제거
             - hard옵션
             - github와 연동시 force push를 사용해야만 함
+
         3. reverse (revert)
             - branch를 생성하지 않고 과거 commit을 최상위 commit으로 등록
             - confilct를 해결 후 stage 등록 후 커밋
             - 최상위 commit시점으로 checkout 하는것
-            - 한단계 아래의 commit을 차례대로 reverse
+            - 마지막 commit시점부터 차례대로 아래의 commit을 차례대로 reverse
 
-        
+        4. 파일 관리
+            - .gitignore
+                1. .git폴더와 동일한 경로에 .gitignore파일을 생성
+                2. 폴더명 / 파일명 등을 한줄단위로 기록
+                3. source tree의 파일리스트에서 우클릭 후 ignore 선택
+
+            - discard
+                1. commit에서 제외한다.
+
+            - remove 
+                1. 파일, 폴더를 아예 제거한다.
 2. clouding data
 3. co-working
