@@ -16,9 +16,12 @@
     /* 2항연산자 ---------------------------------------------------------------- */
 }
 {
-    let a = 1;
-    const foo = new Function(`console.log('tt')`)
+    n = 1;
+    const foo = new Function('a','b',`return(a + b)`)
+
+    
     document.querySelector('.ex_three button').addEventListener('click', e => {
-       foo();
+       console.log(foo(1, 2));
     })//click-event
+    /* 함수생성문 ---------------------------------------------------------------- */
 }
