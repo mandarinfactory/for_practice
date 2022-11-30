@@ -44,6 +44,8 @@
         1. commit
             - version을 생성
             - commit
+            - 파란색 줄기 = main줄기, master
+            - 맨위 user가 있는 곳 (속이 빈 원)이 head
 
         2. reset
             - 선택한 commit 이후의 history를 제거
@@ -52,5 +54,7 @@
         3. reverse (revert)
             - branch를 생성하지 않고 과거 commit을 최상위 commit으로 등록
             - confilct를 해결 후 stage 등록 후 커밋
+
+        
 2. clouding data
 3. co-working
