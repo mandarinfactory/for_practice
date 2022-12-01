@@ -1,5 +1,7 @@
-.ex_five p {
-    height: 50px;
-    width: 200px;
-    border: 3px solid seagreen;
+button {
+    width: 70px;
+    height: 30px;
+}
+.ex_five.active { 
+    color: darkred;
 }
