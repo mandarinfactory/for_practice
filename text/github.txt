@@ -75,5 +75,18 @@
             - 생성방법
                 1. 분기점 commit으로 checkout
                 2. branch 생성 (history 우클릭, 상단메뉴 branch icon)
+            
+            - merge(branch를 하나로 병합한다.)
+                1. 순서 
+                    - 예시 : b-브런치를 master로 합병
+                        1. master-브런치로 checkout
+                        2. b-브런치를 우클릭 후 merge
+                        3. b-브런치를 제거
+                
+                2. 종류
+                    - fast-foward : history의 마지막 commit에서 branch를 생성 후 merge    
+                    - three-way-merge
+
+            - delete(제거) 
 2. clouding data
 3. co-working
