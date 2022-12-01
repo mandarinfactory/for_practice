@@ -85,8 +85,15 @@
                 
                 2. 종류
                     - fast-foward : history의 마지막 commit에서 branch를 생성 후 merge    
-                    - three-way-merge
+                    - three-way-merge : branch의 분기가 나누어졌을 경우 merge (conflict를 해결해야 함!!!!!!!)
+
+                3. 주의사항
+                    - merge가 된 branch는 reset으로 다시 복원할 수 없음
 
             - delete(제거) 
+            - conflict(충돌) 
+                1. select-current : checkout된 branch의 내용으로 변경
+                2. select-incoming  : 병합될 branch의 내용으로 변경
+                3. select-both : 두개의 branch 내용을 병합
 2. clouding data
 3. co-working
