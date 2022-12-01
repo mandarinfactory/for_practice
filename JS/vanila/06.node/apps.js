@@ -61,10 +61,11 @@
     })//forEach
 /* click한 애랑 target이랑 같으면 true! */
 }/* ex_five */
-{
-    document.querySelectorAll('.ex_six button').forEach( v => {
+{   
+    let btnArr = Array.from(document.querySelectorAll('.ex_six button')) // 먼저 만들어 놓는게 index하려고 할때 편하다!
+    btnArr.forEach( v => {
         v.addEventListener('click', e => {
-
+            console.log(btnArr.indexOf(e.target))
         })//click-event
     })//forEach
-}
+}/* ex_six */
