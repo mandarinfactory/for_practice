@@ -70,5 +70,10 @@
 
             - remove 
                 1. 파일, 폴더를 아예 제거한다.
+
+        5. branch
+            - 생성방법
+                1. 분기점 commit으로 checkout
+                2. branch 생성 (history 우클릭, 상단메뉴 branch icon)
 2. clouding data
 3. co-working
