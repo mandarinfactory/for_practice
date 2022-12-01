@@ -47,7 +47,7 @@
                 if(v !== e.target) v.classList.remove('active')
             })//forEach
             e.target.classList.toggle('active')
-          /*   let elE = e.target.
+          /*   let elE = e.target
             // e.target => btn3
             Array.from(e.target.parentElement.children).forEach( h => {
                 // h => [btn1, btn2, btn3, btn4]
@@ -69,3 +69,25 @@
         })//click-event
     })//forEach
 }/* ex_six */
+{   
+    document.querySelectorAll('.ex_seven button').forEach( v => {
+        v.addEventListener('click', e => {
+            let mySiblingsBtnArr = Array.from(e.target.parentElement.children)
+            let indexNumber = mySiblingsBtnArr.indexOf(e.target)
+            alert(indexNumber);
+        })
+    })
+    /* let btnsArr = Array.from(document.querySelectorAll('.ex_seven button'))
+    btnsArr.forEach( v => {
+        v.addEventListener('click', e => {
+            if(btnsArr.indexOf(v) === btnsArr.indexOf(e.target)){
+                e.target.style.backgroundColor = 'yellow'
+            } else {
+                e.target.style.backgroundColor = 'rgb(239,239,239)'
+            }//if-else
+        })//click-event
+    })//forEach 요것도 내가 만든 방법...뀽 */
+}/* ex_seven */
+{
+    
+}/* ex_eight */
