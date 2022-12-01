@@ -40,24 +40,55 @@
     /* 함수생성문_assignment ----------------------------------------------------- */
 }
 {
-    let str = '1'
-    let strDouble = str += '2'
-    let strTriple = str += '3'
-    let strPlus = str += '+'
-    let strMinus = str += '-'
-    let strMuliple = str += '*'
-    let strDivide = str += '/'
-    document.querySelectorAll('.ex_five button:not(.result)').forEach( e => {
-        e.addEventListener('click', e => {
-            e.currentTarget.innerHTML = str;
+
+    window.str = '';
+    document.querySelectorAll('.ex_five button:not(.result)').forEach( v => {
+        v.addEventListener('click', e => {
+            str += e.target.innerText;
+            document.querySelector('.ex_five p').innerText = str;
         })//addEventListener
     })//forEach
+    document.querySelector('.ex_five .result').addEventListener('click', e => {
+        try {
+            let fn = new Function (`return ${str}`)
+            alert(fn())
+        } catch {
+            alert('계산식 틀림!')
+        }
+    })
+       /* 
+        글자들 = ''
+        클릭할때마다
+        글자들 += 글릭한버튼
+        출력       
+       */
 }
-/* 
-ex_five button에서 not result button
-querySelectorAll => forEach.addEventListener
-click한 애한테서 값을 가져와야함 = innerHTML
-document.querySelectorAll('.ex_five button(not:'result')).addEventListener.forEach(function e => {
-    e.currentTarget.addEventListener.innerHTML
-})
-*/
+{
+    window.foo = '1 + 2'
+    let fn = new Function('console.log(foo)')
+    fn();
+    /* 
+    01.
+    window.foo = '1 + 2'
+    new Function ('console.log(foo)') => 
+    'console.log('1 + 2')' => 
+    console.log('1 + 2') => 
+    // 1 + 2
+
+    02.
+    window.foo = '1 + 2'
+    let fn = new Function('return 1+foo+1')
+    console.log(fn());
+    //11 + 21
+
+    03.
+    window.foo = '1 + 2'
+    let fn = new Function('return 1+'+foo+'+1')
+    'return 1+''+1 + 2+''+1' =>
+    return 1+'+'1 + 2'+'+1 =>
+    return 1+1+2+1 =>
+    // 5
+    console.log(fn());
+    // 5
+    */
+}
