@@ -19,15 +19,43 @@
     </p>
     <hr>
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>inline_block 레벨이다.(img, input, textarea....)</li>
+        <li>img요소를 이용해서 출력이 가능 (ratio 유지가능, 다양한 animation이 불가능)</li>
+        <li>SVG코드정리
+            <pre>
+                https://jakearchibald.github.io/svgomg/ 
+
+                ▶ Global Settings 옵션
+                
+                - Compare Gzipped
+                - Prettify Markup
+
+                ▶ Feture 옵션
+                
+                모든 옵션 활성화후 아래의 옵션 비활성화
+                
+                - Clean up IDs
+                - Round/rewrite paths 
+                - Round/rewrite transforms
+                - Remove ViewBox
+                - Merge paths
+                - Replace duplicate elements with links
+
+            </pre>
+        </li>
+        <li>viewBox 속성을 이용해서 비율을 유지함</li>
         <li></li>
         <li></li>
     </ul>
     <hr>
     <div class="ex_one">
         <img src="./circle.svg" alt="">
+    </div>
+    <div class="ex_two">
+        <svg viewBox="0 0 500 500">
+            <ellipse cx="249.61" cy="249.2" rx="249.57" ry="249.98"
+                style="fill:#0b743b;stroke:#721011;stroke-miterlimit:10" />
+        </svg>
     </div>
 </body>
 

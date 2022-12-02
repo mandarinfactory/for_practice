@@ -1,0 +1,10 @@
+.ex_one img {
+    width: 50%;
+}
+.ex_two svg {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    max-width: 300px;
+
+}
