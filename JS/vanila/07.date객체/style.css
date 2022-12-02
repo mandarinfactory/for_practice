@@ -1,0 +1,9 @@
+.btns .play {
+    display: none;
+}
+.btns.active .play {
+    display: block;
+}
+.btns.active .stop {
+    display: none;
+}
