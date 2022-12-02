@@ -18,12 +18,12 @@
     let dayArr = ['일','월','화','수','목','금','토']
     let str = ''
 
-    let foo = () => {
+  /*   let foo = () => {
         str += `${year}년도 ${monthArr[month]} ${date}일 ${dayArr[day]}요일 ${dayNight} ${halfHour}시 ${min}분 ${sec}초`
         document.querySelector('.ex_one .output').innerText = str
-    }
+    } 오류있다.....뀽....*/
     let intervalID = setInterval(() => {
-        foo()
+    /* foo() */
     },1000)
     document.querySelectorAll('.ex_one button').forEach(v => {        
         v.addEventListener('click', e => {
@@ -39,4 +39,14 @@
             },1000)
         })
     })
-}
+}/* ex_one ------------------------------------------------------------ */
+{
+    let findDate = new Date()
+}/* ex_two (assignment) ----------------------------------------------- */
+{
+    let nowSec = parseInt(Date.now() / 1000);
+    let nowMin = parseInt(nowSec / 60);
+    let nowHour = parseInt(nowMin / 60);
+    let nowDate = parseInt(nowHour / 24);
+    console.log(nowDate);
+}/* ex_three --------------------------------------------------------- */
