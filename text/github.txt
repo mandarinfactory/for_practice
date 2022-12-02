@@ -75,6 +75,8 @@
             - 생성방법
                 1. 분기점 commit으로 checkout
                 2. branch 생성 (history 우클릭, 상단메뉴 branch icon)
+                3. branch를 생성하지 않고 과거의 하위commit을 수정했을 경우
+                최종commit으로 checkout된 상태에서 branch를 생성해야 함
             
             - merge(branch를 하나로 병합한다.)
                 1. 순서 
