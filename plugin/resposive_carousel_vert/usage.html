@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="./responsive_carousel_vert.js"></script>
+  <script>
+    $(function () {
+      responsive_carousel_vert(".visual", false, 2000, 5000)
+    })//ready
+  </script>
+</head>
+
+<body>
+  <div class="visual">
+    <!-- 클래스 이름은 임의로 사용 가능 -->
+    <div class="overflow">
+      <div class="col_height">
+        <!-- 클래스 이름 변경하지 말것 -->
+        <ul class="img_container"><!-- ul,li 객체를 사용g하고, 클래스 이름 변경하지 말것 -->
+          <li><!-- 안쪽의 구조는 임의로 설정 -->
+            <div class="inner">
+              <img src="./img/img1.jpg" alt="">
+              <div class="textbox">
+                <h3>Img Title1</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <img src="./img/img2.jpg" alt="">
+              <div class="textbox">
+                <h3>Img Title2</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <img src="./img/img3.jpg" alt="">
+              <div class="textbox">
+                <h3>Img Title3</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <img src="./img/img4.jpg" alt="">
+              <div class="textbox">
+                <h3>Img Title4</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <img src="./img/img5.jpg" alt="">
+              <div class="textbox">
+                <h3>Img Title5</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div><!-- col_height -->
+    </div><!-- overflwo -->
+    <button class="next">next</button>
+    <button class="prev">prev</button>
+    <div class="indicator"><!-- 클래스 이름 변경하지 말것 -->
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+    </div>
+    <div class="progress"><!-- 클래스 이름 변경하지 말것 -->
+      <div class="bar"></div>
+    </div><!-- progress -->
+  </div><!-- visual -->
+</body>
+
+</html>
