@@ -3,7 +3,13 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#0B743B;stroke:#721011;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#2C2B7E;stroke-width:10;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#F0E930;stroke-width:10;stroke-miterlimit:10;}
 </style>
-<ellipse class="st0" cx="249.61" cy="249.2" rx="249.57" ry="249.98"/>
+<svg>
+	<path class="st0" d="M373.69,39.22c-99.45,172.25-144.13,172.25-243.57,0c99.45,172.25,77.11,210.94-121.79,210.94
+		c198.89,0,221.23,38.69,121.79,210.94c99.45-172.25,144.13-172.25,243.57,0c-99.45-172.25-77.11-210.94,121.79-210.94
+		C296.59,250.16,274.25,211.47,373.69,39.22z"/>
+</svg>
+<polygon class="st1" points="338.36,96.77 163.28,96.77 75.74,248.39 163.28,400.02 338.36,400.02 425.9,248.39 "/>
 </svg>
