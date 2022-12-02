@@ -93,6 +93,8 @@
                     - merge가 된 branch는 reset으로 다시 복원할 수 없음
 
             - delete(제거) 
+                1. checkout된 branch는 delete할 수가 없음
+
             - conflict(충돌) 
                 1. select-current : checkout된 branch의 내용으로 변경
                 2. select-incoming  : 병합될 branch의 내용으로 변경
