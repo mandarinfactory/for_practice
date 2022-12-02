@@ -17,31 +17,40 @@
     let monthArr = ['Janurary', 'Febrary','March','April','May','June','July','August','September','October','November','December']
     let dayArr = ['일','월','화','수','목','금','토']
     let str = ''
-
-  /*   let foo = () => {
+    
+    /*   let foo = () => {
         str += `${year}년도 ${monthArr[month]} ${date}일 ${dayArr[day]}요일 ${dayNight} ${halfHour}시 ${min}분 ${sec}초`
         document.querySelector('.ex_one .output').innerText = str
     } 오류있다.....뀽....*/
     let intervalID = setInterval(() => {
     /* foo() */
-    },1000)
-    document.querySelectorAll('.ex_one button').forEach(v => {        
-        v.addEventListener('click', e => {
-            document.querySelector('.ex_one .btns').classList.toggle('active')
-        })
-        document.querySelector('.ex_one .btns .stop').addEventListener('click', e => {
-            clearInterval(intervalID);
-        })
-        document.querySelector('.ex_one .btns .play').addEventListener('click', e => {
-            clearInterval(intervalID);
-            intervalID = setInterval(() => {
-                foo()
-            },1000)
-        })
+},1000)
+document.querySelectorAll('.ex_one button').forEach(v => {        
+    v.addEventListener('click', e => {
+        document.querySelector('.ex_one .btns').classList.toggle('active')
     })
+    document.querySelector('.ex_one .btns .stop').addEventListener('click', e => {
+        clearInterval(intervalID);
+    })
+    document.querySelector('.ex_one .btns .play').addEventListener('click', e => {
+        clearInterval(intervalID);
+        intervalID = setInterval(() => {
+            foo()
+        },1000)
+    })
+})
 }/* ex_one ------------------------------------------------------------ */
 {
-    let findDate = new Date()
+    let monthArr = ['Janurary', 'Febrary','March','April','May','June','July','August','September','October','November','December']
+    let dayArr = ['일','월','화','수','목','금','토']
+    document.querySelector('.ex_two button').addEventListener('click', e => {
+        let theYear = parseInt(document.getElementsByClassName('year').getAttribute('value'))
+        let theMonth = parseInt(document.getElementsByClassName('month').getAttribute('value'))
+        let theDate = parseInt(document.getElementsByClassName('date').getAttribute('value'))
+        let findDate = new Date(theYear, monthArr[theMonth], dayArr[theDate])
+        console.log(theYear, theMonth, theDate)
+        document.querySelector('.ex_two p.output').append(findDate)
+    })
 }/* ex_two (assignment) ----------------------------------------------- */
 {
     let nowSec = parseInt(Date.now() / 1000);
