@@ -50,3 +50,36 @@
     let nowDate = parseInt(nowHour / 24);
     console.log(nowDate);
 }/* ex_three --------------------------------------------------------- */
+{
+    let christmas = new Date(2022,11,25)
+    let dDay = parseInt(christmas.getTime() / 1000)
+    let now = parseInt(Date.now() / 1000)
+    let remainTime = dDay - now;
+    let remainHour = parseInt(remainTime / 3600)
+    let remainMin  = parseInt(remainTime % 3600 / 60)
+    let remainSec  = parseInt(remainTime % 3600 % 60)
+    document.querySelector('.ex_four p.output').append(`크리스마스까지 ${remainHour}시간, ${remainMin}분, ${remainSec}초 남았습니다.`)
+}/* ex_four ---------------------------------------------------------- */
+
+{
+    /* 
+    62초
+    62 / 60초 = 1분
+    62 % 60초 = 2초
+
+    62분 => 1시간 2분 0초
+    = 3720초
+    3720 / 3600초 = 1시간
+    3720 % 3600초 = 120초
+    120 / 60초 = 2분
+    120 % 60초 = 0초
+
+    62분 30초 => 1시간 2분 30초
+    = 3750초
+    3750 / 3600초 = 1시간
+    3750 % 3600초 = 150초
+    150 / 60초 = 2분
+    150 % 60초 = 30초
+
+    */
+}
