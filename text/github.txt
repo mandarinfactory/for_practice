@@ -94,6 +94,7 @@
 
             - delete(제거) 
                 1. checkout된 branch는 delete할 수가 없음
+                2. merge가 되기 전 branch를 삭제할 경우 force delete를 이용
 
             - conflict(충돌) 
                 1. select-current : checkout된 branch의 내용으로 변경
