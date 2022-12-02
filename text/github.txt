@@ -91,12 +91,32 @@
 
                 3. 주의사항
                     - merge가 된 branch는 reset으로 다시 복원할 수 없음
-                    - 원격시 force push를 같이 사용해야 함
 
             - rebase(branch를 하나로 병합)
                 1. branch의 history가 남지 않음
+
                 2. 주의사항
-                    - 원격 연동이나 협업시 
+                    - 원격 연동이나 협업시 매우 위험
+                    - 원격시 force push를 같이 사용해야 함
+
+                3. 순서
+                    - 제거될 branch로 checkout
+                    - 남아야 될 branch를 우클릭 후 rebase
+                    - 충돌해결
+                    - 변경된 모든 파일을 stage 등록 (절대! commit하지 말것)
+                    - 남아야 될 branch를 우클릭 후 rebase (continue rebase 선택)
+                    - 남아야 될 branch로 checkout
+                    - 제거 될 branch 선택 후 merge
+                    - branch 제거
+
+            - squash
+                1. 목적
+                    - history를 병합
+                2. 주의사항
+                    - 원격 연동이나 협업시 매우 위험
+                    - 원격시 force push를 같이 사용해야 함
+                3. 순서
+                    1. 하위 commit을 우클릭(checkout아님) => rebase children 실행
 
             - delete(제거) 
                 1. checkout된 branch는 delete할 수가 없음
@@ -106,5 +126,6 @@
                 1. select-current : checkout된 branch의 내용으로 변경
                 2. select-incoming  : 병합될 branch의 내용으로 변경
                 3. select-both : 두개의 branch 내용을 병합
+
 2. clouding data
 3. co-working
