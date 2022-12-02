@@ -75,8 +75,8 @@
             let mySiblingsBtnArr = Array.from(e.target.parentElement.children)
             let indexNumber = mySiblingsBtnArr.indexOf(e.target)
             alert(indexNumber);
-        })
-    })
+        })//click-event
+    })//forEach
     /* let btnsArr = Array.from(document.querySelectorAll('.ex_seven button'))
     btnsArr.forEach( v => {
         v.addEventListener('click', e => {
@@ -89,5 +89,17 @@
     })//forEach 요것도 내가 만든 방법...뀽 */
 }/* ex_seven */
 {
-    
+    document.querySelectorAll('.ex_eight button').forEach( v => {
+        v.addEventListener('click', e => {
+            let btnArr = Array.from(e.target.parentElement.children)
+            let thisIndex = btnArr.indexOf(e.target)
+            btnArr.forEach((v, i)=> {
+                if(thisIndex > i){
+                    v.style.backgroundColor = 'firebrick'
+                } else if(thisIndex <= i){
+                    v.style.backgroundColor = 'rgb(239,239,239)'
+                } else return false
+            })
+        })//click-event
+    })//forEach
 }/* ex_eight */
