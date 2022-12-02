@@ -33,3 +33,18 @@
     stroke-dasharray: 7px;
     stroke-linecap: round;
 }
+.ex_four svg .path2,
+.ex_four svg .path1_copy {
+    display: none;
+}
+.ex_five svg path {
+    fill: yellow;
+    stroke: darkblue;
+    stroke-width: 5px;
+    stroke-dasharray: 7px;
+    stroke-linecap: round;
+}
+.ex_five svg .path2,
+.ex_five svg .path1_copy {
+    display: none;
+}
