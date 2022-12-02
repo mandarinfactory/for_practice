@@ -91,6 +91,12 @@
 
                 3. 주의사항
                     - merge가 된 branch는 reset으로 다시 복원할 수 없음
+                    - 원격시 force push를 같이 사용해야 함
+
+            - rebase(branch를 하나로 병합)
+                1. branch의 history가 남지 않음
+                2. 주의사항
+                    - 원격 연동이나 협업시 
 
             - delete(제거) 
                 1. checkout된 branch는 delete할 수가 없음
