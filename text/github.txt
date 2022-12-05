@@ -127,7 +127,7 @@
                 2. select-incoming  : 병합될 branch의 내용으로 변경
                 3. select-both : 두개의 branch 내용을 병합
 
-2. system link
+2. system link(with github)
 
     - github 연동 순서
 
@@ -137,6 +137,37 @@
             - 저장소 이름
             - 저장소 설명(입력안해도 무방)
             - 공개설정(public, private => 대부분 public으로 해놓는편!)
-            - add readme file (연동 목적이 아닌 직접 파일을 업로드할경우, 호스팅 안할 경우)
+            - add readme file (연동 목적이 아닌 직접 파일을 업로드할경우, 호스팅 할 경우)
+        
+        2. git repository 관리
+            
+            - 저장소 선택 
+                1. 우측상단 사용자메뉴 / your repositories / new (녹색버튼)
 
-3. co-working
+            - 저장소 삭제
+                삭제할 저장소 선택
+                저장소메뉴 / settings / danger-zone => delete this repository => 선택하고 입력하면 삭제됨
+
+3. 로컬(local)저장소와 원격(remote)저장소 연동
+
+    - project를 처음 연결할 경우
+        1. 로컬을 git 등록 (소스트리의 create)
+        2. github 저장소 생성 후 token 발급
+            - 우측 상단 사용자 메뉴 / settings => personal access tokens / tokens(classic)
+            - 좌측 메뉴 하단의 developer settings
+            - generate new token
+            - note : 메모 / expiration : 유효 기간, select scope옵션 repo 체크
+            - 생성된 token 필히!!!!!!!!저장
+        3. token사용시 주의사항
+            - source tree가 설치 되어 있는 수만큼 token이 필요함
+
+    - 메뉴 / repository / repository settings 혹은 우측상단의 remote 아이콘을 클릭
+
+    - remote details 옵션
+        1. default remote 체크 (origin 원격 이름)
+        2. url / path 
+            - github 저장소의 경로 입력
+            - 파일이 업로드 된 이후 저장소 code메뉴에서 확인 가능
+        3. username 임의로 입력
+        4. push나 pull 실행시 비빌번호란에 토큰입력
+            (no-helper 체크 후 하단의 always옵션 체크)
