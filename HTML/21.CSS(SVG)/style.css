@@ -48,3 +48,26 @@
 .ex_five svg .path1_copy {
     display: none;
 }
+.ex_six svg {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: lightgray;
+}
+.ex_six svg path {
+    fill: none;
+    stroke: firebrick;
+    stroke-width: 3px;
+    stroke-dasharray: 10px;
+    stroke-dashoffset: 5px;
+    animation: dashOffset 10000s linear;
+}
+@keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 0px;
+    }
+    100% {
+        stroke-dashoffset: 1000000px;
+    }
+}
