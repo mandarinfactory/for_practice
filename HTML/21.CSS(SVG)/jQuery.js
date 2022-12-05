@@ -18,4 +18,19 @@ $(function () {
     $('.ex_eight .btn2').click(function () {
       $('.ex_eight').removeClass('active');
     })//click-event
+    function resizeImage() {
+      var t = $('.ex_nine').offset().top
+      if (scrY >= t -winH * 0.8) {
+        $('.ex_nine').addClass('active')
+      } else {
+        $('.ex_nine').removeClass('active')
+      }
+
+    }
+    resizeImage()
+    $(window).resize(function (){
+      resizeImage()
+    }).scroll(function () {
+      resizeImage()
+    })//window-event
 })

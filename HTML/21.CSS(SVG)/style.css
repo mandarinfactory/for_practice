@@ -119,3 +119,22 @@
 .ex_eight.active svg path {
     stroke-dashoffset: 0;
 }
+.ex_nine {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.ex_nine path {
+    fill: white;
+    stroke: black;
+    stroke-width: 3px;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 15s, fill 5s;
+    transition-delay: 0s, 0s;
+}
+.ex_nine.active path {
+    stroke-dashoffset: 0;
+    fill: rgb(37, 136, 103);
+    transition-delay: 0s, 1s;
+}
