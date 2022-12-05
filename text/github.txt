@@ -127,8 +127,10 @@
                 2. select-incoming  : 병합될 branch의 내용으로 변경
                 3. select-both : 두개의 branch 내용을 병합
 
-2. clouding data
+2. synchronizing
 
     - github 연동 순서
-
+        1. git repository(저장소)
+            - 우측상당 사용자메뉴 / your repositories / new (녹색버튼)
+            - 저장소 이름, 저장소 설명, 공개설정(public, private => 대부분 public으로 해놓는편!)
 3. co-working
