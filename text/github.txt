@@ -128,4 +128,7 @@
                 3. select-both : 두개의 branch 내용을 병합
 
 2. clouding data
+
+    - github 연동 순서
+
 3. co-working
