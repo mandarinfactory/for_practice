@@ -160,6 +160,8 @@
             - 생성된 token 필히!!!!!!!!저장
         3. token사용시 주의사항
             - source tree가 설치 되어 있는 수만큼 token이 필요함
+            - source tree에 token을 재 입력해야 할 경우
+            (C:사용자 / 사용자ID / AppData / local / atlassian / sourceTree / passwd, userhosts 삭제)
 
     - 메뉴 / repository / repository settings 혹은 우측상단의 remote 아이콘을 클릭
 
