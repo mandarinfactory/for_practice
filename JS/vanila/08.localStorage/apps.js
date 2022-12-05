@@ -1,7 +1,7 @@
 {
-    let theTime = localStorage.getItem('hide')
+    let hideTime = localStorage.getItem('hide')
     if(/* '팝업에 기록된 시간으로부터 하루(24 * 60 * 60 * 1000)가 지났으면' */
-    console.log(parseInt(theTime / 1000 / 3600 / 24 + 1) - parseInt(theTime / 1000 / 3600 / 24))
+    console.log(parseInt(hideTime / 1000 / 3600 / 24 + 1) - parseInt(hideTime / 1000 / 3600 / 24))
     )
         {
     localStorage.removeItem('hide')
