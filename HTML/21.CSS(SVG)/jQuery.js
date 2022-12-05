@@ -11,4 +11,11 @@ $(function () {
     $('.ex_five .btn2').click(function () {
       TweenMax.to(".ex_five .path1",1,{morphSVG:".ex_five .path2",fill:"yellow",ease:Linear.easeNone})
     })
+    /* morphing-motion ------------------------------------------------------------------------------------------ */
+    $('.ex_eight .btn1').click(function () {
+      $('.ex_eight').addClass('active');
+    })//click-event
+    $('.ex_eight .btn2').click(function () {
+      $('.ex_eight').removeClass('active');
+    })//click-event
 })

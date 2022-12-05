@@ -55,12 +55,19 @@
     margin: 0 auto;
     background-color: lightgray;
 }
+.ex_seven svg {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: lightgray;
+}
 .ex_six svg path {
     fill: none;
     stroke: firebrick;
     stroke-width: 3px;
-    stroke-dasharray: 10px;
-    stroke-dashoffset: 5px;
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 500px;
     animation: dashOffset 10000s linear;
 }
 @keyframes dashOffset {
@@ -70,4 +77,45 @@
     100% {
         stroke-dashoffset: 1000000px;
     }
+}
+.ex_seven svg path {
+    fill: none;
+    stroke: darkgreen;
+    stroke-width: 3px;
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 500px;
+    animation: circulating 10s infinite;
+}
+@keyframes circulating {
+    0% {
+        stroke-dashoffset: 300px;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -300px;
+    }
+}
+.ex_eight button {
+    display: block;
+    margin: 20px auto;
+}
+.ex_eight svg {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: lightgray;
+}
+.ex_eight svg path {
+    fill: none;
+    stroke: midnightblue;
+    stroke-width: 5px;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: all 3s linear;
+}
+.ex_eight.active svg path {
+    stroke-dashoffset: 0;
 }
