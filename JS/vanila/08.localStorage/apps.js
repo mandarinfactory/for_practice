@@ -1,6 +1,10 @@
 {
-    if('팝업에 기록된 시간으로부터 하루(24 * 60 * 60 * 1000)가 지났으면') {
-    localStorage.removeItem('popup')
+    let theTime = localStorage.getItem('hide')
+    if(/* '팝업에 기록된 시간으로부터 하루(24 * 60 * 60 * 1000)가 지났으면' */
+    console.log(parseInt(theTime / 1000 / 3600 / 24 + 1) - parseInt(theTime / 1000 / 3600 / 24))
+    )
+        {
+    localStorage.removeItem('hide')
     }
     if(localStorage.getItem('hide')){
         /* 있으면 ex_one을 숨긴다. */
