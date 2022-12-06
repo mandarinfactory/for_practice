@@ -148,7 +148,6 @@
                 삭제할 저장소 선택
                 저장소메뉴 / settings / danger-zone => delete this repository => 선택하고 입력하면 삭제됨
 
-3. 로컬(local)저장소와 원격(remote)저장소 연동
 
     - project를 처음 연결할 경우
         1. 로컬을 git 등록 (소스트리의 create)
@@ -173,11 +172,22 @@
         3. username 임의로 입력
         4. push나 pull 실행시 비빌번호란에 토큰입력
             (no-helper 체크 후 하단의 always옵션 체크)
+        5. 저장소가 존재할 경우 연동 
+            - 별도의 token을 생성할 것
+            - sourceTree의 clone메뉴를 이용
+            - 저장소 경로 입력
+            - clone (처음연동시 token입력)
 
-    - 저장소가 존재할 경우 연동 
+3. 로컬(local)저장소와 원격(remote)저장소 연동
+    
+    - pull / push
+        1. 작업시작 전 반드시 pull을 실행
+        2. 작업종료 후 반드시 push를 실행
+    
+    - 문제상황해결
+        1. 작업종료 후 push를 실행하지 않았을 경우 => 해결방법이 없음!!!!!!!!!!!!!!
+        2. pull을 선행하지 않고 작업했을 경우 => sourceTree의 history패널에서 수정한 파일 확인 후 backup + 작업 전 commit으로 hard-push를 한다.
 
-        1. sourceTree의 clone메뉴를 이용
-        
 4. 협업
 
     - 각각 따로 집, 학원, 회사용으로 token을 만들어야한다.
