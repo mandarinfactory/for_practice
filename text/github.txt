@@ -186,7 +186,11 @@
     
     - 문제상황해결
         1. 작업종료 후 push를 실행하지 않았을 경우 => 해결방법이 없음!!!!!!!!!!!!!!
-        2. pull을 선행하지 않고 작업했을 경우 => sourceTree의 history패널에서 수정한 파일 확인 후 backup + 작업 전 commit으로 hard-push를 한다.
+        2. pull을 선행하지 않고 작업했을 경우 
+            - sourceTree의 history패널에서 수정한 파일 확인 후 backup
+            - 작업 전 commit으로 hard-push를 한다.
+            - pull실행
+            - backup된 파일과 마지막 commit상태의 파일 비교 후 commit 후 push
 
 4. 협업
 
