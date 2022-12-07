@@ -57,6 +57,14 @@ JS처럼 먼저 선언을 해야 후순위에서 쓸수 있다! */
     font-size: 40px;
     font-weight: 700;
     animation: jump 1s infinite alternate;
+    @for $i from 1 through 5
+    /* 
+    $i = var i, i <= 5 = from 1 through 5 => JS for생각해보자! 
+    #{} = ${}
+    ($i = 1, 2, 3, 4, 5 ) * 0.2s => 각각 animation을 다른시간에 설정해준다.
+    */{
+        &:nth-child(#{$i}){animation-delay: ($i * 0.2s);}
+    }
     @keyframes jump {
         0% {
             transform: translateY(0);
@@ -65,4 +73,7 @@ JS처럼 먼저 선언을 해야 후순위에서 쓸수 있다! */
             transform: translateY(-20px);
         }
     }//jump
+}
+.ex_eight span {
+    
 }

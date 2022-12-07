@@ -59,6 +59,20 @@
             extend <br>
             동일한 CSS파일내에서 반복할 디자인을 선언 후 사용
         </li>
+        <li>
+            for구문
+            <pre>
+                @for $i from 1 through 5
+                /* 
+                $i = var i, i <= 5 = from 1 through 5 => JS for생각해보자! 
+                to / through 있는데 to는 4까지 밖에 안된다!
+                #{} = ${}
+                ($i = 1, 2, 3, 4, 5 ) * 0.2s => 각각 animation을 다른시간에 설정해준다.
+                */{
+                    &:nth-child(#{$i}){animation-delay: ($i * 0.2s);}
+                }
+            </pre>
+        </li>
     </ul>
     <div class="ex_one">
         <div></div>
@@ -96,7 +110,16 @@
         <button>나</button>
         <button>다</button>
     </div>
+    <hr>
     <div class="ex_seven">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </div>
+    <hr>
+    <div class="ex_eight">
         <span>1</span>
         <span>2</span>
         <span>3</span>

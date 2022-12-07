@@ -79,6 +79,21 @@ JS처럼 먼저 선언을 해야 후순위에서 쓸수 있다! */
   font-weight: 700;
   animation: jump 1s infinite alternate;
 }
+.ex_seven span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.ex_seven span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.ex_seven span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.ex_seven span:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.ex_seven span:nth-child(5) {
+  animation-delay: 1s;
+}
 @keyframes jump {
   0% {
     transform: translateY(0);
