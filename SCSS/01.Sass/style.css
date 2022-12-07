@@ -2,10 +2,10 @@ body {
   background-color: darkgreen;
 }
 
-.ex_one {
+.ex_one, .ex_two {
   background-color: rgba(255, 255, 0, 0.5);
 }
-.ex_one div {
+.ex_one div, .ex_two div {
   padding: 50px;
   display: inline-block;
   border: 5px solid rgb(48, 8, 8);
