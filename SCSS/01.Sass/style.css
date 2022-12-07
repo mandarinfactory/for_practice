@@ -8,9 +8,20 @@
   border: 5px solid rgb(48, 8, 8);
 }
 
-.ex_three a {
-  /* & => .ex_three a:hover의 역할을 한다! */
+:root {
+  --main-color: tomato;
 }
-.ex_three a:hover {
-  background-color: darkorange;
+
+/* SCSS는 직접 import를 해줘야 link가 된다! */
+.ex_three a {
+  /* & => .ex_three a:nth-child(1):hover의 역할을 한다! */
+}
+.ex_three a:nth-child(1):hover {
+  background-color: var(--main-color);
+}
+.ex_three a:nth-child(2):hover {
+  background-color: darkblue;
+}
+.ex_three a:nth-child(3):hover {
+  background-color: firebrick;
 }/*# sourceMappingURL=style.css.map */

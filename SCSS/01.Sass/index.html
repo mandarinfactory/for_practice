@@ -5,12 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="style.css">
     <!-- 쓸때는 SCSS에 쓰지만, link연결은 CSS를 연결해준다! => compiling -->
     <title>Document</title>
 </head>
 
 <body>
+    <ul>
+        <li>complier 실행 후 작성(VSC => SCSS watch)</li>
+        <li>nested 선택자를 사용할 수 있음</li>
+        <li>&amp;선택자 => 중괄호{}밖의 선택자를 의미한다.</li>
+        <li>
+            변수선언
+            <pre>
+                $color : red;
+                a{
+                    color : $color
+                }
+            </pre>
+        </li>
+        <li>
+            외부SCSS file에 작성된 변수를 호출할 경우 @import가 선행해야한다.
+            <pre>
+                @import 'SCSS파일명.scss'
+            </pre>
+        </li>
+    </ul>
     <div class="ex_one">
         <div></div>
         <div></div>
@@ -24,9 +45,9 @@
     </div>
     <hr>
     <div class="ex_three">
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
+        <a href="">ABCD</a>
+        <a href="">ABCD</a>
+        <a href="">ABCD</a>
     </div>
 </body>
 

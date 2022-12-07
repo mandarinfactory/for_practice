@@ -6,9 +6,19 @@
         border: 5px solid rgb(48, 8, 8);
     }
 } 
+
+$sub_color:firebrick;
+@import "common.scss";
+/* SCSS는 직접 import를 해줘야 link가 된다! */
 .ex_three a{
-    &:hover{
-        background-color: darkorange;
+    &:nth-child(1):hover{
+        background-color: var(--main-color);
     }
-    /* & => .ex_three a:hover의 역할을 한다! */
+    /* & => .ex_three a:nth-child(1):hover의 역할을 한다! */
+    &:nth-child(2):hover{
+        background-color: darkblue;
+    }
+    &:nth-child(3):hover{
+        background-color: $sub_color;
+    }
 }
