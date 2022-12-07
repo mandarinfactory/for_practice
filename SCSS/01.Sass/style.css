@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* SCSS는 직접 import를 해줘야 link가 된다! */
-/* JS처럼 먼저 선언을 해야 후순위에서 쓸수 있다! */
+/* 반복되는 모양은 common에다가 @mixin으로 만들어놓으면 편하다! =>
+JS처럼 먼저 선언을 해야 후순위에서 쓸수 있다! */
 .ex_one, .ex_two {
   background-color: rgba(255, 255, 0, 0.5);
 }
