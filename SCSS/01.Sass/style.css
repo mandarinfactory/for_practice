@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* SCSS는 직접 import를 해줘야 link가 된다! */
+/* JS처럼 먼저 선언을 해야 후순위에서 쓸수 있다! */
 .ex_one, .ex_two {
   background-color: rgba(255, 255, 0, 0.5);
 }
@@ -8,7 +10,6 @@
   border: 5px solid rgb(48, 8, 8);
 }
 
-/* SCSS는 직접 import를 해줘야 link가 된다! */
 .ex_three a {
   /* & => .ex_three a:nth-child(1):hover의 역할을 한다! */
 }
