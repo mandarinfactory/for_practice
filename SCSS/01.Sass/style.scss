@@ -75,5 +75,19 @@ JS처럼 먼저 선언을 해야 후순위에서 쓸수 있다! */
     }//jump
 }
 .ex_eight span {
-    
+    display: inline-block;
+    padding-top: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    animation: jump 1s infinite alternate;
+    @for $i from 1 through 8
+   {
+        &:nth-child(#{$i}){animation-delay: ($i * 0.2s);}
+    }
+}
+$colorArr : (1:orangered, 2:indigo, 3:darkblue, 4:darkseagreen, 5:green, 6:pink, 7:gold, 8:magenta, 9:crimson);
+@each $n, $color in $colorArr /* => colorArr.forEach(function (n, color) {}) */{
+    .ex_eight span:nth-child(#{$n}){
+        color: $color;
+    }
 }
