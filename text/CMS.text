@@ -1,0 +1,13 @@
+■ CMS(Content Management System)
+    다양한 웹서비스를 쉽게 구축할 수 있는 framework(solution) => 자유도의 제약을 많이 받음
+
+■ wordpress 설치
+
+    ● 개발환경구축
+
+        - AMP 환경설정
+            1. Apache, mySQL, PHP => AMP은 기본!
+            2. local 개발환경이 deploy 대상 호스트와 호환이 되어야함
+            (호환목록 : Apache, mySQL, PHP)
+    
+        - DBMS(mySQL...etc) 비밀번호
