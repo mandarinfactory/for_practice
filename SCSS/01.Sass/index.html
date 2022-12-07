@@ -36,8 +36,28 @@
             </pre>
         </li>
         <li>
-            반복되는 CSS디자인은 @mixin을 사용해서 선언하고,
+            @mixin() <br>
+            여러개의 CSS파일에서 반복해서 사용할
+            CSS디자인은 @mixin을 사용해서 선언하고,
             호출시 @include를 이용한다.
+            parameter(인자)가 사용가능하다.
+            <pre>
+                @mixin btn => 디자인이름(w, h){
+                    width : w(100px),
+                    height : h(200px), 
+                }
+                button {
+                    @include btn(100px, 200px)
+                }
+                 => JS function형태랑 비슷하다.
+                function foo(a, b){
+                    console.log(a + b)
+                }
+            </pre>
+        </li>
+        <li>
+            extend <br>
+            동일한 CSS파일내에서 반복할 디자인을 선언 후 사용
         </li>
     </ul>
     <div class="ex_one">
@@ -57,10 +77,24 @@
         <a href="">ABCD</a>
         <a href="">ABCD</a>
     </div>
+    <hr>
     <div class="ex_four">
         <a href="">ABCD</a>
         <a href="">ABCD</a>
         <a href="">ABCD</a>
+    </div>
+    <hr>
+    <div class="ex_five">
+        <button>경고</button>
+        <button>동의</button>
+        <button>거절</button>
+        <button>승인</button>
+    </div>
+    <hr>
+    <div class="ex_six">
+        <button>가</button>
+        <button>나</button>
+        <button>다</button>
     </div>
 </body>
 
