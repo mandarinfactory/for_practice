@@ -42,3 +42,10 @@
                 - 워드프레스가 설치된 DB를 선택
                 - 상단 메뉴에서 내보내기 => 내보내기
                 - hard copy와 같이 저장
+            
+            2. 라이브 서버로 이전(migration)
+                - 호스팅 초기화
+                    1. dothome예시) dothome 사이트 로그인 후 마이닷홈 / 해당 웹호스팅 / 상세보기 / 초기화
+                    2. 워드프레스의 wp-config.php 파일을 수정
+                        - DB_NAME, DB_USER, DB_PASSWORD를 이전할 호스팅 정보로 변경
+                    3. FTP 접속 후 루트폴더에 파일 업로드
