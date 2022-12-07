@@ -11,3 +11,10 @@
             (호환목록 : Apache, mySQL, PHP)
     
         - DBMS(mySQL...etc) 비밀번호
+            1. 127.0.0.1/phpmyadmin => DBMS 접속 페이지
+            2. 사용자계정 메뉴로 페이지 이동
+            3. 'root - localhost'의 계정 - 권한수정 - change password로 이동 
+            4. 새로고침(F5) 후 error 페이지 확인
+            5. c://xampp - phpMyAdmin/config.inc.php를 수정
+            6. $cfg['Servers'][$i]['password'] = 'change password에서 만든 비밀번호로 수정해줌!';
+            7. 다시 페이지 새로고침 후 정상적인 페이지 확인할것
