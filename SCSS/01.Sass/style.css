@@ -9,7 +9,7 @@
 }
 
 :root {
-  --main-color: tomato;
+  --main-color: rgb(71, 255, 178);
 }
 
 /* SCSS는 직접 import를 해줘야 link가 된다! */
