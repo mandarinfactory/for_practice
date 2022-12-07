@@ -1,11 +1,14 @@
-body {
-    background-color: darkgreen;
-}
 .ex_one, .ex_two {
     background-color: rgba(yellow,0.5);
-    div {
+    > div {
         padding: 50px;
         display: inline-block;
         border: 5px solid rgb(48, 8, 8);
     }
 } 
+.ex_three a{
+    &:hover{
+        background-color: darkorange;
+    }
+    /* & => .ex_three a:hover의 역할을 한다! */
+}
