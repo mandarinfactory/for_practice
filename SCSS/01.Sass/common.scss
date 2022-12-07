@@ -4,3 +4,10 @@ $sub_color:firebrick;
     background-color: black;
     color: white;
 }
+@mixin anotherBtn ($bgc){
+    padding: 10px 20px;
+    border: 1px solid black;
+    color: white;
+    background-color: $bgc;
+    border-radius: 5px;
+}

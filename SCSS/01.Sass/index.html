@@ -42,9 +42,9 @@
             호출시 @include를 이용한다.
             parameter(인자)가 사용가능하다.
             <pre>
-                @mixin btn => 디자인이름(w, h){
-                    width : w(100px),
-                    height : h(200px), 
+                @mixin btn => 디자인이름($w, $h){ => parameter에 꼭 $를 붙여서 써야한다!
+                    width : $w(100px),
+                    height : $h(200px), 
                 }
                 button {
                     @include btn(100px, 200px)
@@ -95,6 +95,13 @@
         <button>가</button>
         <button>나</button>
         <button>다</button>
+    </div>
+    <div class="ex_seven">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
     </div>
 </body>
 
