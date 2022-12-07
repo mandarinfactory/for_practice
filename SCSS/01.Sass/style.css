@@ -1,3 +1,12 @@
 body {
-  background-color: aqua;
+  background-color: darkgreen;
+}
+
+.ex_one {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.ex_one div {
+  padding: 50px;
+  display: inline-block;
+  border: 5px solid rgb(48, 8, 8);
 }/*# sourceMappingURL=style.css.map */
