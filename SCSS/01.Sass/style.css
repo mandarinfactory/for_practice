@@ -8,10 +8,6 @@
   border: 5px solid rgb(48, 8, 8);
 }
 
-:root {
-  --main-color: rgb(71, 255, 178);
-}
-
 /* SCSS는 직접 import를 해줘야 link가 된다! */
 .ex_three a {
   /* & => .ex_three a:nth-child(1):hover의 역할을 한다! */

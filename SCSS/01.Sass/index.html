@@ -29,6 +29,8 @@
         <li>
             외부SCSS file에 작성된 변수를 호출할 경우 @import가 선행해야한다. <br>
             => import로 변수를 호출할경우 변수가 변경되었을경우 import를 새로고침으로 저장을 다시 해야 변경된다.
+            => 다시말해, import가 되는 파일을 수정할 경우, import를 하는파일도 수정해야 함. <br>
+            (변수는 SCSS변수 대신 CSS변수 사용권장, SCSS변수를 사용할 경우 import없이 해당 파일에서 선언 후 사용)
             <pre>
                 @import 'SCSS파일명.scss'
             </pre>
