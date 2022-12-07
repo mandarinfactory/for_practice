@@ -48,4 +48,7 @@
                     1. dothome예시) dothome 사이트 로그인 후 마이닷홈 / 해당 웹호스팅 / 상세보기 / 초기화
                     2. 워드프레스의 wp-config.php 파일을 수정
                         - DB_NAME, DB_USER, DB_PASSWORD를 이전할 호스팅 정보로 변경
+                        + 아래2줄 추가
+                        define('WP_HOME', '가려고 하는 도메인 호스팅 주소 이름!!');
+                        define('WP_SITEURL', '가려고 하는 도메인 호스팅 주소 이름!!');          
                     3. FTP 접속 후 루트폴더에 파일 업로드
