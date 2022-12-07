@@ -18,3 +18,27 @@
             5. c://xampp - phpMyAdmin/config.inc.php를 수정
             6. $cfg['Servers'][$i]['password'] = 'change password에서 만든 비밀번호로 수정해줌!';
             7. 다시 페이지 새로고침 후 정상적인 페이지 확인할것
+
+    ● 설치과정
+
+        - wordpress 다운로드
+            1. https://ko.wordpress.org/download/ => more resources 에서 all releases로 다운로드한다.
+            2. wordpress 파일과 폴더를 서버의 루트폴더로 이동
+            3. DBMS 접속 
+                - mySQL 접속
+                - 데이터베이스 페이지로 이동 후
+                - DB 생성
+            4. 브라우저 주소창에 도메인 입력(127.0.0.1)
+                - DB이름(생성한 DB이름), 사용자명(root), 비밀번호(아까 change pw에서 만든 비밀번호!) 
+                - 그외의 호스트, 접두는 건들면 안됨! 후 제출, 설치실행
+                - site 정보 입력, 워드프레스 설치 => 검색 엔진 가시성은 선차단 개발후 변경할것!
+
+    ● wordpress베포 (deploy)
+        
+        - wordpress source파일 백업 = hard copy
+        - DB 백업
+
+            1. mySQL 접속
+                - 워드프레스가 설치된 DB를 선택
+                - 상단 메뉴에서 내보내기 => 내보내기
+                - hard copy와 같이 저장
