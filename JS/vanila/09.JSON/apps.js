@@ -26,18 +26,24 @@
         let todoListCopy = [...todoList]
         todoListCopy.reverse().forEach(e => { // .reverse()를 사용해서 내림차순(3 -> 2 -> 1)으로 만들어준다.
          let list = document.createElement('li')
+         let delBtn = document.createElement('button')
+         delBtn.innerHTML = '삭제띠!'
          document.querySelector('.ex_one ul').append(list)// jQuery에서 .append 역할!
          list.innerHTML = `
          날짜 : ${e.date}<br>
          시간 : ${e.time}<br>
          일정 : ${e.todo}<br>
-             <br>
+            <br>
              `
+        list.append(delBtn);    
+        document.querySelector('.ex_one ul').append(list);
+
+            
          })//forEach
      }//listOutput
      listOutput();
      // 일정이 존재하면 일정목록을 배열로 저장 //
-    document.querySelector('.ex_one button').addEventListener('click', () => {
+    document.querySelector('.ex_one .add').addEventListener('click', () => {
         let id = Date.now()
         let date = document.querySelector('.ex_one input[type=date]').value
         let time = document.querySelector('.ex_one input[type=time]').value
@@ -49,6 +55,6 @@
         /* date : date => 이런꼴로 많이해서 간소화시켜서 쓸수 있다! */
         listOutput();
     })//addEventListener
-
     /* 일정삭제 ---------------------------------------------------- */
+
 }
