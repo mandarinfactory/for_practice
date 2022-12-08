@@ -1,8 +1,22 @@
 {/* ex_one */
+    /*
+    {
+        ~~~~ 일정들 ~~~~~
+    } 
+    */
     /* 일정추가 ---------------------------------------------------- */
-    let jsonLocalStorage = localStorage.getItem('todoList')
+    // localStorage에서 일정을 확인한다. //
+    let todoList
+    let jsonLocalStorage = localStorage.getItem('todoList') // JSON화된 요소!(JSON.stringify)
+    // '일정이 없다'라면 빈배열 //
+    if(!jsonLocalStorage) {
+        todoList = [];
+    } else {
+        todoList = JSON.parse(jsonLocalStorage); // 다시 JSON화된 요소를 JS객체나 배열로 또 변화!
+    }
+    // 일정이 존재하면 일정목록을 배열로 저장 //
     console.log(jsonLocalStorage);
-    let todoList = [];//일정들의 배열
+    
     document.querySelector('.ex_one button').addEventListener('click', () => {
         let date = document.querySelector('.ex_one input[type=date]').value
         let time = document.querySelector('.ex_one input[type=time]').value
