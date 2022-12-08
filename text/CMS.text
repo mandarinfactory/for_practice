@@ -36,6 +36,7 @@
     ● wordpress베포 (deploy)
         
         - wordpress source파일 백업 = hard copy
+
         - DB 백업
 
             1. mySQL 접속
@@ -60,3 +61,47 @@
                         - 대시보드 메뉴 / 설정탭 / 고유주소 / 변경사항 저장 
 
             // 여기까지 하면 백업(migration) 끝!!!!!!!!!!!!!!!!!! //
+
+
+    
+    ● 테마(themes)
+
+        - 테마구성
+
+            1. wordpress설치경로 => wp-content / themes / 폴더생성
+
+            2. 테마구조설정
+
+                - 'index.php, functions.php, style.css' 요3개는 꼭 있어야하며 임의로 이전시키면 안된다!!!
+
+                    1. index.php : 화면에 출력되는 문서
+                    2. functions.php : 다양한 기능을 관리하는 문서
+                    3. style.css : 테마 정보를 기록하는 문서
+                    4. screenshot.png : 테마 미리보기(thumbnail / 1200 X 900비율)
+
+            3. 대시보드(관리자, 왼쪽 검은메뉴 => 외모,apperance / 테마 / 테마활성화)
+
+                - page
+                    수정이 빈번하게 발생하지 않는 디자인 페이지
+                - category
+                    수정관리가 빈번하게 발생하는 목록
+                - single
+                    카테고리목록의 새글 목록
+
+        - 테마제작순서
+
+            1. 대시보드 / 설정 / 미디어 / 썸네일크기
+
+                - 대표이미지 크기를 적당하게 설정해야한다.
+
+            2. 대시보드 / 설정 / 미디어 / 고유주소 (대표이미지 크기)
+
+                - 사용자정의주소
+                - category, postname 순으로 권장
+
+            3. IA(Information Architecture) => 사이트맵 구성
+
+                - page와 category를 분류
+
+
+
