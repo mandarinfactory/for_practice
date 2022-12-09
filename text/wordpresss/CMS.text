@@ -20,7 +20,7 @@
             7. 다시 페이지 새로고침 후 정상적인 페이지 확인할것
 
     ● 설치과정
-
+        
         - wordpress 다운로드
             1. https://ko.wordpress.org/download/ => more resources 에서 all releases로 다운로드한다.
             2. wordpress 파일과 폴더를 서버의 루트폴더로 이동
