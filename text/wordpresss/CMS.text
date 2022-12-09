@@ -125,6 +125,10 @@
                 - 요소검사 통해 메뉴구조 파악 후 CSS나 script를 사용
                 - 
 
+                - single 주소일 경우
+                    현재 주소에 해당하는 2dep li요소는 current-post-parent 클래스명이 추가됨
+                        - 링크 active 구현 예시
+                            .gnb
 
         ● 워드프레스 편집기
 
