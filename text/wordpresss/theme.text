@@ -1,0 +1,36 @@
+■ 플러그인 설치방법
+
+    ● 대시보드 -> 플러그인 -> 새로추가
+
+    ● 검색설치, 플러그인(ZIP파일)을 업로드
+
+    ● 설치 후 활성화
+
+    ● 설치 된 플러그인 메뉴는 대시보드메뉴에 등록되거나, 설정메뉴에 등록된다. 
+
+■ Remove Category URL 
+
+    ● URL의 category 출력을 제거 -> 별도의 설정이 필요하지 않음
+
+■ Breadcrump NavXT
+
+    ● 따로 웹사이트에 자동으로 breadcrump을 만들어줌
+
+    ● 설정 -> Breadcrump NavXT에서 관리
+    
+    ● 사용법
+
+        - 출력함수 : <?php if(function_exists('bcn_display')){ bcn_display(); }?> (header.php에 복붙!)
+
+        - 세부옵션 
+            1.General
+                - Breadcrump Separator : '/'으로 변경
+                - Home Template, Home Template(unlinked) : home 또는 홈으로 변경 -> 홈출력
+
+            2.Post Types
+                - 페이지나 글 출력 방식 설정
+                - 글 template 또는 페이지 template 태그를 수정
+                - 글 template, 글 template(unlinked)는 다 비울것! -> 다 비우고 여백 한칸 추가해야한다!
+
+            3. taxonomies
+                - category 태그를 수정
