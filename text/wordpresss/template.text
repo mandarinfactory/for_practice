@@ -2,7 +2,7 @@
 
     ● index.php와 동일한 내용으로 template 파일 생성
     ● sub 페이지 공통 상, 하단을 제작 후 템플릿과 연동
-
+    ● 필요한 모든 template 파일을 생성 -> 임의의 template을 생성해서 <?php include?>로 연결
 ■ home.php
 
 ■ page.php
