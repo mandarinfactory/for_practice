@@ -80,3 +80,17 @@ document.querySelector('.ex_one .btn_async').addEventListener('click',async e =>
     */
     makeBread()
 })
+
+/* async 방법1 --------------------------------------- */
+async function 비동기실행 () {
+    let return값1 = await 함수1()
+    let return값2 = await 함수2(return값1)
+    함수3(return값2)
+}
+
+/* async 방법2 --------------------------------------- */
+let 비동기실행 = async () => {
+    let return값1 = await 함수1()
+    let return값2 = await 함수2(return값1)
+    함수3(return값2)
+}
