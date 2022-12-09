@@ -82,15 +82,67 @@ document.querySelector('.ex_one .btn_async').addEventListener('click',async e =>
 })
 
 /* async 방법1 --------------------------------------- */
-async function 비동기실행 () {
+async function 비동기실행1 () {
     let return값1 = await 함수1()
     let return값2 = await 함수2(return값1)
     함수3(return값2)
 }
 
 /* async 방법2 --------------------------------------- */
-let 비동기실행 = async () => {
+let 비동기실행2 = async () => {
     let return값1 = await 함수1()
     let return값2 = await 함수2(return값1)
     함수3(return값2)
 }
+
+let wakeupTime = () => {
+    return new Promise((resolve) => {
+        console.log('일어나!!!!!!!!!!');
+        setTimeout(() => {
+            console.log('기상완료!!!!!!!!!!!!!')
+            resolve('기상')
+        }, Math.ceil(Math.random() * 3) * 1000)
+    })
+}
+
+
+let washTime = (time) => {
+    return new Promise((resolve) => {
+        console.log(`${time}했으니까 씻어!!!!!!!!!!!!`)
+        setTimeout(() => {
+            console.log('다씻었다!!!!!!!!!!!!!')
+            resolve('다씻었음')
+        }, Math.ceil(Math.random() * 3) * 1000)
+    })
+}
+
+let breakfastTime = (time) => {
+    return new Promise((resolve) => {
+        console.log(`${time}그럼 밥먹어!!!!!!!!!!!!`)
+        setTimeout(() => {
+            console.log('밥다먹음!!!!!!!!!!!!!')
+            resolve('아침다먹음')
+        }, Math.ceil(Math.random() * 3) * 1000)
+    })
+}
+
+
+let startWorkTime = (time) => {
+    return new Promise((resolve) => {
+        console.log(`${time}그럼 출근해!!!!!!!!!!!!`)
+        setTimeout(() => {
+            console.log('출근함 회사야!!!!!!!!!!!!!')
+            resolve('출근함')
+        }, Math.ceil(Math.random() * 3) * 1000)
+    })
+}
+
+document.querySelector('.ex_two button').addEventListener('click',async e => {
+    let 기상 = await wakeupTime()
+    let 다씻었음 = await washTime(기상)
+    let 아침다먹음 = await breakfastTime(다씻었음)
+    let 출근함 = await startWorkTime(아침다먹음)
+    console.log(`${출근함}그럼 얼른 일해!!!!!!!!!!!!`)
+
+})//addEventListener
+
