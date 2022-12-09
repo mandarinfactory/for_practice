@@ -1,5 +1,5 @@
-let makeWheat = a => {
-    return new Promise(() => {
+let makeWheat = () => {
+    return new Promise((resolve) => {
         console.log('밀 만들기 시작')
         setTimeout(() => {
             console.log('밀 만들기 끝!!')
@@ -7,7 +7,7 @@ let makeWheat = a => {
         },Math.ceil(Math.random() * 3))//setTimeout
     })//promise -> 필히 하나의 parameter가 필요하다!
 }//makeWheat-function
-/* 
+/*            
 let makeWheat = () => {
     console.log('밀 만들기 시작')
     setTimeout(() => {
