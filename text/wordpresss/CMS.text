@@ -65,6 +65,10 @@
 
     
     ● 테마(themes)
+        - 주소설정
+            1. <?php bloginfo('url'); ?> //홈 url
+
+            2. <?php bloginfo('template_directory'); ?> //테마 url 
 
         - 테마구성
 
