@@ -6,7 +6,20 @@
 ■ home.php
 
 ■ page.php
-
+    ● page.php 구성
+        - page 출력함수
+            <?php get_header(); ?>
+            <!--페이지 제목 출력-->
+            <?php the_title(); ?>
+            <!--페이지 출력 시작-->
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <!--페이지 본문 출력-->
+            <?php the_content(); ?>
+            <?php endwhile; else: ?>
+            <!--페이지가 없을 경우 출력될 내용-->	
+            <?php endif; ?>
+            <!--페이지 출력 끝-->
+            <?php get_footer(); ?>
 ■ category.php
 
 ■ single.php
