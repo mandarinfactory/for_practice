@@ -34,3 +34,14 @@
 
             3. taxonomies
                 - category 태그를 수정
+
+
+■ 위젯설정
+    ● functions.php
+        register_sidebar( array(
+        'name' => __( '위젯이름' ),
+        'id'=> 'widjet1',  // 위젯 영역의 고유한 ID));
+
+    ● 대시보드 / 외모 / 위젯
+        - 위젯이름으로 생성된 
+
