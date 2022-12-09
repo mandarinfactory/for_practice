@@ -23,13 +23,28 @@
             }//function
             </pre>
         </li>
-        <li></li>
+        <li>then문법
+            <pre>
+               함수1().then((result) => {
+                    return 함수2(result)
+                })//함수1_then -> 꼭 return으로 끝내줘야 .then으로 연결할수 있다! 안하면 또 call-back 미로 써야함!
+
+                .then((result) => {
+                    return 함수2(result)
+                })/함수2_then
+
+                .then((result) => {
+                    console.log(`${result}`)
+                })
+            </pre>
+        </li>
     </ul>
     <hr>
     <div class="ex_one">
-        <p>1.로그창에 비동기 문이 출력됩니다.</p>
-        <button>빵만들기!!</button>
-    </div>
+        <p>1.로그창에 비동기 문이 출력됩니다.(promise && then // await && async)</p>
+        <button class="btn_then">빵만들기!!(then)</button>
+        <button class="btn_async">빵만들기!!(async)</button>
+    </div><!-- ex_one -->
 </body>
 
 </html>

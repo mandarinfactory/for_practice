@@ -34,7 +34,7 @@ let makePowder = (ingredient) => {
         setTimeout(() => {
             console.log('밀가루 만들기 끝!!')
             resolve('powder')
-        },Math.ceil(Math.random() * 3))//setTimeout
+        },(Math.ceil(Math.random() * 3)) * 1000)//setTimeout
     })//promise
 }//makePowder-function
 
@@ -44,20 +44,39 @@ let makeBread = (ingredient) => {
         setTimeout(() => {
             console.log('빵 만들기 끝!!')
             resolve('bread')
-        },Math.ceil(Math.random() * 3))//setTimeout
+        }, (Math.ceil(Math.random() * 3)) * 1000)//setTimeout
     })//promise
 }//makeBread-function
 
-makeWheat().then((result) => {
-    return makePowder(result)
-})//makeWheat_then -> 꼭 return으로 끝내줘야 .then으로 연결할수 있다! 안하면 또 call-back 미로 써야함!
-.then((result) => {
-    return makeBread(result)
-})//makePower_then
-.then((result) => {
-    console.log(`${result}완성!!!!!!!!!!!!!`)
+/* promise && then -------------------------------------------------------- */
+document.querySelector('.ex_one .btn_then').addEventListener('click', e => {
+    makeWheat().then((result) => {
+        return makePowder(result)
+    })//makeWheat_then -> 꼭 return으로 끝내줘야 .then으로 연결할수 있다! 안하면 또 call-back 미로 써야함!
+    .then((result) => {
+        return makeBread(result)
+    })//makePower_then
+    .then((result) => {
+        console.log(`${result}완성!!!!!!!!!!!!! 빵조! 빵내나!`)
+    })
+    /*
+    then -> promise로 만든 function은 then으로 연결할수 있다.
+    result는 그냥 parameter이므로 임의의 값이다.
+    */
 })
-/*
-then -> promise로 만든 function은 then으로 연결할수 있다.
-result는 그냥 parameter이므로 임의의 값이다.
-*/
+
+/* await && async -------------------------------------------------------------- */
+document.querySelector('.ex_one .btn_async').addEventListener('click',async e => {
+    let wheat = await makeWheat()
+    let powder = await makePowder(wheat)
+    let bread = await makeBread(powder)
+    alert(`${bread}완료띠!!!!!!!!`)
+    /* 
+    makeWheat이 이미 promise가 되어있어야지 await을 쓸 수 있다!
+    await -> 일단 기다리고 있어! 이런뜻...
+    let foo = async () => {
+        await loo();
+    } 꼴로 해줘야한다.
+    */
+    makeBread()
+})
