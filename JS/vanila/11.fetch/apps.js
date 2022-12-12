@@ -4,5 +4,5 @@ $('header').load('login.html') */
 
 
 fetch('header.html').then(result => {
-    console.log(result);
+    console.log(result.text);
 })//fetch.then -> 비동기로 된다! ('html'다 읽고 나서 확인한다.)
