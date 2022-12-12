@@ -1,0 +1,48 @@
+■ 플러그인 설치방법
+  ● 대시보드/플러그인/새로추가
+  ● 검색설치 혹은 플러그인파일(zip파일)을 업로드
+  ● 설치 후 활성화
+  ● 설치된 플러그인 메뉴는 대시보드메뉴에, 설정, 도구메뉴에 등록된다
+
+■ Remove Category URL 
+  ● url의 category출력을 제거
+  ● 별도의 설정이 필요하지 않음
+
+■ Breadcrumb NavXT
+  ● 웹사이트 Breadcrumb 출력
+  ● 대시보드/설정 안으로 메뉴가 등록됨
+  ● 사용법
+    -출력함수
+    <?php if(function_exists('bcn_display')){ bcn_display(); }?>
+  ● 세부옵션
+    - General / Breadcrumb Separator : 구분기호
+    - General / Home Template , Home Template (Unlinked) : 홈출력설정
+    - 페이지나 글 출력방식 설정
+      · Post Types / 글 template 안쪽의 내용은 여백 한칸 추가
+      · Post Types / 글 template 또는 페이지 template 태그를 수정
+      · Texonomies / 카테고리 template 태그를 수정
+
+■ Regenerate Thumbnails
+  ● 대표이미지 크기등을 일괄처리 재설정
+  ● 사용법
+    - 대시보드/설정/미디어/썸네일크기 변경후 저장
+    - 대시보드/도구/Regenerate thumbnails
+      · delete thumb... 체크, 
+      · 버튼클릭
+
+■ 위젯설정
+  ● functions.php 
+    register_sidebar( array(
+      'name' => __( '위젯이름' ),
+      'id'=> 'widjet1',  // 위젯 영역의 고유한 ID
+    ));
+  ● 대시보드/외모/위젯
+    - 위젯이름으로 생성된 위젯 추가버튼 후 모두보기
+    - 위젯 추가후 update
+  ● 출력
+    - 출력을 원하는 탬플릿에 하단의 코드 입력
+    <?php
+      if ( is_active_sidebar( 'widjet1' ) ) {
+        dynamic_sidebar( 'widjet1' );
+      }
+    ?> 

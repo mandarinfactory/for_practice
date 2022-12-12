@@ -1,0 +1,109 @@
+■ 템플릿 제작 순서
+  - index.php와 동일한 구성으로 임의의 템플릿 파일 생성
+  - sub페이지 공통 상,하단을 제작
+  - 모든 템플릿 파일 생성 
+
+■ home.php 
+
+■ page.php 구성
+  ● 출력함수
+  <!--페이지 제목 출력-->
+  <?php the_title(); ?>
+  <!--페이지 출력 시작-->
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <!--페이지 본문 출력-->
+  <?php the_content(); ?>
+  <?php endwhile; else: ?>
+  <!--페이지가 없을 경우 출력될 내용-->	
+  <?php endif; ?>
+  <!--페이지 출력 끝-->
+
+■ category.php
+  ● 출력함수
+  <!--카테고리 전체 제목 출력-->
+  <?php single_cat_title(' '); ?>
+  <!--카테고리 설명 출력-->
+  <?php echo category_description(); ?>
+  <!--카테고리 리스트 출력-->
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>   
+  <!--리스트 한개 출력-->
+  <!--글 이미지-->
+  <?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnail'); } ?>
+  <!--글 제목-->
+  <?php the_title(); ?>
+  <!--작성자-->
+  <?php echo get_the_author(); ?>
+  <!--작성일-->
+  <?php echo get_the_date(); ?> <?php echo get_the_time(); ?>
+  <!--요약글 출력-->
+  <?php the_excerpt(); ?>
+  <!--해당글 링크-->
+  <a href="<?php the_permalink(); ?>">해당글 보기</a>
+  <!--리스트 한개 끝-->
+  <?php endwhile; else: ?>
+  <!--카테고리 글이 없는 경우-->
+  <?php endif; ?>
+  <!--카테고리 리스트 출력끝-->
+  <!--페이징출력시작--> 
+  <?php
+    global $wp_query;
+    $big = 999999999;
+    echo paginate_links( array(
+      'type'        => 'list',
+      'base'        => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+      'format'      => '?paged=%#%',
+      'current'     => max( 1, get_query_var('paged') ),
+      'total'       => $wp_query->max_num_pages,
+      'prev_text'   => __('<'),
+      'next_text'   => __('>'),
+    ) );
+  ?>
+  <!--페이징출력끝--> 
+
+■ single.php
+  ● 출력함수
+  <!--포스트의 해당 카테고리 정보가져오기-->
+  <?php
+  $category = get_the_category();
+  $categoryID = $category[0]->cat_ID;
+  $categoryName = $category[0]->cat_name;
+  $categoryUrl = get_category_link($category[0]);
+  $categoryDesc = category_description($category[0]);
+  ?>
+  <!--포스트의 해당 카테고리 제목 출력-->
+  <?php echo $categoryName ?>
+  <!--포스트의 해당 카테고리 설명 출력-->
+  <?php echo category_description($categoryID) ?>
+  <!--포스트의 해당 카테고리 태그 출력--> 
+  <?php the_tags('이 포스트의 태그: ', ' · ', ''); ?>
+  <!--post(글) 출력시작-->
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <!--제목-->
+  <?php the_title(); ?>
+  <!--작성자-->
+  <?php echo get_the_author(); ?>
+  <!--작성 시간-->
+  <?php echo get_the_date(); ?> 
+  <?php echo get_the_time(); ?>
+  <!--post 본문-->
+  <?php the_content(); ?>
+  <!--이전글 다음글-->
+  <?php previous_post_link( '%link','prev' ); ?>
+  <?php next_post_link( '%link','next' ); ?>
+  <a href="<?php echo $categoryUrl; ?>">목록</a><!--해당 카테고리 정보를 가져와야 함-->
+  <!--댓글 출력-->
+  <?php
+  if ( comments_open() || get_comments_number() ) :
+  comments_template();
+  endif;
+  ?>
+  <?php endwhile; else: ?>
+  <!--글 내용이 없을 경우-->
+  <?php endif; ?>
+  <!--post(글) 출력 끝-->
+
+■ search.php
+  category.php와 출력부분은 동일한 구조
+
+■ 404.php
+
