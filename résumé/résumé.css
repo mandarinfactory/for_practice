@@ -56,7 +56,10 @@ li {
 }
 .middle_section .middle_one ul p {
     font-size: 3.8em;
-    font-style: italic;
+    background: 
+    -webkit-linear-gradient(110deg,orangered 40%,black 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .middle_section .middle_one ul li {
     font-size: 2em;
