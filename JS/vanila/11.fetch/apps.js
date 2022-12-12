@@ -31,16 +31,16 @@ let loginHandler = async () => {
     result = await result.text();
     document.querySelector('header').innerHTML = result;
     // 로그인했으면, login_after를 보여주자! //
+    document.querySelector('.logoutBtn').addEventListener('click', e => {
+        e.preventDefault();
+        window.user = null;
+        sessionStorage.removeItem('user');
+        loggedCheck();
+    })//addEventListener
 }//loginHandler_function ---> 로그인체크함수()!!!
 
 loginHandler();
 
-document.querySelector('.logoutBtn').addEventListener('click', e => {
-    e.preventDefault();
-    window.user = null;
-    sessionStorage.removeItem('user');
-    loggedCheck();
-})//addEventListener
 
 window.loggedCheck = () => {
     if(handleLogin) {
