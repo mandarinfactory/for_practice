@@ -1,4 +1,6 @@
-
+li {
+    list-style: none;
+}
 .top_section .top {
     width: 100px;
     height: 100px;
@@ -15,7 +17,7 @@
     align-items: center;
 }
 .top_section .top_letter h2 {
-    margin-bottom: 15px;
+    margin: 15px 0;
    
 }
 .top_section .top_letter h2 {
@@ -23,7 +25,45 @@
     font-style: italic;
 }
 .top_section .top_letter div {
-    font-family: sans-serif;
+    font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.6em;
-    font-weight: 300;
+    font-weight: 650;
+}
+.middle_section {
+    width: 100%;
+    height: 100%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.middle_section > div {
+    flex: 1;
+    height: 1000px;
+}
+.middle_section .middle_one {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    box-sizing: border-box;
+    border-right: 3px solid black;
+}
+.middle_section .middle_one ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.middle_section .middle_one ul p {
+    font-size: 3.8em;
+    font-style: italic;
+}
+.middle_section .middle_one ul li {
+    font-size: 2em;
+    font-weight: 650;
+    margin-bottom: 40px;
+}
+.middle_section .middle_two {
+    padding-left: 50px;
+    box-sizing: border-box;
 }
