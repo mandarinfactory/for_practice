@@ -11,6 +11,8 @@ document.querySelector('.loginBtn').addEventListener('click', async e => {
                 pw,
                 name : v.name // 얘는 따로 줄이지 않고 일일히 써줘야한다!
             }//user_object
+            let jsonUser = JSON.stringify(user)
+            sessionStorage.setItem('user', jsonUser)
         }//if-else
     })//forEach
     console.log(user.id, user.pw, user.name);

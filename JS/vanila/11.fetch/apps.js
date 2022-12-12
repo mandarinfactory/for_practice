@@ -8,7 +8,12 @@ $('header').load('login.html') */
 
 
 /* AJAX, AXIOS, FETCH */
-window.handleLogin = false
+window.jsonUser = sessionStorage.getItem('user');
+if(jsonUser){
+    window.user = JSON.parse(jsonUser);
+} else {
+    window.user; //undefined
+}
 
 let includeText = () => {
      /* fetch('header.html').then(result => {
@@ -27,6 +32,7 @@ let loginHandler = async () => {
     document.querySelector('header').innerHTML = result;
     // 로그인했으면, login_after를 보여주자! //
 }//loginHandler_function ---> 로그인체크함수()!!!
+window.user = false
 window.loggedCheck = () => {
     if(handleLogin) {
         document.querySelector('.login_before').style.display = 'none'
