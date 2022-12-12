@@ -27,11 +27,14 @@ let loginHandler = async () => {
     document.querySelector('header').innerHTML = result;
     // 로그인했으면, login_after를 보여주자! //
 }//loginHandler_function ---> 로그인체크함수()!!!
-let loggedCheck = () => {
+window.loggedCheck = () => {
     if(handleLogin) {
+        document.querySelector('.login_before').style.display = 'none'
         document.querySelector('.login_after').style.display = 'block'
+        document.querySelector('.login_after b').innerHTML = user.name
     } else {
-        return false
+        document.querySelector('.login_before').style.display = 'block'
+        document.querySelector('.login_after').style.display = 'none'
     }//if-else
 }//loggedCheck_function
 loggedCheck();
