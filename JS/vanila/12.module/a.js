@@ -1,3 +1,3 @@
-export let a = 1;
-let b = 2;
+export let a1 = 1;
+export let a2 = 2;
 let c = 3;
