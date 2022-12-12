@@ -32,7 +32,16 @@ let loginHandler = async () => {
     document.querySelector('header').innerHTML = result;
     // 로그인했으면, login_after를 보여주자! //
 }//loginHandler_function ---> 로그인체크함수()!!!
-window.user = false
+
+loginHandler();
+
+document.querySelector('.logoutBtn').addEventListener('click', e => {
+    e.preventDefault();
+    window.user = null;
+    sessionStorage.removeItem('user');
+    loggedCheck();
+})//addEventListener
+
 window.loggedCheck = () => {
     if(handleLogin) {
         document.querySelector('.login_before').style.display = 'none'
