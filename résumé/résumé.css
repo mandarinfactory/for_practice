@@ -1,0 +1,29 @@
+
+.top_section .top {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    margin-bottom: 0;
+    border-radius: 50%;
+    padding: 100px;
+    background-color: orangered;
+}
+.top_section .top_letter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top_section .top_letter h2 {
+    margin-bottom: 15px;
+   
+}
+.top_section .top_letter h2 {
+    font-size: 5em;
+    font-style: italic;
+}
+.top_section .top_letter div {
+    font-family: sans-serif;
+    font-size: 2.2em;
+    font-weight: 750;
+}
