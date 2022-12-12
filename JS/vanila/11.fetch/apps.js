@@ -18,6 +18,7 @@ let loginHandler = async () => {
     await includeText();
 }// ---> 로그인체크함수()!!!
 /* 
+0. await 하려면 new Promise가 먼저 있어야한다!
 1. 항상! await를 쓰려면 선 async가 있어야한다!
 2. 바로 실행되지 말고 먼저 includeText위에가 되고 나서 실행! new Promise(resolve {~ resolve()}) --> await includeText() 
 */
