@@ -1,6 +1,13 @@
 /* jQuery로 연결하는 방법! 
 $('header').load('login.html') */
 /* http://127.0.0.1:5500/JS/vanila/11.RECAP/login.html -> 로 연결된다! */
+
+
+
+
+
+
+/* AJAX, AXIOS, FETCH */
 window.handleLogin = false
 
 let includeText = () => {
@@ -24,7 +31,7 @@ let loggedCheck = () => {
     if(handleLogin) {
         document.querySelector('.login_after').style.display = 'block'
     } else {
-        document.querySelector('.login_before').style.display = 'block'
+        return false
     }//if-else
 }//loggedCheck_function
 loggedCheck();
