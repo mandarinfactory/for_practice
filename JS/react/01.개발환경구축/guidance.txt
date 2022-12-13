@@ -30,3 +30,24 @@
 
 ■ react project 생성
     - create-react-app 폴더명(임의의 폴더이름으로!)
+
+■ src/app.js --> 해당 코드로 reset!
+    const App = () => {
+    return (
+    <>
+      app
+    </>
+    );
+    };
+export default App;
+■ src/index.js --> 해당 코드로 reset!
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import App from './App';
+    ReactDOM.render(
+    <>
+        <App />
+    </>,
+    document.getElementById('root')
+    );
+■
