@@ -19,7 +19,7 @@ section.section_one figure figcaption h2 {
     font-size: 8em;
     font-weight: 700;
     color: white;
-    text-shadow: 1px 1px 7px black;
+    text-shadow: 2px 2px 7px black;
 }
 form input{
     padding: 15px 10px 15px 10px;
@@ -27,7 +27,7 @@ form input{
     border: 0px;
     border-bottom: 1px solid black;
     text-align: center;
-
+    
 }
 #login-form input,
 #identity{
@@ -35,6 +35,11 @@ form input{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#identity {
+    font-size: 4em;
+    color: white;
+    text-shadow: 2px 2px 7px black;
 }
 #login-form button {
     position: absolute;
@@ -56,8 +61,11 @@ form input{
 }
 #quotes span{
     position: absolute;
-    bottom: -2%;
+    bottom: 1%;
     left: 50%;
     transform: translate(-50%, -50%);
-    line-height: 30px;
+    line-height: 50px;
+    font-size: 1.7em;
+    color: white;
+    text-shadow: 2px 2px 7px black;
 }
