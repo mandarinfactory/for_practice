@@ -12,4 +12,5 @@
         }
 
 ■ VSCode 확장        
-    - reactJS code snippets ()
+    - reactJS code snippets
+    - Auto Import
