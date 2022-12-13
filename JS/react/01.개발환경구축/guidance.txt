@@ -6,6 +6,8 @@
 
 ■ VSCode 환경설정 
     - 단축아이콘 --> 우클릭 --> 속성 --> 호환성 --> 관리자 권한으로 실행하기 check,적용 후 재실행
+    - terminal 설정변경(powershall --> command로!)
+        터미널실행 --> 터미널창 --> 옵션(plus 옆에 down chevron모양) --> 기본 프로필 선택 --> command prompt로 설정
     - setting.json에 하단의 내용 추가!
         "emmet.includeLanguages":{
          "javascript":"javascriptreact"
@@ -14,3 +16,14 @@
 ■ VSCode 확장        
     - reactJS code snippets
     - Auto Import
+
+■ create react app 설치
+    (webpack + babel + reactJS)
+    - babel : JS로 html로 코딩을 하면 html element로 직접적으로 만들어줌
+    - 터미널 --> npm i (install) -g (global) create-react-app
+    - create-react-app -V (version)
+
+■ terminal 명령어
+    - F1 + TERMINAL(꼭 대문자로!)
+    - cls --> 썼던 명령들이 지워짐.
+    - cd(change directory) ../(한단계 상위 폴더로 이동), cd 폴더명 (하위폴더로 이동)
