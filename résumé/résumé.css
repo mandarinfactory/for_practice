@@ -1,6 +1,7 @@
 body {
     width: 100%;
     height: 100%;
+    font-family: 'Rubik', sans-serif;
 }
 li {
     line-height: 80px;
@@ -33,7 +34,7 @@ section.section_left .left_one .title li:last-child {
 }
 section.section_left .left_one > ul > li{
     text-transform: uppercase;
-    font-size: 2.8em;
+    font-size: 4em;
     font-weight: bolder;
 }
 section.section_left .left_one > ul > li > ul > li {
