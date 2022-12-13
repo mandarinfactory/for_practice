@@ -40,6 +40,7 @@
     );
     };
 export default App;
+
 ■ src/index.js --> 해당 코드로 reset!
     import React from 'react';
     import ReactDOM from 'react-dom';
