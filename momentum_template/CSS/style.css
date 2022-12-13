@@ -1,22 +1,7 @@
-body {
-    font-family: 'Ubuntu', sans-serif;
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-}
-input {
-    font-family: 'Ubuntu', sans-serif;
-}
-button {
-    font-family: 'Ubuntu', sans-serif;
-}
-.hidden {
-    display: none;
-}
-/* display:none --> element를 숨겨주는 역할을 한다. */
-
 section.section_one figure {
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 section.section_one figure img {
     position: relative;
