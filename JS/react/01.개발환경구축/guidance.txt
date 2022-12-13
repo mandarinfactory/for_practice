@@ -58,7 +58,12 @@ export default App;
 
 ■ 베포(deploy)
     ● root폴더에 베포시
-
         - 먼저 서버중지(ctrl + C)
         - npm run build
         - build폴더안의 파일들을 root폴더에 업로드(dothome에서는 html폴더)
+
+    ● root폴더의 하위폴더 베포시
+        - 항상! project 완성 후에 베포할것!!!!
+        - package.json파일에 key추가
+            --> 'homepage' : '/폴더명'
+        - build폴더안의 파일들을 등록한 폴더안에 업로드함
