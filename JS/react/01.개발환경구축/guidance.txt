@@ -1,3 +1,15 @@
 ■ NODE.js 설치
     - JS 실행 --> (브라우저 없이 JS가 실행하게 해준다.)
     - https://nodejs.org/ko/에 들어가서 꼭 LTS 버전으로 다운로드해준다.
+    - 설치확인
+        터미널 / node --version 입력해서 version확인
+
+■ VSCode 환경설정 
+    - 단축아이콘 --> 우클릭 --> 속성 --> 호환성 --> 관리자 권한으로 실행하기 check,적용 후 재실행
+    - setting.json에 하단의 내용 추가!
+        "emmet.includeLanguages":{
+         "javascript":"javascriptreact"
+        }
+
+■ VSCode 확장        
+    - reactJS code snippets ()
