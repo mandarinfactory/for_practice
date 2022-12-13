@@ -55,3 +55,7 @@ export default App;
 
     - 실행 : terminal --> npm start
     - 종료 : ctrl + C
+
+■ 베포(deploy)
+
+    - npm run build
