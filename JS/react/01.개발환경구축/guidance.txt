@@ -51,4 +51,7 @@ export default App;
         <App />
     </>,
     );
-■
+■ (가상)서버실행
+
+    - 실행 : terminal --> npm start
+    - 종료 : ctrl + C
