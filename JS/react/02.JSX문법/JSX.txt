@@ -1,2 +1,15 @@
 ■ JSX 문법
     - html문법을 JS로 설계 (babel 프레임워크가 parsing)
+        --> compotent의 return문 안에서 작성한다.
+
+        - 하나의 element만 return 할 수 있음 (react fragment를 사용할 수 있음)
+
+        - xml문법특징
+
+            - xml문법을 기반으로 작성하므로 반드시 닫는 태그가 필요하다.
+                --> <div/>, 셀프클로징
+                --> {/* */}, react주석
+                --> %PUBLIC_URL%(HTML내에서) / {process.env.PUBLIC_URL}(JS에서), 절대경로
+                - {process.env.PUBLIC_URL}는 문자를 추가하려면 {`${process.env.PUBLIC_URL}기타문자`}로 쓸 수 있다.
+
+            - 주의해야할 html속성 : htmlfor, className, defaultValue
