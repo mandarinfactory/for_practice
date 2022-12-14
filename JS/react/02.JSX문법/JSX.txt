@@ -1,0 +1,2 @@
+■ JSX 문법
+    - html문법을 JS로 설계 (babel 프레임워크가 parsing)
