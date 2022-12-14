@@ -46,6 +46,9 @@ section.section_box {
 .section_box .lg_section_left a {
     text-decoration: none;
     color: white;
+}.section_box .lg_section_right a {
+    text-decoration: none;
+    color: black;
 }
 /* section_left ------------------------------- */
 .section_left .left_one .title {
@@ -90,3 +93,27 @@ section.section_box {
     font-size: 25px;
 }
 /* left_one_skill -------------------------------- */
+.section_box .lg_section_right {
+    background-color: white;
+    color: black;
+}
+.section_right .right_one .portpolio {
+    font-size: 2.2em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.section_right .right_one .portpolio ul li:nth-child(odd) a{
+    display: block;
+    margin-top: 20px;
+    padding: 200px 5px 5px 200px;
+}
+.section_right .right_one .portpolio ul li:nth-child(even) {
+    margin-top: 15px;
+    font-size: 25px;
+}
+.section_right .right_one .portpolio ul li.sunshine {
+    background-color: rgb(237,25,58);
+}
+.section_right .right_one .portpolio ul li.museum {
+    background-color: rgb(46,55,76);
+}
