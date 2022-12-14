@@ -8,17 +8,27 @@
     font-family: 'LeferiPoint-BlackA';
 }
 body {
-    width: 100%;
+    width: 90%;
     height: 100%;
     font-family: 'Rubik', sans-serif;
+    margin: 0 auto;
+    display: flex;
+ /*    background-color:  
+    -webkit-linear-gradient(135deg,dimgrey 30%,white 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 li {
     line-height: 80px;
     list-style: none;
 }
-body {
-    margin: 0;
-    display: flex;
+/* root_design ------------------------------------------------ */
+div.left_box {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 800px;
+    background-color: dimgray;
 }
 section {
     padding: 80px;
@@ -27,9 +37,10 @@ section {
     justify-content: flex-end;
 }
 section.section_left {
-    width: 60%;
     background-color: rgb(15, 15, 15);
     color: white;
+}
+section.section_left .left_one {
 }
 section.section_left .left_one ul {
     margin-bottom: 70px;
@@ -62,6 +73,7 @@ section.section_left .left_one > ul > li > ul > li  i {
 /* section_left ------------------------------------------------------------------------ */
 section.section_right {
     color: black;
+    padding-left: 0;
 }
 section.section_right .right_one > ul > li{
     text-transform: uppercase;
@@ -70,7 +82,7 @@ section.section_right .right_one > ul > li{
 }
 section.section_right .right_one .portpolio a {
     display: block;
-    width: 700px;
+    width: 550px;
     padding-top: 300px;
     box-sizing: border-box;
     text-align: right;
