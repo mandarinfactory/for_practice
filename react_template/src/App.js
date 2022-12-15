@@ -14,17 +14,21 @@ const App = () => {
   const theResultNum = event => {
     event.preventDefault();
     let userNum = parseInt(document.querySelector('.user_num').value);
-    chResultNum((stNum1 + stNum2 === userNum) ?
-      location.reload()
-      :
-      document.querySelector('.user_num').value = '')
+    /* chResultNum((stNum1 + stNum2 === userNum) ? location.reload() : document.querySelector('.user_num').value = '') */
+    if (stNum1 + stNum2 === userNum) {
+      document.querySelector('span:first-child').innerText = chStNum1(setNum())
+      document.querySelector('span:nth-child(2)').innerText = chStNum2(setNum())
+      document.querySelector('.user_num').value = '';
+    } else {
+      document.querySelector('.user_num').value = '';
+    }
   }//theResultNum
   /* ---------------------------------------------------------------- */
   return (
     <form onSubmit={theResultNum}>
-      <input type="text" readOnly defaultValue={stNum1} size="1" />
+      <span>{stNum1}</span>
       +
-      <input type="text" readOnly defaultValue={stNum2} size="1" />
+      <span>{stNum2}</span>
       =
       <input className="user_num" type="text" size="1" />
       <button style={{ display: 'none' }}>결과보자미!</button>
