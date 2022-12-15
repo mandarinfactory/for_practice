@@ -1,30 +1,37 @@
 /* eslint-disable */
 /* └-> 주석처리로 하면 warning은 따로 안나오고 error창만 뜨게 된다.  */
-import { useRef, useState } from "react";
+
+import { useState } from "react";
 
 const App = () => {
-  const [stResult,changeStResult] = useState('prime') //const stResult = 'prime'
-  let refNum1 = useRef()
-  /* JS공간! */
-  useState
-  const refNum1Val = () => {
-    let num1 = parseInt(refNum1.current.value)  
-    /* randering되기전, setTimeout & setInterval일때만 useRef 쓰기를 권장한다!!!!!!!!!!!! */
-    let num2 = parseInt(document.querySelector('.num2').value)
-    changeStResult(num1 + num2)
-    /* document.querySelector('.result').innerText = result --> 이거 안쓰려고 react쓰는거임! ==> react state로 변경!!!!*/
-  }//refNum1Val_function
+  /* ----------------------------------------------------------------------- */
+  const setNum = () => {
+    return Math.floor(Math.random() * 10)
+  }//setNum_function 
+  /* └->  항상 먼저 function을 우선적으로 써줘야 scope에 오류가 나지 않는다! 
+  단, arrow function이 아닌 function () {~}꼴로 써주면 아래 써도 오류가 나지 않는다.
+  */
+ /* ----------------------------------------------------------------------- */
+ const [stNum1, chStNum1] = useState(setNum())
+ const [stNum2, chStNum2] = useState(setNum())
+ const resultNum = () => {
 
+ }
+  /* ----------------------------------------------------------------------- */
   return (
-    <div>
-      <input ref={refNum1} className="num1" type="number" />
-      +
-      <input className="num2" type="number" />
-      =
-      <button onClick={refNum1Val}>결과보기</button>
-      <p className="result">{stResult}</p>
-    </div>
+    <form onSubmit={resultNum}>
+    {/* └-> 제대로 된 HTML element가 아니므로 querySelector 할수없어서 'on-'을 써야한다! */}
+    <input type="text" readOnly defaultValue={stNum1} size="1" />
+    +
+    <input type="text" readOnly defaultValue={stNum2} size="1" />
+    =
+    <input type="text" size="1" />
+    <button style={{display : 'none'}}>결과보기!</button>
+    {/* react에서 inline-style은 {{}}로 묶어서 {{display : 'none'}} 꼴로 적어야한다. */}
+    <p className="result">결과!</p>
+    </form>
     /* HTML공간! */
-  );
-};
+    );//return(JSX)
+    /* ----------------------------------------------------------------------- */
+  };//component
 export default App;
