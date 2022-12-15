@@ -10,7 +10,7 @@ const App = () => {
     /* randering되기전, setTimeout & setInterval일때만 useRef 쓰기를 권장한다!!!!!!!!!!!! */
     let num2 = parseInt(document.querySelector('.num2').value)
     let result = num1 + num2
-    /* document.querySelector('.result').innerText = result --> 이거 안쓰려고 react쓰는거임! */
+    /* document.querySelector('.result').innerText = result --> 이거 안쓰려고 react쓰는거임! ==> react state로 변경!!!!*/
   }//refNum1Val_function
 
   return (
