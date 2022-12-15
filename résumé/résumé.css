@@ -167,7 +167,12 @@ section.section_box {
     margin-top: 15px;
     font-size: 15px;
 }
+/* portpolio ------------------------------------------------------------------- */
+.section_right .right_one .portpolio ul li.sunshine {
+    position: relative;
+}
 .section_right .right_one .portpolio ul li.sunshine a {
+    display: block;
     background-color: rgb(237,25,58);
     color: white;
     transition: all 0.3s;
@@ -176,6 +181,26 @@ section.section_box {
     background-color: white;
     color: rgb(237,25,58);
 }
+.section_right .right_one .portpolio ul li.sunshine figure.sun_template {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 180px;
+    margin: 0;
+    z-index: -10;
+}
+.section_right .right_one .portpolio ul li.sunshine figure.sun_template
+.section_right .right_one .portpolio ul li.sunshine figure.sun_template img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+/* sunshine ------------------------------------------------------------------- */
 .section_right .right_one .portpolio ul li.museum a {
     background-color: rgb(46,55,76);
     color: white;
@@ -185,3 +210,4 @@ section.section_box {
     background-color: white;
     color: rgb(46,55,76);
 }
+/* museum ------------------------------------------------------------------- */
