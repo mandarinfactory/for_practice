@@ -6,9 +6,11 @@ const App = () => {
   let refNum1 = useRef()
   /* JS공간! */
   const refNum1Val = () => {
-    let num1 = parseInt(refNum1.current.value)
+    let num1 = parseInt(refNum1.current.value)  
+    /* randering되기전, setTimeout & setInterval일때만 useRef 쓰기를 권장한다!!!!!!!!!!!! */
     let num2 = parseInt(document.querySelector('.num2').value)
-    console.log(num1, num2)
+    let result = num1 + num2
+    document.querySelector('.result').innerText = result
   }//refNum1Val_function
 
   return (
