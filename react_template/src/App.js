@@ -19,8 +19,10 @@ const App = () => {
       document.querySelector('span:first-child').innerText = chStNum1(setNum())
       document.querySelector('span:nth-child(2)').innerText = chStNum2(setNum())
       document.querySelector('.user_num').value = '';
+      chResultNum('정답입니다!!!!!!ㅊㅊㅊ')
     } else {
       document.querySelector('.user_num').value = '';
+      chResultNum('오답입니다!!!!!!멍청아')
     }
   }//theResultNum
   /* ---------------------------------------------------------------- */
@@ -32,7 +34,7 @@ const App = () => {
       =
       <input className="user_num" type="text" size="1" />
       <button style={{ display: 'none' }}>결과보자미!</button>
-      <p className="result">{chResultNum}</p>
+      <p className="result">{resultNum}</p>
     </form>
   );
 };
