@@ -1,7 +1,31 @@
 ■ event-binding
+
     ● onClick속성
         - 생명주기 관계로 객체를 호출 할수 없음(document.querySelector등 사용 X)
+
         - 함수 1개만 사용할 경우,
             --> onClick = {함수명} ===> 절대로 '함수명()'꼴로 쓰면 안된다!!!
+            
         - 다수의 명령어를 실행할 경우,
             --> onClick = {() => {함수명1(), 함수명2(), 함수명3(), ...}}
+
+■ State 관리
+
+
+■ useRef
+    - element를 선택하기 위해 사용
+
+    1. module 불러오기
+    --> import { useRef } from "react";
+
+    2. 이름생성
+    --> const(주로 const를 쓴다!) 이름 = useRef(); // useRef()는 function이다!
+
+    3. 이름연결
+    -->  <input ref={이름} className="num1" type="number" />
+         --> 꼭 ref내에서는 한개의 이름만 쓰인다!
+
+    4. 호출
+    이름.current
+
+    5. setTimeout, setInterval의 ID는 항상!!!!!!!! useRef를 이용해서 선언해야함!
