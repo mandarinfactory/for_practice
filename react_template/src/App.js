@@ -23,7 +23,7 @@ const App = () => {
     } else {
       document.querySelector('.user_num').value = '';
       chResultNum('오답입니다!!!!!!멍청아')
-    }
+    }//if-else
   }//theResultNum
   /* ---------------------------------------------------------------- */
   return (
