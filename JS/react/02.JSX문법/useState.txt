@@ -9,11 +9,24 @@
         - 다수의 명령어를 실행할 경우,
             --> onClick = {() => {함수명1(), 함수명2(), 함수명3(), ...}}
 
-■ State 관리
-    - state : 화면을 바꾸는 모오오오오오드으으은 변수들
+■ state 관리
+    ● state : 화면을 바꾸는 모오오오오오드으으은 변수들!!!
+        └-> state값이 변경될 때 화면이 갱신되는 목적!
+    
+    ● 순서
+        1. 선언
+            component(const App = () {})밖에서 import
+                --> import { useState } from "react";
+            component(const App = () {})안에서 declare
+                --> const [state함수명, 변경함수명] = useState('초기값')
+        2. 연결
+            - 항상 JSX문법내에서 연결한다!(return (~~))
+            <p className="result">{state함수명}</p>
+        3. 갱신
+            변경함수명(값);
 
 ■ useRef
-    - element를 선택하기 위해 사용
+    ● element를 선택하기 위해 사용
 
     1. module 불러오기
     --> import { useRef } from "react";
