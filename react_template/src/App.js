@@ -14,14 +14,10 @@ const App = () => {
   const theResultNum = event => {
     event.preventDefault();
     let userNum = parseInt(document.querySelector('.user_num').value);
-    /*  chResultNum((stNum1 + stNum2 === userNum) ? :) */
-    if (stNum1 + stNum2 === userNum) {
-      location.reload();
-      /* chStNum1(setNum())
-      chStNum2(setNum()) */
-    } else {
-      document.querySelector('.user_num').value = '';
-    }
+    chResultNum((stNum1 + stNum2 === userNum) ?
+      location.reload()
+      :
+      document.querySelector('.user_num').value = '')
   }//theResultNum
   /* ---------------------------------------------------------------- */
   return (
