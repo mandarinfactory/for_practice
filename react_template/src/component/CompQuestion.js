@@ -13,13 +13,15 @@ const CompQuestion = (props) => {
     }//setRandomNum
     const checkResult = e => {
         e.preventDefault();
+        let point
         let userNum = parseInt(document.querySelector('input').value);
         if (isNaN(userNum % 2)) {
             alert('숫자를 적어주십시오.')
         }//if_validation
         if (stNum1 + stNum2 === userNum) {
             chStResult('정답');
-            chStPoint(++stPoint)
+            chStPoint(stPoint + 1)//stPoint = stPoint + 1
+            point = stPoint + 1
             chStNum1(setRandomNum())
             chStNum1(setRandomNum())
             /* 
@@ -28,10 +30,11 @@ const CompQuestion = (props) => {
             */
         } else {
             chStResult('오답');
-            chStPoint(--stPoint)
+            chStPoint(stPoint - 1)
         }//if_else
-        if (stPoint === 3) {
-            chStShowCamp(2)
+        if (point === 3) {
+            /* stPoint로 if조건식을 하면 updating이 느리므로 따로 변수를 선언(let point)를 통해 빠르게 숫자 변환을 시킨다. */
+            props.chStShowCamp(2)
         }
         document.querySelector('input').value = '';
     }//checkResult
@@ -48,6 +51,7 @@ const CompQuestion = (props) => {
                 </p>
                 <hr />
                 <p className="result">
+
                     ★결과★ : {stResult}
                 </p>
                 <hr />
