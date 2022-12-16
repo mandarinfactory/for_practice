@@ -13,3 +13,5 @@
                 - {process.env.PUBLIC_URL}는 문자를 추가하려면 {`${process.env.PUBLIC_URL}기타문자`}로 쓸 수 있다.
 
             - 주의해야할 html속성 : htmlfor, className, defaultValue
+
+        - return문안에서(JSX 중괄호)는 한개의 component, 한개의 variable만 return 할 수 있다.
