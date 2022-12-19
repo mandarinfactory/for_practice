@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "LeferiPoint-BlackA";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'LeferiPoint-BlackA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 .korean {
   font-family: "LeferiPoint-BlackA";
@@ -46,7 +46,7 @@ figure.pencil {
 figure.pencil img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 /* figure.pencil ------------------------------ */
@@ -67,23 +67,44 @@ section.section_box {
     }
 }
 .section_box > section {
-  display: block;
-  width: 100%;
-  max-width: 750px;
-  height: 100%;
-  padding: 60px;
-  box-sizing: border-box;
+    display: block;
+    height: 100%;
+    padding: 60px;
+    box-sizing: border-box;
 }
-@media screen and (min-width:1250px){
-    
-}
-@media screen and (max-width:1250px){
-
-}
-/* section_box ------------------------------ */
 .section_box .lg_section_left {
+    width: 100%;
     max-width: 450px;
 }
+.section_box > section.lg_section_right {
+    width: 100%;
+    max-width: 750px;
+}
+@media screen and (min-width:1000px) and (max-width:1250px){
+    .section_box > section.lg_section_right {
+        width: 100%;
+        max-width: 550px;
+    }
+}
+@media screen and (min-width:800px) and (max-width:1000px){
+    section.section_box { 
+        flex-direction: column;
+    }
+    .section_box .lg_section_left {
+        width: 100%;
+        max-width: 750px;
+    }
+}
+@media screen and (max-width:800px){
+    section.section_box { 
+        flex-direction: column;
+    }
+    .section_box > section {
+        width: 100%;
+        max-width: 600px !important;
+    }
+}
+/* section_box ------------------------------ */
 .section_box .lg_section_left {
     background-color: rgb(31,32,35);
     color: white;
@@ -105,7 +126,7 @@ section.section_box {
   font-size: 2.3em;
   font-weight: 800;
   text-transform: uppercase;
-  margin-top: 35px;
+  margin-top: 33px;
 }
 .section_left .left_one .title > li {
     margin-bottom: 25px;
@@ -316,3 +337,11 @@ section.section_box {
     object-position: center;
 }
 /* museum ------------------------------------------------------------------- */
+.section_left .left_one a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s;
+}
+.section_left .left_one a:hover{
+    color: white;
+}
+/* motion_effect ------------------------------------------------------------ */
