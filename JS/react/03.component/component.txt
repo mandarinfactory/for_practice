@@ -1,0 +1,17 @@
+■ component 생성
+    ● component 이름으로 함수제작 후 export
+    ● 예시
+        const CompClac = function () {
+        return (
+        <>
+            <h2>더하기문제</h2>
+        </>
+        );
+        };
+        export default CompClac;
+
+    ● 호츨
+    import CompClac from "./CompCalc";
+    import CompResult from "./CompResult";
+
+■ component 조건부 출력

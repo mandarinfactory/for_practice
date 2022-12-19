@@ -1,7 +1,11 @@
+import CompClac from "./CompCalc";
+import CompResult from "./CompResult";
+
 const App = () => {
   return (
     <>
-      app
+      <CompClac />
+      <CompResult />
     </>
   );
 };
