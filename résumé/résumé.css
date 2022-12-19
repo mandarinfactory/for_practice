@@ -74,6 +74,12 @@ section.section_box {
   padding: 60px;
   box-sizing: border-box;
 }
+@media screen and (min-width:1250px){
+    
+}
+@media screen and (max-width:1250px){
+
+}
 /* section_box ------------------------------ */
 .section_box .lg_section_left {
     max-width: 450px;
