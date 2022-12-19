@@ -15,3 +15,5 @@
     import CompResult from "./CompResult";
 
 ■ component 조건부 출력
+    ● JSX문법의 return문안에서는 한개의 변수나 tag만 포함할 수 있음
+     └-> 조건문이나 for구문등을 사용할수 없음
