@@ -14,6 +14,7 @@ body {
   font-family: "Rubik", sans-serif;
   margin: 0 auto;
   display: flex;
+  position: relative;
 }
 
 li {
@@ -21,21 +22,21 @@ li {
 }
 .hidden_one {
     position: absolute;
-    width: 60%;
+    width: 50%;
     height: 100%;
     background-color: gray;
     z-index: -10;
 }
 /* root_design ------------------------------------------------ */
 figure.pencil {
-    position: absolute;
+    position: sticky;
     width: 100%;
     max-width: 100px;
     height: 100%;
     max-height: 800px;
-    bottom: 0;
-    right: 3%;
-    z-index: -1;
+    top: 35px;
+    left: 1520px;
+    z-index: 10;
 }
 figure.pencil img {
     width: 100%;
@@ -45,7 +46,7 @@ figure.pencil img {
 }
 /* figure.pencil ------------------------------ */
 section.section_box {
-  margin: 40px auto;
+  margin: 40px 130px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,9 +63,11 @@ section.section_box {
 }
 /* section_box ------------------------------ */
 .section_box .lg_section_left {
-    background-color: black;
+    max-width: 450px;
+}
+.section_box .lg_section_left {
+    background-color: rgb(31,32,35);
     color: white;
-    position: relative;
 }
 .section_box .lg_section_left a {
     text-decoration: none;
@@ -76,8 +79,11 @@ section.section_box {
     color: black;
 }
 /* section_left ------------------------------- */
+.section_left .left_one ul {
+    padding-left: 0;
+}
 .section_left .left_one .title {
-  font-size: 2.2em;
+  font-size: 2.3em;
   font-weight: 800;
   text-transform: uppercase;
   margin-top: 35px;
@@ -85,17 +91,16 @@ section.section_box {
 .section_left .left_one .title > li {
     margin-bottom: 25px;
 }
-.section_left .left_one .title > li:nth-child(2) {
+.section_left .left_one .title > li:nth-child(3) {
     color: gray;
 }
 .section_left .left_one .title figure {
-    position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
     background-color: white;
-    top: 1%;
-    right: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,17 +111,6 @@ section.section_box {
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-}
-.section_left .left_one .title  div.dark_one {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background-color: gray; 
-    top: 3.5%;
-    left: 60%;
-    z-index: 0;
-
 }
 /* left_one_title -------------------------------- */
 .section_left .left_one .social > li {
@@ -136,19 +130,77 @@ section.section_box {
 }
 .section_left .left_one .profile > li > ul > li {
     margin-top: 15px;
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 400;
 }
 /* left_one_profile -------------------------------- */
+.section_left .left_one .certificate > li {
+    font-size: 1.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.section_left .left_one .certificate > li > ul > li {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.section_left .left_one .certificate > li > ul > li > ul > li {
+    margin-bottom: 5px;
+} 
+/* left_one_certificate -------------------------------- */
+.section_left .left_one .career > li {
+    font-size: 1.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.section_left .left_one .career > li > ul > li {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.section_left .left_one .career > li > ul > li > ul > li {
+    margin-bottom: 5px;
+}
+/* left_one_career -------------------------------- */
 .section_left .left_one .skills > li {
     font-size: 1.7em;
     font-weight: 700;
     text-transform: uppercase;
 }
 .section_left .left_one .skills > li > ul > li {
-    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0;
     font-size: 22px;
     font-weight: 500;
+}
+.section_left .left_one .skills > li > ul > li * {
+    margin-right: 15px;
+}
+.section_left .left_one .skills > li > ul > li > figure {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    margin-right: 15px;
+}
+.section_left .left_one .skills > li > ul > li > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.section_left .left_one .skills > li > ul > li > .graph {
+    width: 200px;
+    height: 15px;
+    background: 
+    -webkit-linear-gradient(0deg, #ffffff 75%, black 45%);
+}
+.section_left .left_one .skills > li > ul > li > .graph_js {
+    width: 200px;
+    height: 15px;
+    background: 
+    -webkit-linear-gradient(0deg, #ffffff 55%, black 45%);
 }
 /* left_one_skill -------------------------------- */
 .section_box .lg_section_right {
@@ -159,6 +211,7 @@ section.section_box {
     font-size: 1.7em;
     font-weight: 800;
     text-transform: uppercase;
+    padding-left: 0;
 }
 .section_right .right_one .portpolio ul {
     padding-left: 0;
@@ -166,7 +219,7 @@ section.section_box {
 .section_right .right_one .portpolio ul li:nth-child(odd) a{
     display: block;
     margin-top: 15px;
-    padding-top: 300px;
+    padding-top: 250px;
     text-align: right;
     box-sizing: border-box;
     font-size: 40px;
@@ -198,7 +251,7 @@ section.section_box {
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 590px;
+    max-width: 630px;
     height: 100%;
     max-height: 350px;
     margin: 0 auto;
@@ -231,10 +284,10 @@ section.section_box {
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 590px;
+    max-width: 630px;
     height: 100%;
-    max-height: 250px;
-    margin: 0;
+    max-height: 350px;
+    margin: 0 auto;
     z-index: 1;
 }
 .section_right .right_one .portpolio ul li.museum figure.mu_template img {
