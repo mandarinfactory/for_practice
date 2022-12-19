@@ -10,6 +10,8 @@ const App = () => {
         /* {(stShowComp === 'calc') && <CompClac />} --> true면 <CompClac />를 출력, false면 false를 출력한다. */
         /* {(stShowComp === 'calc') && <CompResult />} --> true면 <CompResult />를 출력, false면 false를 출력한다. */
       }
+      <button>문제화면</button>
+      <button>결과화면</button>
       {(stShowComp === 'calc') && <CompClac />}
       {(stShowComp === 'calc') && <CompResult />}
     </>
