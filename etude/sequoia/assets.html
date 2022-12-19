@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon"
+        href="/Users/mandarin/Documents/dev./for practicing/sequoia/practices/canadian-maple-leaf.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>sequoia_assets</title>
+</head>
+
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <!-- 'status-bar__column'은 BEM(Block,Element(__),Modifier(--))이라고 불리는 항목이다. -->
+            <!-- BEM은 class로만 이름짓고, 어떤목적인가에 따라 이름을 짓는다. -->
+            <!-- 큰 항목은 block, 하위/작은 항목은 element, 항목의 추가설정들은 modifier로 이름을 적어-->
+            <!-- 'status_bar'는 Block이고, 'column'은 Element이다. -->
+            <span>No Service</span>
+            <i class="fa-solid fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span class="status-bar__column__clock"></span>
+        </div>
+        <div class="status-bar__column">
+            <span>91%</span>
+            <i class="fa-solid fa-battery-full fa-xl"></i>
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+    </div>
+    <div class="assets-icons_end">
+        <i class="fa-solid fa-plus fa-xl"></i>
+        <i class="fa-regular fa-bell fa-xl"></i>
+    </div>
+    <div class="assets-user">
+        <div class="img_sequioa">
+            <img src="IMG/sequioa.jpeg" />
+            <span>Sequioa</span>
+        </div>
+    </div>
+    <div class="assets-header">
+        <header class="assets-header__title">
+            <span>송금하기</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </header>
+    </div>
+    <div class="assets-accounts">
+        <div class="assets-accounts__title">
+            <i class="fab fa-canadian-maple-leaf fa-lg"></i>
+            내 계좌
+        </div>
+        <div class="assets-accounts__list_01">
+            LemonBank
+            5,450,000원
+        </div>
+        <div class="assets-accounts__list_02">
+            TomatoBank
+            13,890,000원
+        </div>
+        <div class="assets-accounts__list_03">
+            CherryBank
+            2,723,000원
+        </div>
+        <div class="assets-accounts__list_04">
+            AppleBank
+            20,010,000원
+        </div>
+    </div>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="assets.html"><i class="fa-solid fa-house fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="benefits.html"><i class="fa-solid fa-diamond fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="stock.html"><i class="fa-solid fa-chart-column fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="others.html"><i class="fas fa-ellipsis-h fa-2x"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- status-bar는 browser 가장 위에 있는 부분(데이터, 시간, 베터리양 등을 표시해놓음) -->
+    <script src="clock.js"></script>
+    <script src="https://kit.fontawesome.com/d44beb033c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
