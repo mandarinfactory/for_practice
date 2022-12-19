@@ -38,6 +38,11 @@ figure.pencil {
     left: 1520px;
     z-index: 10;
 }
+@media screen and (max-width:1900px){
+    figure.pencil {
+        display: none;
+    }
+}
 figure.pencil img {
     width: 100%;
     height: 100%;
@@ -46,13 +51,21 @@ figure.pencil img {
 }
 /* figure.pencil ------------------------------ */
 section.section_box {
-  margin: 40px 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 3px 3px 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 10px black;
 }
-
+@media screen and (min-width:1900px){
+    section.section_box {
+        margin: 40px 130px;   
+    }
+}
+@media screen and (max-width:1900px){
+    section.section_box {
+        margin: 40px auto;
+    }
+}
 .section_box > section {
   display: block;
   width: 100%;
