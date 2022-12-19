@@ -1,7 +1,7 @@
 ■ event-binding
 
     ● onClick속성
-        - 생명주기 관계로 객체를 호출 할수 없음(document.querySelector등 사용 X)
+        - 생명주기(life_cycle) 관계로 객체를 호출 할수 없음(document.querySelector등 사용 X)
 
         - 함수 1개만 사용할 경우,
             --> onClick = {함수명} ===> 절대로 '함수명()'꼴로 쓰면 안된다!!!
@@ -30,9 +30,10 @@
         1. 주의(useState 사용시 증감연산 주의사항!)
             ※ changeState(a++)를, changeState(++a) 또는 changeState(a+1)로 써야한다!
         
-        2. ★★★★★★★★★★★★★★ useState 변경시점 ★★★★★★★★★★★★★★★
+        2. ★★★★★★★★★★★★★★ useState 변경 ★★★★★★★★★★★★★★★
             ※ useState로 값을 변경하는 시점이 아닌 실제로 DOM생성하기 직전에 변경된다.
-
+            ※ re-rander시 실행되는 문법안에서는 절대 사용하지 말것!!!!!!
+              └-> event 혹은 특정조건에서만 사용 O
 
 ■ useRef
     ● element를 선택하기 위해 사용
