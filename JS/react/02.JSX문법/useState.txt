@@ -30,8 +30,9 @@
         1. 주의(useState 사용시 증감연산 주의사항!)
             ※ changeState(a++)를, changeState(++a) 또는 changeState(a+1)로 써야한다!
         
-        2. useState 변경사항
-        
+        2. ★★★★★★★★★★★★★★ useState 변경시점 ★★★★★★★★★★★★★★★
+            ※ useState로 값을 변경하는 시점이 아닌 실제로 DOM생성하기 직전에 변경된다.
+
 
 ■ useRef
     ● element를 선택하기 위해 사용
