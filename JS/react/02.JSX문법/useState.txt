@@ -34,6 +34,7 @@
             ※ useState로 값을 변경하는 시점이 아닌 실제로 DOM생성하기 직전에 변경된다.
             ※ re-rander시 실행되는 문법안에서는 절대 사용하지 말것!!!!!!
               └-> event 혹은 특정조건에서만 사용 O
+            ※ 비동기문법(setInterval, setTimeout, Promise--then, async--await)등은 randering 이후에 사용되어야한다.
 
 ■ useRef
     ● element를 선택하기 위해 사용
