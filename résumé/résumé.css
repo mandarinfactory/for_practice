@@ -31,12 +31,11 @@ li {
 figure.pencil {
     position: sticky;
     width: 100%;
-    max-width: 100px;
+    max-width: 110px;
     height: 100%;
-    max-height: 800px;
-    top: 150px;
+    top: 75px;
     left: 1520px;
-    z-index: 10;
+    z-index: -1;
 }
 @media screen and (max-width:1900px){
     figure.pencil {

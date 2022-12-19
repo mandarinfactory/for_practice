@@ -8,13 +8,12 @@ body {
 }
 section.section_one figure {
     width: 100%;
-    height: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative; /* 기준화면!!!! */
 }
 section.section_one figure img {
-    width: 100%;
-    height: 100%;
+    width: 100%;    
     object-fit: cover;
     object-position: center;
 }
@@ -52,11 +51,14 @@ form#todo-form input{
     font-size: 1.5em;
 }
 ul#todo-list {
-    
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 div#quotes {
     position: absolute;
-    bottom: -15%;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.5em;
