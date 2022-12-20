@@ -4,10 +4,12 @@
 /* Components */
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
+@import "components/header-bar.css";
 
 /* Screens*/
 @import "screens/login.css";
 @import "screens/assets.css";
+@import "screens/purchase.css";
 /* 항상 다른file들을 가져올때는 @import를 사용해서 연결시켜 놓자! */
 
 body {

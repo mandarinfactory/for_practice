@@ -1,27 +1,6 @@
-
-.assets-icons_end{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 15px;
-    color: #505050;
-}
-.assets-icons_end {
-    font-size: 1.5em;
-}
-.assets-icons_end i {
-    font-size: 1.1em;
-    margin-right: 10px;
-}
-.assets-icons_end i.leaf {
-    margin-top: 15px;
-    padding-right: 0;
-    margin-right: 0;
-    font-size: 1.1em;
-}
-/* assets-icons_end ------------------------------------------------ */
 .assets-header {
     margin: 15px;
+    margin-top: 20px;
     border-radius: 20px;
     background-color: rgba(201, 201, 201, 0.2);
     font-weight: 600;
@@ -177,4 +156,8 @@ img {
     border-radius: 10px;
     font-size: 20px;
     background-color: rgba(0, 0, 0, 0.4);
+}
+.assets-purchase > div > a {
+    text-decoration: none;
+    color: black;
 }
