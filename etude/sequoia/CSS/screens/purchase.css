@@ -136,3 +136,20 @@
 .purchase_sub_main .purchase_main_transaction .graph_container .graph_desc div:nth-child(7) {
     background-color: rgb(180, 180, 180);
 }
+/* donut_graph -------------------------------------------------- */
+.purchase_main_transaction .transaction_desc {
+    
+}
+.purchase_main_transaction .transaction_desc ul {
+    margin: 25px 0;
+}
+.purchase_main_transaction .transaction_desc ul i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    border: 3px solid var(--dark);
+    color: var(--dark);
+    font-size: 1.2em;
+}
