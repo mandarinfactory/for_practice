@@ -7,6 +7,7 @@ const CompClac = ({ chStShowComp }) => {
     let chName = e.target.getAttribute('data_comp_name') //$(this).attr('data-n')
     chStShowComp(chName);
   }//chComponent_function
+
   useEffect(() => {
     let intervalID = setInterval(() => {
       changeStSec(--secRef.current)
@@ -19,6 +20,7 @@ const CompClac = ({ chStShowComp }) => {
       clearInterval(intervalID);
     })//return
   }, [])
+
   return (
     <>
       <p>남은시간 : {stSec}</p>

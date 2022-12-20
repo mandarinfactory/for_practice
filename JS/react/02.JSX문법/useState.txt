@@ -51,5 +51,3 @@
 
     4. 호출
     이름.current
-
-    5. setTimeout, setInterval의 ID는 항상!!!!!!!! useRef를 이용해서 선언해야함!

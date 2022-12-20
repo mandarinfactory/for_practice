@@ -25,3 +25,27 @@
                 //components가 사라질때 실행됨
             })//return
         })
+
+■ setInterval, setTimeout(비동기문법) 사용시 주의사항
+
+    ● randering이 완료된 후 1회만 호출!!
+
+    ● setInterval, setTimeout으로 state값을 변경 시 useRef를 사용할것
+
+    ● component가 사라지기 전에 반드시 clearInterval해줄 것
+    
+    예시)
+        let [num, changeNum] = useState(10)
+        let n = useRef(10)
+
+        useEffect(() => {
+            let intervalID = setInterval(() => {
+                changeNum(num - 1) --> 잘못된 사용법1!!!!!(setInterval에서 state변수를 직접 사용 XXX)
+                changeNum(n --) --> 잘못된 사용법2!!!!!(증감연산자 생각해보자!)
+                changeNum(-- n)
+            },1000)
+
+            return (() => {
+                clearInterval(intervalID) --> 딱 시간이 끝나면 setInterval을 끝내준다.
+            })//return
+        },[])//useEffect
