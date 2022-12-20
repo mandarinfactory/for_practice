@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/components/donut_graph.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./JS/clock.js"></script>
+    <script src="./JS/store.js"></script>
     <title>sequoia_perchase</title>
 </head>
 
@@ -43,16 +47,139 @@
             12월 내 소비
             <i class="fa-solid fa-chevron-down"></i>
         </div>
-        <div class="purchase_main_calendar">
-            <span>달력</span>
-            <ul>
-                <li>지출</li>
-                <li>1,625,560원</li>
-                <li>수입</li>
-                <li>2,746,059원</li>
-            </ul>
+        <div class="purchase_sub_main">
+            <div class="purchase_sub_main_title">
+                <span>달력</span>
+                <span>거래 내역</span>
+                <span>소비 분석</span>
+            </div>
+            <div class="purchase_main_desc">
+                <ul>
+                    <li>지출</li>
+                    <li>1,625,560원</li>
+                </ul>
+                <ul>
+                    <li>수입</li>
+                    <li>2,746,059원</li>
+                </ul>
+            </div>
+            <div class="purchase_main_calendar">
+                <script>
+                    $('.purchase_main_calendar').append(`<div class=num1></div>`)
+                    window.calendarArr1.forEach(function (v) {
+                        $('.purchase_main_calendar div.num1').append(`
+                        <ul>
+                        <li>${v.date}</li>
+                        <li>${v.minus}</li>
+                        <li>${v.plus}</li>
+                        </ul>
+                        `)
+                    })
+                    $('.purchase_main_calendar').append(`<div class=num2></div>`)
+                    window.calendarArr2.forEach(function (v) {
+                        $('.purchase_main_calendar div.num2').append(`
+                        <ul>
+                        <li>${v.date}</li>
+                        <li>${v.minus}</li>
+                        <li>${v.plus}</li>
+                        </ul>
+                        `)
+                    })
+                    $('.purchase_main_calendar').append(`<div class=num3></div>`)
+                    window.calendarArr3.forEach(function (v) {
+                        $('.purchase_main_calendar div.num3').append(`
+                        <ul>
+                        <li>${v.date}</li>
+                        <li>${v.minus}</li>
+                        <li>${v.plus}</li>
+                        </ul>
+                        `)
+                    })
+                    $('.purchase_main_calendar').append(`<div class=num4></div>`)
+                    window.calendarArr4.forEach(function (v) {
+                        $('.purchase_main_calendar div.num4').append(`
+                        <ul>
+                        <li>${v.date}</li>
+                        <li>${v.minus}</li>
+                        <li>${v.plus}</li>
+                        </ul>
+                        `)
+                    })
+                    $('.purchase_main_calendar').append(`<div class=num5></div>`)
+                    window.calendarArr5.forEach(function (v) {
+                        $('.purchase_main_calendar div.num5').append(`
+                        <ul>
+                        <li>${v.date}</li>
+                        <li>${v.minus}</li>
+                        <li>${v.plus}</li>
+                        </ul>
+                        `)
+                    })
+                </script>
+            </div>
+            <div class="purchase_main_transaction">
+                <span>1,625,560 원 지출</span>
+                <div class="graph_container">
+                    <div class="donut-chart-block block">
+                        <div class="donut-chart">
+                            <div id="part1" class="portion-block">
+                                <div class="circle"></div>
+                            </div>
+                            <div id="part2" class="portion-block">
+                                <div class="circle"></div>
+                            </div>
+                            <div id="part3" class="portion-block">
+                                <div class="circle"></div>
+                            </div>
+                            <div id="part4" class="portion-block">
+                                <div class="circle"></div>
+                            </div>
+                            <p class="center"></p>
+                        </div>
+                    </div>
+                    <div class="graph_desc">
+                        <div></div>
+                        <span>술·유흥 17%</span>
+                        <div></div>
+                        <span>식품 29%</span>
+                        <div></div>
+                        <span>쇼핑 20%</span>
+                        <div></div>
+                        <span>기타 34%</span>
+                    </div>
+                </div>
+                <div class="transaction_desc">
+                    <ul>
+                        <li>식품</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li>쇼핑</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li>술</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li>교통·자동차</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li>이체</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li>커피</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li>주거·통신</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
     </main>
     <nav class="nav">
         <ul class="nav__list">
@@ -71,7 +198,7 @@
         </ul>
     </nav>
     <!-- status-bar는 browser 가장 위에 있는 부분(데이터, 시간, 베터리양 등을 표시해놓음) -->
-    <script src="clock.js"></script>
+
     <script src="https://kit.fontawesome.com/d44beb033c.js" crossorigin="anonymous"></script>
 </body>
 
