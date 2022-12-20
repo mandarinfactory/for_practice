@@ -1,3 +1,27 @@
 ■ DOM_element의 호출
     ● DOM(HTML)을 생성한 후 랜더링이 완료된 후 요소호출이 가능
+
     ● DOM을 생성하기 전 useRef()를 이용해서 element 호출이 가능
+
+■ useEffect
+    ● 첫번째 randering 후 실행함수
+        useEffect(() => {
+
+        }, [])
+
+    ● 지정된 state값(deps parameter)이 변경될 때마다 실행
+        useEffect(() => {
+
+        }, [state이름])
+
+    ● 화면이 update될 때마다 실행([]이 없음)
+        useEffect(() => {
+            
+        })
+
+    ● components가 종료시 실행
+        useEffect(() => {
+            return(() => {
+                //components가 사라질때 실행됨
+            })//return
+        })

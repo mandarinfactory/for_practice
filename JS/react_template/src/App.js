@@ -1,20 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import CompClac from "./CompCalc";
 import CompResult from "./CompResult";
 
 const App = () => {
   let [stShowComp, chStShowComp] = useState('calc')
-  let [stSec, changeStSec] = useState(10);
-  let secRef = useRef(10)
   const chComponent = e => {
     let chName = e.target.getAttribute('data_comp_name') //$(this).attr('data-n')
     chStShowComp(chName);
   }//chComponent_function
-  useEffect(() => {
-    const intervalID = setInterval(() => {
-      changeStSec(secRef.current--)
-    }, 1000)//setInterval
-  }, [])
   /* 
     useEffect --> 대표적인 life_cycle hooks★★★★★ 
     [] --> app이 실행되는 첫번째에만 실행되게끔 하게 해준다.
@@ -29,11 +22,11 @@ const App = () => {
   /* state갱신시점!!!!! ---------------------------------------------------------------------------------------- */
   return (
     <>
-      <p>{stSec}</p>
-      <hr />
+
       <button onClick={chComponent} data_comp_name='calc'>문제화면</button>
       <button onClick={chComponent} data_comp_name='result'>결과화면</button>
-      {(stShowComp === 'calc') && <CompClac />}
+
+      {(stShowComp === 'calc') && <CompClac chStShowComp={chStShowComp} />}
       {(stShowComp === 'result') && <CompResult />}
 
 
