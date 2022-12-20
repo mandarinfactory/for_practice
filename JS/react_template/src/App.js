@@ -27,7 +27,7 @@ const App = () => {
       <button onClick={chComponent} data_comp_name='result'>결과화면</button>
 
       {(stShowComp === 'calc') && <CompClac chStShowComp={chStShowComp} />}
-      {(stShowComp === 'result') && <CompResult />}
+      {(stShowComp === 'result') && <CompResult chStShowComp={chStShowComp} />}
 
 
       {/* 

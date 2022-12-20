@@ -15,7 +15,7 @@ const CompClac = ({ chStShowComp }) => {
     return (() => { //--> components가 화면에서 사라질때!!!!
       clearInterval(intervalID);
     })//return
-  }, [])
+  }, [])//useEffect
 
   return (
     <>
