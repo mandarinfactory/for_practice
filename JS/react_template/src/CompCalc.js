@@ -3,22 +3,21 @@ import { useEffect, useRef, useState } from "react";
 const CompClac = ({ chStShowComp }) => {
   let [stSec, changeStSec] = useState(5);
   let secRef = useRef(5)
-  let refIntervalID = useRef()
   const chComponent = e => {
     let chName = e.target.getAttribute('data_comp_name') //$(this).attr('data-n')
     chStShowComp(chName);
   }//chComponent_function
   useEffect(() => {
-    refIntervalID = setInterval(() => {
+    let intervalID = setInterval(() => {
       changeStSec(--secRef.current)
       if (secRef.current === 0) {
         chStShowComp('result')
       }//if
-      console.log(refIntervalID.current);
-      return (() => {
-        clearInterval(refIntervalID.current);
-      })//return
+      console.log(secRef.current);
     }, 1000)//setInterval
+    return (() => { //--> components가 화면에서 사라질때!!!!
+      clearInterval(intervalID);
+    })//return
   }, [])
   return (
     <>

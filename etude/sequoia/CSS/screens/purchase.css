@@ -1,0 +1,16 @@
+.purchase_header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.purchase_header i {
+    margin: 40px 10px;
+    margin-right: 30px;
+}
+.purchase_main .purchase_main_title {
+    font-size: 1.6em;
+    margin-left: 40px;
+}
+.purchase_main .purchase_main_title i {
+    font-size: 0.7em;
+}
