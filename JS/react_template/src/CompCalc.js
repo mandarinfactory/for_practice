@@ -3,10 +3,6 @@ import { useEffect, useRef, useState } from "react";
 const CompClac = ({ chStShowComp }) => {
   let [stSec, changeStSec] = useState(5);
   let secRef = useRef(5)
-  const chComponent = e => {
-    let chName = e.target.getAttribute('data_comp_name') //$(this).attr('data-n')
-    chStShowComp(chName);
-  }//chComponent_function
 
   useEffect(() => {
     let intervalID = setInterval(() => {
