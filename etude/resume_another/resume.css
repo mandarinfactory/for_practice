@@ -92,13 +92,23 @@ body {
     margin-left: 350px;
     font-size: 2em;
 }
-.section_two ul.about_main {
+.section_two ul.about_main_first {
     margin-top: 50px;
 }
-.section_two ul.about_main li{
-    margin-top: 3px;
-    margin-left: 780px; 
-    font-size: 1.3em;
+.section_two ul.about_main_first li{
+    margin-top: 6px;
+    margin-left: 730px; 
+    font-size: 1.35em;
+}
+.section_two ul.about_main_second h3 {
+    margin-top: 30px;
+    margin-left: 720px;
+    font-size: 1.25em;
+}
+.section_two ul.about_main_second li {
+    margin-top: 7px;
+    margin-left: 720px;
+    color: var(--dark);
 }
 /* section_two ---------------------------------------------------------------- */
 .section_three {
