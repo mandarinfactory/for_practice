@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const CompMinus = () => {
+    useEffect(() => {
+        console.log('Minus 완성!!!!!!');
+    }, [])//useEffect
+    useEffect(() => {
+        console.log('Minus 수정!!!!!!');
+    }, [])//useEffect
     return (
         <>
             <h2>빼기</h2>
