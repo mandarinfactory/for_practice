@@ -82,14 +82,23 @@ body {
     height: 1000px;
     background-color: white;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     color: var(--navy);
 }
-.section_two div.first {
+.section_two div.about_first {
     margin-top: 100px;
-    margin-left: 300px;
+    margin-left: 350px;
     font-size: 2em;
+}
+.section_two ul.about_main {
+    margin-top: 50px;
+}
+.section_two ul.about_main li{
+    margin-top: 3px;
+    margin-left: 780px; 
+    font-size: 1.3em;
 }
 /* section_two ---------------------------------------------------------------- */
 .section_three {
