@@ -46,6 +46,9 @@ body {
     font-weight: 500;
     line-height: 35px;
 }
+.left ul li.box {
+    display: flex;
+}
 .left ul li.box span{
     display: block;
     margin-top: 55px;
@@ -53,6 +56,12 @@ body {
     height: 40px;
     font-size: 0.9em;
     text-align: center;
+}
+.left ul li.box a {
+    margin: 0 15px;
+    margin-top: 55px;
+    color: var(--mint);
+    text-decoration: none;
 }
 /* left_side ------------------------------------------------------------------ */
 .section_one {
