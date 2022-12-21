@@ -97,17 +97,27 @@ body {
 }
 .section_two ul.about_main_first li{
     margin-top: 6px;
-    margin-left: 730px; 
+    margin-left: 680px; 
     font-size: 1.35em;
 }
 .section_two ul.about_main_second h3 {
-    margin-top: 30px;
-    margin-left: 720px;
+    margin-top: 9px;
+    margin-left: 690px;
     font-size: 1.25em;
 }
 .section_two ul.about_main_second li {
     margin-top: 7px;
-    margin-left: 720px;
+    margin-left: 690px;
+    color: var(--dark);
+}
+.section_two ul.about_main_third h3 {
+    margin-top: 9px;
+    margin-left: 580px;
+    font-size: 1.25em;
+}
+.section_two ul.about_main_third li {
+    margin-top: 7px;
+    margin-left: 580px;
     color: var(--dark);
 }
 /* section_two ---------------------------------------------------------------- */
@@ -116,7 +126,24 @@ body {
     top: 200%;
     left: 0;
     height: 1000px;
-    background-color: lightgray;
+    background-color: white;
+}
+.section_three ul.project_main {
+    margin-top: 9px;
+    margin-left: 580px;
+    font-size: 1.25em;
+}
+.section_three ul.project_main h3 {
+    margin-top: 100px;
+    margin-left: 435px;
+    font-size: 1.7em;
+    color: var(--navy);
+}
+.section_three ul.project_main li {
+    margin-top: 3px;
+    margin-left: 435px;
+    font-size: 0.8em;
+    color: var(--dark);
 }
 /* section_three ---------------------------------------------------------------- */
 .section_four {
