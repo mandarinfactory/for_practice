@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'Happiness-Sans-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
 html,body {
@@ -18,7 +18,7 @@ body {
     height: 4000px;
 }
 .title_font {
-    font-family: 'NanumSquareNeo-Variable';
+    font-family: 'Happiness-Sans-Bold';
 }
 .project {
     position: absolute;
@@ -174,15 +174,73 @@ body {
     height: 1000px;
     background-color: white;
 }
-.section_three figure {
+.section_three figure.figure_one {
+    position: relative;
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    cursor: pointer;
 }
 .section_three figure.figure_one img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center;
+}
+.section_three figure.figure_one figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navy);
+    border: 30px solid rgba(255, 255, 255, 0.9);
+    opacity: 0.97;
+    border-radius: 100px;
+    color: black;
+    font-size: 1.2em;
+    box-shadow: 2px 2px 7px black;
+   /*  transform: translateX(-10000px); */
+}
+.section_three figure.figure_one figcaption ul {
+    padding-left: 0;
+}
+.section_three figure.figure_one figcaption ul li {
+    line-height: 30px;
+    margin: 10px 20px;
+    font-size: 0.9em;
+    color: white;
+}
+.section_three figure.figure_one figcaption ul li:first-child {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+}
+.section_three figure.figure_one figcaption ul li.sub_title {
+    font-size: 1.3em;
+    font-weight: 900;
+    color: var(--mint);
+}
+.section_three figure.figure_one figcaption ul li a {
+    display: block;
+    width: 130px;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: aqua;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+.section_three figure.figure_one:hover figcaption {
+   /*  transform: translateX(0); */
 }
 /* section_three ---------------------------------------------------------------- */
