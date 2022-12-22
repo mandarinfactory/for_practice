@@ -213,6 +213,7 @@ body {
     line-height: 30px;
     margin: 10px 20px;
     font-size: 0.9em;
+    font-weight: 700;
     color: white;
 }
 .section_three figure.figure_one figcaption ul li:first-child {
@@ -221,7 +222,7 @@ body {
     margin-left: 0;
 }
 .section_three figure.figure_one figcaption ul li.sub_title {
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 900;
     color: var(--mint);
 }
