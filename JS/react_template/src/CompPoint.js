@@ -3,7 +3,7 @@ import React from 'react';
 const CompPoint = ({ point }) => {
     return (
         <>
-            <p>{point}점쑤</p>
+            <p>점쑤 {point}점★★★★★★★★★</p>
         </>
     );
 };

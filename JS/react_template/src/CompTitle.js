@@ -14,4 +14,4 @@ const CompTitle = () => {
     );
 };
 
-export default CompTitle;
+export default React.memo(CompTitle);
