@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,7 +18,7 @@ body {
     height: 4000px;
 }
 .title_font {
-    font-family: 'NanumSquareNeo-Variable';
+    font-family: 'S-CoreDream-3Light';
 }
 /* root ---------------------------------------------------------------------- */
 .right {
@@ -45,6 +45,7 @@ body {
 }
 .right ul li b.white_color {
     color: white;
+    font-weight: 650;
 }
 .right ul li.small {
     font-size: 1.2em;
@@ -79,6 +80,15 @@ body {
     font-size: 1.0em;
     color: var(--mint);
 }
+.right #particles-js {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
 /* right_side ------------------------------------------------------------------ */
 .section_one {
     position: absolute;
