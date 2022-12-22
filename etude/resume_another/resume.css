@@ -37,7 +37,6 @@ body {
     margin-left: 40px;
     color: var(--mint);
     font-size: 2.2em;
-    font-weight: 800;
     line-height: 55px;
 }
 .left ul li:nth-child(3) {
@@ -64,6 +63,10 @@ body {
     margin-top: 55px;
     color: var(--mint);
     text-decoration: none;
+    transition: all 0.5s;
+}
+.left ul li.box a:hover {
+    color: white;
 }
 /* left_side ------------------------------------------------------------------ */
 .section_one {
@@ -112,7 +115,7 @@ body {
 }
 .section_two ul.about_main_third {
     padding-left: 0;
-    padding-right: 100px;
+    padding-right: 10px;
 }
 .section_two ul.about_main_third h3 {
     margin-top: 9px;
@@ -135,19 +138,11 @@ body {
     font-size: 1.25em;
 }
 .section_three ul.project_main h3 {
-    width: 53%;
+    width: 58%;
     display: flex;
     justify-content: center;
     margin-top: 100px;
     font-size: 1.7em;
     color: var(--navy);
-}
-.section_three ul.project_main li {
-    display: flex;
-    justify-content: center;
-    margin-top: 3px;
-    margin-right: 90px;
-    font-size: 0.8em;
-    color: var(--dark);
 }
 /* section_three ---------------------------------------------------------------- */
