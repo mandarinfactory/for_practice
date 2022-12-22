@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-const CompSum = () => {
+const CompSum = ({ point, chPoint }) => {
     let [num1, chNum1] = useState(Math.floor(Math.random() * 10));
     let [num2, chNum2] = useState(Math.floor(Math.random() * 10));
     let [result, chResult] = useState('결과');
@@ -19,8 +19,10 @@ const CompSum = () => {
         let num3 = parseInt(document.querySelector('.sum .num3').value)
         if (num1 + num2 === num3) {
             chResult('정답!!!!!');
+            chPoint(++point)
         } else {
             chResult('5답!!!!!!');
+            chPoint(--point)
         }//if-else
     }//function_formResult
     return (

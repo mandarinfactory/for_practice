@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CompMinus from "./CompMinus";
 import CompPoint from "./CompPoint";
 import CompSum from "./CompSum";
 import CompTitle from "./CompTitle";
 
 const App = () => {
+  let [point, chPoint] = useState(0)
   useEffect(() => {
     console.log('AppComponent 완성!!!!!!');
   }, [])//useEffect
@@ -15,11 +16,11 @@ const App = () => {
     <>
       <CompTitle />
       <hr />
-      <CompSum />
+      <CompSum point={point} chPoint={chPoint} />
       <hr />
-      <CompMinus />
+      <CompMinus point={point} chPoint={chPoint} />
       <hr />
-      <CompPoint />
+      <CompPoint point={point} />
     </>
   );
 };

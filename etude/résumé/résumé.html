@@ -5,180 +5,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/7d1f9ca95d.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="./résumé.css">
-
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./onepage-scroll.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./resume.js"></script>
+    <script src="./jquery.onepage-scroll.js"></script>
+    <script src="https://kit.fontawesome.com/7d1f9ca95d.js" crossorigin="anonymous"></script>
+    <title>Document</title>
 </head>
 
 <body>
-    <figure class="pencil">
-        <img src="./img/pencil.png" alt>
-    </figure>
-    <div class="hidden_one"></div>
-    <section class="section_box">
-        <section class="lg_section_left">
-            <section class="section_left">
-                <div class="left_one">
-                    <ul class="title">
-                        <figure>
-                            <img class="picture" src="./img/odung.jpeg">
-                        </figure>
-                        <li class="korean">이 호 준</li>
-                        <li>web publisher</li>
-                    </ul>
-                    <ul class="social">
-                        <li>social media
-                            <ul>
-                                <li>
-                                    <i class="fa-brands fa-github"></i>
-                                    GITHUB
-                                </li>
-                                <li class="social_desc">
-                                    <a target="_blank" href="https://github.com/mandarinfactory">
-                                        github.com/mandarinfactory
-                                    </a>
-                                </li>
-                                <li>
-                                    <i class="fa-sharp fa-solid fa-envelope"></i>
-                                    GOOGLE
-                                </li>
-                                <li class="social_desc">
-                                    <a href="mailto:hoojunee@gmail.com">hoojunee@gmail.com</a>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-mobile"></i>
-                                    PHONE
-                                </li>
-                                <li class="social_desc">
-                                    <a href="tel:010-9837-0037">010-9837-0037</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="profile">
-                        <li>profile
-                            <ul>
-                                <li class="korean">
-                                    하늘 호에 준걸 준, 하늘같이 높고 뛰어난 사람이 되라고 부모님이 지어주신 제 이름처럼
-                                    프로그래밍, 디자인에 있어 좁은시야가 아닌 하늩처럼 넓게 보는 퍼블리셔가 될 이호준입니다.
-                                    제가 가지고 있는 능력과 일관성 있는 배움의 자세를 통해 저를 성장시켜
-                                    뛰어난 개발자가 되겠습니다.
-
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="certificate">
-                        <li>certificate
-                            <ul>
-                                <li class="korean">
-                                    <ul>
-                                        <li>- 공인중개사</li>
-                                        <li>- 한국능력검정시험 1급</li>
-                                        <li>- TOEIC 905</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="career">
-                        <li>career
-                            <ul>
-                                <li class="korean">
-                                    <ul>
-                                        <li>- 14.08.10 ~ 15.09.01</li>
-                                        <li> 유니클로 현대백화점 중동점</li>
-                                        <li>- 17.10.01 ~ 20.06.01 </li>
-                                        <li>유니클로 여의도 IFC몰점</li>
-                                        <li>- 20.10.01 ~ 22.06.30</li>
-                                        <li>AONE감정평가법인 북부지사</li>
-                                    </ul>
-
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="skills">
-                        <li>skills
-                            <ul>
-                                <li>
-                                    <figure>
-                                        <img src="./img/html.png" alt>
-                                    </figure>
-                                    <div class="graph"></div>
-                                    <div>80%</div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="./img/css.png" alt>
-                                    </figure>
-                                    <div class="graph"></div>
-                                    <div>80%</div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="./img/js.png" alt>
-                                    </figure>
-                                    <div class="graph_js"></div>
-                                    <div>60%</div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+    <div class="left">
+        <ul>
+            <li class="title_font">
+                안녕하세요.
+            </li>
+            <li class="title_font">
+                일관성 있는 배움의 자세를 통해
+            </li>
+            <li class="title_font">
+                성장하는 개발자 이호준이라고 합니다.
+            </li>
+            <li class="title_font small">
+                하늘같이 높고 넓은 사람이 되라는 이름처럼
+            </li>
+            <li class="title_font small">
+                항상 깊고 많은 호기심을 갖고 개발하고 있습니다.
+            </li>
+            <li class="title_font box">
+                <span>Contact</span>
+                <a target="_blank" href="https://github.com/mandarinfactory">
+                    <i class="fa-brands fa-github fa-lg"></i>
+                </a>
+                <a href="mailto:hoojunee@gmail.com">
+                    <i class="fa-solid fa-envelope fa-lg"></i>
+                </a>
+                <a href="tel:010-9837-0037">
+                    <i class="fa-solid fa-mobile fa-lg"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <section class="section_one"></section>
+        <section class="section_two">
+            <div class="title_font about_first">
+                About me
+            </div>
+            <ul class="title_font about_main_first">
+                <li>몇번이고 벽을 만나 부딪힌 적도, 힘든적도 많지만,</li>
+                <li>직접 코딩을 통해 나오는 결과에 성취감을 느끼고</li>
+                <li>새로운것을 배움에 있어 즐거움이 항상 생깁니다.</li>
+                <li>깃헙에 주중 한 commit을 하는 습관을 꾸준하게 유지하며,</li>
+                <li>늘 안주하지 않기 위해 노력하고 있습니다.</li>
+            </ul>
+            <ul class="title_font about_main_second">
+                <h3>Technical</h3>
+                <li>현재 HTML5, CSS3, Sass, JavaScript(jQuery, ECMA6)을 수학했으며,</li>
+                <li>배운것을 바탕으로 각각 다른 디자인으로 2개의 project 만들었고,</li>
+                <li>추가적으로 wordpress를 공부하며 함께 webpage를 만들었습니다.</li>
+                <li>framework인 react도 공부하였고 이에 따른 project도 만들었습니다.</li>
+                <li>또한, 독학으로 figma, git 그리고 JavaScript를 깊이있게 공부하고 있습니다.</li>
+            </ul>
+            <ul class="title_font about_main_third">
+                <h3>Personal</h3>
+                <li>저는 현재 28살이고 지난 15년부터 20년까지 군복무를 제외하고</li>
+                <li>4년동안 유니클로(현대백화점 중동점, 여의도 IFC몰점)에서 근무했으며, </li>
+                <li>20년도 하반기부터 22년도 하반기까지 AONE 북부감평법인에서 일했습니다.</li>
+                <li>금년에 퇴사후, 바로 더 조은컴퓨터학원에서 </li>
+                <li>웹퍼블리셔 3개월과정을 수료했습니다.</li>
+            </ul>
         </section>
-        <section class="lg_section_right">
-            <section class="section_right">
-                <div class="right_one">
-                    <ul class="portpolio">
-                        <li style="font-size: 1.5em;">
-                            portpolio
-                            <ul>
-                                <li class="sunshine">
-                                    <a target="_blank" href="http://127.0.0.1/template/">
-                                        sunshine
-                                    </a>
-                                    <figure class="sun_template">
-                                        <img src="./img/template_website_complete.jpg" alt>
-                                    </figure>
-                                </li>
-                                <li class="portpolio_desc korean">
-                                    템플릿 홈페이지를 만들면서 햇빛과 어린아이들을 주제로 만들고 싶었고, 전체적인 테마를 밝고 개구쟁이같은
-                                    느낌을 주고 싶어서 밝은 색과 다채로운 이미지, 패턴들을 이용해서 홈페이지를 만들게 되었습니다.
-                                    또한, 실제 홈페이지처럼 만들고 싶어 세밀한 부분까지 페이지를 만들어 실제 운영하는 페이지처럼 만들게 되었습니다.
-                                </li>
-                                <li class="museum">
-                                    <a target="_blank" href="http://127.0.0.1/museum/">
-                                        museum
-                                    </a>
-                                    <figure class="mu_template">
-                                        <img src="./img/museum_template_complete.jpg" alt>
-                                    </figure>
-                                </li>
-                                <li class="portpolio_desc korean">
-                                    자주 접하는 국립중앙박물관 홈페이지를 보면서 스스로 아쉬웠던 점이 많았기에,
-                                    개인 프로젝트를 시작하면서 원래 있던 박물관 홈페이지를 깔끔하고 보다 보기 좋은
-                                    디자인과 구조로 변경하고 싶어서 시작하게 되었습니다. 실제 페이지에서 잘못된 부분을 수정했고,
-                                    반응형 디자인 그리고 모션을 보다 역동적으로 움직이게끔 만들었습니다.
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href=""></a></li>
-                    </ul>
-                    </li>
-                    </ul>
-                </div>
-            </section>
+        <section class="section_three">
+            <ul class="title_font project_main">
+                <h3>Project01</h3>
+            </ul>
         </section>
-    </section>
+    </div>
+    <script>
+        $(".main").onepage_scroll({
+            sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+            easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+            // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+            animationTime: 700,             // AnimationTime let you define how long each section takes to animate
+            pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+            updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+            beforeMove: function (index) { },  // This option accepts a callback function. The function will be called before the page moves.
+            afterMove: function (index) { },   // This option accepts a callback function. The function will be called after the page moves.
+            loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+            keyboard: false,                  // You can activate the keyboard controls
+            responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+            // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+            // the browser's width is less than 600, the fallback will kick in.
+            direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+        });
+    </script>
 </body>
 
 </html>

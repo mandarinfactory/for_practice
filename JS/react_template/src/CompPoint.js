@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CompPoint = () => {
+const CompPoint = ({ point }) => {
     return (
         <>
-            <p>점쑤</p>
+            <p>{point}점쑤</p>
         </>
     );
 };
