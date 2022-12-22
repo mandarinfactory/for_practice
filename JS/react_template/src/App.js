@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import CompMinus from "./CompMinus";
+import CompPoint from "./CompPoint";
 import CompSum from "./CompSum";
 import CompTitle from "./CompTitle";
 
@@ -17,6 +18,8 @@ const App = () => {
       <CompSum />
       <hr />
       <CompMinus />
+      <hr />
+      <CompPoint />
     </>
   );
 };
