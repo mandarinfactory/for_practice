@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Happiness-Sans-Title';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,10 +18,10 @@ body {
     height: 4000px;
 }
 .title_font {
-    font-family: 'Happiness-Sans-Title';
+    font-family: 'NanumSquareNeo-Variable';
 }
 /* root ---------------------------------------------------------------------- */
-.left {
+.right {
     position: fixed;
     top: 0;
     right: 0;
@@ -33,42 +33,53 @@ body {
     justify-content: flex-start;
     align-items: center;
 }
-.left ul li {
-    margin-left: 40px;
+.right ul li {
+    margin-right: 40px;
     color: var(--mint);
     font-size: 2.2em;
+    font-weight: 500;
     line-height: 55px;
 }
-.left ul li:nth-child(3) {
-    margin-bottom: 40px;
+.right ul li:nth-child(2) {
+    margin-bottom: 30px;
 }
-.left ul li.small {
-    font-size: 1.4em;
-    font-weight: 500;
+.right ul li b.white_color {
+    color: white;
+}
+.right ul li.small {
+    font-size: 1.2em;
+    font-weight: 600;
     line-height: 35px;
 }
-.left ul li.box {
+.right ul li.box {
     display: flex;
+    width: 225px;
+    border-bottom: 2px solid var(--mint);
 }
-.left ul li.box span{
+.right ul li.box span{
     display: block;
     margin-top: 55px;
-    width: 140px;
+    width: 100px;
     height: 40px;
-    font-size: 0.9em;
+    font-size: 0.6em;
     text-align: center;
 }
-.left ul li.box a {
-    margin: 0 15px;
+.right ul li.box a {
+    margin: 0 10px;
     margin-top: 55px;
     color: var(--mint);
     text-decoration: none;
     transition: all 0.5s;
 }
-.left ul li.box a:hover {
+.right ul li.box a:hover {
     color: white;
 }
-/* left_side ------------------------------------------------------------------ */
+.right ul li.address {
+    height: 30px;
+    font-size: 1.0em;
+    color: var(--mint);
+}
+/* right_side ------------------------------------------------------------------ */
 .section_one {
     position: absolute;
     top: 0;
@@ -97,6 +108,7 @@ body {
     font-size: 2em;
     width: 54%;
     display: flex;
+    font-weight: 600;
 }
 .section_two ul.about_main_first {
     margin-top: 50px;
@@ -104,6 +116,10 @@ body {
 .section_two ul.about_main_first li{
     margin-top: 6px;
     font-size: 1.35em;
+}
+.section_two ul.about_main_first li b.bg_navy {
+    background-color: var(--navy);
+    color: var(--mint);
 }
 .section_two ul.about_main_second h3 {
     margin-top: 9px;
