@@ -1,0 +1,14 @@
+.section_four {
+
+}
+.section_four figure.figure_one {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.section_four figure.figure_one img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

@@ -1,0 +1,7 @@
+.section_four .viewbox_museum ul {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.section_four .viewbox_museum ul li {}
+.section_four .viewbox_museum ul li figure {}
