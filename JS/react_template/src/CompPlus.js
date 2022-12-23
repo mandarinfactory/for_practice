@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const setNumber = () => {
+/* const setNumber = () => {
     return Math.floor(Math.random() * 9)
-}//function_setNumber
+}//function_setNumber */
 
-const CompPlus = () => {
-    let [num1, chNum1] = useState()
+const CompPlus = () => {//component
+    let [num1, chNum1] = useState('hello!')
     return (
         <>
             <form>
