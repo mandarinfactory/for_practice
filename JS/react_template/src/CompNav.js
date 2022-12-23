@@ -1,12 +1,17 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const CompNav = () => {
     return (
         <>
             <nav>
-                더하기문제!
+                <NavLink to="/">
+                    더하기문제!
+                </NavLink>
                 <hr />
-                빼기문제!
+                <NavLink to="minus">
+                    빼기문제!
+                </NavLink>
             </nav>
         </>
     );

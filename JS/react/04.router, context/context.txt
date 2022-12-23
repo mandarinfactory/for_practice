@@ -1,3 +1,5 @@
 ■ context
+
     ● props의 전송방식을 관리하는 framework (context, useReducer, reduxToolkit)
+
     ● useReducer, reduxToolkit --> 따로 공부할것!!!!!(redux는 따로 공부해야할거 같음!!!!!)
