@@ -29,7 +29,7 @@ body {
     text-align: center;
     line-height: 40px;
     background-color: var(--navy);
-    color: var(--mint);
+    color: var(--mustard);
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -50,7 +50,7 @@ body {
 }
 .right ul li {
     margin-right: 40px;
-    color: var(--mint);
+    color: var(--mustard);
     font-size: 2.2em;
     font-weight: 500;
     line-height: 55px;
@@ -71,7 +71,7 @@ body {
 .right ul li.box {
     display: flex;
     width: 225px;
-    border-bottom: 2px solid var(--mint);
+    border-bottom: 2px solid var(--mustard);
 }
 .right ul li.box span{
     display: block;
@@ -84,7 +84,7 @@ body {
 .right ul li.box a {
     margin: 0 10px;
     margin-top: 55px;
-    color: var(--mint);
+    color: var(--mustard);
     text-decoration: none;
     transition: all 0.5s;
     cursor: pointer;
@@ -95,7 +95,7 @@ body {
 .right ul li.address {
     height: 30px;
     font-size: 1.0em;
-    color: var(--mint);
+    color: var(--mustard);
 }
 .right #particles-js {
     position: absolute;
@@ -112,7 +112,7 @@ body {
     top: 0;
     left: 0;
     height: 1000px;
-    background-color: var(--mint);
+    background-color: var(--mustard);
 }
 /* section_one ---------------------------------------------------------------- */
 .section_two {
@@ -248,7 +248,7 @@ body {
 .section_three figure.figure_one figcaption ul li.sub_title {
     font-size: 1.2em;
     font-weight: 900;
-    color: var(--mint);
+    color: var(--mustard);
 }
 .section_three figure.figure_one figcaption ul li.sub_title::before {
     content: '';
