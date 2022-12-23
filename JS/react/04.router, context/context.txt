@@ -3,3 +3,16 @@
     ● props의 전송방식을 관리하는 framework (context, useReducer, reduxToolkit)
 
     ● useReducer, reduxToolkit --> 따로 공부할것!!!!!(redux는 따로 공부해야할거 같음!!!!!)
+
+    ● context 생성
+        - let 택배박스이름 = createContext
+
+    ● context 범위
+        !!!!주의!!!! : BrowserRouter 하위 element로 구성되어야 함!!
+        <택배박스이름.Provider value={{물건1, 물건2, 물건3 ···}}>
+            <Comp1/>
+            <Comp2/>
+        </택배박스이름.Provider>
+
+    ● context 사용
+        let {물건1, 물건2, 물건3 ···} = useContext(택배박스이름)

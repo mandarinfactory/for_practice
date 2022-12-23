@@ -7,12 +7,11 @@ import CompPlusContainer from "./CompPlusContainer";
 export let myContext = createContext();
 /* 'myContext'는 export <--> import를 해야하는데 이미 App이 export되어있는곳이 아닌 밖에서 선언해야한다!!! */
 
+let setNumber = () => {
+  return Math.floor(Math.random() * 9)
+}//function_setNumber
+
 const App = () => {
-
-  const setNumber = () => {
-    return Math.floor(Math.random() * 9)
-  }//function_setNumber
-
   return (
     <myContext.Provider value={setNumber}>
       <CompNav />

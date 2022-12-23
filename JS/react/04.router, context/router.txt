@@ -14,3 +14,14 @@
         - BrowserRouter (App전체를 감싸는 element)
             - Routes (주소에 따라서 출력되는 component의 범위)
                 - Route (주소와 component를 연결)
+
+    ● link 구조
+
+        - 제작 :<NavLink to "/링크주소">링크</NavLink>
+
+        - 결과 : <a href="/링크주소" class="active">링크</a>
+
+    ● React Router Hooks
+        
+        - useNavigate, useHistory, userParams
+    
