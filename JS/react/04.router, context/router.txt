@@ -1,3 +1,7 @@
 ■ React Router
     ● SPW(Single Page Web-app)
     └-> 싱글페이지를 주소를 이용해 멀티페이지처럼 구성하는 framework
+
+    ● router 설치
+
+        1. terminal창 새로운창 키고 입력(아니면 react실행을 끄고 하면 된다.) : npm i react-router-dom
