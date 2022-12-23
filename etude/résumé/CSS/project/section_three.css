@@ -48,7 +48,7 @@
 .section_three figure.figure_one:hover::before {
     content: '';
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 53%;
     transform: translate(-50%, -50%);
     width: 300px;
@@ -57,6 +57,7 @@
     background-color: white;
     box-shadow: 2px 2px 7px black;
     opacity: 0.3;
+    z-index: 5;
 }
 .section_three figure.figure_one figcaption ul {
     padding-left: 0;

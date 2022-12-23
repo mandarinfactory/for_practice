@@ -1,6 +1,7 @@
 .section_four .viewbox_museum {
     position: absolute;
     bottom: -2%;
+    z-index: 1;
 }
 .section_four .viewbox_museum ul {
     padding-left: 0;

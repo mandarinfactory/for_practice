@@ -12,3 +12,80 @@
     object-fit: cover;
     object-position: center;
 }
+.section_four figure.figure_one figcaption {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 2px 2px 7px black;
+    transform: translateX(-10000px);
+    z-index: 10;
+}
+.section_four figure.figure_one:hover::before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 480px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 7px black;
+    opacity: 0.3;
+}
+.section_four figure.figure_one figcaption ul {
+    padding-left: 0;
+}
+.section_four figure.figure_one figcaption ul li {
+    line-height: 30px;
+    margin: 10px 20px;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: white;
+    z-index: 10;
+}
+.section_four figure.figure_one figcaption ul li:first-child {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+}
+.section_four figure.figure_one figcaption ul li.sub_title {
+    font-size: 1.2em;
+    font-weight: 900;
+    color: var(--mustard);
+}
+.section_four figure.figure_one figcaption ul li.sub_title::before {
+    content: '';
+    border-left: 3px solid gray;
+    margin-right: 7px;
+}
+.section_four figure.figure_one figcaption ul li a {
+    display: block;
+    width: 130px;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.section_four figure.figure_one figcaption ul li a:hover {
+    color: firebrick;
+}
+.section_four figure.figure_one:hover figcaption {
+    transform: translate(-50%, -50%);
+}
