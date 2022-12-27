@@ -1,0 +1,22 @@
+div.output {
+  position: relative;
+  height: 40%;
+}
+div.output::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  bottom: 0;
+  background-image: url(../../img/output.png);
+  background-size: 100% 100%;
+}
+div.output p {
+  position: relative;
+  width: 87%;
+  height: 78%;
+  top: 12.5%;
+  left: 6.8%;
+  box-sizing: border-box;
+  padding: 5px;
+}/*# sourceMappingURL=output.css.map */

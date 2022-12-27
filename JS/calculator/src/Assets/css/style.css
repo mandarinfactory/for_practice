@@ -8,5 +8,6 @@
 }
 
 body {
-  background: #EEE;
+  background-image: url(../img/paper.jpg);
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */
