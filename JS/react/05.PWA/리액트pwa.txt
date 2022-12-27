@@ -1,0 +1,60 @@
+■ npx 설치
+  npm i, npx -g, yarn --> module을 설치(plugin)
+
+■ 프로젝트 폴더 설치 
+  npx create-react-app calculator 프로젝트명 --template cra-template-pwa
+  
+■ index.js 캐시설정
+  - 개발중
+    serviceWorkerRegistration.unregister();
+  - 개발후 (성능에 큰 차이가 없을 경우 개발중에 변경해도 무방)
+    serviceWorkerRegistration.register();  
+
+■ manifest.json
+  {
+    "version" : "여러분앱의 버전.. 예를 들면 1.12 이런거",
+    "short_name" : "설치후 앱런처나 바탕화면에 표시할 짧은 12자 이름",
+    "name" : "기본이름",
+    "icons" : { 여러가지 사이즈별 아이콘 이미지 경로 },
+    "start_url" : "앱아이콘 눌렀을 시 보여줄 메인페이지 경로",
+    "display" : "standalone 아니면 fullscreen",
+    "orientation": "portrait",
+    "background_color" : "앱 처음 실행시 잠깐 뜨는 splashscreen의 배경색",
+    "theme_color" : "상단 탭색상 등 원하는 테마색상",
+  }
+
+■아이콘설정   
+  https://favicomatic.com/
+  every damn size 옵션을 이용해 아이콘 생성
+
+■ index.html
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.webmanifest">
+
+■ github hosting (https)
+  ● 리액트빌드
+    - npm을 사용해 gh-pages 패키지를 설치.
+      npm i --save gh-pages
+    - package.json homepage 경로추가
+      "homepage": "https://깃허브아이디.github.io/저장소이름",
+    - package.json scrpis키값 추가  
+      "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+      }
+    - 빌드
+      npm run deploy 
+      (최종 에러가 발생시 무시해도 무방함)
+      (!주의 : 기타 호스팅에 재 빌드할경우 homepage속성을 수정하거나 삭제)
+
+  ● 깃허브저장소   
+    - repository 생성 (파일등록을 활성하하기 위해 readme파일 추가)
+    - Add file / Upload files 메뉴를 이용하여 사이트파일 업로드 후 commit change버튼 클릭
+      (! commit change버튼 클릭)
+      (! 드래그앤드롭이 활성화 되지 않을 경우 브라우저 설정 초기화)
+    - 저장소메뉴 / Settings 페이지로 이동후 Pages탭 설정
+      · Source 옵션을 deploy from a branch로  변경
+      · branch 옵션을 main으로 변경  
+      · save 클릭,
+    - 5~10분정도 경과후 해당 사이트로 접속이 가능,
+      주소가 나타나지 않을 경우 새로고침하거나 다시 접속
+     
