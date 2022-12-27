@@ -1,3 +1,4 @@
+import './Assets/'
 
 function App() {
   return (
