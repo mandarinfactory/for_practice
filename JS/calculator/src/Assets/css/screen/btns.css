@@ -1,6 +1,13 @@
 div.btns {
   position: relative;
   height: 50%;
-  margin-left: 5px;
-  background-color: cornflowerblue;
+  top: 0;
+}
+div.btns button {
+  width: 25%;
+  height: 20%;
+}
+div.btns button img {
+  display: inline-block;
+  height: 80%;
 }/*# sourceMappingURL=btns.css.map */

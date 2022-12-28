@@ -1,6 +1,13 @@
 div.btns {
     position: relative;
     height: 50%;
-    margin-left: 5px;
-    background-color: cornflowerblue;
-}
+    top: 0;
+    button {
+        width: 25%;
+        height: 20%;
+        img {
+            display: inline-block;
+            height: 80%;
+        }//img
+    }//button
+}//div.btns
