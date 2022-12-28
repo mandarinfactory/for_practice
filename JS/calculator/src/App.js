@@ -9,16 +9,21 @@ import './Assets/css/screen/btns.css'
 import CompTitle from './Comp/CompTitle.js'
 import CompOutput from './Comp/CompOutput.js'
 import CompBtns from './Comp/CompBtns.js'
+import { createContext, useState } from 'react'
 
+export let AppContext = createContext()
 function App() {
+  let str = useState('')
   return (
-    <section className="app">
-      <CompTitle />
-      <CompOutput />
-      <CompBtns />
-
-    </section>
+    <AppContext.Provider value={{ str }}>
+      <section className="app">
+        <CompTitle />
+        <CompOutput />
+        <CompBtns />
+      </section>
+    </AppContext.Provider>
   );
 }
 
 export default App;
+

@@ -12,9 +12,9 @@ const CompBtn = ({ btnInfo }) => {
     */
     let { src, type, char } = btnInfo
     return (
-        <button>
+        <button className={`${type}`} >
             <img src={require(`../Assets/img/${src}.png`)} alt />
-        </button>
+        </button >
     );
 };
 
