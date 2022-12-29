@@ -13,9 +13,9 @@ import { createContext, useState } from 'react'
 
 export let AppContext = createContext()
 function App() {
-  let str = useState('')
+  let [str, chStr] = useState('')
   return (
-    <AppContext.Provider value={{ str }}>
+    <AppContext.Provider value={{ str, chStr }}>
       <section className="app">
         <CompTitle />
         <CompOutput />
