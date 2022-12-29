@@ -2,12 +2,24 @@ div.btns {
   position: relative;
   height: 50%;
   top: 0;
+  /* click-motion */
 }
 div.btns button {
   width: 25%;
   height: 20%;
+  transition: all 0.3s;
 }
 div.btns button img {
   display: inline-block;
   height: 80%;
+}
+div.btns:active button {
+  transform: scale(0.8);
+}
+div.btns:active button:active {
+  z-index: 1;
+  transform: scale(2);
+}
+div.btns:active button:active img {
+  animation: rubberBand 0.5s;
 }/*# sourceMappingURL=btns.css.map */

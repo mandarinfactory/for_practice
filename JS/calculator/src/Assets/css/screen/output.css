@@ -22,4 +22,7 @@ div.output p {
   left: 6.8%;
   box-sizing: border-box;
   padding: 5px;
+}
+div.output p img {
+  width: 15%;
 }/*# sourceMappingURL=output.css.map */

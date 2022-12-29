@@ -5,9 +5,23 @@ div.btns {
     button {
         width: 25%;
         height: 20%;
+        transition: all 0.3s;
         img {
             display: inline-block;
             height: 80%;
         }//img
     }//button
+    /* click-motion */
+    &:active {
+        button {
+            transform: scale(0.8);
+            &:active {
+                z-index: 1;
+                transform: scale(2);
+                img {
+                    animation: rubberBand 0.5s;
+                }
+            }
+        }
+    }//btns:active
 }//div.btns

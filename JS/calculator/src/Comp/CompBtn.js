@@ -28,8 +28,12 @@ const CompBtn = ({ btnInfo }) => {
             /*  str.slice(0, -0) 첫글자(0)부터 마지막글자(-0)까지! --> 뒤에서 한글자까지라고 하려면 -1로 해놓으면 된다. */
             chStr(str.slice(0, -1))
         } else if (btnType === 'equal') {
-            let theResult = new Function(`return ${str}`)
-            chStr(String(theResult()))
+            try {
+                let theResult = new Function(`return ${str}`)
+                chStr(String(theResult()))
+            } catch {
+                alert('error 입니다. 식을 다시 확인해주십시오.')
+            }//try(일단은 시도해보고)-catch(안되면 여기서 해결!) --> 예외처리구문
         }//if-else
     }//function_setCalc --> 여기서 e는 parameter가 아닌 eventListener로써의 e다!
 
