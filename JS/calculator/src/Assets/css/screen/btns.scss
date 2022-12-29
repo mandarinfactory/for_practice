@@ -18,9 +18,6 @@ div.btns {
             &:active {
                 z-index: 1;
                 transform: scale(2);
-                img {
-                    animation: rubberBand 0.5s;
-                }
             }
         }
     }//btns:active

@@ -24,5 +24,6 @@ div.output p {
   padding: 5px;
 }
 div.output p img {
-  width: 15%;
+  width: 10%;
+  animation: rubberBand 0.5s;
 }/*# sourceMappingURL=output.css.map */

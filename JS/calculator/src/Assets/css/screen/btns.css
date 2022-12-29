@@ -19,7 +19,4 @@ div.btns:active button {
 div.btns:active button:active {
   z-index: 1;
   transform: scale(2);
-}
-div.btns:active button:active img {
-  animation: rubberBand 0.5s;
 }/*# sourceMappingURL=btns.css.map */

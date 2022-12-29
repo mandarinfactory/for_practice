@@ -22,7 +22,8 @@ div.output {
         box-sizing: border-box;
         padding: 5px;
         img {
-            width: 15%;
+            width: 10%;
+            animation: rubberBand 0.5s;
         }
     }//p
 }//output
