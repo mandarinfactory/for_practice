@@ -1,0 +1,15 @@
+.error {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.error img {
+  position: absolute;
+  max-width: 90%;
+  max-height: 90%;
+  animation: pulse 1.5s;
+}/*# sourceMappingURL=error.css.map */

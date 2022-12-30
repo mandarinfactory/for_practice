@@ -97,6 +97,26 @@ body {
     font-size: 1.0em;
     color: var(--mustard);
 }
+.right div.menu_box {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 300px;
+    height: 455px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 15;
+}
+.right div.menu_box button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
 .right #particles-js {
     position: absolute;
     z-index: 1;

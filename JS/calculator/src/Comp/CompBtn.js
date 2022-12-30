@@ -14,7 +14,7 @@ let [1,2,3] = arr
 */
 
 const CompBtn = ({ btnInfo }) => {
-    let { str, chStr } = useContext(AppContext);
+    let { str, chStr, chShowErr } = useContext(AppContext);//택배박스에서 가져오기!
     let { src, type, char } = btnInfo
 
     let setCalc = e => {
@@ -32,7 +32,7 @@ const CompBtn = ({ btnInfo }) => {
                 let theResult = new Function(`return ${str}`)
                 chStr(String(theResult()))
             } catch {
-                alert('error 입니다. 식을 다시 확인해주십시오.')
+                chShowErr(true)
             }//try(일단은 시도해보고)-catch(안되면 여기서 해결!) --> 예외처리구문
         }//if-else
     }//function_setCalc --> 여기서 e는 parameter가 아닌 eventListener로써의 e다!
