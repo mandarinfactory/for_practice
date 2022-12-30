@@ -1,10 +1,38 @@
-.section_four {
-
-}
 .section_four figure.figure_one {
     width: 100%;
     height: 100%;
-    margin: 0;
+    margin: 0 auto;
+}
+@media screen and (min-width:1200px) and (max-width:1300px){
+    .section_four figure.figure_one {
+        width: 80%;
+        height: 70%;
+        margin: 100px auto;
+    }
+}
+@media screen and (min-width:900px) and (max-width:1200px){
+    .section_four figure.figure_one {
+        position: absolute;
+        left: -50%;
+        width: 200%;
+        height: 70%;
+        margin: 200px 0;
+    }
+    .section_four figure.figure_one img{
+        object-fit: contain;
+    }
+}
+@media screen and (min-width:700px) and (max-width:900px){
+    .section_four figure.figure_one {
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        height: 50%;
+        margin: 200px 0;
+    }
+    .section_four figure.figure_one img{
+        object-fit: contain;
+    }
 }
 .section_four figure.figure_one img {
     width: 100%;
@@ -14,7 +42,7 @@
 }
 .section_four figure.figure_one figcaption {
     position: absolute;
-    top: 34%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
@@ -34,7 +62,7 @@
 .section_four figure.figure_one:hover::before {
     content: '';
     position: absolute;
-    top: 34%;
+    top: 35%;
     left: 53%;
     transform: translate(-50%, -50%);
     width: 300px;
@@ -89,3 +117,26 @@
 .section_four figure.figure_one:hover figcaption {
     transform: translate(-50%, -50%);
 }
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    .section_four figure.figure_one figcaption {
+        width: 250px;
+    }
+    .section_four figure.figure_one figcaption ul li {
+        font-size: 0.7em;
+    }
+    .section_four figure.figure_one figcaption ul li.sub_title {
+        font-size: 1em;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .section_four figure.figure_one figcaption {
+        width: 200px;
+    }
+    .section_four figure.figure_one figcaption ul li {
+        font-size: 0.7em;
+    }
+    .section_four figure.figure_one figcaption ul li.sub_title {
+        font-size: 0.8em;
+    }
+}
+/* section_four -------------------------------------------------------------- */
