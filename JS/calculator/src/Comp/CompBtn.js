@@ -14,14 +14,19 @@ let [1,2,3] = arr
 */
 
 const CompBtn = ({ btnInfo }) => {
-    let { str, chStr, chShowErr } = useContext(AppContext);//택배박스에서 가져오기!
+    let { str, chStr, chShowErr, chShowLong } = useContext(AppContext);//택배박스에서 가져오기!
     let { src, type, char } = btnInfo
 
     let setCalc = e => {
         let btnType = e.currentTarget.getAttribute('data-type')
         let btnChar = e.currentTarget.value
         if (btnType === 'string') {
-            chStr(str += btnChar);
+            if (str.length < 18) {
+                chStr(str += btnChar);
+            } else {
+                chShowLong(true)
+            }//if-else
+
         } else if (btnType === 'clear') {
             chStr('');
         } else if (btnType === 'del') {
