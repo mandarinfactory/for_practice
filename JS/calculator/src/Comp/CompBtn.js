@@ -49,7 +49,7 @@ const CompBtn = ({ btnInfo }) => {
 
     return (
         <button onClick={setCalc} data-type={type} value={char}>
-            <img src={require(`../Assets/img/${src}.png`)} alt />
+            <img src={require(`../Assets/img/${src}.png`)} alt="" />
         </button >
     );
 };

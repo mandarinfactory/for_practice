@@ -11,7 +11,7 @@ const CompLong = () => {
     }//function_longErr
     return (
         <figure className='long' onClick={longErr}>
-            <img src={require('../Assets/img/sorry.png')} alt />
+            <img src={require('../Assets/img/sorry.png')} alt="" />
         </figure>
     );
 };

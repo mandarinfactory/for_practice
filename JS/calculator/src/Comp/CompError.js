@@ -11,7 +11,7 @@ const CompError = () => {
     }//function_hideErr
     return (
         <figure className='error' onClick={hideErr}>
-            <img src={require('../Assets/img/oops.png')} alt />
+            <img src={require('../Assets/img/oops.png')} alt="" />
         </figure>
     );
 };
