@@ -5,7 +5,6 @@ import { charArr, imgArr } from '../Store/store.js';
 const CompOutput = () => {
     let { str } = useContext(AppContext)
     let strArr = str.split('')
-    console.log(strArr);
     return (
         <div className="output">
             <p>

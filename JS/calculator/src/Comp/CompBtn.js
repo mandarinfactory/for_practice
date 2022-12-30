@@ -35,7 +35,9 @@ const CompBtn = ({ btnInfo }) => {
         } else if (btnType === 'equal') {
             try {
                 let theResult = new Function(`return ${str}`)
-                chStr(String(theResult()))
+                if (theResult() !== undefined) {
+                    chStr(String(theResult()))
+                }
             } catch {
                 chShowErr(true)
             }//try(일단은 시도해보고)-catch(안되면 여기서 해결!) --> 예외처리구문
