@@ -24,6 +24,7 @@
     <script src="./JS/plugin/jquery.viewbox.js"></script>
     <script src="./JS/plugin/viewbox_section.js"></script>
     <!-- src_JS(plugins) -->
+    <script src="./JS/apps.js"></script>
     <script src="./JS/store.js"></script>
     <script src="./JS/common.js"></script>
     <script src="https://kit.fontawesome.com/7d1f9ca95d.js" crossorigin="anonymous"></script>
@@ -63,18 +64,35 @@
             <li class="title_font address">hoojunee@gmail.com</li>
             <li class="title_font address">tel.010-9837-0037</li>
         </ul>
+        <i class="fa-solid fa-bars list"></i>
         <div class="menu_box">
-            <i class="fa-solid fa-bars list"></i>
             <i class="fa-solid fa-xmark close"></i>
-            <button class="active">About me</button>
-            <button>Project01</button>
-            <button>Project02</button>
+            <button onclick="handleMove('_two')" class="active">About me</button>
+            <button onclick="handleMove('_three')">Project01</button>
+            <button onclick="handleMove('_four')">Project02</button>
             <button>Project03</button>
             <button>Project04</button>
         </div>
         <div id="particles-js"></div>
         <script src="./JS/particles.js"></script>
     </div>
+    <script>
+        document.querySelector('div.right i.list').addEventListener('click', e => {
+            e.currentTarget.style.display = 'none';
+            document.querySelector('.right div.menu_box').style.transform = 'translate(0)'
+        })//list_click시
+        document.querySelector('div.right div.menu_box i.close').addEventListener('click', () => {
+            document.querySelector('.right div.menu_box').style.transform = 'translate(1000%)'
+            document.querySelector('.right i.list').style.display = 'block'
+        })//close_click시
+        function handleMove(seq) {	// seq 값을 인자로 가지는 handleMove라는 이름의 함수
+            let offset = $(".section" + seq).offset();	// 이동하고자하는 태그의 좌표를 찍어주는 offset변수 생성
+            /*  html,body 영역에서 이동할 태그인 offset의 top 부분으로 scroll하는 animate */
+            $('html, body').animate({
+                scrollTop: offset.top
+            }, 100); //0.4초 느리게
+        }//function_handleMove
+    </script>
     <div class="main">
         <section class="section_one"></section>
         <section class="section_two">
