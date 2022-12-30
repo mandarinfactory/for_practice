@@ -7,6 +7,10 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.error.active {
+  opacity: 0;
+  transition: opacity 1s;
+}
 .error img {
   position: absolute;
   max-width: 90%;
