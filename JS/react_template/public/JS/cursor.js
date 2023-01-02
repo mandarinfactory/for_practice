@@ -8,7 +8,7 @@ document.querySelectorAll('a,button').forEach(v => {
         document.querySelector('.cursor').classList.add('hover')
     })//addEventListener
     v.addEventListener('mouseleave', () => {
-        document.querySelector('.cursor').classList.remove('hover')
+        document.querySelector('.cursor').classList.remove('hover active')
     })//addEventListener
     /* mouseenter/leave --------------------------------------------------- */
     v.addEventListener('mouseup', () => {
