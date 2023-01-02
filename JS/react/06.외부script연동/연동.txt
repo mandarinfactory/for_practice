@@ -1,0 +1,8 @@
+■ 외부 script 연동
+    └-> npm install --save react-helmet
+
+    import { Helmet } from "react-helmet";
+    
+    <Helmet>
+      <script src={`${process.env.PUBLIC_URL}/path/to/resource.js`} type="text/javascript" />
+    </Helmet>

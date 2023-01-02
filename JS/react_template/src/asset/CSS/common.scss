@@ -1,0 +1,5 @@
+@import 'mixin';
+
+#root {
+    display: inline;
+} // --> CSS로 없는걸로 치게 된다! element자체가 없어지지는 않음!
