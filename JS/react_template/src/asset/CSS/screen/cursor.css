@@ -1,3 +1,27 @@
 * {
-  cursor: none;
+  /*   cursor: none; */
+}
+
+body {
+  background-color: white;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  top: -10000px;
+  left: -10000px;
+  width: 70px;
+  height: 70px;
+  box-sizing: border-box;
+  border: 1px solid white;
+  background-color: #333;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 100;
+  mix-blend-mode: difference;
+  transition: transform 0.3s, border-radius 0.3s;
+}
+.cursor.hover {
+  transform: translate(-50%, -50%) rotate(720deg) scale(0.7);
+  border-radius: 50%;
 }/*# sourceMappingURL=cursor.css.map */
