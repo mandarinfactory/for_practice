@@ -8,5 +8,10 @@
 }
 
 body {
-  background: #EEE;
+  font-family: "Montserrat", "Noto Sans Kr", sans-serif;
+  font-size: 15px;
+  color: #666;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,51 @@
+* {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
+}
+
+body {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #444;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+
+:root {
+  --orange:#f68e56;
+  --blue:#0272bc;
+  --navy:#10385c;
+  --dark:#18222b;
+}
+
+html {
+  margin-top: 0 !important;
+}
+
+#wpadminbar {
+  display: none;
+}
+
+body {
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1100px) {
+  body {
+    padding-right: 120px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  body {
+    padding-top: 70px;
+  }
+}
+body .body-wrap {
+  position: relative;
+  z-index: 1;
+  background: #FFF;
+}/*# sourceMappingURL=style.css.map */
