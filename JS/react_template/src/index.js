@@ -11,6 +11,7 @@ import './asset/CSS/screen/header.css'
 import './asset/CSS/screen/visual.css'
 import './asset/CSS/screen/section1.css'
 import './asset/CSS/screen/section2.css'
+import './asset/CSS/screen/section6.css'
 /* screen CSS rel ----------------------------------------------- */
 
 /* adjustment CSS rel ------------------------------------------- */

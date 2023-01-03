@@ -4,6 +4,7 @@ import CompHeader from "./components/CompHeader";
 import CompVisual from "./components/CompVisual";
 import CompSection1 from "./components/CompSection1";
 import CompSection2 from "./components/CompSection2";
+import CompSection6 from "./components/CompSection6";
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
       <CompVisual />
       <CompSection1 />
       <CompSection2 />
+      <CompSection6 />
     </>
   );
 };
