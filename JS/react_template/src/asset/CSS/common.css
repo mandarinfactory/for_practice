@@ -1,0 +1,25 @@
+@charset "UTF-8";
+#root {
+  display: inline;
+}
+
+section {
+  height: 100%;
+}
+
+.sticky_container {
+  /* height --> script로 제어! */
+}
+.sticky_container .sticky {
+  /* height --> script로 제어! */
+  box-sizing: border-box;
+}
+.sticky_container .sticky .sticky_inner {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  background-color: crimson;
+}
+.sticky_container .sticky .sticky_inner section {
+  flex: 1;
+}/*# sourceMappingURL=common.css.map */

@@ -3,7 +3,7 @@ window.addEventListener('mousemove', () => {
     document.querySelector('.cursor').style.top = `${window.mausY}px`
 })//mousemove_event
 
-document.querySelectorAll('a,button').forEach(v => {
+document.querySelectorAll('a, button').forEach(v => {
     v.addEventListener('mouseenter', () => {
         document.querySelector('.cursor').classList.add('hover')
     })//addEventListener

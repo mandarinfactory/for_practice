@@ -21,7 +21,7 @@ window.addEventListener('mousemove', e => {
     window.pageY = e.pageY // document 기준의 mouse좌표
 })//--> mousemove할때!
 
-/* Smooth Scroll ----------------------------------------------------------------------------- */
+/* Smooth_Scroll ----------------------------------------------------------------------------- */
 window.isMobile = false;
 window.smoothScroll = true
 var scrSpeed = 0;
@@ -33,9 +33,18 @@ if (navigator.platform) {
 
 window.addEventListener("mousewheel", function (e) {
     if (!smoothScroll) { return false }
-    e.preventDefault(); /* 브라우져 휠의 사용성을 없앤다 // 다만 passive : false를 써야 작동이 가능*/
+    e.preventDefault(); /* 브라우져 휠의 사용성을 없앤다 // 다만 passive : false를 써야 작동이 가능 */
     delta = e.wheelDeltaY / -120; /* 휠방향과 scrY와의 부호일치 */
     scrSpeed += 10 * delta;
 },
     { passive: false }
 );
+
+setInterval(function () {
+    if (isMobile || !smoothScroll) return false
+    window.scrollTo({
+        top: scrY + scrSpeed, // behavior 랑 충돌이 나기에 수동값과 behavior는 공존할 수 없다.
+    });
+    scrSpeed *= 0.9;
+}, 20);
+
