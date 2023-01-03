@@ -9,10 +9,14 @@ import './asset/CSS/common.css'
 import './asset/CSS/screen/cursor.css'
 import './asset/CSS/screen/header.css'
 import './asset/CSS/screen/visual.css'
-import './asset/CSS/screen/section1.css'
-import './asset/CSS/screen/section2.css'
-import './asset/CSS/screen/section6.css'
 /* screen CSS rel ----------------------------------------------- */
+import './asset/CSS/screen/sections/section1.css'
+import './asset/CSS/screen/sections/section2.css'
+import './asset/CSS/screen/sections/section3.css'
+import './asset/CSS/screen/sections/section4.css'
+import './asset/CSS/screen/sections/section5.css'
+import './asset/CSS/screen/sections/section6.css'
+/* screen/sections CSS rel ----------------------------------------------- */
 
 /* adjustment CSS rel ------------------------------------------- */
 import { BrowserRouter } from 'react-router-dom';
