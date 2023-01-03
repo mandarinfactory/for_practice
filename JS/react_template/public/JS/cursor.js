@@ -19,3 +19,15 @@ document.querySelectorAll('a,button').forEach(v => {
     })//addEventListener
     /* mouseup/down ------------------------------------------------------- */
 })//forEach
+
+document.addEventListener('mouseup', () => {
+    document.querySelector('.cursor').classList.remove('active')
+})//addEventListener
+document.addEventListener('mouseleave', () => {
+    document.querySelector('.cursor').style.display = 'none'
+})//addEventListener
+document.addEventListener('mouseenter', () => {
+    document.querySelector('.cursor').style.display = 'block'
+})//addEventListener
+/* mouseup/leave/enter ------------------------------------------------------- */
+
