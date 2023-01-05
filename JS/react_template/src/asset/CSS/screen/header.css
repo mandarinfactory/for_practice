@@ -42,11 +42,29 @@ header h1 {
 /* ------------------------------------------------------------------------------------------------ */
 .gnb_sm {
   position: fixed;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.gnb_sm ul li {
+  margin: 10px 0;
+}
+.gnb_sm ul li a {
+  text-transform: uppercase;
+  color: white;
+  opacity: 0.8;
+  font-size: 1.2em;
+  font-weight: 100;
+  transition: all 0.3s;
+}
+.gnb_sm ul li a:hover {
+  opacity: 1;
+  font-size: 1.3em;
 }
 @media screen and (min-width: 1000px) {
   .gnb_sm {
@@ -61,7 +79,41 @@ header h1 {
   height: 50px;
   margin-right: 20px;
   z-index: 12;
+  /* button active motion ----------------------------------------------------------------------- */
+  transition: transform 0.3s;
+  transition-delay: 1s;
+}
+.mbtn span {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 40px;
+  height: 2px;
   background-color: white;
+  transition: margin-top 0.3s, opacity 0.3s, transform 0.3s;
+  transition-delay: 0.5s, 0.5s, 0s;
+}
+.mbtn span.bar1 {
+  margin-top: -10px;
+}
+.mbtn span.bar3 {
+  margin-top: 10px;
+}
+.mbtn.active {
+  transform: rotate(90deg);
+}
+.mbtn.active span {
+  margin-top: 0;
+  transition-delay: 0.5s, 0.5s, 1s;
+}
+.mbtn.active span.bar1 {
+  transform: rotate(45deg);
+}
+.mbtn.active span.bar2 {
+  opacity: 0;
+}
+.mbtn.active span.bar3 {
+  transform: rotate(-45deg);
 }
 @media screen and (min-width: 1000px) {
   .mbtn {
