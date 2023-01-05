@@ -1,15 +1,24 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import CompMenu from './CompMenu';
 
 const CompHeader = () => {
     return (
-        <header>
-            <nav className='gnb'>
-                <NavLink to="/abcd">
-                    주우소오카아안
-                </NavLink>
-            </nav>
-        </header>
+        <>
+            <header>
+                <h1>로오오오고오오오</h1>
+                <nav className='gnb gnb_lg'>
+                    <CompMenu />
+                </nav>
+                <button className='mbtn'>
+                    <span className='bar1'></span>
+                    <span className='bar2'></span>
+                    <span className='bar3'></span>
+                </button>
+                <nav className="gnb gnb_sm">
+                    <CompMenu />
+                </nav>
+            </header>
+        </>
     );
 };
 

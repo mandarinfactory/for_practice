@@ -10,15 +10,15 @@
 body {
   font-family: "Montserrat", "Song Myung KR", sans-serif;
   font-size: 16px;
-  color: #444;
+  color: #222;
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
 }
 
 :root {
-  --orange:#f68e56;
-  --blue:#0272bc;
-  --navy:#10385c;
-  --dark:#18222b;
+  --blue: #0181e7;
+  --dark: #333;
+  --purple: #8279ee;
+  --pink: #da5480;
 }/*# sourceMappingURL=style.css.map */

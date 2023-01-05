@@ -1,5 +1,5 @@
 * {
-  /*   cursor: none; */
+    cursor: none;
 }
 body {
     background-color: white;
@@ -22,14 +22,14 @@ body {
         animation: cursor 0.3s infinite;
     }
     &.hover {
-        transform: translate(-50%, -50%) rotate(360deg) scale(0.7);
         border-radius: 50%;
+        transform: translate(-50%, -50%) rotate(360deg) scale(0.7);
         &::before {
             border-radius: 50%;
-        }//.hover::before
-    }//cursor.hover
+        } //.hover::before
+    } //cursor.hover
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
@@ -38,8 +38,8 @@ body {
         height: 150%;
         border: 1px solid white;
         transition: all 0.3s;
-    }//::before
-}//cursor
+    } //::before
+} //cursor
 
 @keyframes cursor {
     0% {
@@ -48,4 +48,4 @@ body {
     100% {
         transform: translate(-50%, -50%) rotate(360deg) scale(0.7);
     }
-}//animation_cursor
+} //animation_cursor

@@ -19,7 +19,7 @@ const App = () => {
 
   useEffect(() => {
     const scriptArr = [
-      'common.js', 'cursor.js', 'layout.js'
+      'common.js', 'cursor.js', 'layout.js', 'header.js'
     ]//scriptArr
 
     scriptArr.forEach(v => {
@@ -28,6 +28,8 @@ const App = () => {
       script.defer = true;
       document.body.appendChild(script);
     })//forEach
+
+
   }, [])//useEffect  --> helmet 안쓰고 하려면 일일히 따로 변수 선언해서 해아함!
   return (
     <>
