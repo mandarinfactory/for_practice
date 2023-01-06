@@ -1,8 +1,8 @@
 import React from 'react';
 
-const CompStickyContainer = ({children}) => {
+const CompStickyContainer = ({ children }) => {
   return (
-    <div className='sticky-container'>
+    <div className='sticky-container scr-target3'>
       {children}
     </div>
   );

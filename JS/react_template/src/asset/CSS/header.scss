@@ -122,13 +122,14 @@ h1 {
     opacity: 1;
     pointer-events: all;
     ul {
+      transition-delay: 1.5s !important;
       opacity: 1;
     } //.active ul
   } //.active
   ul {
     opacity: 0;
     transition: all 0.3s;
-    transition-delay: 2s;
+    transition-delay: 0s !important;
   } //ul
 } //gnb-sm
 
