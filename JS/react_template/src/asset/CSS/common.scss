@@ -1,24 +1,30 @@
-#root {
-    display: inline;
-} // --> CSS로 없는걸로 치게 된다! element자체가 없어지지는 않음!
-
-section {
-    height: 100%;
+@import 'mixin';
+body{
+  background: #FFF;
+}
+#root{
+  display: inline;
+}
+section{
+  height: 100%;
 }
 
-.sticky_container {
-    /* height --> script로 제어! */
-    .sticky {
-        /* height --> script로 제어! */
-        box-sizing: border-box;
-        .sticky_inner {
-            display: flex;
-            width: 300%;
-            height: 100%;
-            background-color: crimson;
-            section {
-                flex: 1;
-            } //section --> sticky내에 있는 section들
-        } //sticky_inner
-    } //sticky
-} //sticky_container
+.sticky-container{
+  /* height:스크립트제어 */
+  .sticky{
+    /* height:스크립트제어 */
+    overflow: hidden;
+    position: sticky;
+    top:0;
+    box-sizing: border-box;
+    .sticky-inner{
+      display: flex;
+      width: 300%;
+      height: 100%;
+      background: #CCC;
+      section{
+        flex: 1;
+      }//section
+    }//sticky-inner
+  }//sticky
+}//sticky-container

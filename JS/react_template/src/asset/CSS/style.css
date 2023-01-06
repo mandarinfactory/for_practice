@@ -8,17 +8,16 @@
 }
 
 body {
-  font-family: "Montserrat", "Song Myung KR", sans-serif;
-  font-size: 16px;
-  color: #222;
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  color: #666;
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
 }
 
 :root {
-  --blue: #0181e7;
-  --dark: #333;
-  --purple: #8279ee;
-  --pink: #da5480;
+  --blue:#0181e7;
+  --purpple:#827dea;
+  --pink:#da5480;
 }/*# sourceMappingURL=style.css.map */

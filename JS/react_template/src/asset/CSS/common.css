@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  background: #FFF;
+}
+
 #root {
   display: inline;
 }
@@ -7,19 +11,22 @@ section {
   height: 100%;
 }
 
-.sticky_container {
-  /* height --> script로 제어! */
+.sticky-container {
+  /* height:스크립트제어 */
 }
-.sticky_container .sticky {
-  /* height --> script로 제어! */
+.sticky-container .sticky {
+  /* height:스크립트제어 */
+  overflow: hidden;
+  position: sticky;
+  top: 0;
   box-sizing: border-box;
 }
-.sticky_container .sticky .sticky_inner {
+.sticky-container .sticky .sticky-inner {
   display: flex;
   width: 300%;
   height: 100%;
-  background-color: crimson;
+  background: #CCC;
 }
-.sticky_container .sticky .sticky_inner section {
+.sticky-container .sticky .sticky-inner section {
   flex: 1;
 }/*# sourceMappingURL=common.css.map */
