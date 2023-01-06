@@ -68,6 +68,9 @@ header h1 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.gnb_sm ul {
+  position: relative;
+}
 .gnb_sm ul li {
   margin: 10px 0;
 }
@@ -96,6 +99,11 @@ header h1 {
 }
 .gnb_sm ul li a:hover::before, .gnb_sm ul li a.active::before {
   width: 100%;
+}
+.gnb_sm video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (min-width: 1000px) {
   .gnb_sm {

@@ -9,6 +9,10 @@ const CompHeader = () => {
                 <nav className='gnb gnb_lg'>
                     <CompMenu />
                 </nav>
+                <nav className='gnb gnb_sm'>
+                    <video src={require(`../asset/video/nav.mp4`)} />
+                    <CompMenu />
+                </nav>
                 <button className='mbtn'>
                     <span className='bar1'></span>
                     <span className='bar2'></span>

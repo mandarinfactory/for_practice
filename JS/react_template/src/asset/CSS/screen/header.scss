@@ -71,6 +71,7 @@ header {
     height: 100%;
     background-color: rgba($color: #000000, $alpha: 0.5);
     ul {
+        position: relative;
         li {
             margin: 10px 0;
             a {
@@ -102,6 +103,11 @@ header {
             } //a
         } //li
     } //ul
+    video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
     @media screen and (min-width: 1000px) {
         display: none;
     } //lg

@@ -3,10 +3,6 @@ window.addEventListener('mousemove', () => {
     document.querySelector('.cursor').style.top = `${window.mausY}px`
 })//mousemove_event
 
-window.addEventListener('touchstart', () => {
-    document.querySelector('.cursor').style.left = `-1000000px`
-})//touchstart
-
 document.querySelectorAll('a, button').forEach(v => {
     v.addEventListener('mouseenter', () => {
         document.querySelector('.cursor').classList.add('hover')
