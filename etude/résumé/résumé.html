@@ -33,14 +33,74 @@
 
 <body>
     <div class="right">
-        <div class="menu_box">
-            <button>About Me</button>
-            <button>Project01</button>
-            <button>Project02</button>
-            <button>Project03</button>
-            <button>Project04</button>
-            <button>Project05</button>
+        <div class="mbtn">
+            <i class="fa-solid fa-bars-staggered bars"></i>
+            <i class="fa-solid fa-xmark close"></i>
         </div>
+        <div class="menu_box">
+            <button class="button0">HOME</button>
+            <button class="button1">About Me</button>
+            <button class="button2">Project01</button>
+            <button class="button3">Project02</button>
+            <button class="button4">Project03</button>
+            <button class="button5">Project04</button>
+            <button class="button6">Project05</button>
+        </div>
+        <script>
+            const button0 = document.querySelector('.menu_box .button0')
+            const button1 = document.querySelector('.menu_box .button1')
+            const button2 = document.querySelector('.menu_box .button2')
+            const button3 = document.querySelector('.menu_box .button3')
+            const button4 = document.querySelector('.menu_box .button4')
+            const button5 = document.querySelector('.menu_box .button5')
+            const button6 = document.querySelector('.menu_box .button6')
+            const barBtn = document.querySelector('.mbtn .bars')
+            const closeBtn = document.querySelector('.mbtn .close')
+            const menuBox = document.querySelector('.menu_box')
+            const menuBtn = Array.from(document.querySelectorAll('.menu_box button'))
+            const handleClick = e => {
+                menuBtn.forEach(v => {
+                    v.classList.remove('active')
+                })
+                e.target.classList.add('active')
+            }//function_handleClick
+
+            barBtn.addEventListener('click', e => {
+                e.target.classList.add('active')
+                closeBtn.classList.add('active')
+                menuBox.classList.add('active')
+            })//addEventListener
+            closeBtn.addEventListener('click', e => {
+                e.target.classList.remove('active')
+                barBtn.classList.remove('active')
+                menuBox.classList.remove('active')
+            })//addEventListener
+            menuBtn.forEach(e => {
+                e.addEventListener('click', handleClick)
+            })//forEach
+
+            button0.addEventListener('click', e => {
+                document.querySelector('.section_one').scrollIntoView({behavior:'smooth', block:'center'})
+            })//addEventListener
+            button1.addEventListener('click', e => {
+                document.querySelector('.section_two').scrollIntoView({behavior:'smooth', block:'center'})
+            })//addEventListener
+            button2.addEventListener('click', e => {
+                document.querySelector('.section_three').scrollIntoView({behavior:'smooth', block:'center'})
+            })//addEventListener
+            button3.addEventListener('click', e => {
+                document.querySelector('.section_four').scrollIntoView({behavior:'smooth', block:'center'})
+            })//addEventListener
+            button4.addEventListener('click', e => {
+                document.querySelector('.section_five').scrollIntoView({behavior:'smooth', block:'center'})
+            })//addEventListener
+            button5.addEventListener('click', e => {
+                document.querySelector('.section_six').scrollIntoView({behavior:'smooth', block:'center'})
+            })//addEventListener
+            button6.addEventListener('click', e => {
+                document.querySelector('.section_seven').scrollIntoView({behavior:'smooth', block:'center'})
+            })//addEventListener
+            </script>
         <ul>
             <li class="small">
                 하늘같이 높고 넓은 사람이 되라는 이름처럼
@@ -134,12 +194,12 @@
                         <figure>
                             <a href="./IMG/sunshine/template_${v.path}.jpg">
                                 <img src="./IMG/sunshine/template_${v.path}.jpg" alt>
-                            </a>
-                        </figure>
-                    </li>
-                    `)//append
-                })//forEach
-            </script>
+                                </a>
+                                </figure>
+                                </li>
+                                `)//append
+                            })//forEach
+                            </script>
         </section>
 
         <section class="section_four">
@@ -173,12 +233,12 @@
                         <figure>
                             <a href="./IMG/museum/museum_${v.path}.jpg">
                                 <img src="./IMG/museum/museum_${v.path}.jpg" alt>    
-                            </a>    
-                        </figure>    
-                    </li>
-                    `)//append
-                })//forEach
-            </script>
+                                </a>    
+                                </figure>    
+                                </li>
+                                `)//append
+                            })//forEach
+                            </script>
         </section>
     </div>
     <!--------------------------- slider_plugin ---------------------------->
@@ -199,7 +259,7 @@
             // the browser's width is less than 600, the fallback will kick in.
             direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
         });
-    </script>
+        </script>
 </body>
 
 </html>
