@@ -23,21 +23,6 @@
 .viewbox_section ul li figure a img {
     width: 100%;
 }
-/* @media screen and (min-width:1000px) {
-    .viewbox_section ul li {
-        width: 25%;
-    }
-}
-@media screen and (min-width:600px) and (max-width:1000px) {
-    .viewbox_section ul li {
-        width: 50%;
-    }
-}
-@media screen and (max-width:600px) {
-    .viewbox_section ul li {
-        width: 100%;
-    }
-}*/
 /* motions ----------------------------------------- */
 .viewbox_section ul li figure a {
     overflow: hidden;

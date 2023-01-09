@@ -33,11 +33,19 @@
 
 <body>
     <div class="right">
+        <div class="menu_box">
+            <button>About Me</button>
+            <button>Project01</button>
+            <button>Project02</button>
+            <button>Project03</button>
+            <button>Project04</button>
+            <button>Project05</button>
+        </div>
         <ul>
-            <li class="title_font small">
+            <li class="small">
                 하늘같이 높고 넓은 사람이 되라는 이름처럼
             </li>
-            <li class="title_font small">
+            <li class="small">
                 항상 깊고 많은 호기심을 갖고 개발하고 있습니다.
             </li>
             <li class="title_font">
@@ -49,7 +57,7 @@
             <li class="title_font">
                 성장하는 개발자 <b class="white_color">이호준</b>이라고 합니다.
             </li>
-            <li class="title_font box">
+            <li class="box">
                 <span>Contact</span>
                 <a target="_blank" href="https://github.com/mandarinfactory">
                     <i class="fa-brands fa-github fa-sm"></i>
@@ -61,59 +69,33 @@
                     <i class="fa-solid fa-mobile fa-sm"></i>
                 </a>
             </li>
-            <li class="title_font address">hoojunee@gmail.com</li>
-            <li class="title_font address">tel.010-9837-0037</li>
+            <li class="address">hoojunee@gmail.com</li>
+            <li class="address">tel.010-9837-0037</li>
         </ul>
-        <i class="fa-solid fa-bars list"></i>
-        <div class="menu_box">
-            <i class="fa-solid fa-xmark close"></i>
-            <button onclick="handleMove('_two')" class="active">About me</button>
-            <button onclick="handleMove('_three')">Project01</button>
-            <button onclick="handleMove('_four')">Project02</button>
-            <button>Project03</button>
-            <button>Project04</button>
-        </div>
         <div id="particles-js"></div>
         <script src="./JS/particles.js"></script>
     </div>
-    <script>
-        document.querySelector('div.right i.list').addEventListener('click', e => {
-            e.currentTarget.style.display = 'none';
-            document.querySelector('.right div.menu_box').style.transform = 'translate(0)'
-        })//list_click시
-        document.querySelector('div.right div.menu_box i.close').addEventListener('click', () => {
-            document.querySelector('.right div.menu_box').style.transform = 'translate(1000%)'
-            document.querySelector('.right i.list').style.display = 'block'
-        })//close_click시
-        function handleMove(seq) {	// seq 값을 인자로 가지는 handleMove라는 이름의 함수
-            let offset = $(".section" + seq).offset();	// 이동하고자하는 태그의 좌표를 찍어주는 offset변수 생성
-            /*  html,body 영역에서 이동할 태그인 offset의 top 부분으로 scroll하는 animate */
-            $('html, body').animate({
-                scrollTop: offset.top
-            }, 100); //0.4초 느리게
-        }//function_handleMove
-    </script>
     <div class="main">
         <section class="section_one"></section>
         <section class="section_two">
-            <div class="title_font about_first">
+            <div class="about_first">
                 About me
             </div>
-            <ul class="title_font about_main_first">
+            <ul class="about_main_first">
                 <li>몇번이고 벽을 만나 부딪힌 적도, 힘든적도 많지만,</li>
                 <li>직접 코딩을 통해 나오는 결과에 <b class="bg_navy">성취감</b>을 느끼고</li>
                 <li>새로운것을 배움에 있어 <b class="bg_navy">즐거움</b>이 항상 생깁니다.</li>
                 <li>깃헙에 주중 한 commit을 하는 습관을 꾸준하게 유지하며,</li>
                 <li>늘 <b class="bg_navy">안주하지 않기 위해</b> 노력하고 있습니다.</li>
             </ul>
-            <ul class="title_font about_main_second">
+            <ul class="about_main_second">
                 <h3>Technical</h3>
                 <li>현재 HTML5, CSS3, Sass, JavaScript(jQuery, ECMA6)을 수학했으며,</li>
                 <li>배운것을 바탕으로 각각 다른 디자인으로 2개의 project 만들었고,</li>
                 <li>framework인 react도 공부하여 이에 따른 project들도 만들었습니다.</li>
                 <li>또한, 독학으로 figma, git 그리고 JavaScript를 깊이있게 공부하고 있습니다.</li>
             </ul>
-            <ul class="title_font about_main_third">
+            <ul class="about_main_third">
                 <h3>Personal</h3>
                 <li>저는 현재 28살이고 지난 15년부터 20년까지 군복무를 제외하고</li>
                 <li>4년동안 유니클로(현대백화점 중동점, 여의도 IFC몰점)에서 근무했으며, </li>
@@ -123,7 +105,7 @@
             </ul>
         </section>
         <section class="section_three">
-            <div class="title_font project">Project01</div>
+            <div class="project">Project01</div>
             <figure class="figure_one">
                 <img src="./IMG/sunshine/mockup_sunshine.jpg" alt>
                 <figcaption>
@@ -135,7 +117,7 @@
                         <li>HTML5, CSS3, jQuery</li>
                         <li class="sub_title">작업시간 및 구조</li>
                         <li>3주 · 반응형, 역동적인 구조</li>
-                        <li class="sub_title">작업사유</li>
+                        <li class="sub_title">작업과정</li>
                         <li>햇빛과 어린아이들을 주제로 만들고 싶었고,
                             전체적인 테마를 밝고 개구쟁이같은 느낌을 주고 싶어서 밝은 색과 다채로운 이미지,
                             패턴들을 이용해서 홈페이지를 만들게 되었습니다.</li>
@@ -161,7 +143,7 @@
         </section>
 
         <section class="section_four">
-            <div class="title_font project">Project02</div>
+            <div class="project">Project02</div>
             <figure class="figure_one">
                 <img src="./IMG/museum/museum_main_02.jpg" alt>
                 <figcaption>
@@ -173,8 +155,11 @@
                         <li>HTML5, CSS3, jQuery</li>
                         <li class="sub_title">작업시간 및 구조</li>
                         <li>3주 · 반응형, 역동적인 구조</li>
-                        <li class="sub_title">작업사유</li>
-                        <li>박물관____</li>
+                        <li class="sub_title">작업과정</li>
+                        <li>자주 방문하는 국립중앙박물관 홈페이지를 보면서
+                            직접 다른 디자인들로 바꾸고 싶었고 실제 잘못된 부분이 많이 보이면서
+                            수정된 홈페이지로 만들어보게 되었습니다.
+                        </li>
                     </ul>
                 </figcaption>
             </figure>

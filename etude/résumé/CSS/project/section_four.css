@@ -42,7 +42,7 @@
 }
 .section_four figure.figure_one figcaption {
     position: absolute;
-    top: 35%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
@@ -62,7 +62,7 @@
 .section_four figure.figure_one:hover::before {
     content: '';
     position: absolute;
-    top: 35%;
+    top: 42%;
     left: 53%;
     transform: translate(-50%, -50%);
     width: 300px;
