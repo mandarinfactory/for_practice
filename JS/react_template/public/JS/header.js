@@ -19,9 +19,6 @@
         v.addEventListener('click', e => {
             let target = e.target.getAttribute('data-target')
             let offset = document.querySelector('.scr-target' + target).getBoundingClientRect().y + scrY
-            if (target == '4' || target == '5') {
-                offset += winW - winH
-            }//if
             window.smoothScroll = false;
             window.scrSpeed = 0
             window.scrollTo({

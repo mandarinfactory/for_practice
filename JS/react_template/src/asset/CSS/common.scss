@@ -11,6 +11,7 @@ section {
 
 .sticky-container {
   /* height:스크립트제어 */
+  position: relative;
   .sticky {
     /* height:스크립트제어 */
     overflow: hidden;
@@ -29,5 +30,7 @@ section {
   } //sticky
   div.scr-div {
     padding-top: 100%;
+    position: absolute;
+    width: 100%;
   } //scr-div
 } //sticky-container
