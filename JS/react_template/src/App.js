@@ -34,7 +34,8 @@ const App = () => {
       <CompCursor />
       <CompHeader />
       <CompVisual />
-      <CompSection1 />
+      <CompSection1 />{/* fixed display zone */}
+      <div className="scr-section1 scr-target1"></div>
       <CompSection2 />
       <CompStickyContainer>
         <CompSticky>

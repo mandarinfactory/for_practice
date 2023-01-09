@@ -1,3 +1,32 @@
 .visual {
-  background: darkred;
+  position: relative;
+  z-index: 1;
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    } //img
+  } //bg
+  .bg-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  } //bg-bottom
+  .bg-bottom1 {
+    bottom: 0;
+    max-height: 700px;
+    min-height: 300px;
+  } //bg-bottom1
+  .bg-bottom2 {
+    top: 100%;
+    max-height: 200px;
+    min-height: 100px;
+  } //bg-bottom2
 } //visual

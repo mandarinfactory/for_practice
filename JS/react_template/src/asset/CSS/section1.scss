@@ -1,3 +1,17 @@
 .section1 {
-  background: darkorange;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #4fa7e2;
+  video.bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(1) blur(4px) brightness(1.2);
+    mix-blend-mode: overlay;
+  } //video.bg
 } //section1
+div.scr-section1 {
+  height: 100%;
+}
