@@ -57,7 +57,6 @@ button6.addEventListener('click', e => {
 
 let scrollSpy = () => {
     let current
-    const offset0 = document.querySelector('.section_one').getBoundingClientRect().y + (scrY * 0.9)
     const offset1 = document.querySelector('.section_two').getBoundingClientRect().y + (scrY * 0.9)
     const offset2 = document.querySelector('.section_three').getBoundingClientRect().y + (scrY * 0.9)
     const offset3 = document.querySelector('.section_four').getBoundingClientRect().y + (scrY * 0.9)
