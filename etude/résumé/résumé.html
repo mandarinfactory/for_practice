@@ -21,11 +21,10 @@
     <script src="./JS/plugin/particles.js"></script>
     <script src="./JS/plugin/jquery.viewbox.js"></script>
     <script src="./JS/plugin/viewbox_section.js"></script>
+    <script src="https://kit.fontawesome.com/7d1f9ca95d.js" crossorigin="anonymous"></script>
     <!-- src_JS(plugins) -->
-    <script src="./JS/apps.js"></script>
     <script src="./JS/store.js"></script>
     <script src="./JS/common.js"></script>
-    <script src="https://kit.fontawesome.com/7d1f9ca95d.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
@@ -36,69 +35,19 @@
             <i class="fa-solid fa-xmark close"></i>
         </div>
         <div class="menu_box">
-            <button class="button0">HOME</button>
+            <button class="button0">Profile</button>
             <button class="button1">About Me</button>
-            <button class="button2">Project01(선샤인)</button>
-            <button class="button3">Project02(박물관)</button>
-            <button class="button4">Project03(React01)</button>
-            <button class="button5">Project04(팀프로젝트-블루보틀)</button>
-            <button class="button6">Project05(팀프로젝트-React02)</button>
+            <button class="button2">Project01 <br>
+                (선샤인)</button>
+            <button class="button3">Project02 <br>
+                (박물관)</button>
+            <button class="button4">Project03 <br>
+                (React01)</button>
+            <button class="button5">Project04 <br>
+                (팀프로젝트-블루보틀)</button>
+            <button class="button6">Project05 <br>
+                (팀프로젝트-React02)</button>
         </div>
-        <script>
-            const button0 = document.querySelector('.menu_box .button0')
-            const button1 = document.querySelector('.menu_box .button1')
-            const button2 = document.querySelector('.menu_box .button2')
-            const button3 = document.querySelector('.menu_box .button3')
-            const button4 = document.querySelector('.menu_box .button4')
-            const button5 = document.querySelector('.menu_box .button5')
-            const button6 = document.querySelector('.menu_box .button6')
-            const barBtn = document.querySelector('.mbtn .bars')
-            const closeBtn = document.querySelector('.mbtn .close')
-            const menuBox = document.querySelector('.menu_box')
-            const menuBtn = Array.from(document.querySelectorAll('.menu_box button'))
-            const handleClick = e => {
-                menuBtn.forEach(v => {
-                    v.classList.remove('active')
-                })//forEach
-                e.target.classList.add('active')
-            }//function_handleClick
-
-            barBtn.addEventListener('click', e => {
-                e.target.classList.add('active')
-                closeBtn.classList.add('active')
-                menuBox.classList.add('active')
-            })//addEventListener
-            closeBtn.addEventListener('click', e => {
-                e.target.classList.remove('active')
-                barBtn.classList.remove('active')
-                menuBox.classList.remove('active')
-            })//addEventListener
-            menuBtn.forEach(e => {
-                e.addEventListener('click', handleClick)
-            })//forEach
-
-            button0.addEventListener('click', e => {
-                document.querySelector('.section_one').scrollIntoView({ behavior: 'smooth', block: 'center' })
-            })//addEventListener
-            button1.addEventListener('click', e => {
-                document.querySelector('.section_two').scrollIntoView({ behavior: 'smooth', block: 'center' })
-            })//addEventListener
-            button2.addEventListener('click', e => {
-                document.querySelector('.section_three').scrollIntoView({ behavior: 'smooth', block: 'center' })
-            })//addEventListener
-            button3.addEventListener('click', e => {
-                document.querySelector('.section_four').scrollIntoView({ behavior: 'smooth', block: 'center' })
-            })//addEventListener
-            button4.addEventListener('click', e => {
-                document.querySelector('.section_five').scrollIntoView({ behavior: 'smooth', block: 'center' })
-            })//addEventListener
-            button5.addEventListener('click', e => {
-                document.querySelector('.section_six').scrollIntoView({ behavior: 'smooth', block: 'center' })
-            })//addEventListener
-            button6.addEventListener('click', e => {
-                document.querySelector('.section_seven').scrollIntoView({ behavior: 'smooth', block: 'center' })
-            })//addEventListener
-        </script>
         <ul>
             <li class="small">
                 하늘같이 높고 넓은 사람이 되라는 이름처럼
@@ -244,5 +193,7 @@
         </section>
     </div>
 </body>
+<script src="./JS/résumé.js"></script>
+<!-- DOM load 후 전체로 되므로 body 아래로 내려놓음 -->
 
 </html>
