@@ -37,7 +37,7 @@ li {
 }
 .sections {
     opacity: 0;
-    transition: all 0.1s;
+    transition: all 1.5s;
 }
 /* root ---------------------------------------------------------------------- */
 .right {
@@ -83,6 +83,7 @@ li {
     right: 10%;
     color: var(--mustard);
     font-size: 0.8em;
+    transition: all 0.1s;
 }
 .right div.arrow_down {
     position: absolute;
@@ -90,6 +91,7 @@ li {
     left: 2%;
     color: var(--mustard);
     font-size: 0.8em;
+    transition: all 0.1s;
 }
 .right div.arrow_down span {
     margin-left: 5px;

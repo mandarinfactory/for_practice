@@ -8,6 +8,7 @@ const button6 = document.querySelector('.menu_box .button6')
 const barBtn = document.querySelector('.mbtn .bars')
 const closeBtn = document.querySelector('.mbtn .close')
 const menuBox = document.querySelector('.menu_box')
+const rightArrow = document.querySelector('.arrow_right')
 const menuBtn = Array.from(document.querySelectorAll('.menu_box button'))
 const handleClick = e => {
     menuBtn.forEach(v => {
@@ -21,15 +22,21 @@ barBtn.addEventListener('click', e => {
     e.target.classList.add('active')
     closeBtn.classList.add('active')
     menuBox.classList.add('active')
+    rightArrow.style.opacity = 0
 })//addEventListener
 closeBtn.addEventListener('click', e => {
     e.target.classList.remove('active')
     barBtn.classList.remove('active')
     menuBox.classList.remove('active')
+    rightArrow.style.opacity = 1
 })//addEventListener
 menuBtn.forEach(e => {
     e.addEventListener('click', handleClick)
 })//forEach
+
+document.body.addEventListener('scroll', e => {
+    document.querySelector('.arrow_down').style.opacity = 0
+})
 /* menu_box내에서 icon들 누르면 사라지게 하거나 button 누르면 색변경 시키게 해놓음 ---------------------- */
 
 button0.addEventListener('click', e => {
@@ -96,6 +103,8 @@ let scrollObserver = new IntersectionObserver(e => {
     e.forEach(v => {
         if (v.isIntersecting) {
             v.target.style.opacity = 1;
+        } else {
+            v.target.style.opacity = 0;
         }
     })//forEach
 })//function_scrollObserver
@@ -106,4 +115,6 @@ scrollObserver.observe(sections[1])
 scrollObserver.observe(sections[2])
 scrollObserver.observe(sections[3])
 scrollObserver.observe(sections[4])
-scrollObserver.observe(sections[5])    
+scrollObserver.observe(sections[5])
+
+/* section으로 넘어갈때마다 확인해서 opacity줌 -------------------------------------------------------- */
