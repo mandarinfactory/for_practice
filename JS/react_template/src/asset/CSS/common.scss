@@ -2,6 +2,9 @@
 body {
   background: #fff;
 }
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
 #root {
   display: inline;
 }
