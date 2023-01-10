@@ -61,8 +61,8 @@ let scrollSpy = () => {
     const offset2 = document.querySelector('.section_three').getBoundingClientRect().y + (scrY * 0.9)
     const offset3 = document.querySelector('.section_four').getBoundingClientRect().y + (scrY * 0.9)
     const offset4 = document.querySelector('.section_five').getBoundingClientRect().y + (scrY * 0.9)
-    /*    const offset5 = document.querySelector('.section_six').getBoundingClientRect().y + scrY
-    const offset6 = document.querySelector('.section_seven').getBoundingClientRect().y + scrY */
+    /*    const offset5 = document.querySelector('.section_six').getBoundingClientRect().y + (scrY * 0.9)
+    const offset6 = document.querySelector('.section_seven').getBoundingClientRect().y + (scrY * 0.9) */
     if (scrY < offset1) {
         current = 0
     } else if (scrY >= offset1 && scrY < offset2) {
