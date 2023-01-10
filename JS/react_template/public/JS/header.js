@@ -71,8 +71,8 @@
     scrollSpy()
     window.addEventListener('scroll', () => {
         scrollSpy()
-    })
+    })//scroll event
     window.addEventListener('resize', () => {
         scrollSpy()
-    })//scroll-resize event
+    })//resize event
 }//유효scope

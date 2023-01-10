@@ -55,3 +55,40 @@ button6.addEventListener('click', e => {
 })//addEventListener
 /* 해당 button 누르면 해당 section으로 가게 만들어줌 ---------------------------------------------------- */
 
+let scrollSpy = () => {
+    let current
+    const offset0 = document.querySelector('.section_one').getBoundingClientRect().y + (scrY * 0.9)
+    const offset1 = document.querySelector('.section_two').getBoundingClientRect().y + (scrY * 0.9)
+    const offset2 = document.querySelector('.section_three').getBoundingClientRect().y + (scrY * 0.9)
+    const offset3 = document.querySelector('.section_four').getBoundingClientRect().y + (scrY * 0.9)
+    const offset4 = document.querySelector('.section_five').getBoundingClientRect().y + (scrY * 0.9)
+    /*    const offset5 = document.querySelector('.section_six').getBoundingClientRect().y + scrY
+    const offset6 = document.querySelector('.section_seven').getBoundingClientRect().y + scrY */
+    if (scrY < offset1) {
+        current = 0
+    } else if (scrY >= offset1 && scrY < offset2) {
+        current = 1
+    } else if (scrY >= offset2 && scrY < offset3) {
+        current = 2
+    } else if (scrY >= offset3 && scrY < offset4) {
+        current = 3
+    } else if (scrY >= offset4 && scrY < offset5) {
+        current = 4
+    } else if (scrY >= offset5 && scrY < offset6) {
+        current = 5
+    } else {
+        current = 6
+    }//if-else
+    document.querySelectorAll('.menu_box button').forEach(v => {
+        v.classList.remove('active')
+    })//forEach
+    document.querySelector(`.menu_box .link_btn${current}`).classList.add('active')
+}//function_scrollSpy
+scrollSpy()
+window.addEventListener('scroll', () => {
+    scrollSpy()
+})//scroll event
+window.addEventListener('resize', () => {
+    scrollSpy()
+})//resize event
+/* 해당 section으로 scroll할때마다 button.active도 같이 따라감 --------------------------------------------- */
