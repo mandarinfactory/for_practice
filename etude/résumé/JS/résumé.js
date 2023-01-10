@@ -91,3 +91,19 @@ window.addEventListener('resize', () => {
     scrollSpy()
 })//resize event
 /* 해당 section으로 scroll할때마다 button.active도 같이 따라감 --------------------------------------------- */
+
+let scrollObserver = new IntersectionObserver(e => {
+    e.forEach(v => {
+        if (v.isIntersecting) {
+            v.target.style.opacity = 1;
+        }
+    })//forEach
+})//function_scrollObserver
+
+const sections = document.querySelectorAll('.sections')
+scrollObserver.observe(sections[0])/* 해당 HTML요소가 화면에 등장하는지 감시한다. --> observe */
+scrollObserver.observe(sections[1])
+scrollObserver.observe(sections[2])
+scrollObserver.observe(sections[3])
+scrollObserver.observe(sections[4])
+scrollObserver.observe(sections[5])    

@@ -8,7 +8,7 @@ const CompVisual = () => {
     <section className='visual scr-target0'>
       <svg style={{ display: 'none' }}>
         <defs>
-          <filter id="ripple-filter1">
+          <filter id="ripple-filter">
             <feImage xlink="" x="0" y="0" result="rippleImage" />
             <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic"
               in2="rippleImage" result="displacementMap" colorInterpolationFilters="sRGB" scale="100" />

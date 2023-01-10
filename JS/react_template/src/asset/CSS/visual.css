@@ -1,4 +1,5 @@
 .visual {
+  perspective: 10000px;
   position: relative;
   z-index: 1;
 }
@@ -14,11 +15,13 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transform-origin: center bottom;
 }
 .visual .bg-bottom {
   position: absolute;
   left: 0;
   width: 100%;
+  transform-origin: center bottom;
 }
 .visual .bg-bottom1 {
   bottom: 0;

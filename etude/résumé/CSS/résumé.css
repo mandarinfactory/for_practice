@@ -35,6 +35,10 @@ li {
     text-transform: uppercase;
     box-shadow: 1px 1px 5px black;
 }
+.sections {
+    opacity: 0;
+    transition: all 0.1s;
+}
 /* root ---------------------------------------------------------------------- */
 .right {
     position: fixed;
@@ -72,6 +76,23 @@ li {
 }
 .right .mbtn i.close.active {
     display: block;
+}
+.right div.arrow_right {
+    position: absolute;
+    top: 7.3%;
+    right: 10%;
+    color: var(--mustard);
+    font-size: 0.8em;
+}
+.right div.arrow_down {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    color: var(--mustard);
+    font-size: 0.8em;
+}
+.right div.arrow_down span {
+    margin-left: 5px;
 }
 .right .menu_box {
     opacity: 0;
@@ -164,8 +185,12 @@ li {
 .right ul li.address a {
     color: var(--mustard);
     text-decoration: none;
+    transition: all 0.5s;
     cursor: pointer;
     font-size: 1.2em;
+}
+.right ul li.address a:hover {
+    color: white;
 }
 .right #particles-js {
     position: absolute;
