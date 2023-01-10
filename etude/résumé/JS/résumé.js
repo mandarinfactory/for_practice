@@ -34,7 +34,7 @@ menuBtn.forEach(e => {
     e.addEventListener('click', handleClick)
 })//forEach
 
-document.body.addEventListener('scroll', e => {
+document.addEventListener('scroll', e => {
     document.querySelector('.arrow_down').style.opacity = 0
 })
 /* menu_box내에서 icon들 누르면 사라지게 하거나 button 누르면 색변경 시키게 해놓음 ---------------------- */
