@@ -1,49 +1,75 @@
-.visual{
+.visual {
   perspective: 1000px;
   position: relative;
   z-index: 1;
-  .bg{
+  .bg {
     position: absolute;
     overflow: hidden;
-    width:100%; 
+    width: 100%;
     height: 100%;
-    top:0;left:0;
-    img{
-      width:100%; 
+    top: 0;
+    left: 0;
+    img {
+      width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
-      filter:url(#filter); 
+      filter: url(#filter);
+      transform: scale(1.1);
       transform-origin: center bottom;
       transition: transform 0.3s;
     }
-  }//bg
-  .bg-bottom{
+  } //bg
+  .bg-bottom {
     position: absolute;
-    left:0;
+    left: 0;
     width: 100%;
   }
-  .bg-bottom1{
+  .bg-bottom1 {
     bottom: 0;
     min-height: 300px;
     max-height: 600px;
-    filter:url(#filter);
+    filter: url(#filter);
     transform-origin: center bottom;
     transition: transform 0.3s;
-  }//bg-bttom1
-  .bg-bottom2{
+  } //bg-bttom1
+  .bg-bottom2 {
     top: 100%;
     min-height: 100px;
     max-height: 250px;
-  }//bg-bttom2
-  img.dancer{
+  } //bg-bttom2
+  img.dancer {
     position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
     max-width: 700px;
     transition: transform 0.3s;
-    //filter: url(#ripple-filter1); 
-  }//dancer
-}//visual
+  } //dancer
+  img.splatter {
+    position: absolute;
+    bottom: 0;
+  } //img.splatter
+  .splatter1 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
+    opacity: 0.9;
+  } //splatter1
+  .splatter2 {
+    right: 0;
+    width: 30%;
+    max-width: 300px;
+    opacity: 0.9;
+  } //spaltter2
+  .splatter3 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+  } //spaltter3
+} //visual

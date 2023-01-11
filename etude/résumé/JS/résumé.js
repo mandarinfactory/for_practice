@@ -133,7 +133,7 @@ ScrollReveal().reveal('.right ul li:nth-child(4)', { delay: 100, origin: 'right'
 ScrollReveal().reveal('.right ul li:nth-child(5)', { delay: 100, origin: 'right' });
 ScrollReveal().reveal('.right ul li.box', { delay: 100, origin: 'right' });
 ScrollReveal().reveal('.right ul li.address', { delay: 100, origin: 'right' });
+ScrollReveal().reveal('.right .arrow_right span', { delay: 100, origin: 'left', interval: 1000 });
 ScrollReveal().reveal('.right .arrow_right i', { delay: 100, origin: 'right', interval: 1000 });
-ScrollReveal().reveal('.right .arrow_right span', { delay: 100, origin: 'right', interval: 1000 });
+ScrollReveal().reveal('.right .arrow_down span', { delay: 100, origin: 'right', interval: 1000 });
 ScrollReveal().reveal('.right .arrow_down i', { delay: 100, origin: 'bottom', interval: 1000 });
-ScrollReveal().reveal('.right .arrow_down span', { delay: 100, origin: 'bottom', interval: 1000 });

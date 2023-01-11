@@ -16,40 +16,40 @@ import { useEffect } from "react";
 
 const App = () => {
 
-  useEffect(()=>{
+  useEffect(() => {
     let scriptArr = [
-      'cursor.js','layout.js','header.js','section1.js',
-    ] 
-    scriptArr.forEach((v)=>{
+      'cursor.js', 'layout.js', 'header.js', 'section1.js', 'visual.js'
+    ]
+    scriptArr.forEach((v) => {
       let script = document.createElement('script');
       script.src = `${process.env.PUBLIC_URL}/js/${v}`;
       script.defer = true;
-      document.body.appendChild(script); 
+      document.body.appendChild(script);
     })
-    
+
     /* 스크립트 제거..... */
-  },[])
+  }, [])
   return (
-    <> 
-      <CompCursor/>
-      <CompHeader/>
-      <CompVisual/>
-      <CompSection1/>{/* fixed */}
+    <>
+      <CompCursor />
+      <CompHeader />
+      <CompVisual />
+      <CompSection1 />{/* fixed */}
       <div className="scr-section1 scr-target1"></div>
-      <CompSection2/>
+      <CompSection2 />
       <CompStickyContainer>
         <CompSticky>
           <CompStickyInner>
-            <CompSection3/>
-            <CompSection4/>
-            <CompSection5/> 
+            <CompSection3 />
+            <CompSection4 />
+            <CompSection5 />
           </CompStickyInner>
         </CompSticky>
         <div className="scr-div scr-target4" />
         <div className="scr-div scr-target5" />
       </CompStickyContainer>
-      <CompSection6/>
-      <CompFooter/>
+      <CompSection6 />
+      <CompFooter />
     </>
   );
 };

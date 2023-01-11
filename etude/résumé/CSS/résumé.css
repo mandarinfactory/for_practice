@@ -10,7 +10,6 @@ html,body {
 } 
 body {
     width: 100%;
-    height: 100%;
     box-sizing: border-box;
     font-family: 'LINESeedKR-Bd';
 }
@@ -35,7 +34,7 @@ li {
     text-transform: uppercase;
     box-shadow: 1px 1px 5px black;
 }
-.sections {
+section.sections {
     opacity: 0;
     transition: all 1.5s;
 }
