@@ -16,7 +16,7 @@ const CompHeader = () => {
         </button>
       </header>
       <nav className="gnb gnb-sm">
-        <video src={require = ('./asset/video/nav.mp4')}></video>
+        <video src={require(`../asset/video/nav.mp4`)} />
         <CompMenu />
       </nav>
     </>

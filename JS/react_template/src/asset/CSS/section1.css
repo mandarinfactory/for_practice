@@ -9,7 +9,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: grayscale(1) blur(4px) brightness(1.2);
+  filter: grayscale(1) blur(5px) brightness(1.2);
   mix-blend-mode: overlay;
 }
 

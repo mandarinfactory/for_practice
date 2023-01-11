@@ -5,7 +5,6 @@ let fnGetWindow = () => {
   window.winW = document.body.clientWidth 
   window.winH = document.body.clientHeight
 }
-
 fnGetWindow()
 
 window.addEventListener('scroll', () => {

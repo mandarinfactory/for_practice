@@ -118,3 +118,22 @@ scrollObserver.observe(sections[4])
 scrollObserver.observe(sections[5])
 
 /* section으로 넘어갈때마다 확인해서 opacity줌 -------------------------------------------------------- */
+
+ScrollReveal({
+    reset: false,
+    distance: '70px',
+    duration: 2000,
+    delay: 500
+});
+
+ScrollReveal().reveal('.right ul li:first-child', { delay: 100, origin: 'right' });
+ScrollReveal().reveal('.right ul li:nth-child(2)', { delay: 100, origin: 'right' });
+ScrollReveal().reveal('.right ul li:nth-child(3)', { delay: 100, origin: 'right' });
+ScrollReveal().reveal('.right ul li:nth-child(4)', { delay: 100, origin: 'right' });
+ScrollReveal().reveal('.right ul li:nth-child(5)', { delay: 100, origin: 'right' });
+ScrollReveal().reveal('.right ul li.box', { delay: 100, origin: 'right' });
+ScrollReveal().reveal('.right ul li.address', { delay: 100, origin: 'right' });
+ScrollReveal().reveal('.right .arrow_right i', { delay: 100, origin: 'right', interval: 1000 });
+ScrollReveal().reveal('.right .arrow_right span', { delay: 100, origin: 'right', interval: 1000 });
+ScrollReveal().reveal('.right .arrow_down i', { delay: 100, origin: 'bottom', interval: 1000 });
+ScrollReveal().reveal('.right .arrow_down span', { delay: 100, origin: 'bottom', interval: 1000 });
