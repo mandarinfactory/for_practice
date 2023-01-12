@@ -1,21 +1,23 @@
-.section2{
+.section2 {
   position: relative;
-  .bg-top{
+  .bg-top {
     position: absolute;
     width: 100%;
-    left:0;
+    left: 0;
     bottom: 100%;
   }
-  .bg{
+  .bg {
+    pointer-events: none;
     position: absolute;
-    width: 100%;;
+    width: 100%;
     height: 100%;
-    top:0;left:0;
-    img{
+    top: 0;
+    left: 0;
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
     }
-  }//figure.bg
-}//section1
+  } //figure.bg
+} //section1

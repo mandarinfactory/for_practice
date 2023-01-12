@@ -78,31 +78,31 @@
 }
 @keyframes glitch {
   10% {
-    transform: translateX(0.0565177031px);
+    transform: translateX(4.44062603px);
   }
   20% {
-    transform: translateX(2.8286052133px);
+    transform: translateX(-4.9568591912px);
   }
   30% {
-    transform: translateX(-1.3524325697px);
+    transform: translateX(5.7488451905px);
   }
   40% {
-    transform: translateX(2.7899732048px);
+    transform: translateX(1.0662020149px);
   }
   50% {
-    transform: translateX(-2.497020131px);
+    transform: translateX(-6.4906440993px);
   }
   60% {
-    transform: translateX(4.7848604425px);
+    transform: translateX(-5.1287303138px);
   }
   70% {
-    transform: translateX(-5.8156510643px);
+    transform: translateX(-2.1853882318px);
   }
   80% {
-    transform: translateX(3.6665173624px);
+    transform: translateX(-5.3415401256px);
   }
   90% {
-    transform: translateX(0.8933768109px);
+    transform: translateX(2.8749517179px);
   }
 }
 .visual img.splatter {
