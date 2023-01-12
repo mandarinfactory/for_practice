@@ -5,7 +5,10 @@ const CompHeader = () => {
   return (
     <>
       <header>
-        <h1>로고</h1>
+        <h1>
+          <span className='hidden'>로고</span>
+          <img src={require('../asset/img/logo/Logo.png')} alt="" />
+        </h1>
         <nav className="gnb gnb-lg">
           <CompMenu />
         </nav>
