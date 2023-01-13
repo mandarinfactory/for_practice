@@ -16,6 +16,10 @@ body {
   text-decoration: none;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --blue: #00aced;
   --purple: #827dea;

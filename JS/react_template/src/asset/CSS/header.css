@@ -183,4 +183,51 @@ h1 img {
   .mbtn {
     display: none;
   }
+}
+
+.title {
+  position: absolute;
+  z-index: 9;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+  width: 70%;
+  max-width: 400px;
+}
+.title div {
+  position: relative;
+  transition: all 0.2s;
+  height: 100%;
+  box-shadow: 0 0 30px 5px purple inset;
+}
+.title div img {
+  width: 100%;
+}
+.title div img.title-glitch1 {
+  position: absolute;
+  top: 0;
+  mix-blend-mode: color-dodge;
+  animation: title-glitch 0.2s linear infinite;
+}
+.title div img.title-glitch2 {
+  position: absolute;
+  top: 0;
+  mix-blend-mode: color-dodge;
+  animation: title-glitch 0.1s linear infinite;
+}
+
+@keyframes title-glitch {
+  0% {
+    transform: translateX(-2px);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
 }/*# sourceMappingURL=header.css.map */

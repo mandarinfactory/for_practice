@@ -195,3 +195,50 @@ h1 {
     display: none;
   } //min
 } //mbtn
+
+.title {
+  position: absolute;
+  z-index: 9;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+  width: 70%;
+  max-width: 400px;
+  div {
+    position: relative;
+    transition: all 0.2s;
+    height: 100%;
+    box-shadow: 0 0 30px 5px rgba($color: purple, $alpha: 1) inset;
+    img {
+      width: 100%;
+    } //img
+    img.title-glitch1 {
+      position: absolute;
+      top: 0;
+      mix-blend-mode: color-dodge;
+      animation: title-glitch 0.2s linear infinite;
+    } //img.title-glitch1
+    img.title-glitch2 {
+      position: absolute;
+      top: 0;
+      mix-blend-mode: color-dodge;
+      animation: title-glitch 0.1s linear infinite;
+    } //img.title-glitch2
+  } //div
+} //title
+
+@keyframes title-glitch {
+  0% {
+    transform: translateX(-2px);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+} //animation

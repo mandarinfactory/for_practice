@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet";
 import CompCursor from "./comp/CompCursor";
 import CompHeader from "./comp/CompHeader";
+import CompTitle from "./comp/CompTitle";
 import CompVisual from "./comp/CompVisual";
 import CompSection1 from "./comp/CompSection1";
 import CompSection2 from "./comp/CompSection2";
@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     let scriptArr = [
-      'cursor.js', 'layout.js', 'header.js', 'section1.js', 'visual.js'
+      'cursor.js', 'layout.js', 'header.js', 'section1.js', 'visual.js', 'title.js'
     ]
     scriptArr.forEach((v) => {
       let script = document.createElement('script');
@@ -31,6 +31,7 @@ const App = () => {
   }, [])
   return (
     <>
+      <CompTitle />
       <CompCursor />
       <CompHeader />
       <CompVisual />
