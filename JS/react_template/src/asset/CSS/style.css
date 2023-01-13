@@ -26,4 +26,8 @@ body::-webkit-scrollbar {
   --pink: #eb008a;
   --yellow: #f6eb0f;
   --green: #00a451;
+}
+
+.mono {
+  font-family: "Monoton", cursive;
 }/*# sourceMappingURL=style.css.map */
