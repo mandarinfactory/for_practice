@@ -6,10 +6,10 @@
 }
 html,
 body {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    font-family: 'LINESeedKR-Bd';
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "LINESeedKR-Bd";
 }
 
 body::-webkit-scrollbar {
@@ -39,22 +39,19 @@ button {
   text-transform: uppercase;
   box-shadow: 1px 1px 5px black;
 }
-.sections {
-    opacity: 0;
-    transition: all 1.5s;
-}
-/* root ---------------------------------------------------------------------- */
-.right {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background-color: var(--navy);
-    z-index: 10;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+
+/* root -------------------------------------------------------------------- */
+.right_content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--navy);
+  z-index: 10;
 }
 .right_content .mbtn {
   color: rgba(255, 255, 255, 0.9);
@@ -95,7 +92,7 @@ button {
   left: 2%;
   color: var(--mustard);
   font-size: 0.8em;
-  transition: all 0.1s;
+  transition: all 0.3s;
 }
 .right_content .arrow_down span {
   margin-left: 5px;
@@ -216,15 +213,17 @@ section {
   justify-content: center;
   align-items: center;
   background-color: white;
+  transition: opacity 1s;
 }
 section h1 {
   font-size: 4em;
   font-weight: 800;
-  color: black;
+  color: white;
+  text-shadow: 1px 1px 5px black;
 }
 
 .section01 {
-  background-color: lightgray;
+  background-color: var(--mustard);
 }
 
 .section02 {
@@ -318,4 +317,7 @@ section h1 {
   width: 100%;
   transition: all 0.5s;
 }
-/* section_two ---------------------------------------------------------------- */
+.viewbox_section ul li.active figure {
+  margin: 0 5px;
+  transform: scale(1);
+}/*# sourceMappingURL=résumé.css.map */

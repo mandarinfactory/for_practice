@@ -5,11 +5,11 @@ gsap.utils.toArray("section").forEach((section, i) => {
     start: "top top", 
     pin: true,
     pinSpacing: false,
-  });
-});
+  })//create
+})//forEach
 ScrollTrigger.create({
-  snap: 1 / 100
-});
+  snap: 1 / 5000
+})//create
 /* folder_scroll_animation 작동법 ---------------------------------------------------------------------- */
 
 const button0 = document.querySelector('.menu_box .button0')
@@ -23,6 +23,13 @@ const barBtn = document.querySelector('.mbtn .bars')
 const closeBtn = document.querySelector('.mbtn .close')
 const menuBox = document.querySelector('.menu_box')
 const rightArrow = document.querySelector('.arrow_right')
+const section0 = document.querySelector('.section01')
+const section1 = document.querySelector('.section02')
+const section2 = document.querySelector('.section03')
+const section3 = document.querySelector('.section04')
+const section4 = document.querySelector('.section05')
+const section5 = document.querySelector('.section06')
+const section6 = document.querySelector('.section07')
 const menuBtn = Array.from(document.querySelectorAll('.menu_box button'))
 const handleClick = e => {
     menuBtn.forEach(v => {
@@ -48,42 +55,42 @@ menuBtn.forEach(e => {
     e.addEventListener('click', handleClick)
 })//forEach
 
-document.addEventListener('scroll', e => {
+document.addEventListener('scroll', () => {
     document.querySelector('.arrow_down').style.opacity = 0
 })
 /* menu_box내에서 icon들 누르면 사라지게 하거나 button 누르면 색변경 시키게 해놓음 ---------------------- */
 
-button0.addEventListener('click', e => {
-    document.querySelector('.section01').scrollTo(0, 100)
+button0.addEventListener('click', () => {
+    section0.scrollIntoView({ behavior: 'smooth', block: 'start' })
 })//addEventListener
-button1.addEventListener('click', e => {
-    document.querySelector('.section02').scrollIntoView({ behavior: 'smooth', block: 'start' })
+button1.addEventListener('click', () => {
+    section1.scrollIntoView({ behavior: 'smooth', block: 'start' })
 })//addEventListener
-button2.addEventListener('click', e => {
-    document.querySelector('.section03').scrollIntoView({ behavior: 'smooth', block: 'start' })
+button2.addEventListener('click', () => {
+    section2.scrollIntoView({ behavior: 'smooth', block: 'start' })
 })//addEventListener
-button3.addEventListener('click', e => {
-    document.querySelector('.section04').scrollIntoView({ behavior: 'smooth', block: 'start' })
+button3.addEventListener('click', () => {
+    section3.scrollIntoView({ behavior: 'smooth', block: 'start' })
 })//addEventListener
-button4.addEventListener('click', e => {
-    document.querySelector('.section05').scrollIntoView({ behavior: 'smooth', block: 'start' })
+button4.addEventListener('click', () => {
+    section4.scrollIntoView({ behavior: 'smooth', block: 'start' })
 })//addEventListener
-button5.addEventListener('click', e => {
-    document.querySelector('.section06').scrollIntoView({ behavior: 'smooth', block: 'start' })
+button5.addEventListener('click', () => {
+    section5.scrollIntoView({ behavior: 'smooth', block: 'start' })
 })//addEventListener
-button6.addEventListener('click', e => {
-    document.querySelector('.section07').scrollIntoView({ behavior: 'smooth', block: 'start' })
+button6.addEventListener('click', () => {
+    section6.scrollIntoView({ behavior: 'smooth', block: 'start' })
 })//addEventListener */
 /* 해당 button 누르면 해당 section으로 가게 만들어줌 ---------------------------------------------------- */
 
 let scrollSpy = () => {
     let current
-    const offset1 = document.querySelector('.section02').getBoundingClientRect().y + (scrY)
-    const offset2 = document.querySelector('.section03').getBoundingClientRect().y + (scrY)
-    const offset3 = document.querySelector('.section04').getBoundingClientRect().y + (scrY)
-    const offset4 = document.querySelector('.section05').getBoundingClientRect().y + (scrY)
-    const offset5 = document.querySelector('.section06').getBoundingClientRect().y + (scrY)
-    const offset6 = document.querySelector('.section07').getBoundingClientRect().y + (scrY)
+    const offset1 = section1.getBoundingClientRect().y + (scrY)
+    const offset2 = section2.getBoundingClientRect().y + (scrY)
+    const offset3 = section3.getBoundingClientRect().y + (scrY)
+    const offset4 = section4.getBoundingClientRect().y + (scrY)
+    const offset5 = section5.getBoundingClientRect().y + (scrY)
+    const offset6 = section6.getBoundingClientRect().y + (scrY)
     if (scrY < offset1) {
         current = 0
     } else if (scrY >= offset1 && scrY < offset2) {
@@ -99,7 +106,7 @@ let scrollSpy = () => {
     } else {
         current = 6
     }//if-else
-    document.querySelectorAll('.menu_box button').forEach(v => {
+    menuBtn.forEach(v => {
         v.classList.remove('active')
     })//forEach
     document.querySelector(`.menu_box .link_btn${current}`).classList.add('active')
@@ -130,6 +137,7 @@ scrollObserver.observe(sections[2])
 scrollObserver.observe(sections[3])
 scrollObserver.observe(sections[4])
 scrollObserver.observe(sections[5])
+scrollObserver.observe(sections[6])
 /* section으로 넘어갈때마다 확인해서 opacity줌 -------------------------------------------------------- */
 ScrollReveal({
     reset: false,

@@ -87,7 +87,7 @@ button {
     left: 2%;
     color: var(--mustard);
     font-size: 0.8em;
-    transition: all 0.1s;
+    transition: all 0.3s;
     span {
       margin-left: 5px;
     } //span
@@ -212,14 +212,16 @@ section {
   justify-content: center;
   align-items: center;
   background-color: white;
+  transition: opacity 1s;
   h1 {
     font-size: 4em;
     font-weight: 800;
-    color: black;
+    color: white;
+    text-shadow: 1px 1px 5px black;
   } //h1
 } //section
 .section01 {
-  background-color: lightgray;
+  background-color: var(--mustard);
 } //section01
 .section02 {
   display: flex;
