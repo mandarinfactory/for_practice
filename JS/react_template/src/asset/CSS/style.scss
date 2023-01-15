@@ -1,21 +1,29 @@
-*{ 
+* {
   font-family: inherit;
   font-size: inherit;
-  color:inherit;
+  color: inherit;
   font-weight: inherit;
   font-style: inherit;
   text-decoration: inherit;
 }
-body{
-  font-family: 'Montserrat', 'Noto Sans KR',  sans-serif;
+body {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
   font-size: 15px;
-  color:#666;
+  color: #666;
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
 }
-:root{ 
-  --blue:#0181e7;
-  --purpple:#827dea;
-  --pink:#da5480; 
+body::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  --blue: #00aced;
+  --purple: #827dea;
+  --pink: #eb008a;
+  --yellow: #f6eb0f;
+  --green: #00a451;
+}
+.mono {
+  font-family: "Monoton", cursive;
 }

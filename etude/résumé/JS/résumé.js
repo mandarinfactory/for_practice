@@ -131,7 +131,6 @@ scrollObserver.observe(sections[3])
 scrollObserver.observe(sections[4])
 scrollObserver.observe(sections[5])
 /* section으로 넘어갈때마다 확인해서 opacity줌 -------------------------------------------------------- */
-
 ScrollReveal({
     reset: false,
     distance: '70px',
@@ -150,3 +149,4 @@ ScrollReveal().reveal('.right_content ul li:nth-child(4)', { delay: 100, origin:
 ScrollReveal().reveal('.right_content ul li:nth-child(5)', { delay: 100, origin: 'right' });
 ScrollReveal().reveal('.right_content ul li.box', { delay: 100, origin: 'right' });
 ScrollReveal().reveal('.right_content ul li.address', { delay: 100, origin: 'right' });
+

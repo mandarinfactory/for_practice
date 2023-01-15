@@ -1,26 +1,20 @@
 {
-    $('.visual').mousemove(function (e) {
-        let mausX = e.offsetX
-        let mausY = e.offsetY
-        mouseMotion(mausX, mausY)
-    }).bind('touchmove', function (e) {
-        let mausX = e.originalEvent.offsetX
-        let mausY = e.originalEvent.offsetY
-        mouseMotion(mausX, mausY)
-    })//mousemove, bind
+    let motion = () => {
+        const scrSection1 = document.querySelector('.scr-target1')
+        const scrSection2 = document.querySelector('.scr-target2')
+        const section1 = document.querySelector('.section1')
 
-    function mouseMotion(x, y) {
-        let centerX = $(this).innerWidth() * 0.5
-        let centerY = $(this).innerHeight() * 0.5
-        let diffX = x - centerX
-        let diffY = y - centerY
-        let metaScale1 = 2 + diffX * 0.0001
-        if (metaScale1 < 1) metaScale1 = 1
-        $('.visual .bg img').css({ 'transform': `scale(${metaScale1})` })
-        let metaScale2 = 1 + diffX * 0.0001
-        $('.visual .bg-bottom1').css({ 'transform': `scaleY(${metaScale2})` })
-        let rotateX = diffX * 0.01
-        let rotateY = - diffY * 0.01
-        $('.visual .dancer').css({ 'transform': `translate(-50%, -50%) rotateX(${rotateX}deg) rotateY(${rotateY}deg)` })
-    }//function_mouseMotion
+        const offsetTop1 = scrSection1.getBoundingClientRect().y
+        const offsetTop2 = scrSection2.getBoundingClientRect().y
+
+        if (offsetTop1 < winH * 0.5 && offsetTop2 > 0) section1.classList.add('active')
+        else section1.classList.remove('active')
+    }//function_motion
+    motion();
+    window.addEventListener('scroll', () => {
+        motion();
+    })//scroll_event
+    window.addEventListener('resize', () => {
+        motion();
+    })//resize_event
 }

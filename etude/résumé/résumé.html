@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="./CSS/viewbox/sunshine_viewbox.css">
     <link rel="stylesheet" href="./CSS/viewbox/museum_viewbox.css">
     <link rel="stylesheet" href="./CSS/plugin/viewbox.css">
-    <!-- viewbox_CSS -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <!-- jQuery -->
+
+    <!-- link_CSS_plugin -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script><!-- jQuery -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./JS/plugin/app_particle_default.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./JS/plugin/particles.js"></script>
@@ -30,81 +31,78 @@
     <!-- plugin -->
     <script src="./JS/store.js"></script>
     <script src="./JS/common.js"></script>
-    <title>résumé</title>
-  </head>
-  <body>
-    <div class="right_content">
-      <div class="mbtn">
-        <i class="fa-solid fa-bars-staggered bars"></i>
-        <i class="fa-solid fa-xmark close"></i>
-      </div>
-      <!-- mbtn -->
-      <div class="arrow_right">
-        <span>메뉴버튼을 누르면 메뉴가 나타납니다.</span>
-        <i class="fa-solid fa-arrow-right"></i>
-      </div>
-      <!-- arrow_right -->
-      <div class="arrow_down">
-        <i class="fa-solid fa-arrow-down"></i>
-        <span>아래로 스크롤을 하시면, 페이지가 보입니다.</span>
-      </div>
-      <!-- arrow_down -->
-      <div class="menu_box">
-        <button class="button0 link_btn0">Profile</button>
-        <button class="button1 link_btn1">About Me</button>
-        <button class="button2 link_btn2">
-          Project01 <br />
-          (선샤인)
-        </button>
-        <button class="button3 link_btn3">
-          Project02 <br />
-          (박물관)
-        </button>
-        <button class="button4 link_btn4">
-          Project03 <br />
-          (React01)
-        </button>
-        <button class="button5 link_btn5">
-          Project04 <br />
-          (팀프로젝트-블루보틀)
-        </button>
-        <button class="button6 link_btn6">
-          Project05 <br />
-          (팀프로젝트-React02)
-        </button>
-      </div>
-      <!-- menu_box -->
-      <ul>
-        <li class="small">하늘같이 높고 넓은 사람이 되라는 이름처럼</li>
-        <li class="small">항상 깊고 많은 호기심을 갖고 개발하고 있습니다.</li>
-        <li class="title_font">안녕하세요.</li>
-        <li class="title_font">
-          일관성 있는 <b class="white_color">배움</b>의 자세를 통해
-        </li>
-        <li class="title_font">
-          성장하는 개발자 <b class="white_color">이호준</b>이라고 합니다.
-        </li>
-        <li class="box">
-          <span>Contact</span>
-          <a target="_blank" href="https://github.com/mandarinfactory">
-            <i class="fa-brands fa-github fa-sm"></i>
-          </a>
-          <a href="mailto:hoojunee@gmail.com">
-            <i class="fa-solid fa-envelope fa-sm"></i>
-          </a>
-          <a href="tel:010-9837-0037">
-            <i class="fa-solid fa-mobile fa-sm"></i>
-          </a>
-        </li>
-        <!-- li.box -->
-        <li class="address">hoojunee@gmail.com</li>
-        <li class="address">tel.010-9837-0037</li>
-        <li class="address">
-          <a href="./IMG/mandarin.jpg" download>이력서</a>
-        </li>
-      </ul>
-      <div id="particles-js"></div>
-      <script src="./JS/particles.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="right">
+        <div class="mbtn">
+            <i class="fa-solid fa-bars-staggered bars"></i>
+            <i class="fa-solid fa-xmark close"></i>
+        </div>
+        <div class="arrow_right">
+            <span>누르면 메뉴가 나타납니다.</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="arrow_down">
+            <i class="fa-solid fa-arrow-down"></i>
+            <span>아래로 스크롤을 하시면, 페이지가 보입니다.</span>
+        </div>
+        <div class="menu_box">
+            <button class="button0 link_btn0">Profile</button>
+            <button class="button1 link_btn1">About Me</button>
+            <button class="button2 link_btn2">Project01 <br>
+                (선샤인)
+            </button>
+            <button class="button3 link_btn3">Project02 <br>
+                (박물관)
+            </button>
+            <button class="button4 link_btn4">Project03 <br>
+                (React01)
+            </button>
+            <button class="button5 link_btn5">Project04 <br>
+                (팀프로젝트-블루보틀)
+            </button>
+            <button class="button6 link_btn6">Project05 <br>
+                (팀프로젝트-React02)
+            </button>
+        </div>
+        <ul>
+            <li class="small">
+                하늘같이 높고 넓은 사람이 되라는 이름처럼
+            </li>
+            <li class="small">
+                항상 깊고 많은 호기심을 갖고 개발하고 있습니다.
+            </li>
+            <li class="title_font">
+                안녕하세요.
+            </li>
+            <li class="title_font">
+                일관성 있는 <b class="white_color">배움</b>의 자세를 통해
+            </li>
+            <li class="title_font">
+                성장하는 개발자 <b class="white_color">이호준</b>이라고 합니다.
+            </li>
+            <li class="box">
+                <span>Contact</span>
+                <a target="_blank" href="https://github.com/mandarinfactory">
+                    <i class="fa-brands fa-github fa-sm"></i>
+                </a>
+                <a href="mailto:hoojunee@gmail.com">
+                    <i class="fa-solid fa-envelope fa-sm"></i>
+                </a>
+                <a href="tel:010-9837-0037">
+                    <i class="fa-solid fa-mobile fa-sm"></i>
+                </a>
+            </li>
+            <li class="address">hoojunee@gmail.com</li>
+            <li class="address">tel.010-9837-0037</li>
+            <li class="address">
+                <a href="./IMG/mandarin.jpg" download>이력서</a>
+            </li>
+        </ul>
+        <div id="particles-js"></div>
+        <script src="./JS/particles.js"></script>
     </div>
     <!-- right -->
     <section class="section section01">

@@ -1,10 +1,17 @@
 .visual {
-  perspective: 10000px;
+  perspective: 1000px;
   position: relative;
   z-index: 1;
 }
+.visual .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 .visual .bg {
   position: absolute;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   top: 0;
@@ -15,29 +22,111 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  filter: url(#filter);
+  transform: scale(1.1);
   transform-origin: center bottom;
+  transition: transform 0.3s;
 }
 .visual .bg-bottom {
   position: absolute;
   left: 0;
   width: 100%;
-  transform-origin: center bottom;
 }
 .visual .bg-bottom1 {
   bottom: 0;
-  max-height: 700px;
   min-height: 300px;
+  max-height: 600px;
+  filter: url(#filter);
+  transform-origin: center bottom;
+  transition: transform 0.3s;
 }
 .visual .bg-bottom2 {
   top: 100%;
-  max-height: 200px;
   min-height: 100px;
+  max-height: 250px;
 }
-.visual img.dancer {
+.visual figure.dancer {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 700px;
+  transition: transform 0.3s;
+}
+.visual figure.dancer img {
+  width: 100%;
+}
+.visual figure.dancer .origin {
+  position: relative;
+}
+.visual figure.dancer .glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: overlay;
+  opacity: 0;
+}
+.visual figure.dancer .glitch:hover {
+  opacity: 0.7;
+}
+.visual figure.dancer .glitch1 {
+  animation: glitch 0.2s infinite;
+}
+.visual figure.dancer .glitch2 {
+  animation: glitch 0.15s infinite;
+}
+@keyframes glitch {
+  10% {
+    transform: translateX(0.0694690293px);
+  }
+  20% {
+    transform: translateX(-0.7607440089px);
+  }
+  30% {
+    transform: translateX(3.3195660597px);
+  }
+  40% {
+    transform: translateX(5.2148751493px);
+  }
+  50% {
+    transform: translateX(-3.6112838556px);
+  }
+  60% {
+    transform: translateX(-6.125414812px);
+  }
+  70% {
+    transform: translateX(-4.8588104422px);
+  }
+  80% {
+    transform: translateX(-0.6619815209px);
+  }
+  90% {
+    transform: translateX(-6.4746317935px);
+  }
+}
+.visual img.splatter {
+  position: absolute;
+  bottom: 0;
+}
+.visual .splatter1 {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+  opacity: 0.9;
+}
+.visual .splatter2 {
+  right: 0;
+  width: 30%;
+  max-width: 300px;
+  opacity: 0.9;
+}
+.visual .splatter3 {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
 }/*# sourceMappingURL=visual.css.map */

@@ -16,8 +16,18 @@ body {
   text-decoration: none;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
-  --blue:#0181e7;
-  --purpple:#827dea;
-  --pink:#da5480;
+  --blue: #00aced;
+  --purple: #827dea;
+  --pink: #eb008a;
+  --yellow: #f6eb0f;
+  --green: #00a451;
+}
+
+.mono {
+  font-family: "Monoton", cursive;
 }/*# sourceMappingURL=style.css.map */

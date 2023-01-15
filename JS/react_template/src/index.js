@@ -11,6 +11,7 @@ import './asset/css/section3.css'
 import './asset/css/section4.css'
 import './asset/css/section5.css'
 import './asset/css/section6.css'
+import './asset/css/footer.css'
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';

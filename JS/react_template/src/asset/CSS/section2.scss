@@ -1,20 +1,104 @@
 .section2 {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .bg-top {
+    pointer-events: none;
     position: absolute;
-    bottom: 100%;
-    left: 0;
     width: 100%;
-  } //bg-top
-  .bg {
+    left: 0;
+    bottom: 100%;
+  }
+  figure.bg {
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
     } //img
-  } //bg
+  } //figure.bg
+  figure.bg-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    img {
+      width: 100%;
+    } //img
+  } //figure.bg-bottom
+  div.center {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+    } //lg
+    figure {
+      @media screen and (min-width: 1000px) {
+        width: 45%;
+      } //lg
+      @media screen and (max-width: 1000px) {
+        max-width: 500px;
+        margin: 0 auto;
+      } //sm
+      div {
+        img {
+          width: 100%;
+        } //img
+        em {
+        } //em
+      } //div
+    } //figure
+    .textbox {
+      @media screen and (min-width: 1000px) {
+        width: 45%;
+        text-align: right;
+      } //lg
+      @media screen and (max-width: 1000px) {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: -150px;
+        background-color: rgba($color: #fff, $alpha: 0.7);
+      } //sm
+      h2 {
+        span {
+        } //span
+      } //h2
+      p {
+        em {
+        } //em
+      } //p
+      a {
+      } //a
+    } //textbox
+    /* active ----------------------------- */
+    figure {
+      div {
+        img {
+        } //img
+        em {
+        } //em
+      } //div
+    } //figure
+    .textbox {
+      h2 {
+        span {
+        } //span
+      } //h2
+      p {
+        em {
+        } //em
+      } //p
+      a {
+      } //a
+    } //textbox
+  } //div.center
 } //section1

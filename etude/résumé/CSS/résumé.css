@@ -6,10 +6,10 @@
 }
 html,
 body {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: "LINESeedKR-Bd";
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'LINESeedKR-Bd';
 }
 
 body::-webkit-scrollbar {
@@ -39,19 +39,22 @@ button {
   text-transform: uppercase;
   box-shadow: 1px 1px 5px black;
 }
-
-/* root -------------------------------------------------------------------- */
-.right_content {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: var(--navy);
-  z-index: 10;
+.sections {
+    opacity: 0;
+    transition: all 1.5s;
+}
+/* root ---------------------------------------------------------------------- */
+.right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--navy);
+    z-index: 10;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .right_content .mbtn {
   color: rgba(255, 255, 255, 0.9);
@@ -315,7 +318,4 @@ section h1 {
   width: 100%;
   transition: all 0.5s;
 }
-.viewbox_section ul li.active figure {
-  margin: 0 5px;
-  transform: scale(1);
-}/*# sourceMappingURL=résumé.css.map */
+/* section_two ---------------------------------------------------------------- */
