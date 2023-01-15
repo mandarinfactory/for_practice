@@ -1,226 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/résumé.css">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <!-- link_CSS -->
-    <link rel="stylesheet" href="./CSS/viewbox/viewbox_sunshine.css">
-    <link rel="stylesheet" href="./CSS/viewbox/viewbox_museum.css">
-    <!-- link_CSS_viewbox -->
-    <link rel="stylesheet" href="./CSS/project/section_three.css">
-    <link rel="stylesheet" href="./CSS/project/section_four.css">
-    <link rel="stylesheet" href="./CSS/project/section_five.css">
-    <!-- link_CSS_project -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/résumé.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- root_CSS -->
+    <link rel="stylesheet" href="./CSS/project/section03.css" />
+    <link rel="stylesheet" href="./CSS/project/section04.css" />
+    <!-- sections_CSS -->
+    <link rel="stylesheet" href="./CSS/viewbox/sunshine_viewbox.css">
+    <link rel="stylesheet" href="./CSS/viewbox/museum_viewbox.css">
     <link rel="stylesheet" href="./CSS/plugin/viewbox.css">
-    <!-- link_CSS_plugin -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script><!-- jQuery -->
+    <!-- viewbox_CSS -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- jQuery -->
     <script src="./JS/plugin/app_particle_default.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./JS/plugin/particles.js"></script>
     <script src="./JS/plugin/jquery.viewbox.js"></script>
     <script src="./JS/plugin/viewbox_section.js"></script>
-    <script src="https://kit.fontawesome.com/7d1f9ca95d.js" crossorigin="anonymous"></script>
-    <!-- src_JS(plugins) -->
+    <script
+      src="https://kit.fontawesome.com/7d1f9ca95d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- plugin -->
     <script src="./JS/store.js"></script>
     <script src="./JS/common.js"></script>
-    <title>Document</title>
-</head>
-
-<body>
-    <div class="right">
-        <div class="mbtn">
-            <i class="fa-solid fa-bars-staggered bars"></i>
-            <i class="fa-solid fa-xmark close"></i>
-        </div>
-        <div class="arrow_right">
-            <span>메뉴버튼을 누르면 메뉴가 나타납니다.</span>
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-        <div class="arrow_down">
-            <i class="fa-solid fa-arrow-down"></i>
-            <span>아래로 스크롤을 하시면, 페이지가 보입니다.</span>
-        </div>
-        <div class="menu_box">
-            <button class="button0 link_btn0">Profile</button>
-            <button class="button1 link_btn1">About Me</button>
-            <button class="button2 link_btn2">Project01 <br>
-                (선샤인)
-            </button>
-            <button class="button3 link_btn3">Project02 <br>
-                (박물관)
-            </button>
-            <button class="button4 link_btn4">Project03 <br>
-                (React01)
-            </button>
-            <button class="button5 link_btn5">Project04 <br>
-                (팀프로젝트-블루보틀)
-            </button>
-            <button class="button6 link_btn6">Project05 <br>
-                (팀프로젝트-React02)
-            </button>
-        </div>
-        <ul>
-            <li class="small">
-                하늘같이 높고 넓은 사람이 되라는 이름처럼
-            </li>
-            <li class="small">
-                항상 깊고 많은 호기심을 갖고 개발하고 있습니다.
-            </li>
-            <li class="title_font">
-                안녕하세요.
-            </li>
-            <li class="title_font">
-                일관성 있는 <b class="white_color">배움</b>의 자세를 통해
-            </li>
-            <li class="title_font">
-                성장하는 개발자 <b class="white_color">이호준</b>이라고 합니다.
-            </li>
-            <li class="box">
-                <span>Contact</span>
-                <a target="_blank" href="https://github.com/mandarinfactory">
-                    <i class="fa-brands fa-github fa-sm"></i>
-                </a>
-                <a href="mailto:hoojunee@gmail.com">
-                    <i class="fa-solid fa-envelope fa-sm"></i>
-                </a>
-                <a href="tel:010-9837-0037">
-                    <i class="fa-solid fa-mobile fa-sm"></i>
-                </a>
-            </li>
-            <li class="address">hoojunee@gmail.com</li>
-            <li class="address">tel.010-9837-0037</li>
-            <li class="address">
-                <a href="./IMG/mandarin.jpg" download>이력서</a>
-            </li>
-        </ul>
-        <div id="particles-js"></div>
-        <script src="./JS/particles.js"></script>
+    <title>résumé</title>
+  </head>
+  <body>
+    <div class="right_content">
+      <div class="mbtn">
+        <i class="fa-solid fa-bars-staggered bars"></i>
+        <i class="fa-solid fa-xmark close"></i>
+      </div>
+      <!-- mbtn -->
+      <div class="arrow_right">
+        <span>메뉴버튼을 누르면 메뉴가 나타납니다.</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+      <!-- arrow_right -->
+      <div class="arrow_down">
+        <i class="fa-solid fa-arrow-down"></i>
+        <span>아래로 스크롤을 하시면, 페이지가 보입니다.</span>
+      </div>
+      <!-- arrow_down -->
+      <div class="menu_box">
+        <button class="button0 link_btn0">Profile</button>
+        <button class="button1 link_btn1">About Me</button>
+        <button class="button2 link_btn2">
+          Project01 <br />
+          (선샤인)
+        </button>
+        <button class="button3 link_btn3">
+          Project02 <br />
+          (박물관)
+        </button>
+        <button class="button4 link_btn4">
+          Project03 <br />
+          (React01)
+        </button>
+        <button class="button5 link_btn5">
+          Project04 <br />
+          (팀프로젝트-블루보틀)
+        </button>
+        <button class="button6 link_btn6">
+          Project05 <br />
+          (팀프로젝트-React02)
+        </button>
+      </div>
+      <!-- menu_box -->
+      <ul>
+        <li class="small">하늘같이 높고 넓은 사람이 되라는 이름처럼</li>
+        <li class="small">항상 깊고 많은 호기심을 갖고 개발하고 있습니다.</li>
+        <li class="title_font">안녕하세요.</li>
+        <li class="title_font">
+          일관성 있는 <b class="white_color">배움</b>의 자세를 통해
+        </li>
+        <li class="title_font">
+          성장하는 개발자 <b class="white_color">이호준</b>이라고 합니다.
+        </li>
+        <li class="box">
+          <span>Contact</span>
+          <a target="_blank" href="https://github.com/mandarinfactory">
+            <i class="fa-brands fa-github fa-sm"></i>
+          </a>
+          <a href="mailto:hoojunee@gmail.com">
+            <i class="fa-solid fa-envelope fa-sm"></i>
+          </a>
+          <a href="tel:010-9837-0037">
+            <i class="fa-solid fa-mobile fa-sm"></i>
+          </a>
+        </li>
+        <!-- li.box -->
+        <li class="address">hoojunee@gmail.com</li>
+        <li class="address">tel.010-9837-0037</li>
+        <li class="address">
+          <a href="./IMG/mandarin.jpg" download>이력서</a>
+        </li>
+      </ul>
+      <div id="particles-js"></div>
+      <script src="./JS/particles.js"></script>
     </div>
-    <div class="main">
-        <section class="sections section_one">
-            <figure class="main_photo">
-                <img src="./IMG/mandarin.jpg" alt="">
-            </figure>
-        </section><!-- section_one -->
-        <section class="sections section_two">
-            <div class="about_first">
-                About me
-            </div>
-            <ul class="about_main_first">
-                <li>몇번이고 벽을 만나 부딪힌 적도, 힘든적도 많지만,</li>
-                <li>직접 코딩을 통해 나오는 결과에 <b class="bg_navy">성취감</b>을 느끼고</li>
-                <li>새로운것을 배움에 있어 <b class="bg_navy">즐거움</b>이 항상 생깁니다.</li>
-                <li>깃헙에 주중 한 commit을 하는 습관을 꾸준하게 유지하며,</li>
-                <li>늘 <b class="bg_navy">안주하지 않기 위해</b> 노력하고 있습니다.</li>
-            </ul>
-            <ul class="about_main_second">
-                <h3>Technical</h3>
-                <li>현재 HTML5, CSS3, Sass, JavaScript(jQuery, ECMA6)을 수학했으며,</li>
-                <li>배운것을 바탕으로 각각 다른 디자인으로 2개의 project 만들었고,</li>
-                <li>framework인 react도 공부하여 이에 따른 project들도 만들었습니다.</li>
-                <li>또한, 독학으로 figma, git 그리고 JavaScript를 깊이있게 공부하고 있습니다.</li>
-            </ul>
-            <ul class="about_main_third">
-                <h3>Personal</h3>
-                <li>저는 현재 29살이고 지난 15년부터 20년까지 군복무를 제외하고</li>
-                <li>4년동안 유니클로(현대백화점 중동점, 여의도 IFC몰점)에서 근무했으며, </li>
-                <li>20년도 하반기부터 22년도 6월까지 AONE 북부감평법인에서 일했습니다.</li>
-                <li>금년에 퇴사후, 바로 더조은컴퓨터학원 부평지점에서 </li>
-                <li>웹퍼블리셔 3개월과정을 수료했습니다.(22.10.17 ~ 23.01.17)</li>
-            </ul>
-        </section><!-- section_two -->
-        <section class="sections section_three">
-            <div class="project">Project01</div>
-            <figure class="figure_one">
-                <img src="./IMG/sunshine/mockup_sunshine.jpg" alt>
-                <figcaption>
-                    <ul class="title_font">
-                        <li>
-                            <a target="_blank"
-                                href="http://sunshine-env.eba-epq3msmy.ap-northeast-2.elasticbeanstalk.com/">webpage</a>
-                        </li>
-                        <li class="sub_title">작업언어</li>
-                        <li>HTML5, CSS3, jQuery</li>
-                        <li class="sub_title">작업시간 및 구조</li>
-                        <li>3주 · 반응형, 역동적인 구조</li>
-                        <li class="sub_title">작업과정</li>
-                        <li>햇빛과 어린아이들을 주제로 만들고 싶었고,
-                            전체적인 테마를 밝고 개구쟁이같은 느낌을 주고 싶어서 밝은 색과 다채로운 이미지,
-                            패턴들을 이용해서 홈페이지를 만들게 되었습니다.</li>
-                    </ul>
-                </figcaption>
-            </figure>
-            <div class="viewbox_sunshine">
-            </div>
-            <script>
-                $('.viewbox_sunshine').prepend(`<ul></ul>`)
-                viewBoxArr.forEach(function (v) {
-                    $('.viewbox_sunshine ul').append(`
-                    <li>
-                        <figure>
-                            <a href="./IMG/sunshine/template_${v.path}.jpg">
-                                <img src="./IMG/sunshine/template_${v.path}.jpg" alt>
-                                </a>
-                                </figure>
-                                </li>
-                                `)//append
-                })//forEach
-            </script>
-        </section><!-- section_three -->
-        <section class="sections section_four">
-            <div class="project">Project02</div>
-            <figure class="figure_one">
-                <img src="./IMG/museum/museum_main_02.jpg" alt>
-                <figcaption>
-                    <ul class="title_font">
-                        <li>
-                            <a target="_blank"
-                                href="http://museum-env.eba-wipayawh.ap-northeast-2.elasticbeanstalk.com/">webpage</a>
-                        </li>
-                        <li class="sub_title">작업언어</li>
-                        <li>HTML5, CSS3, jQuery</li>
-                        <li class="sub_title">작업시간 및 구조</li>
-                        <li>3주 · 반응형, 역동적인 구조</li>
-                        <li class="sub_title">작업과정</li>
-                        <li>자주 방문하는 국립중앙박물관 홈페이지를 보면서
-                            직접 다른 디자인들로 바꾸고 싶었고 실제 잘못된 부분이 많이 보이면서
-                            수정된 홈페이지로 만들어보게 되었습니다.
-                        </li>
-                    </ul>
-                </figcaption>
-            </figure>
-            <div class="viewbox_museum">
-            </div>
-            <script>
-                $('.viewbox_museum').prepend(`<ul></ul>`)
-                viewBoxArr.forEach(function (v) {
-                    $('.viewbox_museum ul').append(`
-                    <li>
-                        <figure>
-                            <a href="./IMG/museum/museum_${v.path}.jpg">
-                                <img src="./IMG/museum/museum_${v.path}.jpg" alt>    
-                                </a>    
-                                </figure>    
-                                </li>
-                                `)//append
-                })//forEach
-            </script>
-        </section><!-- section_four -->
-        <section class="sections section_five">
-
-        </section><!-- section_five -->
-        <section class="sections section_six">
-
-        </section><!-- section_five -->
-        <section class="sections section_seven">
-
-        </section><!-- section_five -->
+    <!-- right -->
+    <section class="section section01">
+      <h1>하나</h1>
+    </section>
+    <!-- section01 -->
+    <section class="section section02">
+      <div class="about_first">
+        About me
     </div>
-</body>
-<script src="./JS/résumé.js"></script>
-<!-- DOM load 후 전체로 되므로 body 아래로 내려놓음 -->
-
+    <ul class="about_main_first">
+        <li>몇번이고 벽을 만나 부딪힌 적도, 힘든적도 많지만,</li>
+        <li>직접 코딩을 통해 나오는 결과에 <b class="bg_navy">성취감</b>을 느끼고</li>
+        <li>새로운것을 배움에 있어 <b class="bg_navy">즐거움</b>이 항상 생깁니다.</li>
+        <li>깃헙에 주중 한 commit을 하는 습관을 꾸준하게 유지하며,</li>
+        <li>늘 <b class="bg_navy">안주하지 않기 위해</b> 노력하고 있습니다.</li>
+    </ul>
+    <ul class="about_main_second">
+        <h3>Technical</h3>
+        <li>현재 HTML5, CSS3, Sass, JavaScript(jQuery, ECMA6)을 수학했으며,</li>
+        <li>배운것을 바탕으로 각각 다른 디자인으로 2개의 project 만들었고,</li>
+        <li>framework인 react도 공부하여 이에 따른 project들도 만들었습니다.</li>
+        <li>또한, 독학으로 figma, git 그리고 JavaScript를 깊이있게 공부하고 있습니다.</li>
+    </ul>
+    <ul class="about_main_third">
+        <h3>Personal</h3>
+        <li>저는 현재 29살이고 지난 15년부터 20년까지 군복무를 제외하고</li>
+        <li>4년동안 유니클로(현대백화점 중동점, 여의도 IFC몰점)에서 근무했으며, </li>
+        <li>20년도 하반기부터 22년도 6월까지 AONE 북부감평법인에서 일했습니다.</li>
+        <li>금년에 퇴사후, 바로 더조은컴퓨터학원 부평지점에서 </li>
+        <li>웹퍼블리셔 3개월과정을 수료했습니다.(22.10.17 ~ 23.01.17)</li>
+    </ul>
+    </section>
+    <!-- section02 -->
+    <section class="section section03">
+      <div class="project">Project01</div>
+      <figure class="figure_one">
+        <img src="./IMG/sunshine/mockup_sunshine.jpg" alt>
+        <figcaption>
+            <ul class="title_font">
+                <li>
+                    <a target="_blank"
+                        href="http://sunshine-env.eba-epq3msmy.ap-northeast-2.elasticbeanstalk.com/">webpage</a>
+                </li>
+                <li class="sub_title">작업언어</li>
+                <li>HTML5, CSS3, jQuery</li>
+                <li class="sub_title">작업시간 및 구조</li>
+                <li>3주 · 반응형, 역동적인 구조</li>
+                <li class="sub_title">작업과정</li>
+                <li>햇빛과 어린아이들을 주제로 만들고 싶었고,
+                    전체적인 테마를 밝고 개구쟁이같은 느낌을 주고 싶어서 밝은 색과 다채로운 이미지,
+                    패턴들을 이용해서 홈페이지를 만들게 되었습니다.</li>
+            </ul>
+        </figcaption>
+    </figure>
+    <div class="viewbox_sunshine">
+    </div>
+    <script>
+        $('.viewbox_sunshine').prepend(`<ul></ul>`)
+        viewBoxArr.forEach(function (v) {
+            $('.viewbox_sunshine ul').append(`
+            <li>
+                <figure>
+                    <a href="./IMG/sunshine/template_${v.path}.jpg">
+                        <img src="./IMG/sunshine/template_${v.path}.jpg" alt>
+                        </a>
+                        </figure>
+                        </li>
+                        `)//append
+        })//forEach
+    </script>
+    </section>
+    <!-- section03 -->
+    <section class="section section04">
+      <div class="project">Project02</div>
+      <figure class="figure_one">
+        <img src="./IMG/museum/museum_main_02.jpg" alt>
+        <figcaption>
+            <ul class="title_font">
+                <li>
+                    <a target="_blank"
+                        href="http://museum-env.eba-wipayawh.ap-northeast-2.elasticbeanstalk.com/">webpage</a>
+                </li>
+                <li class="sub_title">작업언어</li>
+                <li>HTML5, CSS3, jQuery</li>
+                <li class="sub_title">작업시간 및 구조</li>
+                <li>3주 · 반응형, 역동적인 구조</li>
+                <li class="sub_title">작업과정</li>
+                <li>자주 방문하는 국립중앙박물관 홈페이지를 보면서
+                    직접 다른 디자인들로 바꾸고 싶었고 실제 잘못된 부분이 많이 보이면서
+                    수정된 홈페이지로 만들어보게 되었습니다.
+                </li>
+            </ul>
+        </figcaption>
+    </figure>
+    <div class="viewbox_museum">
+    </div>
+    <script>
+        $('.viewbox_museum').prepend(`<ul></ul>`)
+        viewBoxArr.forEach(function (v) {
+            $('.viewbox_museum ul').append(`
+            <li>
+                <figure>
+                    <a href="./IMG/museum/museum_${v.path}.jpg">
+                        <img src="./IMG/museum/museum_${v.path}.jpg" alt>    
+                        </a>    
+                        </figure>    
+                        </li>
+                        `)//append
+        })//forEach
+    </script>
+    </section>
+    <!-- section04 -->
+    <section class="section section05">
+      <h1>다섯</h1>
+    </section>
+    <!-- section05 -->
+    <section class="section section06">
+      <h1>여섯</h1>
+    </section>
+    <!-- section06 -->
+    <section class="section section07">
+      <h1>일곱</h1>
+    </section>
+    <!-- section07 -->
+  </body>
+  <script src="./JS/résumé.js"></script>
 </html>
