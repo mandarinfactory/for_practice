@@ -15,8 +15,8 @@ const CompSection2 = () => {
         <figure>
           <div>
             <img src={require('../asset/img/section2/section2-dancer.png')} alt="" />
-            <em>
-              Hip Hop
+            <em className='mono'>
+              Hip-Hop
             </em>
           </div>
         </figure>
@@ -28,15 +28,25 @@ const CompSection2 = () => {
           </h2>
           <p>
             <em>
-              한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다.
-              법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다.
-              공무원인 근로자는 법률이 정하는 자에 한하여 단결권·단체교섭권 및 단체행동권을 가진다. 국가는 농·어민과 중소기업의 자조조직을 육성하여야 하며,
-              그 자율적 활동과 발전을 보장한다.
+              힙합(Hip Hop)은 1970년대 미합중국 뉴욕의 브롱스에서 유행하기 시작한 춤과 대중음악으로부터 파생된 거리문화이다.
+              또한 미합중국 뉴욕의 브롱스에서 아프리카계 미국인과 캐리비안 미합중국인, 히스패닉계 주민의 커뮤니티에서 행해지고 있었던 블록 파티에서 태어난 문화이다.
+              힙합은 랩, 비보잉, 크래피티, 비트박스, (디제잉) 크게 4요소로 이루어져 있다.
             </em>
           </p>
-          <a href=""></a>
+          <a href="">Hip-Hop</a>
         </div>
       </div>
+
+      <svg style={{ display: 'none' }} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <filter id="fractal">
+            <feImage xlink="" x="0" y="0" result="rippleImage" xlinkHref={`${process.env.PUBLIC_URL}./img/ripple.png`} />
+            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="rippleImage"
+              result="displacementMap" colorInterpolationFilters="sRGB" scale="100" />
+            <feComposite operator="in" in2="rippleImage"></feComposite>
+          </filter>
+        </defs>
+      </svg>
     </section>
   );
 };

@@ -104,21 +104,11 @@
       p {
         position: relative;
         color: black;
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 20px;
         @media screen and (min-width: 1000px) {
           margin-left: 2.2em;
-          font-size: 1.2em;
-          &::before {
-            content: "";
-            position: absolute;
-            left: -7%;
-            top: -70%;
-            width: 20px;
-            height: 240%;
-            border: 3px solid black;
-            border-right: none;
-          } //::before
+          font-size: 1.1em;
         } //lg
         @media screen and (max-width: 1000px) {
         } //sm

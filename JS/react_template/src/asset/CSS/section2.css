@@ -17,12 +17,14 @@
   height: 100%;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 .section2 figure.bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  filter: url(#fractal);
 }
 .section2 figure.bg-bottom {
   position: absolute;
@@ -63,8 +65,19 @@
     margin: 0 auto;
   }
 }
+.section2 div.center figure div {
+  position: relative;
+}
 .section2 div.center figure div img {
   width: 100%;
+}
+.section2 div.center figure div em {
+  position: absolute;
+  right: 20%;
+  bottom: 20%;
+  font-size: 4.5em;
+  color: white;
+  text-shadow: 1px 1px 3px var(--blue);
 }
 @media screen and (min-width: 1000px) {
   .section2 div.center .textbox {
@@ -75,9 +88,47 @@
 @media screen and (max-width: 1000px) {
   .section2 div.center .textbox {
     position: relative;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    margin-top: -150px;
+    box-sizing: border-box;
+    margin-top: -200px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
   }
+}
+.section2 div.center .textbox h2 {
+  margin-bottom: 20px;
+  color: var(--pink);
+  font-size: 2.5em;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px black;
+}
+.section2 div.center .textbox h2 span {
+  display: block;
+}
+.section2 div.center .textbox p {
+  color: black;
+  margin-bottom: 20px;
+}
+.section2 div.center .textbox p em {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: var(--blue);
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px white;
+}
+.section2 div.center .textbox a {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 3px solid var(--pink);
+  color: var(--pink);
+  transition: all 0.3s;
+}
+.section2 div.center.active .center .figure {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.section2 div.center.active .center .textbox {
+  animation: jello 1s;
 }/*# sourceMappingURL=section2.css.map */

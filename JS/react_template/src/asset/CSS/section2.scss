@@ -16,11 +16,13 @@
     height: 100%;
     top: 0;
     left: 0;
+    overflow: hidden;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
+      filter: url(#fractal);
     } //img
   } //figure.bg
   figure.bg-bottom {
@@ -56,10 +58,17 @@
         margin: 0 auto;
       } //sm
       div {
+        position: relative;
         img {
           width: 100%;
         } //img
         em {
+          position: absolute;
+          right: 20%;
+          bottom: 20%;
+          font-size: 4.5em;
+          color: white;
+          text-shadow: 1px 1px 3px var(--blue);
         } //em
       } //div
     } //figure
@@ -70,42 +79,54 @@
       } //lg
       @media screen and (max-width: 1000px) {
         position: relative;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
-        margin-top: -150px;
+        box-sizing: border-box;
+        margin-top: -200px;
+        padding: 10px;
         background-color: rgba($color: #fff, $alpha: 0.7);
       } //sm
       h2 {
+        margin-bottom: 20px;
         span {
+          display: block;
         } //span
+        color: var(--pink);
+        font-size: 2.5em;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px black;
       } //h2
       p {
+        color: black;
+        margin-bottom: 20px;
         em {
+          display: block;
+          font-weight: 600;
+          font-size: 1.2em;
+          color: var(--blue);
+          margin-bottom: 10px;
+          text-shadow: 1px 1px 2px white;
         } //em
       } //p
       a {
+        display: inline-block;
+        padding: 15px 30px;
+        border: 3px solid var(--pink);
+        color: var(--pink);
+        transition: all 0.3s;
       } //a
     } //textbox
     /* active ----------------------------- */
-    figure {
-      div {
-        img {
-        } //img
-        em {
-        } //em
-      } //div
-    } //figure
-    .textbox {
-      h2 {
-        span {
-        } //span
-      } //h2
-      p {
-        em {
-        } //em
-      } //p
-      a {
-      } //a
-    } //textbox
-  } //div.center
-} //section1
+    &.active {
+      .center {
+        .figure {
+          opacity: 1;
+          transition: all 0.3s;
+        } //figure
+        .textbox {
+          animation: jello 1s;
+        } //textbox
+      } //center
+    } //.active
+  } //center
+} //section2
