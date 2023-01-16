@@ -1,0 +1,37 @@
+.section04 .viewbox_museum {
+  position: absolute;
+  bottom: -2%;
+  z-index: 1;
+}
+.section04 .viewbox_museum ul {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section04 .viewbox_museum ul li {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.section04 .viewbox_museum ul li.active figure {
+  margin: 0 5px;
+  transform: scale(1);
+}
+.section04 .viewbox_museum ul li figure {
+  padding: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 7px black;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+.section04 .viewbox_museum ul li figure a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.section04 .viewbox_museum ul li figure a:hover img {
+  transform: scale(1.3);
+}
+.section04 .viewbox_museum ul li figure a img {
+  width: 100%;
+}/*# sourceMappingURL=museum_viewbox.css.map */
