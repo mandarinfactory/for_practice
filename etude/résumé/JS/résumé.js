@@ -1,14 +1,14 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.utils.toArray("section").forEach((section, i) => {
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top top", 
-    pin: true,
-    pinSpacing: false,
-  })//create
+    ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+    })//create
 })//forEach
 ScrollTrigger.create({
-  snap: 1 / 5000
+    snap: 1 / 5000
 })//create
 /* folder_scroll_animation 작동법 ---------------------------------------------------------------------- */
 
