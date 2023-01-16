@@ -7,6 +7,7 @@ const CompSection2 = () => {
       <figure className='bg'>
         <img src={require('../asset/img/section2/section2-bg.png')} alt="" />
       </figure>
+      <div className="bubble_container bubble-particle"></div>
       <figure className='bg-bottom'>
         <img src={require('../asset/img/section2/section2-bg-bottom.png')} alt="" />
       </figure>

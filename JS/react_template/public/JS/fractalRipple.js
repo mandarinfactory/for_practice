@@ -1,9 +1,7 @@
 function displacmentWave(el, filterID, displacmentMap, sec, scaleSize) {
   this.filterID = filterID;
-  this.xlink = "http://www.w3.org/1999/xlink";
   this.imgUrl = displacmentMap;
   this.feImage = document.querySelector(this.filterID + ' feImage');
-
   this.el = document.querySelector(el);
   this.fesize
   this.sec = sec
@@ -21,7 +19,6 @@ function displacmentWave(el, filterID, displacmentMap, sec, scaleSize) {
 
   window.addEventListener('load', function () {
     this.displacmentResize()
-    this.feImage.setAttributeNS(this.xlink, "xlink:href", this.imgUrl);
   }.bind(this))
 
   window.addEventListener('resize', function () {
@@ -40,6 +37,7 @@ displacmentWave.prototype.wave = function () {
       y: 0,
     }
   }, 0);
+
   TweenMax.to(this.filterID + " feImage", this.sec, {
     attr: {
       width: this.fesize * this.scaleSize,

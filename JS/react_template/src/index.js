@@ -1,4 +1,5 @@
 import './asset/css/animation.css'
+import './asset/css/bubble-particle.css'
 import './asset/css/reset.css'
 import './asset/css/style.css'
 import './asset/css/cursor.css'
