@@ -10,6 +10,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "LINESeedKR-Bd";
+  scroll-snap-type: y mandatory;
 } //html, body
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
@@ -213,6 +214,7 @@ section {
   justify-content: center;
   align-items: center;
   background-color: white;
+  scroll-snap-align: start;
   transition: opacity 1s;
   h1 {
     font-size: 4em;

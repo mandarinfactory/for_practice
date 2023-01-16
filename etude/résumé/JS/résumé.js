@@ -1,17 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-gsap.utils.toArray("section").forEach((section, i) => {
-    ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        pin: true,
-        pinSpacing: false,
-    })//create
-})//forEach
-ScrollTrigger.create({
-    snap: 1 / 5000
-})//create
-/* folder_scroll_animation 작동법 ---------------------------------------------------------------------- */
-
 const button0 = document.querySelector('.menu_box .button0')
 const button1 = document.querySelector('.menu_box .button1')
 const button2 = document.querySelector('.menu_box .button2')
@@ -61,6 +47,7 @@ document.addEventListener('scroll', () => {
 /* menu_box내에서 icon들 누르면 사라지게 하거나 button 누르면 색변경 시키게 해놓음 ---------------------- */
 
 button0.addEventListener('click', () => {
+    /*  window.scrollTo({ top: section0.offsetTop, left: 0, behavior: 'smooth', block: 'start' }) */
     section0.scrollIntoView({ behavior: 'smooth', block: 'start' })
 })//addEventListener
 button1.addEventListener('click', () => {
