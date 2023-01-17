@@ -1,4 +1,5 @@
 .section3 {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +80,52 @@
             } //col
         } //display
     } //carousel
+    /* slider_buttons ------------------------------------------------------------------------------ */
+    .controls {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 400px;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%);
+        .prev,
+        .next {
+            color: white;
+            font-size: 1.5em;
+        } //prev, next
+        .indicator {
+            width: 85%;
+            display: flex;
+            button {
+                position: relative;
+                flex: 1;
+                height: 10px;
+                border: 1px solid white;
+                margin-left: -1px;
+                border-top: none;
+                border-bottom: none;
+                background-color: rgba($color: #fff, $alpha: 0.05);
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    transition: all 0.5s;
+                    background-color: rgba($color: #eb008a, $alpha: 0.5);
+                } //button:after
+                &.active {
+                    &::after {
+                        width: 100%;
+                    } //button.active::after
+                } //button.active
+            } //button
+        } //indicator
+    } //controls
     /* active ----------------------------------------------------------------------- */
     .carousel {
         @media screen and (max-width: 500px) {

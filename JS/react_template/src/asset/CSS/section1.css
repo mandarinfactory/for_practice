@@ -93,7 +93,7 @@
 .section1 .wrap .textbox h2 {
   margin: 10px 0;
   color: white;
-  text-shadow: 1px 1px 0 black;
+  text-shadow: 1px 1px 3px black;
   font-weight: 800;
 }
 @media screen and (min-width: 1000px) {

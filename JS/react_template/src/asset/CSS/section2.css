@@ -80,7 +80,7 @@
   bottom: 20%;
   font-size: 4.5em;
   color: white;
-  text-shadow: 1px 1px 3px var(--blue);
+  text-shadow: 5px 5px 7px var(--blue);
 }
 @media screen and (min-width: 1000px) {
   .section2 div.center .textbox {
@@ -103,7 +103,7 @@
   margin-bottom: 20px;
   color: var(--pink);
   font-size: 2.5em;
-  font-weight: 600;
+  font-weight: 900;
   text-shadow: 1px 1px 2px black;
 }
 .section2 div.center .textbox h2 span {
@@ -117,9 +117,11 @@
   display: block;
   font-weight: 600;
   font-size: 1.2em;
-  color: var(--blue);
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
   margin-bottom: 10px;
-  text-shadow: 1px 1px 2px white;
+  text-shadow: 1px 1px 3px white;
 }
 .section2 div.center .textbox a {
   display: inline-block;
