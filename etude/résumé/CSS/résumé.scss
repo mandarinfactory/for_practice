@@ -114,6 +114,14 @@ button {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     transition: all 0.3s;
+    @media screen and (min-width: 1000px) and (max-width: 1300px) {
+      width: 220px;
+      height: 430px;
+    } //(1300 - 1000)
+    @media screen and (min-width: 700px) and (max-width: 1000px) {
+      width: 160px;
+      height: 380px;
+    } //(1000 - 700)
     &.active {
       opacity: 1;
     } //menu_box.active
@@ -129,6 +137,12 @@ button {
       text-align: center;
       cursor: pointer;
       transition: all 0.3s;
+      @media screen and (min-width: 1000px) and (max-width: 1300px) {
+        font-size: 1em;
+      } //(1300 - 1000)
+      @media screen and (min-width: 700px) and (max-width: 1000px) {
+        font-size: 0.8em;
+      } //(1000 - 700)
       &:hover {
         opacity: 0.95;
       } //button:hover
@@ -198,6 +212,33 @@ button {
         } //a:hover
       } //a
     } //li.address
+    @media screen and (min-width: 1000px) and (max-width: 1300px) {
+      li {
+        font-size: 1.7em;
+        line-height: 45px;
+        &.small {
+          font-size: 1em;
+          line-height: 30px;
+        } //small
+        &.box {
+          width: 180px;
+        } //box
+      } //li
+    } //(1300 - 1000)
+    @media screen and (min-width: 700px) and (max-width: 1000px) {
+      li {
+        font-size: 1.3em;
+        line-height: 35px;
+        &.small {
+          font-size: 0.8em;
+          line-height: 20px;
+        } //small
+        &.box {
+          font-size: 1.5em;
+          width: 170px;
+        } //box
+      } //li
+    } //(1000 - 700)
   } //ul
   #particles-js {
     position: absolute;
