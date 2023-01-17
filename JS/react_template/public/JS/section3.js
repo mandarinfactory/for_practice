@@ -14,4 +14,41 @@ $(function () {
             'right': 100 + (count - i) * (100 / count) + '%'
         })//css
     }//for
+    /* btn_event(slider) ------------------------------------------------------------------------------- */
+    $('.section3 .container').bind('transitionend', function () {
+        if (n > count) {
+            n = 1
+            $('.section3 .container').css({
+                'transition-duration': '0s',
+                'left': (n - 1) * - 100 + '%'
+            })//css
+        } else if (n < 1) {
+            n = count
+            $('.section3 .container').css({
+                'transition-duration': '0s',
+                'left': (n - 1) * - 100 + '%'
+            })//css
+        }//if-else
+    })//bind.transitionend
+    let n = 1;
+    function chBtn() {
+        $('.section3 .container').css({
+            'transition-duration': '0.5s',
+            'left': (n - 1) * - 100 + '%'
+        })//css
+        $('.section3 .controls button').removeClass('active')
+        $('.section3 .controls .btn' + n).addClass('active')
+    }//function_chBtn
+    $('.section3 .prev').click(function () {
+        n--;
+        chBtn()
+    })//click
+    $('.section3 .next').click(function () {
+        n++;
+        chBtn()
+    })//click
+    $('.section3 .indicator button').click(function () {
+        n = $(this).attr('data-n')
+        chBtn()
+    })//click
 })//document.ready

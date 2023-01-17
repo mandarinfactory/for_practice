@@ -45,12 +45,13 @@
 .section3 .carousel .display .col div.container {
   position: relative;
   left: 0;
-  width: 700%;
+  width: 600%;
   height: 100%;
   display: flex;
+  transition: left 0.5s;
 }
 .section3 .carousel .display .col div.container figure {
-  width: 14.285%;
+  width: 16.66%;
   height: 100%;
   box-sizing: border-box;
   padding: 10px;
@@ -129,7 +130,7 @@
   top: 0;
   left: 0;
   transition: all 0.5s;
-  background-color: rgba(235, 0, 138, 0.5);
+  background-color: rgba(130, 125, 234, 0.7);
 }
 .section3 .controls .indicator button.active::after {
   width: 100%;

@@ -31,11 +31,12 @@
                 div.container {
                     position: relative;
                     left: 0;
-                    width: 700%;
+                    width: 600%;
                     height: 100%;
                     display: flex;
+                    transition: left 0.5s;
                     figure {
-                        width: 14.285%;
+                        width: 16.66%;
                         height: 100%;
                         box-sizing: border-box;
                         padding: 10px;
@@ -116,7 +117,7 @@
                     top: 0;
                     left: 0;
                     transition: all 0.5s;
-                    background-color: rgba($color: #eb008a, $alpha: 0.5);
+                    background-color: rgba($color: #827dea, $alpha: 0.7);
                 } //button:after
                 &.active {
                     &::after {

@@ -61,15 +61,6 @@ const CompSection3 = () => {
                   </figcaption>
                 </div>
               </figure>
-              <figure className='figure7'>
-                <div className='inner'>
-                  <img src={require('../asset/img/section3/section3-7.jpg')} alt="" />
-                  <figcaption>
-                    <em>Contemporary Dance</em>
-                    <small>Intermediate Age 18+</small>
-                  </figcaption>
-                </div>
-              </figure>
             </div>
           </div>
         </div>
@@ -77,19 +68,18 @@ const CompSection3 = () => {
 
       <div className="controls">
         <button className="prev">
-          <i class="fa-solid fa-chevron-left"></i>
+          <i className="fa-solid fa-chevron-left"></i>
         </button>
         <div className="indicator">
-          <button className="btn1 active" data-n="1"></button>
+          <button className="btn1 btn7 active" data-n="1"></button>
           <button className="btn2" data-n="2"></button>
           <button className="btn3" data-n="3"></button>
           <button className="btn4" data-n="4"></button>
           <button className="btn5" data-n="5"></button>
-          <button className="btn6" data-n="6"></button>
-          <button className="btn7" data-n="7"></button>
+          <button className="btn6 btn0" data-n="6"></button>
         </div>
         <button className="next">
-          <i class="fa-solid fa-chevron-right"></i>
+          <i className="fa-solid fa-chevron-right"></i>
         </button>
       </div>
     </section>
