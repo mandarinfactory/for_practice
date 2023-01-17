@@ -45,7 +45,6 @@
   position: relative;
   width: 90%;
   max-width: 1200px;
-  /* active ----------------------------- */
 }
 @media screen and (min-width: 1000px) {
   .section2 div.center {
@@ -134,11 +133,4 @@
 .section2 div.center .textbox a:hover {
   background-color: var(--pink);
   color: white;
-}
-.section2 div.center.active .center .figure {
-  opacity: 1;
-  transition: all 0.3s;
-}
-.section2 div.center.active .center .textbox {
-  animation: jello 1s;
 }/*# sourceMappingURL=section2.css.map */

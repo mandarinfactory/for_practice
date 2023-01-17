@@ -87,6 +87,16 @@ button {
   font-size: 0.8em;
   transition: all 0.1s;
 }
+@media screen and (min-width: 800px) and (max-width: 1400px) {
+  .right_content .arrow_right {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .right_content .arrow_right {
+    display: none;
+  }
+}
 .right_content .arrow_down {
   position: absolute;
   bottom: 2%;

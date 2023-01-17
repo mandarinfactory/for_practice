@@ -124,17 +124,5 @@
         }
       } //a
     } //textbox
-    /* active ----------------------------- */
-    &.active {
-      .center {
-        .figure {
-          opacity: 1;
-          transition: all 0.3s;
-        } //figure
-        .textbox {
-          animation: jello 1s;
-        } //textbox
-      } //center
-    } //.active
   } //center
 } //section2

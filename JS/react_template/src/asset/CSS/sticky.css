@@ -11,6 +11,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 3;
 }
 .sticky .bg_cloud img {
   width: 100%;

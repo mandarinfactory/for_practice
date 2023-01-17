@@ -82,6 +82,12 @@ button {
     color: var(--mustard);
     font-size: 0.8em;
     transition: all 0.1s;
+    @media screen and (min-width: 800px) and (max-width: 1400px) {
+      margin-right: 10px;
+    }
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   } //arrow_right
   .arrow_down {
     position: absolute;
