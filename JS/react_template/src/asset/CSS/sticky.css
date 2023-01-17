@@ -1,0 +1,17 @@
+.sticky .sticky_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.sticky .bg_cloud {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.sticky .bg_cloud img {
+  width: 100%;
+}/*# sourceMappingURL=sticky.css.map */
