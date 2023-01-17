@@ -31,6 +31,25 @@ $(function () {
         }//if-else
     })//bind.transitionend
     let n = 1;
+    let intervalID
+    let timeoutID
+
+    intervalID = setInterval(function () {
+        n++;
+        chBtn()
+    }, 2000)
+
+    function autoPlay() {
+        clearInterval(intervalID)
+        clearTimeout(timeoutID)
+        timeoutID = setTimeout(function () {
+            intervalID = setInterval(function () {
+                n++;
+                chBtn()
+            }, 2000)
+        }, 3000)
+    }//function_autoPlay
+
     function chBtn() {
         $('.section3 .container').css({
             'transition-duration': '0.5s',
@@ -38,17 +57,23 @@ $(function () {
         })//css
         $('.section3 .controls button').removeClass('active')
         $('.section3 .controls .btn' + n).addClass('active')
+        $('.section3 .carousel').toggleClass('active')
+        $('.section3 .carousel figure').removeClass('active')
+        $('.section3 .carousel figure' + n).addClass('active')
     }//function_chBtn
     $('.section3 .prev').click(function () {
         n--;
         chBtn()
+        autoPlay()
     })//click
     $('.section3 .next').click(function () {
         n++;
         chBtn()
+        autoPlay()
     })//click
     $('.section3 .indicator button').click(function () {
         n = $(this).attr('data-n')
         chBtn()
+        autoPlay()
     })//click
 })//document.ready

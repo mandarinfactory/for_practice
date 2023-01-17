@@ -134,4 +134,25 @@
 }
 .section3 .controls .indicator button.active::after {
   width: 100%;
+}
+.section3 .carousel .display .col div.container figure {
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+.section3 .carousel .display .col div.container figure.active img {
+  transform: scale(1.2);
+}
+.section3 .carousel .display .col div.container figure .inner img {
+  transition: all 0.5s;
+}
+.section3 .carousel .display .col div.container figure .inner figcaption {
+  position: relative;
+}
+@media screen and (min-width: 600px) {
+  .section3 .carousel.active .display .col .container figure:nth-child(odd) {
+    transform: translateY(-5%);
+  }
+  .section3 .carousel.active .display .col .container figure:nth-child(even) {
+    transform: translateY(5%);
+  }
 }/*# sourceMappingURL=section3.css.map */

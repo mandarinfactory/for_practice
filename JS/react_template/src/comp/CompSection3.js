@@ -52,7 +52,7 @@ const CompSection3 = () => {
                   </figcaption>
                 </div>
               </figure>
-              <figure className='figure6'>
+              <figure className='figure6 figure0'>
                 <div className='inner'>
                   <img src={require('../asset/img/section3/section3-6.jpg')} alt="" />
                   <figcaption>

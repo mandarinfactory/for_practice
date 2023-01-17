@@ -141,10 +141,19 @@
                 } //sm
                 div.container {
                     figure {
+                        overflow: hidden;
+                        transition: transform 0.5s;
+                        &.active {
+                            img {
+                                transform: scale(1.2);
+                            }
+                        } //figure.figure
                         .inner {
                             img {
+                                transition: all 0.5s;
                             } //img
                             figcaption {
+                                position: relative;
                                 em {
                                 } //em
                                 small {
@@ -155,5 +164,23 @@
                 } //container
             } //col
         } //display
+        &.active {
+            .display {
+                .col {
+                    .container {
+                        figure {
+                            @media screen and (min-width: 600px) {
+                                &:nth-child(odd) {
+                                    transform: translateY(-5%);
+                                }
+                                &:nth-child(even) {
+                                    transform: translateY(5%);
+                                }
+                            } //figure 600px 이상!
+                        } //figure
+                    } //container
+                } //col
+            } //display
+        } //carousel.active
     } //carousel
 } //section3
