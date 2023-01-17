@@ -24,12 +24,12 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: url(#fractal);
 }
 .section2 figure.bg-bottom {
   position: absolute;
   width: 100%;
   bottom: 0;
+  overflow: hidden;
 }
 .section2 figure.bg-bottom img {
   width: 100%;
@@ -54,6 +54,9 @@
     flex-direction: row-reverse;
   }
 }
+.section2 div.center figure {
+  perspective: 1000px;
+}
 @media screen and (min-width: 1000px) {
   .section2 div.center figure {
     width: 45%;
@@ -70,6 +73,7 @@
 }
 .section2 div.center figure div img {
   width: 100%;
+  filter: url(#fractal);
 }
 .section2 div.center figure div em {
   position: absolute;
@@ -120,10 +124,16 @@
 }
 .section2 div.center .textbox a {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 10px 30px;
   border: 3px solid var(--pink);
   color: var(--pink);
+  font-size: 1.3em;
+  font-weight: 800;
   transition: all 0.3s;
+}
+.section2 div.center .textbox a:hover {
+  background-color: var(--pink);
+  color: white;
 }
 .section2 div.center.active .center .figure {
   opacity: 1;
