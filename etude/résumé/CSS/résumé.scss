@@ -74,20 +74,45 @@ button {
         } //i.close.active
       } //i.close
     } //i
+    @media screen and (min-width: 1000px) and (max-width: 1300px) {
+      i {
+        top: 6%;
+        &.bars {
+          font-size: 1em;
+        } //i.bars
+        &.close {
+          font-size: 1em;
+        } //i.close
+      } //i
+    } //(1300 - 1000)
+    @media screen and (min-width: 500px) and (max-width: 1000px) {
+      i {
+        top: 5.5%;
+        &.bars {
+          font-size: 1em;
+        } //i.bars
+        &.close {
+          font-size: 1em;
+        } //i.close
+      } //i
+    } //(1000 - 500)
   } //mbtn
   .arrow_right {
     position: absolute;
     top: 7.3%;
     right: 10%;
+    margin-right: 5px;
     color: var(--mustard);
     font-size: 0.8em;
     transition: all 0.1s;
-    @media screen and (min-width: 800px) and (max-width: 1400px) {
+    @media screen and (min-width: 1000px) and (max-width: 1300px) {
+      top: 6%;
+      margin-right: 5px;
+    } //(1300 - 1000)
+    @media screen and (min-width: 500px) and (max-width: 1000px) {
+      top: 5.5%;
       margin-right: 10px;
-    }
-    @media screen and (max-width: 800px) {
-      display: none;
-    }
+    } //(1000 - 500)
   } //arrow_right
   .arrow_down {
     position: absolute;
