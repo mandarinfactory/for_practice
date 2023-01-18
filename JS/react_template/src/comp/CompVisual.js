@@ -23,7 +23,7 @@ const CompVisual = () => {
         <img className='splatter splatter3' src={require('../asset/img/visual/section-visual-splatter4.jpg')} alt="" />
         <figure className='dancer'>
           <img className="glitch glitch1 " src={require('../asset/img/visual/dancer-one.png')} alt="" />
-          <img class="origin" src={require('../asset/img/visual/main-dancer.png')} alt="" />
+          <img className="origin" src={require('../asset/img/visual/main-dancer.png')} alt="" />
           <img className="glitch glitch2 " src={require('../asset/img/visual/dancer-two.png')} alt="" />
         </figure>
       </div>

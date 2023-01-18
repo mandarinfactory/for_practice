@@ -23,9 +23,12 @@
   position: absolute;
   width: 100%;
   bottom: 0;
+  overflow: hidden;
 }
 .section5 .bg_bottom img {
   width: 100%;
+  transform: scale(1.05);
+  filter: url(#filter);
 }
 .section5 .content {
   position: relative;
