@@ -6,12 +6,12 @@ function flipBook(el) {
 
 flipBook.prototype.flip = function (n) {
   //flip position
-  
+
   if (n > 1 && n <= this.sheetCnt) {
     this.el.addClass('active').removeClass('deactive')
   } else if (n > this.sheetCnt) {
     this.el.addClass('deactive').removeClass('active')
-  }else{
+  } else {
     this.el.removeClass('active deactive')
   }
 
@@ -25,7 +25,7 @@ flipBook.prototype.flip = function (n) {
       z-- //n is 4, z to 3
       $(this).css({ 'z-index': z })
     })//prev
-    this.el.children('.sheet' + (n - 1)).css({ 'z-index': this.sheetCnt-1 })
+    this.el.children('.sheet' + (n - 1)).css({ 'z-index': this.sheetCnt - 1 })
 
     this.el.children('.sheet' + (n - 1)).prevAll('.sheet').addClass('active')
     this.el.children('.sheet' + (n - 1)).addClass('active')
