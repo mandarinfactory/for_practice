@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "LINESeedKR-Bd";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2") format("woff2");
@@ -135,6 +136,12 @@ button {
     height: 380px;
   }
 }
+@media screen and (max-width: 700px) {
+  .right_content .menu_box {
+    width: 150px;
+    height: 320px;
+  }
+}
 .right_content .menu_box.active {
   opacity: 1;
 }
@@ -159,6 +166,11 @@ button {
 @media screen and (min-width: 700px) and (max-width: 1000px) {
   .right_content .menu_box button {
     font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .right_content .menu_box button {
+    font-size: 0.6em;
   }
 }
 .right_content .menu_box button:hover {
@@ -254,6 +266,22 @@ button {
     width: 170px;
   }
 }
+@media screen and (max-width: 700px) {
+  .right_content ul li {
+    font-size: 1em;
+    line-height: 25px;
+  }
+  .right_content ul li.small {
+    font-size: 0.7em;
+    line-height: 15px;
+  }
+  .right_content ul li.box {
+    font-size: 1em;
+    width: 140px;
+    height: 80px;
+    margin-bottom: 5px;
+  }
+}
 .right_content #particles-js {
   position: absolute;
   z-index: 1;
@@ -287,6 +315,7 @@ section h1 {
   background-color: var(--mustard);
 }
 
+/* section01 -------------------------------------------------------------------------------------------------------- */
 .section02 {
   display: flex;
   flex-direction: column;
@@ -297,9 +326,27 @@ section h1 {
 .section02 div.about_first {
   margin-top: 10px;
   font-size: 2em;
-  width: 47%;
+  width: 100%;
+  max-width: 500px;
   display: flex;
   font-weight: 600;
+}
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  .section02 div.about_first {
+    max-width: 430px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .section02 div.about_first {
+    font-size: 1.5em;
+    max-width: 340px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section02 div.about_first {
+    font-size: 1.2em;
+    max-width: 300px;
+  }
 }
 .section02 ul {
   padding-left: 0;
@@ -335,7 +382,62 @@ section h1 {
   margin-top: 7px;
   color: var(--dark);
 }
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  .section02 ul.about_main_first li {
+    font-size: 1.15em;
+  }
+  .section02 ul.about_main_second, .section02 ul.about_main_third {
+    width: 100%;
+    max-width: 430px;
+  }
+  .section02 ul.about_main_second h3, .section02 ul.about_main_third h3 {
+    font-size: 1.1em;
+  }
+  .section02 ul.about_main_second li, .section02 ul.about_main_third li {
+    font-size: 0.85em;
+  }
+  .section02 ul.about_main_third {
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .section02 ul.about_main_first li {
+    font-size: 0.9em;
+  }
+  .section02 ul.about_main_second, .section02 ul.about_main_third {
+    width: 100%;
+    max-width: 340px;
+  }
+  .section02 ul.about_main_second h3, .section02 ul.about_main_third h3 {
+    font-size: 0.9em;
+  }
+  .section02 ul.about_main_second li, .section02 ul.about_main_third li {
+    font-size: 0.75em;
+  }
+  .section02 ul.about_main_third {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section02 ul.about_main_first li {
+    font-size: 0.8em;
+  }
+  .section02 ul.about_main_second, .section02 ul.about_main_third {
+    width: 100%;
+    max-width: 295px;
+  }
+  .section02 ul.about_main_second h3, .section02 ul.about_main_third h3 {
+    font-size: 0.8em;
+  }
+  .section02 ul.about_main_second li, .section02 ul.about_main_third li {
+    font-size: 0.7em;
+  }
+  .section02 ul.about_main_third {
+    padding-right: 0;
+  }
+}
 
+/* section02 --------------------------------------------------------------------------------------------------------------- */
 .section05 {
   background-color: orange;
 }
@@ -348,7 +450,7 @@ section h1 {
   background-color: darkred;
 }
 
-/* each sections -------------------------------------------------------------------------- */
+/* each sections -------------------------------------------------------------------------- --> 애네는 따로 section별 scss만들어줄것! */
 .viewbox_section ul {
   padding-left: 0;
   display: flex;

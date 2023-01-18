@@ -122,6 +122,10 @@ button {
       width: 160px;
       height: 380px;
     } //(1000 - 700)
+    @media screen and (max-width: 700px) {
+      width: 150px;
+      height: 320px;
+    } //(700이하)
     &.active {
       opacity: 1;
     } //menu_box.active
@@ -143,6 +147,9 @@ button {
       @media screen and (min-width: 700px) and (max-width: 1000px) {
         font-size: 0.8em;
       } //(1000 - 700)
+      @media screen and (max-width: 700px) {
+        font-size: 0.6em;
+      } //(700이하)
       &:hover {
         opacity: 0.95;
       } //button:hover
@@ -239,6 +246,22 @@ button {
         } //box
       } //li
     } //(1000 - 700)
+    @media screen and (max-width: 700px) {
+      li {
+        font-size: 1em;
+        line-height: 25px;
+        &.small {
+          font-size: 0.7em;
+          line-height: 15px;
+        } //small
+        &.box {
+          font-size: 1em;
+          width: 140px;
+          height: 80px;
+          margin-bottom: 5px;
+        } //box
+      } //li
+    } //(700이하)
   } //ul
   #particles-js {
     position: absolute;
@@ -273,6 +296,7 @@ section {
 .section01 {
   background-color: var(--mustard);
 } //section01
+/* section01 -------------------------------------------------------------------------------------------------------- */
 .section02 {
   display: flex;
   flex-direction: column;
@@ -282,9 +306,21 @@ section {
   div.about_first {
     margin-top: 10px;
     font-size: 2em;
-    width: 47%;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     font-weight: 600;
+    @media screen and (min-width: 900px) and (max-width: 1100px) {
+      max-width: 430px;
+    } //(1100 - 900)
+    @media screen and (min-width: 700px) and (max-width: 900px) {
+      font-size: 1.5em;
+      max-width: 340px;
+    } //(900 - 700)
+    @media screen and (max-width: 700px) {
+      font-size: 1.2em;
+      max-width: 300px;
+    } //(700 이하)
   } //div.about_first
   ul {
     padding-left: 0;
@@ -321,8 +357,72 @@ section {
         color: var(--dark);
       } //li
     } //ul.about_main_third
+    @media screen and (min-width: 900px) and (max-width: 1100px) {
+      &.about_main_first {
+        li {
+          font-size: 1.15em;
+        } //li
+      } //ul.about_main_first
+      &.about_main_second,
+      &.about_main_third {
+        width: 100%;
+        max-width: 430px;
+        h3 {
+          font-size: 1.1em;
+        } //h3
+        li {
+          font-size: 0.85em;
+        } //li
+      } //ul.about_main_second && third
+      &.about_main_third {
+        padding-right: 0;
+      } //about_main_third
+    } //(1100 - 800)
+    @media screen and (min-width: 700px) and (max-width: 900px) {
+      &.about_main_first {
+        li {
+          font-size: 0.9em;
+        } //li
+      } //ul.about_main_first
+      &.about_main_second,
+      &.about_main_third {
+        width: 100%;
+        max-width: 340px;
+        h3 {
+          font-size: 0.9em;
+        } //h3
+        li {
+          font-size: 0.75em;
+        } //li
+      } //ul.about_main_second && third
+      &.about_main_third {
+        padding-right: 0;
+      } //about_main_third
+    } //(900- 700)
+    @media screen and (max-width: 700px) {
+      &.about_main_first {
+        li {
+          font-size: 0.8em;
+        } //li
+      } //ul.about_main_first
+      &.about_main_second,
+      &.about_main_third {
+        width: 100%;
+        max-width: 295px;
+        h3 {
+          font-size: 0.8em;
+        } //h3
+        li {
+          font-size: 0.7em;
+        } //li
+      } //ul.about_main_second && third
+      &.about_main_third {
+        padding-right: 0;
+      } //about_main_third
+    } //(700 이하)
   } //ul
 } //section02
+/* section02 --------------------------------------------------------------------------------------------------------------- */
 .section05 {
   background-color: orange;
 } //section05
@@ -333,7 +433,7 @@ section {
   background-color: darkred;
 } //section07  --> 나중에 따로 section별로(section3이후별로) SCSS 만들면 지울것!
 
-/* each sections -------------------------------------------------------------------------- */
+/* each sections -------------------------------------------------------------------------- --> 애네는 따로 section별 scss만들어줄것! */
 
 .viewbox_section {
   ul {

@@ -3,6 +3,26 @@
   bottom: -2%;
   z-index: 1;
 }
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  .section04 .viewbox_museum {
+    bottom: 8%;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  .section04 .viewbox_museum {
+    bottom: 13%;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .section04 .viewbox_museum {
+    bottom: 23%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section04 .viewbox_museum {
+    bottom: 32%;
+  }
+}
 .section04 .viewbox_museum ul {
   padding-left: 0;
   display: flex;
