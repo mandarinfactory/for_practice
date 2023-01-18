@@ -26,11 +26,26 @@ const CompSection5 = () => {
             </div>
           </div>
           <div className="sheet sheet2">
-            <div className="page page-odd page3">
-              page3 사진1의 설명
+            <div className="page page-odd page3 profile">
+              <div className="inner scroll">
+                <h3>Rosaline Michelle</h3>
+                <dl>
+                  <dt>Contemporary, Modern Dancer</dt>
+                  <dd>Dancing is surely the most basic and relevant of all forms of expression.
+                    Nothing else can so effectively give outward form to an inner experience.</dd>
+                </dl>
+              </div>
             </div>
-            <div className="page page-even page4">
-              page4 사진2의 설명
+            <div className="page page-even page4 profile">
+              <div className="inner scroll">
+                <h3>Elizabeth Truss</h3>
+                <dl>
+                  <dt>Active Dancer</dt>
+                  <dd>Consciousness expresses itself through creation.
+                    This world we live in is the dance of the creator.
+                    Dancers come and go in the twinkling of an eye but the dance lives on.</dd>
+                </dl>
+              </div>
             </div>
           </div>
           <div className="sheet sheet3">
@@ -46,8 +61,16 @@ const CompSection5 = () => {
             </div>
           </div>
           <div className="sheet sheet4">
-            <div className="page page-odd page7">
-              page7 사진3의 설명
+            <div className="page page-odd page7 profile">
+              <div className='inner scroll'>
+                <h3>Anna Beatrix</h3>
+                <dl>
+                  <dt>Happiness Dancer</dt>
+                  <dd>On many an occasion when I am dancing,
+                    I have felt touched by something sacred. In those moments,
+                    I felt my spirit soar and become one with everything that exists</dd>
+                </dl>
+              </div>
             </div>
             <div className="page page-even page8">
               page8 뒷표지
@@ -55,7 +78,7 @@ const CompSection5 = () => {
           </div>
         </div>
         <div className="btns">
-          <button className="btn1" data-n="1">
+          <button className="btn1 active" data-n="1">
             <b>1</b>
           </button>
           <button className="btn2" data-n="2">

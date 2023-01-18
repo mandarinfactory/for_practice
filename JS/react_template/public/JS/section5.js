@@ -6,4 +6,5 @@ $(function () {
         $('.section5 .btns button').removeClass('active')
         $(this).addClass('active')
     })//click
+    $('.section5 .book a').viewbox()
 })//document.ready

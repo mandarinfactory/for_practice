@@ -3,6 +3,7 @@ import './asset/css/bubble-particle.css'
 import './asset/css/reset.css'
 import './asset/css/style.css'
 import './asset/css/cursor.css'
+import './asset/css/scrollbar.css'
 import './asset/css/header.css'
 import './asset/css/common.css'
 import './asset/css/visual.css'
@@ -15,6 +16,7 @@ import './asset/css/section6.css'
 import './asset/css/sticky.css'
 import './asset/css/footer.css'
 import './asset/css/flipBook.css'
+import './asset/css/viewbox.css'
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';

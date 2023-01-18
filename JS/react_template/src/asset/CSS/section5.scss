@@ -63,6 +63,15 @@
           max-height: 100%;
         } //img
       } //page
+      .profile {
+        box-sizing: border-box;
+        padding: 10px;
+        .inner {
+          overflow: auto;
+          width: 100%;
+          height: 100%;
+        } //inner
+      } //profile
     } //filp-book book
     .btns {
       display: flex;
