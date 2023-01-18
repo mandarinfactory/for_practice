@@ -6,6 +6,9 @@ const CompSection5 = () => {
       <figure className="bg">
         <img src={require('../asset/img/section5/section5-bg-window.jpg')} alt="" />
       </figure>
+      <figure className="bg_bottom">
+        <img src={require('../asset/img/section5/section5-bg-bottom.png')} alt="" />
+      </figure>
       <div className="content">
         <div className="title_wrap">
           <h2>Dance Trainers</h2>

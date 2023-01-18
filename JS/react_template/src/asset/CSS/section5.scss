@@ -18,6 +18,14 @@
       object-position: center;
     } //img
   } //bg
+  .bg_bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    img {
+      width: 100%;
+    }
+  }
   .content {
     position: relative;
     width: 95%;

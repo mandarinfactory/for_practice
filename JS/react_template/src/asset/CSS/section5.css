@@ -19,6 +19,14 @@
   object-fit: cover;
   object-position: center;
 }
+.section5 .bg_bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.section5 .bg_bottom img {
+  width: 100%;
+}
 .section5 .content {
   position: relative;
   width: 95%;
