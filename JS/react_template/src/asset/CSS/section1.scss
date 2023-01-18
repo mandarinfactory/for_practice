@@ -65,7 +65,7 @@
     .textbox {
       @media screen and (min-width: 1000px) {
         width: 40%;
-        transform: translateY(10%);
+        transform: translateY(-20%);
       } //lg
       @media screen and (max-width: 1000px) {
         position: relative;
@@ -79,15 +79,16 @@
         box-sizing: border-box;
       } //sm
       small {
-        font-size: 1.2em;
+        font-size: 1.4em;
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 800;
         color: var(--pink);
       } //small
       h2 {
         margin: 10px 0;
         color: white;
-        text-shadow: 1px 1px 0 black;
+        text-shadow: 1px 1px 3px black;
+        font-weight: 800;
         @media screen and (min-width: 1000px) {
           font-size: 2.5em;
           span {
@@ -104,8 +105,11 @@
       p {
         position: relative;
         color: black;
-        font-weight: 600;
+        background-color: rgba($color: #000, $alpha: 0.2);
+        text-shadow: 1px 1px 1px white;
         margin-bottom: 20px;
+        padding: 5px;
+        font-weight: 600;
         @media screen and (min-width: 1000px) {
           margin-left: 2.2em;
           font-size: 1.1em;

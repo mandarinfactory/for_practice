@@ -24,12 +24,12 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: url(#fractal);
 }
 .section2 figure.bg-bottom {
   position: absolute;
   width: 100%;
   bottom: 0;
+  overflow: hidden;
 }
 .section2 figure.bg-bottom img {
   width: 100%;
@@ -45,7 +45,6 @@
   position: relative;
   width: 90%;
   max-width: 1200px;
-  /* active ----------------------------- */
 }
 @media screen and (min-width: 1000px) {
   .section2 div.center {
@@ -53,6 +52,9 @@
     align-items: center;
     flex-direction: row-reverse;
   }
+}
+.section2 div.center figure {
+  perspective: 1000px;
 }
 @media screen and (min-width: 1000px) {
   .section2 div.center figure {
@@ -70,6 +72,7 @@
 }
 .section2 div.center figure div img {
   width: 100%;
+  filter: url(#fractal);
 }
 .section2 div.center figure div em {
   position: absolute;
@@ -77,7 +80,7 @@
   bottom: 20%;
   font-size: 4.5em;
   color: white;
-  text-shadow: 1px 1px 3px var(--blue);
+  text-shadow: 5px 5px 7px var(--blue);
 }
 @media screen and (min-width: 1000px) {
   .section2 div.center .textbox {
@@ -100,7 +103,7 @@
   margin-bottom: 20px;
   color: var(--pink);
   font-size: 2.5em;
-  font-weight: 600;
+  font-weight: 900;
   text-shadow: 1px 1px 2px black;
 }
 .section2 div.center .textbox h2 span {
@@ -114,21 +117,22 @@
   display: block;
   font-weight: 600;
   font-size: 1.2em;
-  color: var(--blue);
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
   margin-bottom: 10px;
-  text-shadow: 1px 1px 2px white;
+  text-shadow: 1px 1px 3px white;
 }
 .section2 div.center .textbox a {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 10px 30px;
   border: 3px solid var(--pink);
   color: var(--pink);
+  font-size: 1.3em;
+  font-weight: 800;
   transition: all 0.3s;
 }
-.section2 div.center.active .center .figure {
-  opacity: 1;
-  transition: all 0.3s;
-}
-.section2 div.center.active .center .textbox {
-  animation: jello 1s;
+.section2 div.center .textbox a:hover {
+  background-color: var(--pink);
+  color: white;
 }/*# sourceMappingURL=section2.css.map */

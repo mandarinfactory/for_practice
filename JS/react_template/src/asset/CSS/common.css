@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  background: #FFF;
+  background: #fff;
 }
 
 #root {
@@ -26,7 +26,6 @@ section {
   display: flex;
   width: 300%;
   height: 100%;
-  background: #CCC;
 }
 .sticky-container .sticky .sticky-inner section {
   flex: 1;

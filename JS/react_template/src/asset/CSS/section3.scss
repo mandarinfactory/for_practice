@@ -1,3 +1,186 @@
-.section3{
-  background: rgb(141, 179, 127);
-}//section1  
+.section3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .carousel {
+        width: 100%;
+        height: 80%;
+        max-height: 650px;
+        @media screen and (max-width: 500px) {
+            width: 80%;
+        } //sm
+        .display {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            overflow: hidden;
+            .col {
+                height: 90%;
+                box-sizing: border-box;
+                margin: 0 auto;
+                @media screen and (min-width: 1100px) {
+                    width: 25%;
+                } //lg
+                @media screen and (min-width: 600px) and (max-width: 1100px) {
+                    width: 60%;
+                } //md
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                } //sm
+                div.container {
+                    position: relative;
+                    left: 0;
+                    width: 600%;
+                    height: 100%;
+                    display: flex;
+                    transition: left 0.5s;
+                    figure {
+                        width: 16.66%;
+                        height: 100%;
+                        box-sizing: border-box;
+                        padding: 10px;
+                        @media screen and (min-width: 1100px) {
+                            &:nth-child(odd) {
+                                transform: translateY(10%);
+                            } //odd
+                            &:nth-child(even) {
+                                transform: translateY(-10%);
+                            } //even
+                        }
+                        .inner {
+                            height: 100%;
+                            img {
+                                width: 100%;
+                                height: 85%;
+                                object-fit: cover;
+                                object-position: center;
+                            } //img
+                            figcaption {
+                                height: 15%;
+                                box-sizing: border-box;
+                                padding: 7px 15px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: flex-end;
+                                background-color: rgba($color: #fff, $alpha: 0.8);
+                                em {
+                                    font-weight: 600;
+                                    font-size: 1.2em;
+                                    color: var(--blue);
+                                    text-shadow: 0 0 2px white;
+                                } //em
+                                small {
+                                    font-style: italic;
+                                } //small
+                            } //figcaption
+                        } //inner
+                    } //figure
+                } //container
+            } //col
+        } //display
+    } //carousel
+    /* slider_buttons ------------------------------------------------------------------------------ */
+    .controls {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 400px;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%);
+        .prev,
+        .next {
+            color: white;
+            font-size: 1.5em;
+        } //prev, next
+        .indicator {
+            width: 85%;
+            display: flex;
+            button {
+                position: relative;
+                flex: 1;
+                height: 10px;
+                border: 1px solid white;
+                margin-left: -1px;
+                border-top: none;
+                border-bottom: none;
+                background-color: rgba($color: #fff, $alpha: 0.05);
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    transition: all 0.5s;
+                    background-color: rgba($color: #827dea, $alpha: 0.7);
+                } //button:after
+                &.active {
+                    &::after {
+                        width: 100%;
+                    } //button.active::after
+                } //button.active
+            } //button
+        } //indicator
+    } //controls
+    /* active ----------------------------------------------------------------------- */
+    .carousel {
+        @media screen and (max-width: 500px) {
+        } //sm
+        .display {
+            .col {
+                @media screen and (min-width: 1000px) {
+                } //lg
+                @media screen and (min-width: 500px) and (max-width: 1000px) {
+                } //md
+                @media screen and (max-width: 500px) {
+                } //sm
+                div.container {
+                    figure {
+                        overflow: hidden;
+                        transition: transform 0.5s;
+                        &.active {
+                            img {
+                                transform: scale(1.2);
+                            }
+                        } //figure.figure
+                        .inner {
+                            img {
+                                transition: all 0.5s;
+                            } //img
+                            figcaption {
+                                position: relative;
+                                em {
+                                } //em
+                                small {
+                                } //small
+                            } //figcaption
+                        } //inner
+                    } //figure
+                } //container
+            } //col
+        } //display
+        &.active {
+            .display {
+                .col {
+                    .container {
+                        figure {
+                            @media screen and (min-width: 600px) {
+                                &:nth-child(odd) {
+                                    transform: translateY(-5%);
+                                }
+                                &:nth-child(even) {
+                                    transform: translateY(5%);
+                                }
+                            } //figure 600px 이상!
+                        } //figure
+                    } //container
+                } //col
+            } //display
+        } //carousel.active
+    } //carousel
+} //section3

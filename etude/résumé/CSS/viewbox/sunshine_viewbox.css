@@ -3,6 +3,26 @@
   bottom: -1%;
   z-index: 1;
 }
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  .section03 .viewbox_sunshine {
+    bottom: 7%;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  .section03 .viewbox_sunshine {
+    bottom: 12%;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .section03 .viewbox_sunshine {
+    bottom: 22%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section03 .viewbox_sunshine {
+    bottom: 30%;
+  }
+}
 .section03 .viewbox_sunshine ul {
   padding-left: 0;
   display: flex;

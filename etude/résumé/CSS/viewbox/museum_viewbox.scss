@@ -2,6 +2,18 @@
   position: absolute;
   bottom: -2%;
   z-index: 1;
+  @media screen and (min-width: 1100px) and (max-width: 1300px) {
+    bottom: 8%;
+  } //(1300 - 1100)
+  @media screen and (min-width: 900px) and (max-width: 1100px) {
+    bottom: 13%;
+  } //(1100 - 900)
+  @media screen and (min-width: 700px) and (max-width: 900px) {
+    bottom: 23%;
+  } //(900 - 700)
+  @media screen and (max-width: 700px) {
+    bottom: 32%;
+  } //(700 이하)
   ul {
     padding-left: 0;
     display: flex;

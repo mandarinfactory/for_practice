@@ -1,37 +1,36 @@
-@import 'mixin';
+@import "mixin";
 
-body{
-  background: #FFF;
+body {
+  background: #fff;
 }
-#root{
+#root {
   display: inline;
 }
-section{
+section {
   height: 100%;
 }
 
-.sticky-container{
+.sticky-container {
   position: relative;
   /* height:스크립트제어 */
-  .sticky{
+  .sticky {
     /* height:스크립트제어 */
     overflow: hidden;
     position: sticky;
-    top:0;
+    top: 0;
     box-sizing: border-box;
-    .sticky-inner{
+    .sticky-inner {
       display: flex;
       width: 300%;
       height: 100%;
-      background: #CCC;
-      section{
+      section {
         flex: 1;
-      }//section
-    }//sticky-inner
-  }//sticky
-  .scr-div{
+      } //section
+    } //sticky-inner
+  } //sticky
+  .scr-div {
     position: absolute;
     /* top좌표는 스크립트로 제어 */
     width: 100%;
   }
-}//sticky-container
+} //sticky-container

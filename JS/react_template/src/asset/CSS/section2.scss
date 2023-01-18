@@ -22,13 +22,13 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
-      filter: url(#fractal);
     } //img
   } //figure.bg
   figure.bg-bottom {
     position: absolute;
     width: 100%;
     bottom: 0;
+    overflow: hidden;
     img {
       width: 100%;
     } //img
@@ -50,6 +50,7 @@
       flex-direction: row-reverse;
     } //lg
     figure {
+      perspective: 1000px;
       @media screen and (min-width: 1000px) {
         width: 45%;
       } //lg
@@ -61,6 +62,7 @@
         position: relative;
         img {
           width: 100%;
+          filter: url(#fractal);
         } //img
         em {
           position: absolute;
@@ -68,7 +70,7 @@
           bottom: 20%;
           font-size: 4.5em;
           color: white;
-          text-shadow: 1px 1px 3px var(--blue);
+          text-shadow: 5px 5px 7px var(--blue);
         } //em
       } //div
     } //figure
@@ -93,7 +95,7 @@
         } //span
         color: var(--pink);
         font-size: 2.5em;
-        font-weight: 600;
+        font-weight: 900;
         text-shadow: 1px 1px 2px black;
       } //h2
       p {
@@ -103,30 +105,26 @@
           display: block;
           font-weight: 600;
           font-size: 1.2em;
-          color: var(--blue);
+          padding: 5px;
+          background-color: rgba($color: #000, $alpha: 0.2);
+          color: black;
           margin-bottom: 10px;
-          text-shadow: 1px 1px 2px white;
+          text-shadow: 1px 1px 3px white;
         } //em
       } //p
       a {
         display: inline-block;
-        padding: 15px 30px;
+        padding: 10px 30px;
         border: 3px solid var(--pink);
         color: var(--pink);
+        font-size: 1.3em;
+        font-weight: 800;
         transition: all 0.3s;
+        &:hover {
+          background-color: var(--pink);
+          color: white;
+        }
       } //a
     } //textbox
-    /* active ----------------------------- */
-    &.active {
-      .center {
-        .figure {
-          opacity: 1;
-          transition: all 0.3s;
-        } //figure
-        .textbox {
-          animation: jello 1s;
-        } //textbox
-      } //center
-    } //.active
   } //center
 } //section2
