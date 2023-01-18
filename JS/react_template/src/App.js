@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     let scriptArr = [
-      'cursor.js', 'layout.js', 'header.js', 'section1.js', 'section2.js', 'section3.js', 'visual.js', 'title.js', 'bubble.js', 'sticky.js'
+      'cursor.js', 'layout.js', 'header.js', 'section1.js', 'section2.js', 'section3.js', 'section5.js', 'visual.js', 'title.js', 'bubble.js', 'sticky.js'
     ]
     scriptArr.forEach((v) => {
       let script = document.createElement('script');

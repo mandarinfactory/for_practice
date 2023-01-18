@@ -14,6 +14,7 @@ import './asset/css/section5.css'
 import './asset/css/section6.css'
 import './asset/css/sticky.css'
 import './asset/css/footer.css'
+import './asset/css/flipBook.css'
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
