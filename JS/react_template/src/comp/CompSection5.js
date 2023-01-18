@@ -16,7 +16,7 @@ const CompSection5 = () => {
         </div>
         <div className="flip-book book">
           <div className="sheet sheet1">
-            <div className="page page-odd page1">
+            <div style={{ background: '#e7e7e7' }} className="page page-odd page1">
               <img src={require('../asset/img/section5/0.jpg')} alt="" />
             </div>
             <div className="page page-even page2">
@@ -38,7 +38,7 @@ const CompSection5 = () => {
             </div>
             <div className="page page-even page4 profile">
               <div className="inner scroll">
-                <h3>Elizabeth Truss</h3>
+                <h3>Elizabeth Madelline</h3>
                 <dl>
                   <dt>Active Dancer</dt>
                   <dd>Consciousness expresses itself through creation.
@@ -65,10 +65,10 @@ const CompSection5 = () => {
               <div className='inner scroll'>
                 <h3>Anna Beatrix</h3>
                 <dl>
-                  <dt>Happiness Dancer</dt>
+                  <dt>Happiness,Splendid Dancer</dt>
                   <dd>On many an occasion when I am dancing,
                     I have felt touched by something sacred. In those moments,
-                    I felt my spirit soar and become one with everything that exists</dd>
+                    I felt my spirit soar and become one with everything that exists.</dd>
                 </dl>
               </div>
             </div>
