@@ -72,7 +72,7 @@
     document.querySelectorAll('.gnb a').forEach(v => {
       v.classList.remove('active')
     })
-    document.querySelector(`.fnb .link-btn${current}`).classList.add('active')
+    document.querySelector(`nav.fnb .link-btn${current}`).classList.add('active')
     document.querySelector(`.gnb-lg .link-btn${current}`).classList.add('active')
     document.querySelector(`.gnb-sm .link-btn${current}`).classList.add('active')
   }//fn

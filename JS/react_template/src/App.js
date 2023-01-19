@@ -1,5 +1,6 @@
 import CompCursor from "./comp/CompCursor";
 import CompHeader from "./comp/CompHeader";
+import CompLoader from "./comp/CompLoader";
 import CompTitle from "./comp/CompTitle";
 import CompVisual from "./comp/CompVisual";
 import CompSection1 from "./comp/CompSection1";
@@ -20,6 +21,7 @@ const App = () => {
     let scriptArr = [
       'cursor.js',
       'layout.js',
+      'preloader.js',
       'header.js',
       'section1.js',
       'section2.js',
@@ -43,6 +45,7 @@ const App = () => {
   }, [])
   return (
     <>
+      <CompLoader />
       <CompTitle />
       <CompCursor />
       <CompHeader />
