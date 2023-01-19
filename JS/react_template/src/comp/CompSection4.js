@@ -14,9 +14,9 @@ const CompSection4 = () => {
         </div>
         <div className="carousel">
           <div className="box box1 active1" data-id="1">
-            <img src="" alt="" />
+            <img src={require('../asset/img/section4/1.jpg')} alt="" />
             <div className="price_table">
-              <h3>Ballet</h3>
+              <h3>ballet</h3>
               <em>
                 <b>$59</b>
                 <sub>/mo</sub>
@@ -30,9 +30,9 @@ const CompSection4 = () => {
             </div>
           </div>
           <div className="box box2 active2" data-id="2">
-            <img src="" alt="" />
+            <img src={require('../asset/img/section4/2.jpg')} alt="" />
             <div className="price_table">
-              <h3>Ballet</h3>
+              <h3>tango</h3>
               <em>
                 <b>$80</b>
                 <sub>/mo</sub>
@@ -46,9 +46,9 @@ const CompSection4 = () => {
             </div>
           </div>
           <div className="box box3 active3" data-id="3">
-            <img src="" alt="" />
+            <img src={require('../asset/img/section4/3.jpg')} alt="" />
             <div className="price_table">
-              <h3>Ballet</h3>
+              <h3>hip-hop</h3>
               <em>
                 <b>$99</b>
                 <sub>/mo</sub>
@@ -63,6 +63,12 @@ const CompSection4 = () => {
           </div>
         </div>
       </div>
+      <button className='prev'>
+        <i className="fa-solid fa-chevron-left left"></i>
+      </button>
+      <button className='next'>
+        <i className="fa-solid fa-chevron-right right"></i>
+      </button>
     </section>
   );
 };
