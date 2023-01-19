@@ -13,7 +13,7 @@ const CompSection4 = () => {
           </p>
         </div>
         <div className="carousel">
-          <div className="box box1 active1" data-id="1">
+          <div className="box box1 active1 active" data-id="1">
             <img src={require('../asset/img/section4/1.jpg')} alt="" />
             <div className="price_table">
               <h3>ballet</h3>

@@ -149,6 +149,7 @@
   font-size: 0.8em;
   font-weight: 700;
   background-color: var(--yellow);
+  z-index: 5;
   transition: all 0.5s;
 }
 .section4 .content .carousel .box .price_table a:hover {
