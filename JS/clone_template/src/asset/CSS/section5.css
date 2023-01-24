@@ -1,0 +1,197 @@
+.section5 {
+  position: relative;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section5 .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+.section5 .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.section5 .bg_bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+}
+.section5 .bg_bottom img {
+  width: 100%;
+  transform: scale(1.05);
+  filter: url(#filter);
+}
+.section5 .content {
+  position: relative;
+  width: 95%;
+  height: 95%;
+  max-width: 1000px;
+  max-height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* copies!! ------------------------------------------------- */
+}
+.section5 .content .title_wrap {
+  text-align: center;
+}
+.section5 .content .title_wrap h2 {
+  font-size: 2.5em;
+  font-weight: 900;
+  text-shadow: 1px 1px 5px black;
+  color: var(--yellow);
+  margin-bottom: 3px;
+}
+.section5 .content .title_wrap p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1em;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px black;
+  line-height: 25px;
+  color: white;
+}
+.section5 .content .book {
+  height: 80%;
+}
+.section5 .content .book .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section5 .content .book .page a {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.section5 .content .book .page img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.section5 .content .book .profile {
+  box-sizing: border-box;
+  padding: 20px;
+}
+.section5 .content .book .profile .inner {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section5 .content .book .profile .inner h3 {
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  font-weight: 900;
+  color: var(--purple);
+  border-bottom: 2px solid var(--purple);
+}
+.section5 .content .book .profile .inner dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section5 .content .book .profile .inner dl dt {
+  display: block;
+  font-size: 1.8em;
+  font-weight: 900;
+  color: black;
+  text-shadow: 7px 7px 2px var(--blue);
+}
+.section5 .content .book .profile .inner dl dd {
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.section5 .content .btns {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  /* button active ---------------------------------------------- */
+}
+.section5 .content .btns button {
+  position: relative;
+  width: 25%;
+  height: 30px;
+  font-size: 1em;
+  font-weight: 800;
+  background-color: white;
+  color: black;
+  filter: drop-shadow(0 0 5px black);
+}
+.section5 .content .btns button:nth-child(1) {
+  z-index: 3;
+}
+.section5 .content .btns button:nth-child(2) {
+  z-index: 2;
+}
+.section5 .content .btns button:nth-child(3) {
+  z-index: 1;
+}
+.section5 .content .btns button:nth-child(4) {
+  z-index: 0;
+}
+.section5 .content .btns button b {
+  position: relative;
+  margin-left: 20px;
+  z-index: 1;
+}
+.section5 .content .btns button::before, .section5 .content .btns button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  border-right: 5px solid var(--yellow);
+}
+.section5 .content .btns button::before {
+  top: 0;
+  transform: skew(45deg);
+  transform-origin: left top;
+}
+.section5 .content .btns button::after {
+  bottom: 0;
+  transform: skew(-45deg);
+  transform-origin: left bottom;
+}
+.section5 .content .btns button {
+  transition: all 0.3s;
+}
+.section5 .content .btns button b {
+  transition: all 0.3s;
+}
+.section5 .content .btns button::before, .section5 .content .btns button::after {
+  transition: all 0.3s;
+}
+.section5 .content .btns button.active {
+  width: 40%;
+  background-color: var(--blue);
+}
+.section5 .content .btns button.active b {
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+.section5 .content .btns button.active::before, .section5 .content .btns button.active::after {
+  background-color: var(--blue);
+}/*# sourceMappingURL=section5.css.map */
