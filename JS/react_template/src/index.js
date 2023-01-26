@@ -19,9 +19,10 @@ import './asset/css/flipBook.css'
 import './asset/css/viewbox.css'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import jQuery from "jquery";
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
