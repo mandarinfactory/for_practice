@@ -1,0 +1,13 @@
+@import "../mixin";
+#root {
+    @include posCenter;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 700px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    > section {
+        height: 100%;
+    } //section
+} //root

@@ -1,0 +1,34 @@
+body,html{
+  height: 100%;
+  box-sizing: border-box;
+} 
+*{
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+}
+li{
+  list-style: none;
+}
+img,svg,iframe,video{
+  display: block;
+}
+iframe{
+  border:none;
+}
+input,textarea,select{
+  box-sizing: border-box;
+}
+table{
+  border-collapse: collapse;
+}
+button{
+  background: none;
+  border:none; 
+  cursor: pointer;
+  outline: none;
+}
+.hidden{
+  position: fixed;
+  left:-10000px;
+}
