@@ -17,9 +17,9 @@ import './asset/css/sticky.css'
 import './asset/css/footer.css'
 import './asset/css/flipBook.css'
 import './asset/css/viewbox.css'
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import jQuery from "jquery";
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
