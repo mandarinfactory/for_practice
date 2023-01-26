@@ -1,6 +1,5 @@
 import CompCursor from "./comp/CompCursor";
 import CompHeader from "./comp/CompHeader";
-import CompLoader from "./comp/CompLoader";
 import CompTitle from "./comp/CompTitle";
 import CompVisual from "./comp/CompVisual";
 import CompSection1 from "./comp/CompSection1";
@@ -45,7 +44,6 @@ const App = () => {
   }, [])
   return (
     <>
-      <CompLoader />
       <CompTitle />
       <CompCursor />
       <CompHeader />
