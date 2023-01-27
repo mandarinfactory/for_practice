@@ -13,8 +13,6 @@ const App = () => {
   const [address, setAddress] = useState(null) // 주소정보
   const [weather, setWeather] = useState(null) // 날씨정보
 
-
-
   const initialize = async () => {
     let { lat, lng } = await getLocation() // 현재 위치의 위·경도를 객체로 반환 --> destructuring 문법 사용!
     let addressResult = await getAddress(lat, lng) // 위·경도를 받아서 주소를 반환
@@ -39,9 +37,9 @@ const App = () => {
       weather, setWeather,
     }}>
       <CompCurrent />
+      <CompDetail />
       <CompHourTime />
       <CompDaily />
-      <CompDetail />
       <CompMap />
     </Appcontext.Provider>
   );
