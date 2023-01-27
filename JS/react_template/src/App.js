@@ -35,7 +35,7 @@ const App = () => {
     ]
     scriptArr.forEach((v) => {
       let script = document.createElement('script');
-      script.src = `${process.env.PUBLIC_URL}/js/${v}`;
+      script.src = `${process.env.PUBLIC_URL}/JS/${v}`;
       script.defer = true;
       document.body.appendChild(script);
     })

@@ -1,5 +1,5 @@
 $(function () {
-    let count = $('.section3 .carousel .container figure').size()
+    let count = $('.section3 .carousel .container figure').length
     for (var i = 1; i <= count; i++) {
         $(`.section3 .carousel .container .figure${i}`).clone().appendTo('.section3 .carousel .container')
         $(`.section3 .carousel .container .figure${i}`).eq(1).css({
