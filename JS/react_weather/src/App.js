@@ -5,7 +5,7 @@ import CompDaily from "./components/CompDaily";
 import CompDetail from "./components/CompDetail";
 import CompHourTime from "./components/CompHourTime";
 import CompMap from "./components/CompMap";
-const Appcontext = createContext()
+export const Appcontext = createContext()
 
 const App = () => {
   const [weatherDt, setWeatherDt] = useState()
