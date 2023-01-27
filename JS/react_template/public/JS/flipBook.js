@@ -1,6 +1,6 @@
 function flipBook(el) {
   this.el = $(el)
-  this.sheetCnt = this.el.children('.sheet').size()
+  this.sheetCnt = this.el.children('.sheet').length
   this.flip(1)
 }
 
