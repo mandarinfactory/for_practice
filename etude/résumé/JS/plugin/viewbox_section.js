@@ -39,4 +39,24 @@ $(function () {
     }).resize(function () {
 
     })//window_event
+    /* viewbox_plugin_bluebottle -------------------------------------- */
+    $(window).load(function () {
+        $('.viewbox_bluebottle ul li figure a').viewbox();
+    })//load
+    function callMotionbluebottle() {
+        $('.viewbox_bluebottle ul li').each(function () {
+            var offsetTop = $(this).offset().top
+            if (scrY = offsetTop) {
+                $(this).addClass('active')
+            } else {
+                $(this).removeClass('active')
+            }
+        })//each
+    }//callMotion_function
+    callMotionbluebottle();
+    $(window).scroll(function () {
+
+    }).resize(function () {
+
+    })//window_event
 })//document.ready
