@@ -4,7 +4,6 @@ import './asset/css/reset.css'
 import './asset/css/style.css'
 import './asset/css/cursor.css'
 import './asset/css/scrollbar.css'
-import './asset/css/loader.css'
 import './asset/css/header.css'
 import './asset/css/common.css'
 import './asset/css/visual.css'
@@ -18,11 +17,12 @@ import './asset/css/sticky.css'
 import './asset/css/footer.css'
 import './asset/css/flipBook.css'
 import './asset/css/viewbox.css'
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>

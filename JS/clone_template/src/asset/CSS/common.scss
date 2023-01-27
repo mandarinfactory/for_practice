@@ -1,0 +1,36 @@
+@import "mixin";
+
+body {
+  background: #fff;
+}
+#root {
+  display: inline;
+}
+section {
+  height: 100%;
+}
+
+.sticky-container {
+  position: relative;
+  /* height:스크립트제어 */
+  .sticky {
+    /* height:스크립트제어 */
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    .sticky-inner {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      section {
+        flex: 1;
+      } //section
+    } //sticky-inner
+  } //sticky
+  .scr-div {
+    position: absolute;
+    /* top좌표는 스크립트로 제어 */
+    width: 100%;
+  }
+} //sticky-container

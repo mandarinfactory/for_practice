@@ -44,7 +44,7 @@ $(function () {
 
     $('.section4 .next').click(function () {
         if (handleClick === false) return false
-        handleClick = false /* user가 연타click하는걸 방지하기 위해서! */
+        handleClick = false //user가 연타click하는걸 방지하기 위해서! 
         n++;
         changeBox();
         autoPlay();
@@ -52,7 +52,7 @@ $(function () {
 
     $('.section4 .prev').click(function () {
         if (handleClick === false) return false
-        handleClick = false /* user가 연타click하는걸 방지하기 위해서! */
+        handleClick = false //user가 연타click하는걸 방지하기 위해서!
         n--;
         changeBox();
         autoPlay();
