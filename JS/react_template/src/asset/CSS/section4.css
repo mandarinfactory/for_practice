@@ -79,8 +79,10 @@
 .section4 .content .carousel .box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .section4 .content .carousel .box .price_table {
   position: absolute;

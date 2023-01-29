@@ -15,5 +15,6 @@
   position: absolute;
   max-width: 90%;
   max-height: 90%;
-  animation: pulse 1.5s;
+  -webkit-animation: pulse 1.5s;
+          animation: pulse 1.5s;
 }/*# sourceMappingURL=long.css.map */

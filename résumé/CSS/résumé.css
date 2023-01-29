@@ -11,7 +11,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: "LINESeedKR-Bd";
-  scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 body::-webkit-scrollbar {
@@ -463,10 +464,6 @@ section h1 {
 }
 
 /* section02 --------------------------------------------------------------------------------------------------------------- */
-.section05 {
-  background-color: orange;
-}
-
 .section07 {
   background-color: darkred;
 }

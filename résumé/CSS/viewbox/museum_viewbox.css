@@ -54,4 +54,5 @@
 }
 .section04 .viewbox_museum ul li figure a img {
   width: 100%;
+  transition: all 0.5s;
 }/*# sourceMappingURL=museum_viewbox.css.map */

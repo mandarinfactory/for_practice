@@ -1,6 +1,7 @@
 .section5 {
   position: relative;
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,8 +17,10 @@
 .section5 .bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .section5 .bg_bottom {
   position: absolute;

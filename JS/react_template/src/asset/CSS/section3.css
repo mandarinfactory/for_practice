@@ -70,8 +70,10 @@
 .section3 .carousel .display .col div.container figure .inner img {
   width: 100%;
   height: 85%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .section3 .carousel .display .col div.container figure .inner figcaption {
   height: 15%;

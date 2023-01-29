@@ -18,6 +18,7 @@ section {
 .sticky-container .sticky {
   /* height:스크립트제어 */
   overflow: hidden;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   box-sizing: border-box;
