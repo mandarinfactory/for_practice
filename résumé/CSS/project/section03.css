@@ -66,6 +66,7 @@
 .section03 figure.figure_one figcaption ul li:first-child {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-left: 0;
 }
 .section03 figure.figure_one figcaption ul li.sub_title {
@@ -80,9 +81,7 @@
 }
 .section03 figure.figure_one figcaption ul li a {
   display: block;
-  width: 130px;
-  height: 40px;
-  margin-bottom: 20px;
+  margin-left: 15px;
   font-size: 1.4em;
   font-weight: 800;
   text-decoration: none;

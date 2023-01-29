@@ -58,6 +58,7 @@
           &:first-child {
             display: flex;
             justify-content: center;
+            align-items: center;
             margin-left: 0;
           } //li:first-child
           &.sub_title {
@@ -72,9 +73,7 @@
           } //li.sub_title
           a {
             display: block;
-            width: 130px;
-            height: 40px;
-            margin-bottom: 20px;
+            margin-left: 15px;
             font-size: 1.4em;
             font-weight: 800;
             text-decoration: none;
@@ -84,7 +83,7 @@
             cursor: pointer;
             &:hover {
               color: firebrick;
-            }
+            }//a:hover
           } //a
         } //li
       } //ul
