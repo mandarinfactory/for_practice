@@ -147,8 +147,11 @@ button {
   width: 250px;
   height: 500px;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  z-index: -3;
   transition: all 0.3s;
+}
+.right_content .menu_box button {
+  cursor: default !important;
 }
 @media screen and (min-width: 1000px) and (max-width: 1300px) {
   .right_content .menu_box {
@@ -170,6 +173,10 @@ button {
 }
 .right_content .menu_box.active {
   opacity: 1;
+  z-index: 1;
+}
+.right_content .menu_box.active button {
+  cursor: pointer !important;
 }
 .right_content .menu_box button {
   display: block;

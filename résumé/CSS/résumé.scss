@@ -137,8 +137,11 @@ button {
     width: 250px;
     height: 500px;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+    z-index: -3;
     transition: all 0.3s;
+    button {
+      cursor: default !important;
+    }//button
     @media screen and (min-width: 1000px) and (max-width: 1300px) {
       width: 220px;
       height: 430px;
@@ -153,6 +156,10 @@ button {
     } //(700이하)
     &.active {
       opacity: 1;
+      z-index: 1;
+      button {
+        cursor: pointer !important;
+      }//.active button
     } //menu_box.active
     button {
       display: block;

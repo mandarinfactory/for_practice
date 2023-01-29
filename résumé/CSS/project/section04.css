@@ -110,9 +110,7 @@
     margin-right: 5px;
   }
   .section04 figure.figure_one figcaption ul li a {
-    width: 100px;
-    height: 30px;
-    margin-bottom: 15px;
+    margin-left: 15px;
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1100px) {
@@ -137,9 +135,7 @@
     margin-right: 5px;
   }
   .section04 figure.figure_one figcaption ul li a {
-    width: 80px;
-    height: 20px;
-    margin-bottom: 10px;
+    margin-left: 15px;
   }
 }
 @media screen and (min-width: 700px) and (max-width: 900px) {
@@ -164,9 +160,7 @@
     margin-right: 5px;
   }
   .section04 figure.figure_one figcaption ul li a {
-    width: 100px;
-    height: 30px;
-    margin-bottom: 15px;
+    margin-left: 15px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -191,8 +185,6 @@
     margin-right: 5px;
   }
   .section04 figure.figure_one figcaption ul li a {
-    width: 70px;
-    height: 20px;
-    margin-bottom: 12px;
+    margin-left: 15px;
   }
 }/*# sourceMappingURL=section04.css.map */
