@@ -1,3 +1,5 @@
+import { codeEnArr, codeKrArr } from "./conditionCode"
+
 /* 현재 위치정보를 가져와서 위경도를 반환하는 비동기 함수 */
 export const getLocation = () => {
     return new Promise(res => {
@@ -43,3 +45,33 @@ export const getWeather = (lat, lng) => {
         })//fetch-catch
     })//promise
 }//function_getWeather
+
+/* export const outputWeather = category => {
+    let temp = (category.temp - 273.15).toFixed(1)
+    let tempMin = (typeof(category.temp) === 'object')&& (category.temp.min - 273.15).toFixed(1)
+    let tempMax = (typeof(category.temp) === 'object')&& (category.temp.max - 273.15).toFixed(1)
+    let time = new Date(category.dt * 1000)
+    let year = time.getFullYear()
+    let month = time.getMonth()
+    let date = time.getDate()
+    let hour = time.getHours()
+    let minute = time.getMinutes()
+    let dayArr = [
+        'SUN','MON','TUE','WES','THU','FRI','SAT'
+    ]
+    let day = dayArr[time.getDay()]
+    let desc = codeKrArr[codeEnArr.indexOf(category.weather[0].description)]
+    let windDeg = category.wind_deg
+    let windSpeed = category.wind_speed
+    let rain = (category.rain) ? category.rain : 0 // 시간별 정보에서는 객체로 반환된다.
+    let sunriseTime = (category.sunrise)&& new Date(category.sunrise * 1000)
+    let sunriseHour = sunriseTime.getHours()
+    let sunriseMin = sunriseTime.getMinutes()
+    let sunsetTime = (category.sunset)&& new Date(category.sunset * 1000)
+    let sunssetHour = sunsetTime.getHours()
+    let sunssetMin = sunsetTime.getMinutes()
+    return ({
+        year, month, date, hour, minute, day, temp, tempMin, tempMax, desc, windDeg, windSpeed, rain, sunriseTime, sunsetTime
+        sunriseHour, sunriseMin, sunsetHour, sunsetMin
+    })
+}//function_outputWeather */
