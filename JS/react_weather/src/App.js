@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createContext } from "react";
+import CompHeader from "./components/CompHeader";
 import CompCurrent from "./components/CompCurrent";
 import CompDaily from "./components/CompDaily";
 import CompDetail from "./components/CompDetail";
@@ -36,6 +37,7 @@ const App = () => {
       address, setAddress,
       weather, setWeather,
     }}>
+      <CompHeader />
       <CompCurrent />
       <CompDetail />
       <CompHourTime />

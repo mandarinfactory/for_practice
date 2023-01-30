@@ -1,4 +1,7 @@
 @import "../mixin";
+body {
+    background-image: url(../../img/main/weather-icos.gif);
+}
 #root {
     @include posCenter;
     width: 100%;
@@ -7,6 +10,7 @@
     max-height: 700px;
     overflow-y: scroll;
     box-sizing: border-box;
+    background-color: white;
     > section {
         height: 100%;
     } //section

@@ -13,7 +13,6 @@ const CompCurrent = () => {
     */
     return (
         <section className='current_section'>
-            <h1>날씨앱</h1>
             <p className="address">
                 {
                     (address) ? address[2].formatted_address : '등록되지 않은 위치입니다.'
