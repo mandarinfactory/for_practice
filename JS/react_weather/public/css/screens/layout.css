@@ -1,5 +1,14 @@
 body {
   background-image: url(../../img/main/weather-icos.gif);
+  animation: bgMove 5000s linear infinite;
+}
+@keyframes bgMove {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -5000px center;
+  }
 }
 
 #root {
@@ -13,7 +22,8 @@ body {
   max-height: 700px;
   overflow-y: scroll;
   box-sizing: border-box;
-  background-color: white;
+  background-image: url(../../img/weather/Clear.jpg);
+  background-size: cover;
 }
 #root > section {
   height: 100%;

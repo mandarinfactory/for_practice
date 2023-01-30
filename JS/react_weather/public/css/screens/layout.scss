@@ -1,7 +1,16 @@
 @import "../mixin";
 body {
     background-image: url(../../img/main/weather-icos.gif);
-}
+    animation: bgMove 5000s linear infinite;
+    @keyframes bgMove {
+        0% {
+            background-position: 0 center;
+        } //0%
+        100% {
+            background-position: -5000px center;
+        } //100%
+    } //bgMove
+} //body
 #root {
     @include posCenter;
     width: 100%;
@@ -10,7 +19,8 @@ body {
     max-height: 700px;
     overflow-y: scroll;
     box-sizing: border-box;
-    background-color: white;
+    background-image: url(../../img/weather/Clear.jpg);
+    background-size: cover;
     > section {
         height: 100%;
     } //section
