@@ -20,8 +20,10 @@
 .visual .bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   filter: url(#filter);
   transform: scale(1.1);
   transform-origin: center bottom;
@@ -71,38 +73,69 @@
   opacity: 0.7;
 }
 .visual figure.dancer .glitch1 {
-  animation: glitch 0.2s infinite;
+  -webkit-animation: glitch 0.2s infinite;
+          animation: glitch 0.2s infinite;
 }
 .visual figure.dancer .glitch2 {
-  animation: glitch 0.15s infinite;
+  -webkit-animation: glitch 0.15s infinite;
+          animation: glitch 0.15s infinite;
+}
+@-webkit-keyframes glitch {
+  10% {
+    transform: translateX(2.4167762759px);
+  }
+  20% {
+    transform: translateX(-3.1529529808px);
+  }
+  30% {
+    transform: translateX(-2.2242329824px);
+  }
+  40% {
+    transform: translateX(-1.2040957714px);
+  }
+  50% {
+    transform: translateX(5.3282834276px);
+  }
+  60% {
+    transform: translateX(-0.3973882222px);
+  }
+  70% {
+    transform: translateX(-6.870105051px);
+  }
+  80% {
+    transform: translateX(0.5837217026px);
+  }
+  90% {
+    transform: translateX(0.6705233877px);
+  }
 }
 @keyframes glitch {
   10% {
-    transform: translateX(-5.2709214199px);
+    transform: translateX(2.4167762759px);
   }
   20% {
-    transform: translateX(-1.4799561267px);
+    transform: translateX(-3.1529529808px);
   }
   30% {
-    transform: translateX(-3.0226454344px);
+    transform: translateX(-2.2242329824px);
   }
   40% {
-    transform: translateX(-1.5487798868px);
+    transform: translateX(-1.2040957714px);
   }
   50% {
-    transform: translateX(-2.8439521467px);
+    transform: translateX(5.3282834276px);
   }
   60% {
-    transform: translateX(-5.1934601277px);
+    transform: translateX(-0.3973882222px);
   }
   70% {
-    transform: translateX(-1.7812720889px);
+    transform: translateX(-6.870105051px);
   }
   80% {
-    transform: translateX(-1.0656961303px);
+    transform: translateX(0.5837217026px);
   }
   90% {
-    transform: translateX(4.6377336556px);
+    transform: translateX(0.6705233877px);
   }
 }
 .visual img.splatter {

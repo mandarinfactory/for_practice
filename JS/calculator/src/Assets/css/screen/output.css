@@ -26,5 +26,6 @@ div.output p {
 }
 div.output p img {
   width: 10%;
-  animation: rubberBand 0.5s;
+  -webkit-animation: rubberBand 0.5s;
+          animation: rubberBand 0.5s;
 }/*# sourceMappingURL=output.css.map */

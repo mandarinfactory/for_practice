@@ -114,7 +114,8 @@ h1 img {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (min-width: 1000px) {
   .gnb-sm {
@@ -208,13 +209,30 @@ h1 img {
   position: absolute;
   top: 0;
   mix-blend-mode: color-dodge;
-  animation: title-glitch 0.2s linear infinite;
+  -webkit-animation: title-glitch 0.2s linear infinite;
+          animation: title-glitch 0.2s linear infinite;
 }
 .title div img.title-glitch2 {
   position: absolute;
   top: 0;
   mix-blend-mode: color-dodge;
-  animation: title-glitch 0.1s linear infinite;
+  -webkit-animation: title-glitch 0.1s linear infinite;
+          animation: title-glitch 0.1s linear infinite;
+}
+
+@-webkit-keyframes title-glitch {
+  0% {
+    transform: translateX(-2px);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
 }
 
 @keyframes title-glitch {

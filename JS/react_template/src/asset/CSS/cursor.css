@@ -22,7 +22,8 @@
   }
 }
 .cursor.active {
-  animation: cursor 0.3s infinite;
+  -webkit-animation: cursor 0.3s infinite;
+          animation: cursor 0.3s infinite;
 }
 .cursor.hover {
   transform: translate(-50%, -50%) rotate(360deg) scale(0.5);
@@ -41,6 +42,15 @@
   height: 150%;
   border: 1px solid #FFF;
   transition: all 0.3s;
+}
+
+@-webkit-keyframes cursor {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(0.3);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(0.8);
+  }
 }
 
 @keyframes cursor {
