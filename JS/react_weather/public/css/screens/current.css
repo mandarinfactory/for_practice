@@ -59,4 +59,29 @@ section .inner .current_info .wrap .sun_set_rise time.sunrise {
 }
 section .inner .current_info .wrap .sun_set_rise time.sunset {
   left: 100%;
+}
+section .inner .current_info .wrap .sun_set_rise .sun {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50%;
+  height: 0;
+  transform-origin: right center;
+  transform: rotate(45deg);
+  border-bottom: 3px solid black;
+}
+section .inner .current_info .wrap .sun_set_rise .sun i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  animation: chScale 3s alternate infinite;
+  text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+}
+@keyframes chScale {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
 }/*# sourceMappingURL=current.css.map */
