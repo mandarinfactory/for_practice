@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="./CSS/project/section04.css" />
     <link rel="stylesheet" href="./CSS/project/section05.css" />
     <link rel="stylesheet" href="./CSS/project/section06.css" />
+    <link rel="stylesheet" href="./CSS/project/section07.css" />
     <!-- sections_CSS -->
     <link rel="stylesheet" href="./CSS/viewbox/sunshine_viewbox.css">
     <link rel="stylesheet" href="./CSS/viewbox/museum_viewbox.css">
     <link rel="stylesheet" href="./CSS/viewbox/bluebottle_viewbox.css">
     <link rel="stylesheet" href="./CSS/viewbox/dancestudio_viewbox.css">
+    <link rel="stylesheet" href="./CSS/viewbox/lyriks_viewbox.css">
     <link rel="stylesheet" href="./CSS/plugin/viewbox.css">
     <!-- link_CSS_plugin -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -315,8 +317,50 @@
     </section>
     <!-- section06 -->
     <section class="section section07">
-        <h1>일곱</h1>
+        <div class="project">Project05</div>
+        <figure class="figure_one">
+            <img src="./IMG/lyriks/lyriks_page.jpg" alt>
+            <figcaption>
+                <ul>
+                    <li>
+                        <a target="_blank"
+                            href="https://lyriks-2dcd3.web.app/">webpage</a>
+                        <a target="_blank" href="https://github.com/mandarinfactory/for_practice_inHouse/tree/master/inHouse/05.React/lyriks">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="sub_title">작업언어</li>
+                    <li>React, tailwind CSS, 바닐라JS,  firebase</li>
+                    <li class="sub_title">작업시간 및 구조</li>
+                    <li>3주 · 반응형, 역동적인 구조</li>
+                    <li class="sub_title">작업과정</li>
+                    <li>
+                        React를 이용해 음악 홈페이지를 만드는 프로젝트를 계획했습니다.
+                        음악API는 Rapid API에서 Shazam API를 이용했고, 실제 음악이 재생되게 했습니다.
+                        또한, 지역API(KR)를 이용해 나라별 업데이트를 하도록 만들었습니다.
+
+                    </li>
+                </ul>
+            </figcaption>
+        </figure>
+        <div class="viewbox_lyriks">
+        </div>
+        <script>
+            $('.viewbox_lyriks').prepend(`<ul></ul>`)
+            viewBoxArr.forEach(function (v) {
+                $('.viewbox_lyriks ul').append(`
+            <li>
+                <figure>
+                    <a href="./IMG/lyriks/lyriks_${v.path}.jpg">
+                        <img src="./IMG/lyriks/lyriks_${v.path}.jpg" alt>    
+                        </a>    
+                        </figure>    
+                        </li>
+                        `)//append
+            })//forEach
+        </script>
     </section>
+    <!-- section06 -->
     <!-- section07 -->
 </body>
 <script src="./JS/résumé.js"></script>

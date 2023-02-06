@@ -79,4 +79,24 @@ $(function () {
     }).resize(function () {
 
     })//window_event
+    /* viewbox_plugin_Lyriks -------------------------------------- */
+    $(window).load(function () {
+        $('.viewbox_lyriks ul li figure a').viewbox();
+    })//load
+    function callMotionLyriks() {
+        $('.viewbox_lyriks ul li').each(function () {
+            var offsetTop = $(this).offset().top
+            if (scrY = offsetTop) {
+                $(this).addClass('active')
+            } else {
+                $(this).removeClass('active')
+            }
+        })//each
+    }//callMotion_function
+    callMotionLyriks();
+    $(window).scroll(function () {
+
+    }).resize(function () {
+
+    })//window_event
 })//document.ready
