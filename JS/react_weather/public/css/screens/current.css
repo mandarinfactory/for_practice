@@ -1,0 +1,87 @@
+section .inner {
+  width: 90%;
+}
+section .inner address {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  text-align: center;
+}
+section .inner .current_info {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+section .inner .current_info::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+section .inner .current_info .wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  border-radius: 50%;
+}
+section .inner .current_info .wrap .sun_set_rise {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+section .inner .current_info .wrap .sun_set_rise .circle {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+section .inner .current_info .wrap .sun_set_rise .circle::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 3px solid white;
+}
+section .inner .current_info .wrap .sun_set_rise time {
+  position: absolute;
+  top: 55%;
+  transform: translate(-50%);
+}
+section .inner .current_info .wrap .sun_set_rise time.sunrise {
+  left: 0;
+}
+section .inner .current_info .wrap .sun_set_rise time.sunset {
+  left: 100%;
+}
+section .inner .current_info .wrap .sun_set_rise .sun {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50%;
+  height: 0;
+  transform-origin: right center;
+  transform: rotate(45deg);
+  border-bottom: 3px solid black;
+}
+section .inner .current_info .wrap .sun_set_rise .sun i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  animation: chScale 3s alternate infinite;
+  text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+}
+@keyframes chScale {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+}/*# sourceMappingURL=current.css.map */
