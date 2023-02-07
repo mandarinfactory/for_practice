@@ -10,7 +10,6 @@ particlesJS.load('particles-js', 'particles.json', function() {
 */
 
 /* Otherwise just put the config content (json): */
-<script src="http://code.jquery.com/jquery-latest.js"></script>
 $(window).load(function () {
   particlesJS('particles-js',
 

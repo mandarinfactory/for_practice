@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "portpolio",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

@@ -4,7 +4,6 @@
  * @author Pavel Khoroshkov aka pgood
  * @link https://github.com/pgooood/viewbox
  */
-<script src="http://code.jquery.com/jquery-latest.js"></script>
 (function($){$.fn.viewbox = function(options){
 	
 	if(typeof(options) === 'undefined')
