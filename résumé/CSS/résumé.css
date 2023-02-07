@@ -343,8 +343,18 @@ section h1 {
   text-shadow: 1px 1px 5px black;
 }
 
-.section01 {
-  background-color: var(--mustard);
+.section01 figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.section01 figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 /* section01 -------------------------------------------------------------------------------------------------------- */

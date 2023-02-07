@@ -326,7 +326,17 @@ section {
   } //h1
 } //section
 .section01 {
-  background-color: var(--mustard);
+  figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }//img
+  }//figure
 } //section01
 /* section01 -------------------------------------------------------------------------------------------------------- */
 .section02 {
